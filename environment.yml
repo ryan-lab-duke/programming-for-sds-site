@@ -1,0 +1,16 @@
+name: sds
+channels:
+    - conda-forge
+    - defaults
+dependencies:
+    - python=3.8    # Python version 3.8
+    - geopandas     # Geospatial extension of pandas
+    - matplotlib    # 2D plotting library
+    - numpy         # N-d array and numerics 
+    - pandas        # Labeled data analysis
+    - jupyter       # Interactive notebooks
+    - shapely       # Vector operations
+    - jupyterlab    # Web-based IDE for Project Jupyter
+    - rasterio      # Read/write gridded data
+    - jupyter-book  # Produce book
+    - black         # 

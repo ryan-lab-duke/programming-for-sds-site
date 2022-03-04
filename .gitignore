@@ -1,0 +1,11 @@
+# File types
+*.DS_Store
+*-checkpoint.ipynb
+*.ipynb_checkpoints
+*.pptx
+*.doc
+*.docxs
+*.xlsx
+*.nc
+*.tif
+*.TIF
