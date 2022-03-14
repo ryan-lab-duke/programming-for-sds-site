@@ -5,7 +5,7 @@ We will use [Slack](https://slack.com/) for most discussion and questions.
 
 ```{image} images/slack.png
 :alt: slack
-:class: bg-primary mb-1
+:class: mb-1
 :width: 200px
 :align: center
 ```

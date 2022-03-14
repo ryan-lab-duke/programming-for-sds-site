@@ -9,5 +9,6 @@ This course...
 ### Learning outcomes:
 
 * Learn how think computationally and statistically
+
 * Improve Python skills
 

@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Getting started &#8212; Programming for spatial data science</title>
+    <title>Completing assignments &#8212; Programming for spatial data science</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -53,8 +53,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Data types and variables" href="01b-demo.html" />
-    <link rel="prev" title="Slack" href="../course-info/slack.html" />
+    <link rel="next" title="Install Python (optional)" href="python.html" />
+    <link rel="prev" title="Slack" href="slack.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -103,20 +103,30 @@ const thebe_selector_output = ".output, .cell_output"
   Course information
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../course-info/general-info.html">
+  <a class="reference internal" href="general-info.html">
    General information
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../course-info/schedule.html">
+  <a class="reference internal" href="schedule.html">
    Schedule
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../course-info/slack.html">
+  <a class="reference internal" href="slack.html">
    Slack
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Completing assignments
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="python.html">
+   Install Python (optional)
   </a>
  </li>
 </ul>
@@ -125,15 +135,64 @@ const thebe_selector_output = ".output, .cell_output"
   Week 1
  </span>
 </p>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   Getting started
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../demos/01a-demo.html">
+   Variables, data types, and structures
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="01b-demo.html">
-   Data types and variables
+  <a class="reference internal" href="../demos/01b-demo.html">
+   Formatting notebooks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../assignments/01-assignment.html">
+   Assignment 1
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Week 2
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../demos/02a-demo.html">
+   The basics of NumPy arrays
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../demos/02b-demo.html">
+   Tidy outputs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../assignments/02-assignment.html">
+   Assignment 2
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Week 3
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../demos/03a-demo.html">
+   For loops
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../demos/03b-demo.html">
+   Conditional statements
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../assignments/03-assignment.html">
+   Assignment 3
   </a>
  </li>
 </ul>
@@ -177,7 +236,7 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/demos/01a-getting-started.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/course-info/getting-started.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -197,7 +256,7 @@ const thebe_selector_output = ".output, .cell_output"
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fdemos/01a-getting-started.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fcourse-info/getting-started.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -218,7 +277,7 @@ const thebe_selector_output = ".output, .cell_output"
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/main?urlpath=tree/book/demos/01a-getting-started.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/main?urlpath=tree/book/course-info/getting-started.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -235,6 +294,34 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#start-assignment">
+   Start assignment
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#check-everything-is-working">
+   Check everything is working
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#save-assignment">
+   Save assignment
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#submit-assignment">
+   Submit assignment
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -242,31 +329,101 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Getting started</h1>
+                <h1>Completing assignments</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#start-assignment">
+   Start assignment
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#check-everything-is-working">
+   Check everything is working
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#save-assignment">
+   Save assignment
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#submit-assignment">
+   Submit assignment
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="getting-started">
-<h1>Getting started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h1>
-<p>We will use several applications for programming and communications during this course. The main application we will use is <a class="reference external" href="https://jupyterlab.readthedocs.io/en/stable/getting_started/overview.html"><code class="docutils literal notranslate"><span class="pre">JupyterLab</span></code></a> which is a <strong>free</strong>, web-based interactive development environment (IDE) for code development.</p>
-<div class="admonition-task admonition">
-<p class="admonition-title">Task</p>
-<p>Launch JupyterLab by clicking this button: <a class="reference external" href="https://mybinder.org/v2/gh/owel-lab/gds-applications-site/HEAD"><img alt="Binder" src="https://mybinder.org/badge_logo.svg" /></a></p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="completing-assignments">
+<h1>Completing assignments<a class="headerlink" href="#completing-assignments" title="Permalink to this headline">¶</a></h1>
+<p>In this course we will use <a class="reference external" href="https://jupyterlab.readthedocs.io/en/stable/getting_started/overview.html"><strong>JupyterLab</strong></a> to complete assignments. JupyterLab is a <strong>free</strong>, web-based interactive development environment (IDE) for code development.</p>
+<div class="admonition-launch-jupyterlab admonition">
+<p class="admonition-title">Launch JupyterLab</p>
+<p>We can launch JupyterLab by clicking this button: <a class="reference external" href="https://mybinder.org/v2/gh/owel-lab/programming-for-sds-site/HEAD"><img alt="Binder" src="https://mybinder.org/badge_logo.svg" /></a></p>
 </div>
-<p>It takes a minute to spin-up but eventually we will see a custom JupyterLab environment in which we can execute code and complete assignments.</p>
-<p>The JupyterLab interface consists of different components such as a file browser, terminal, console, text editor, etc. But the main component we will use during this course are <strong>Jupyter Notebooks</strong> (with <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> extension) which can contain computer code and rich text elements (headings, lists, figures, links, etc.). Jupyter Notebooks are great for sharing code between instructor and students.</p>
+<p>It takes a minute to spin-up but eventually we will see a new JupyterLab environment.</p>
+<p>The JupyterLab interface consists of different components such as a file browser, terminal, console, text editor, etc. The main JupyterLab component we will use during this course is <strong>Jupyter Notebook</strong> (with <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> extension) which can contain computer code and rich text elements (headings, lists, figures, links, etc.). Jupyter Notebooks are great for sharing code between instructor and students, executing code, and completing assignments.</p>
+<div class="section" id="start-assignment">
+<h2>Start assignment<a class="headerlink" href="#start-assignment" title="Permalink to this headline">¶</a></h2>
 <div class="admonition-open-a-new-notebook admonition">
 <p class="admonition-title">Open a new notebook</p>
-<p>We can open a new notebook by clicking the <strong>Python 3 (ipykernel)</strong> panel under <strong>notebook</strong>.</p>
+<p>By clicking the <strong>Python 3 (ipykernel)</strong> panel under <strong>notebook</strong>.</p>
 </div>
-<a class="bg-primary mb-1 reference internal image-reference" href="../_images/jupyterlab.png"><img alt="jupyterlab" class="bg-primary mb-1 align-center" src="../_images/jupyterlab.png" style="width: 600px;" /></a>
+<a class="bg-primary mb-1 reference internal image-reference" href="../_images/jupyterlab.png"><img alt="jupyterlab" class="bg-primary mb-1 align-center" src="../_images/jupyterlab.png" style="width: 1000px;" /></a>
+</div>
+<div class="section" id="check-everything-is-working">
+<h2>Check everything is working<a class="headerlink" href="#check-everything-is-working" title="Permalink to this headline">¶</a></h2>
+<p>Copy and paste the code below into the first cell of your Jupyter Notebook.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">c</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5
+</pre></div>
+</div>
+</div>
+</div>
+<p>Run the cells by pressing <kbd>Shift</kbd> + <kbd>Enter</kbd>. If everything is working correctly, this code block should return the number <code class="docutils literal notranslate"><span class="pre">5</span></code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you are using cloud-based computing environments (i.e. Binder) to complete weekly assignments, they can be accessed from anywhere with any computer as long as we have a good internet connection.</p>
+</div>
+</div>
+<div class="section" id="save-assignment">
+<h2>Save assignment<a class="headerlink" href="#save-assignment" title="Permalink to this headline">¶</a></h2>
+<p>Save the notebook by clicking <strong>File</strong> –&gt; <strong>Save Notebook As…</strong> and naming the file something like <code class="docutils literal notranslate"><span class="pre">assignment-x.ipynb</span></code>, where <code class="docutils literal notranslate"><span class="pre">x</span></code> stands for the assignment number.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Regularly download a copy of your work! The cloud computing environments are temporary and Python3 kernel will automatically shut down after 10 minutes of inactivity (if you leave a jupyterlab window open in the foreground, this will generally be counted as “activity”).</p>
+</div>
+<div class="admonition-tip admonition">
+<p class="admonition-title">Tip</p>
+<p>If you have a short period of inactivity, the kernel can be restarted by clicking <strong>No Kernel</strong> in the top right and selecting <strong>Python 3 (ipykernel)</strong>.</p>
+</div>
+</div>
+<div class="section" id="submit-assignment">
+<h2>Submit assignment<a class="headerlink" href="#submit-assignment" title="Permalink to this headline">¶</a></h2>
+<p>When we are finished with the assignment, we can download the notebook by clicking <strong>File</strong> –&gt; <strong>Download</strong>. This file should be moved to your local course folder and submitte via Canvas.</p>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -282,7 +439,7 @@ const thebe_selector_output = ".output, .cell_output"
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./demos"
+            path: "./course-info"
         },
         predefinedOutput: true
     }
@@ -294,17 +451,17 @@ const thebe_selector_output = ".output, .cell_output"
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="../course-info/slack.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="slack.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
             <p class="prev-next-title">Slack</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="01b-demo.html" title="next page">
+    <a class='right-next' id="next-link" href="python.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Data types and variables</p>
+        <p class="prev-next-title">Install Python (optional)</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

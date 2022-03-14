@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Data types and variables &#8212; Programming for spatial data science</title>
+    <title>Formatting notebooks &#8212; Programming for spatial data science</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -53,7 +53,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="Getting started" href="01a-getting-started.html" />
+    <link rel="next" title="Assignment 1" href="../assignments/01-assignment.html" />
+    <link rel="prev" title="Variables, data types, and structures" href="01a-demo.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -113,6 +114,21 @@ const thebe_selector_output = ".output, .cell_output"
    Schedule
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../course-info/slack.html">
+   Slack
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../course-info/getting-started.html">
+   Completing assignments
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../course-info/python.html">
+   Install Python (optional)
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -121,13 +137,62 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="01a-getting-started.html">
-   Getting started
+  <a class="reference internal" href="01a-demo.html">
+   Variables, data types, and structures
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Data types and variables
+   Formatting notebooks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../assignments/01-assignment.html">
+   Assignment 1
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Week 2
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="02a-demo.html">
+   The basics of NumPy arrays
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="02b-demo.html">
+   Tidy outputs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../assignments/02-assignment.html">
+   Assignment 2
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Week 3
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="03a-demo.html">
+   For loops
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="03b-demo.html">
+   Conditional statements
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../assignments/03-assignment.html">
+   Assignment 3
   </a>
  </li>
 </ul>
@@ -229,6 +294,51 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cells">
+   Cells
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#markdown">
+   Markdown
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#headings">
+     Headings
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#emphasis">
+     Emphasis
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#lists">
+     Lists
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#graphics">
+     Graphics
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tables">
+     Tables
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -236,19 +346,131 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Data types and variables</h1>
+                <h1>Formatting notebooks</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cells">
+   Cells
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#markdown">
+   Markdown
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#headings">
+     Headings
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#emphasis">
+     Emphasis
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#lists">
+     Lists
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#graphics">
+     Graphics
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tables">
+     Tables
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="data-types-and-variables">
-<h1>Data types and variables<a class="headerlink" href="#data-types-and-variables" title="Permalink to this headline">¶</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="formatting-notebooks">
+<h1>Formatting notebooks<a class="headerlink" href="#formatting-notebooks" title="Permalink to this headline">¶</a></h1>
+<p>The second demo of this week provides an introduction to formatting assignment submissions. Jupyter Notebooks are powerful because we can add documentation in <strong>Markdown</strong>, a lightweight markup language for creating formatted text using a plain-text editor.</p>
+<div class="section" id="cells">
+<h2>Cells<a class="headerlink" href="#cells" title="Permalink to this headline">¶</a></h2>
+<p>There are two main types of cell in Jupyter Notebooks: Code and Markdown.</p>
+<p>In <strong>code</strong> cells, the text is treated as statements in a programming language of current kernel (Python in our case).  When such cell is run, the result is displayed in an output cell.</p>
+<p>In <strong>Markdown</strong> cells, the text is formatted using markdown language. All kinds of formatting features are available like making text <strong>bold</strong> and <em>italic</em>, displaying ordered or unordered list, rendering tabular contents etc. Markdown cells are especially useful for providing documentation to a notebook.</p>
+<p>We can choose the cell type by clicking on the drop-down list at the the top of the page.</p>
+<a class="bg-primary mb-1 reference internal image-reference" href="../_images/cells.png"><img alt="cells" class="bg-primary mb-1 align-center" src="../_images/cells.png" style="width: 1000px;" /></a>
+</div>
+<div class="section" id="markdown">
+<h2>Markdown<a class="headerlink" href="#markdown" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="headings">
+<h3>Headings<a class="headerlink" href="#headings" title="Permalink to this headline">¶</a></h3>
+<p>We can add headings to our notebooks using the number sign (<code class="docutils literal notranslate"><span class="pre">#</span></code>) followed by a blank space:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># for titles</span>
+
+<span class="c1">## for major headings</span>
+
+<span class="c1">### for subheadings</span>
+
+<span class="c1">#### for 4th level subheadings</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="emphasis">
+<h3>Emphasis<a class="headerlink" href="#emphasis" title="Permalink to this headline">¶</a></h3>
+<p>We can format text as bold, italic, or monospace font using underscores, asterisks, and grave accents:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Bold text: __string__ or **string**
+
+Italic text: _string_ or *string*
+
+Monospace text: `string`
+</pre></div>
+</div>
+</div>
+<div class="section" id="lists">
+<h3>Lists<a class="headerlink" href="#lists" title="Permalink to this headline">¶</a></h3>
+<p>We can make bullet point lists using hyphens or asterisks followeed by a space. Each bullet point must be on its own line.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">A</span> <span class="n">hyphen</span> <span class="p">(</span><span class="o">-</span><span class="p">)</span>
+<span class="o">*</span> <span class="n">An</span> <span class="n">asterisk</span> <span class="p">(</span><span class="o">*</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="graphics">
+<h3>Graphics<a class="headerlink" href="#graphics" title="Permalink to this headline">¶</a></h3>
+<p>We can add graphics, figures, and images to our notebook using the following syntax:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>![Image title](filename.png)
+</pre></div>
+</div>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Only works when <code class="docutils literal notranslate"><span class="pre">filename.png</span></code> is located in the <strong>same folder</strong> as your Jupyter Notebook.</p>
+</div>
+</div>
+</div>
+<div class="section" id="tables">
+<h3>Tables<a class="headerlink" href="#tables" title="Permalink to this headline">¶</a></h3>
+<p>We can even make tables:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">|</span> <span class="n">This</span> <span class="o">|</span> <span class="ow">is</span>    <span class="o">|</span>
+<span class="o">|------|-------|</span>
+<span class="o">|</span> <span class="n">a</span>    <span class="o">|</span> <span class="n">table</span> <span class="o">|</span>
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -276,12 +498,19 @@ const thebe_selector_output = ".output, .cell_output"
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="01a-getting-started.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="01a-demo.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Getting started</p>
+            <p class="prev-next-title">Variables, data types, and structures</p>
         </div>
+    </a>
+    <a class='right-next' id="next-link" href="../assignments/01-assignment.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Assignment 1</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
     </a>
 </div>
             

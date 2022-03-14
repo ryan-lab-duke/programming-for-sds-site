@@ -9,8 +9,34 @@ parts:
     - file: course-info/general-info.md
     - file: course-info/schedule.md
     - file: course-info/slack.md
+    - file: course-info/getting-started.ipynb
+    - file: course-info/python.md
 
   - caption: Week 1
     chapters:
-    - file: demos/01a-getting-started.ipynb
+    - file: demos/01a-demo.ipynb
     - file: demos/01b-demo.ipynb
+    - file: assignments/01-assignment.md
+  
+  - caption: Week 2
+    chapters:
+    - file: demos/02a-demo.ipynb
+    - file: demos/02b-demo.ipynb
+    - file: assignments/02-assignment.md
+
+  - caption: Week 3
+    chapters:
+    - file: demos/03a-demo.ipynb
+    - file: demos/03b-demo.ipynb
+    - file: assignments/03-assignment.md
+
+  - caption: Week 4
+    chapters:
+    - file: demos/04-demo.ipynb
+    - file: assignments/04-assignment.md
+    
+  - caption: Week 5
+    chapters:
+    - file: demos/05a-demo.ipynb
+    - file: demos/05b-demo.ipynb
+    - file: assignments/05-assignment.md
