@@ -1,6 +1,8 @@
 # Programming for Spatial Data Science
 
-This repository hosts the code for the online textbook, *Programming for Spatial Data Science* designed by [Johnny Ryan](https://www.johnny-ryan.com/). The textbook can be accessed at [https://owel-lab.github.io/gds-applications-site/](https://owel-lab.github.io/gds-applications-site/). 
+This repository hosts the code for the online textbook, *Programming for Spatial Data Science* designed by [Johnny Ryan](https://www.johnny-ryan.com/). The textbook can be accessed at [https://owel-lab.github.io/
+programming-for-sds-site/](https://owel-lab.github.io/
+programming-for-sds-site/). 
 
 The course...
 
@@ -14,9 +16,11 @@ etc.
 
 ## Repository Structure
 
-The Python package [`jupyter-book`](https://jupyterbook.org/intro.html#install-jupyter-book) processes the Jupyter notebook files from this repository and outputs them as the publication-quality HTML files that generate the [corresponding website](https://owel-lab.github.io/gds-applications-site/).
+The Python package [`jupyter-book`](https://jupyterbook.org/intro.html#install-jupyter-book) processes the Jupyter notebook files from this repository and outputs them as the publication-quality HTML files that generate the [corresponding website](https://owel-lab.github.io/
+programming-for-sds-site/).
 
-The HTML files are currently hidden in this branch of the GitHub repository, but you can find them in the [gh-pages branch](https://github.com/owel-lab/gds-applications-site/tree/gh-pages).
+The HTML files are currently hidden in this branch of the GitHub repository, but you can find them in the [gh-pages branch](https://github.com/owel-lab/
+programming-for-sds-site/tree/gh-pages).
 
 ## Build
 
