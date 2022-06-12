@@ -1,0 +1,2009 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pandas DataFrames &#8212; Programming for spatial data science</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Assignment 4" href="../assignments/04-assignment.html" />
+    <link rel="prev" title="Assignment 3" href="../assignments/03-assignment.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/uo_logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Programming for spatial data science</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Welcome to Programming for Spatial Data Science 2023!
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Course information
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../course-info/general-info.html">
+   General information
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../course-info/schedule.html">
+   Schedule
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../course-info/slack.html">
+   Slack
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../course-info/getting-started.html">
+   Completing assignments
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../course-info/python.html">
+   Install Python (optional)
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Week 1
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="01a-demo.html">
+   Variables, data types, and structures
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="01b-demo.html">
+   Formatting notebooks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../assignments/01-assignment.html">
+   Assignment 1
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Week 2
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="02a-demo.html">
+   NumPy arrays
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="02b-demo.html">
+   Tidy outputs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../assignments/02-assignment.html">
+   Assignment 2
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Week 3
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="03a-demo.html">
+   For loops
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="03b-demo.html">
+   Conditional statements
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../assignments/03-assignment.html">
+   Assignment 3
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Week 4
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Pandas DataFrames
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../assignments/04-assignment.html">
+   Assignment 4
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Week 5
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="05a-demo.html">
+   Functions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="05b-demo.html">
+   Time
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../assignments/05-assignment.html">
+   Assignment 5
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/demos/04-demo.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fdemos/04-demo.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/main?urlpath=tree/book/demos/04-demo.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-structure">
+   Data structure
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reading-data">
+   Reading data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dataframe-properties">
+   DataFrame properties
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#indexing">
+   Indexing
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#descriptive-statistics">
+   Descriptive statistics
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#slicing">
+   Slicing
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#grouping">
+   Grouping
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sorting">
+   Sorting
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#saving">
+   Saving
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Pandas DataFrames</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-structure">
+   Data structure
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reading-data">
+   Reading data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dataframe-properties">
+   DataFrame properties
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#indexing">
+   Indexing
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#descriptive-statistics">
+   Descriptive statistics
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#slicing">
+   Slicing
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#grouping">
+   Grouping
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sorting">
+   Sorting
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#saving">
+   Saving
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="pandas-dataframes">
+<h1>Pandas DataFrames<a class="headerlink" href="#pandas-dataframes" title="Permalink to this headline">¶</a></h1>
+<p>One of the pillars Spatial Data Science is a Python library called <code class="docutils literal notranslate"><span class="pre">Pandas</span></code> which provides functions to import tabular data from various file formats (e.g. <code class="docutils literal notranslate"><span class="pre">.csv</span></code>, <code class="docutils literal notranslate"><span class="pre">.xlsx</span></code>) and many other data manipulation operations such as merging, reshaping, selecting, cleaning, and wrangling. In this week, we will introduce some basic <code class="docutils literal notranslate"><span class="pre">Pandas</span></code> operations. In Week 7, we will progress to more advanced usage of <code class="docutils literal notranslate"><span class="pre">Pandas</span></code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The name “Pandas” is derived from the “panel data”, an econometrics term for data sets that include observations over multiple time periods.</p>
+</div>
+<div class="section" id="data-structure">
+<h2>Data structure<a class="headerlink" href="#data-structure" title="Permalink to this headline">¶</a></h2>
+<p>The main <code class="docutils literal notranslate"><span class="pre">Pandas</span></code> data structure is called a <strong>DataFrame</strong> which looks similar to an Excel spreadsheets. A typical DataFrame is a 2-D array with rows, columns, indices, and column names. We can import the <code class="docutils literal notranslate"><span class="pre">Pandas</span></code> and define a DataFrame like so:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;city&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Belfast&#39;</span><span class="p">,</span> <span class="s1">&#39;Cardiff&#39;</span><span class="p">,</span> <span class="s1">&#39;Edinburgh&#39;</span><span class="p">,</span> <span class="s1">&#39;London&#39;</span><span class="p">],</span>
+                   <span class="s2">&quot;country&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Northern Ireland&#39;</span><span class="p">,</span> <span class="s1">&#39;Wales&#39;</span><span class="p">,</span> <span class="s1">&#39;Scotland&#39;</span><span class="p">,</span> <span class="s1">&#39;England&#39;</span><span class="p">]})</span>
+
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>city</th>
+      <th>country</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Belfast</td>
+      <td>Northern Ireland</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Cardiff</td>
+      <td>Wales</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Edinburgh</td>
+      <td>Scotland</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>London</td>
+      <td>England</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Similar to <code class="docutils literal notranslate"><span class="pre">NumPy</span></code>, it is standard practice to shorten the imported name to <code class="docutils literal notranslate"><span class="pre">pd</span></code> for better code readability.</p>
+</div>
+</div>
+<p>So what do we have here? We now have a small table containing countries in the United Kingdom and their capital cities. The table has <strong>two labeled columns</strong>, one called “city” and one called “country”. The table has <strong>four rows</strong>, with each row corresponding to an <strong>index</strong> between 0 and 3.</p>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Column names must be unique.</p>
+</div>
+</div>
+</div>
+<div class="section" id="reading-data">
+<h2>Reading data<a class="headerlink" href="#reading-data" title="Permalink to this headline">¶</a></h2>
+<p>In reality, we rarely make a table from scratch like this. Instead we <strong>read</strong> files that already contain data and store the contents of those files into variables. We can do this using <code class="docutils literal notranslate"><span class="pre">.read_csv()</span></code> which is a general function for reading data files separated by commas, spaces, or other common separators.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/euro_cities.csv&#39;</span><span class="p">)</span>
+
+<span class="c1"># &quot;df&quot; stands for DataFrame</span>
+<span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>city</th>
+      <th>country</th>
+      <th>population</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Moscow</td>
+      <td>Russia</td>
+      <td>10381222</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>London</td>
+      <td>United Kingdom</td>
+      <td>7556900</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Saint Petersburg</td>
+      <td>Russia</td>
+      <td>5028000</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Berlin</td>
+      <td>Germany</td>
+      <td>3426354</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Madrid</td>
+      <td>Spain</td>
+      <td>3255944</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>95</th>
+      <td>Tyumen</td>
+      <td>Russia</td>
+      <td>519119</td>
+    </tr>
+    <tr>
+      <th>96</th>
+      <td>Lisbon</td>
+      <td>Portugal</td>
+      <td>517802</td>
+    </tr>
+    <tr>
+      <th>97</th>
+      <td>Lipetsk</td>
+      <td>Russia</td>
+      <td>515655</td>
+    </tr>
+    <tr>
+      <th>98</th>
+      <td>Hannover</td>
+      <td>Germany</td>
+      <td>515140</td>
+    </tr>
+    <tr>
+      <th>99</th>
+      <td>Penza</td>
+      <td>Russia</td>
+      <td>512602</td>
+    </tr>
+  </tbody>
+</table>
+<p>100 rows × 3 columns</p>
+</div></div></div>
+</div>
+<p>By returning <code class="docutils literal notranslate"><span class="pre">df</span></code> we can see that our table has 100 rows and 3 columns. A more concise way of checking what is contained in our file is the <code class="docutils literal notranslate"><span class="pre">.head()</span></code> method which only prints the first five rows of the data.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>city</th>
+      <th>country</th>
+      <th>population</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Moscow</td>
+      <td>Russia</td>
+      <td>10381222</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>London</td>
+      <td>United Kingdom</td>
+      <td>7556900</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Saint Petersburg</td>
+      <td>Russia</td>
+      <td>5028000</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Berlin</td>
+      <td>Germany</td>
+      <td>3426354</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Madrid</td>
+      <td>Spain</td>
+      <td>3255944</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Alternatively, we could check the last five rows of the data:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">tail</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>city</th>
+      <th>country</th>
+      <th>population</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>95</th>
+      <td>Tyumen</td>
+      <td>Russia</td>
+      <td>519119</td>
+    </tr>
+    <tr>
+      <th>96</th>
+      <td>Lisbon</td>
+      <td>Portugal</td>
+      <td>517802</td>
+    </tr>
+    <tr>
+      <th>97</th>
+      <td>Lipetsk</td>
+      <td>Russia</td>
+      <td>515655</td>
+    </tr>
+    <tr>
+      <th>98</th>
+      <td>Hannover</td>
+      <td>Germany</td>
+      <td>515140</td>
+    </tr>
+    <tr>
+      <th>99</th>
+      <td>Penza</td>
+      <td>Russia</td>
+      <td>512602</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Or the last 10 rows:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>city</th>
+      <th>country</th>
+      <th>population</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>90</th>
+      <td>Orenburg</td>
+      <td>Russia</td>
+      <td>550204</td>
+    </tr>
+    <tr>
+      <th>91</th>
+      <td>Bremen</td>
+      <td>Germany</td>
+      <td>546501</td>
+    </tr>
+    <tr>
+      <th>92</th>
+      <td>Vilnius</td>
+      <td>Lithuania</td>
+      <td>542366</td>
+    </tr>
+    <tr>
+      <th>93</th>
+      <td>Novokuznetsk</td>
+      <td>Russia</td>
+      <td>539616</td>
+    </tr>
+    <tr>
+      <th>94</th>
+      <td>Ryazan'</td>
+      <td>Russia</td>
+      <td>520173</td>
+    </tr>
+    <tr>
+      <th>95</th>
+      <td>Tyumen</td>
+      <td>Russia</td>
+      <td>519119</td>
+    </tr>
+    <tr>
+      <th>96</th>
+      <td>Lisbon</td>
+      <td>Portugal</td>
+      <td>517802</td>
+    </tr>
+    <tr>
+      <th>97</th>
+      <td>Lipetsk</td>
+      <td>Russia</td>
+      <td>515655</td>
+    </tr>
+    <tr>
+      <th>98</th>
+      <td>Hannover</td>
+      <td>Germany</td>
+      <td>515140</td>
+    </tr>
+    <tr>
+      <th>99</th>
+      <td>Penza</td>
+      <td>Russia</td>
+      <td>512602</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+<div class="section" id="dataframe-properties">
+<h2>DataFrame properties<a class="headerlink" href="#dataframe-properties" title="Permalink to this headline">¶</a></h2>
+<p>We can confirm the date type of our variable using the built-in <code class="docutils literal notranslate"><span class="pre">type()</span></code> function:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>pandas.core.frame.DataFrame
+</pre></div>
+</div>
+</div>
+</div>
+<p>To check the data types of each column, we can use <code class="docutils literal notranslate"><span class="pre">Pandas</span></code> method called <code class="docutils literal notranslate"><span class="pre">.dtypes</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">dtypes</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>city          object
+country       object
+population     int64
+dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+<p>Here we see that population is an <strong>integer</strong> (with 64-bit precision) and the other two columns are <strong>objects</strong> (<code class="docutils literal notranslate"><span class="pre">Pandas</span></code> stores string data types as “objects” by default).</p>
+<p>We can also retrieve the column names of the DataFrame using the <code class="docutils literal notranslate"><span class="pre">.column</span></code> method.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">columns</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39;city&#39;, &#39;country&#39;, &#39;population&#39;], dtype=&#39;object&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<p>And, just like <code class="docutils literal notranslate"><span class="pre">NumPy</span></code> arrays, we can find the shape of our DataFrame using the <code class="docutils literal notranslate"><span class="pre">.shape</span></code> method.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(100, 3)
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="indexing">
+<h2>Indexing<a class="headerlink" href="#indexing" title="Permalink to this headline">¶</a></h2>
+<p>We can select specific columns based on the column values. The basic syntax is <code class="docutils literal notranslate"><span class="pre">dataframe[value]</span></code>, where value can be a single column name, or a list of column names.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;city&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0               Moscow
+1               London
+2     Saint Petersburg
+3               Berlin
+4               Madrid
+            ...       
+95              Tyumen
+96              Lisbon
+97             Lipetsk
+98            Hannover
+99               Penza
+Name: city, Length: 100, dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[[</span><span class="s1">&#39;city&#39;</span><span class="p">,</span> <span class="s1">&#39;country&#39;</span><span class="p">]]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>city</th>
+      <th>country</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Moscow</td>
+      <td>Russia</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>London</td>
+      <td>United Kingdom</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Saint Petersburg</td>
+      <td>Russia</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Berlin</td>
+      <td>Germany</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Madrid</td>
+      <td>Spain</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>95</th>
+      <td>Tyumen</td>
+      <td>Russia</td>
+    </tr>
+    <tr>
+      <th>96</th>
+      <td>Lisbon</td>
+      <td>Portugal</td>
+    </tr>
+    <tr>
+      <th>97</th>
+      <td>Lipetsk</td>
+      <td>Russia</td>
+    </tr>
+    <tr>
+      <th>98</th>
+      <td>Hannover</td>
+      <td>Germany</td>
+    </tr>
+    <tr>
+      <th>99</th>
+      <td>Penza</td>
+      <td>Russia</td>
+    </tr>
+  </tbody>
+</table>
+<p>100 rows × 2 columns</p>
+</div></div></div>
+</div>
+<p>We can select specific rows using the <code class="docutils literal notranslate"><span class="pre">.iloc</span></code> method.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>city             Rome
+country         Italy
+population    2318895
+Name: 6, dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+<p>The syntax for selecting the top 10 cities should be quite familiar.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">10</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>city</th>
+      <th>country</th>
+      <th>population</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Moscow</td>
+      <td>Russia</td>
+      <td>10381222</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>London</td>
+      <td>United Kingdom</td>
+      <td>7556900</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Saint Petersburg</td>
+      <td>Russia</td>
+      <td>5028000</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Berlin</td>
+      <td>Germany</td>
+      <td>3426354</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Madrid</td>
+      <td>Spain</td>
+      <td>3255944</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Kyiv</td>
+      <td>Ukraine</td>
+      <td>2797553</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Rome</td>
+      <td>Italy</td>
+      <td>2318895</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Paris</td>
+      <td>France</td>
+      <td>2138551</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Bucharest</td>
+      <td>Romania</td>
+      <td>1877155</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>Minsk</td>
+      <td>Belarus</td>
+      <td>1742124</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>If we wanted to find the city with the highest/lowest population we could use <code class="docutils literal notranslate"><span class="pre">.idxmax()</span></code>/<code class="docutils literal notranslate"><span class="pre">idxmin()</span></code> which returns the index of the highest/lowest value in the column.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;population&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">idxmax</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">index_high</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;population&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">idxmax</span><span class="p">()</span>
+
+<span class="n">city_high</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">index_high</span><span class="p">][</span><span class="s1">&#39;city&#39;</span><span class="p">]</span>
+
+<span class="sa">f</span><span class="s2">&quot;The city with the largest population in Europe is </span><span class="si">{</span><span class="n">city_high</span><span class="si">}</span><span class="s2">&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The city with the highest poputlation in Europe is Moscow&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="descriptive-statistics">
+<h2>Descriptive statistics<a class="headerlink" href="#descriptive-statistics" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">Pandas</span></code> provides basic functions to calculate descriptive statistics - similar to what we might usuaally do with Microsoft Excel.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;population&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1174041.59
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;population&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10381222
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;population&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>512602
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can get all descriptive statistics at once using the <code class="docutils literal notranslate"><span class="pre">describe()</span></code> function</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;population&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>count    1.000000e+02
+mean     1.174042e+06
+std      1.326413e+06
+min      5.126020e+05
+25%      5.969205e+05
+50%      7.817830e+05
+75%      1.152821e+06
+max      1.038122e+07
+Name: population, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<p>Where the <code class="docutils literal notranslate"><span class="pre">25%,</span> <span class="pre">50%,</span> <span class="pre">and</span> <span class="pre">75%</span></code> are the <a class="reference external" href="https://en.wikipedia.org/wiki/Quartile">inter-quartile ranges</a>. Often the output of <code class="docutils literal notranslate"><span class="pre">describe()</span></code> is more readable if we <strong>round</strong> these data to two decimal places.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">round</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;population&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">(),</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>count         100.00
+mean      1174041.59
+std       1326413.44
+min        512602.00
+25%        596920.50
+50%        781783.00
+75%       1152820.75
+max      10381222.00
+Name: population, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="slicing">
+<h2>Slicing<a class="headerlink" href="#slicing" title="Permalink to this headline">¶</a></h2>
+<p>Let’s say we wanted to find how many cities in Germany made it into this top 100 list. We would first produce a <strong>Boolean</strong> mask (i.e. valus equal to <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code>) using the <code class="docutils literal notranslate"><span class="pre">==</span></code> comparison operator.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mask</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;country&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Germany&#39;</span>
+<span class="n">mask</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0     False
+1     False
+2     False
+3      True
+4     False
+      ...  
+95    False
+96    False
+97    False
+98     True
+99    False
+Name: country, Length: 100, dtype: bool
+</pre></div>
+</div>
+</div>
+</div>
+<p>We could then apply this mask to our original DataFrame.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="n">mask</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>city</th>
+      <th>country</th>
+      <th>population</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>3</th>
+      <td>Berlin</td>
+      <td>Germany</td>
+      <td>3426354</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>Hamburg</td>
+      <td>Germany</td>
+      <td>1739117</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>Munich</td>
+      <td>Germany</td>
+      <td>1260391</td>
+    </tr>
+    <tr>
+      <th>40</th>
+      <td>Koeln</td>
+      <td>Germany</td>
+      <td>963395</td>
+    </tr>
+    <tr>
+      <th>64</th>
+      <td>Frankfurt am Main</td>
+      <td>Germany</td>
+      <td>650000</td>
+    </tr>
+    <tr>
+      <th>75</th>
+      <td>Essen</td>
+      <td>Germany</td>
+      <td>593085</td>
+    </tr>
+    <tr>
+      <th>77</th>
+      <td>Stuttgart</td>
+      <td>Germany</td>
+      <td>589793</td>
+    </tr>
+    <tr>
+      <th>78</th>
+      <td>Dortmund</td>
+      <td>Germany</td>
+      <td>588462</td>
+    </tr>
+    <tr>
+      <th>85</th>
+      <td>Duesseldorf</td>
+      <td>Germany</td>
+      <td>573057</td>
+    </tr>
+    <tr>
+      <th>91</th>
+      <td>Bremen</td>
+      <td>Germany</td>
+      <td>546501</td>
+    </tr>
+    <tr>
+      <th>98</th>
+      <td>Hannover</td>
+      <td>Germany</td>
+      <td>515140</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>We could do something similar if we wanted to find cities with populations of over 2 million.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;population&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">2000000</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>city</th>
+      <th>country</th>
+      <th>population</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Moscow</td>
+      <td>Russia</td>
+      <td>10381222</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>London</td>
+      <td>United Kingdom</td>
+      <td>7556900</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Saint Petersburg</td>
+      <td>Russia</td>
+      <td>5028000</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Berlin</td>
+      <td>Germany</td>
+      <td>3426354</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Madrid</td>
+      <td>Spain</td>
+      <td>3255944</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Kyiv</td>
+      <td>Ukraine</td>
+      <td>2797553</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Rome</td>
+      <td>Italy</td>
+      <td>2318895</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Paris</td>
+      <td>France</td>
+      <td>2138551</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>We can add logical operators to find cities with populations of between 700,000 and 800,000</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;population&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">800000</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;population&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">700000</span><span class="p">)]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>city</th>
+      <th>country</th>
+      <th>population</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>48</th>
+      <td>Zaporizhia</td>
+      <td>Ukraine</td>
+      <td>796217</td>
+    </tr>
+    <tr>
+      <th>49</th>
+      <td>Marseille</td>
+      <td>France</td>
+      <td>794811</td>
+    </tr>
+    <tr>
+      <th>50</th>
+      <td>Lodz</td>
+      <td>Poland</td>
+      <td>768755</td>
+    </tr>
+    <tr>
+      <th>51</th>
+      <td>Krakow</td>
+      <td>Poland</td>
+      <td>755050</td>
+    </tr>
+    <tr>
+      <th>52</th>
+      <td>Riga</td>
+      <td>Latvia</td>
+      <td>742572</td>
+    </tr>
+    <tr>
+      <th>53</th>
+      <td>Amsterdam</td>
+      <td>Netherlands</td>
+      <td>741636</td>
+    </tr>
+    <tr>
+      <th>54</th>
+      <td>Nottingham</td>
+      <td>United Kingdom</td>
+      <td>729977</td>
+    </tr>
+    <tr>
+      <th>55</th>
+      <td>Lviv</td>
+      <td>Ukraine</td>
+      <td>717803</td>
+    </tr>
+    <tr>
+      <th>56</th>
+      <td>Sevilla</td>
+      <td>Spain</td>
+      <td>703206</td>
+    </tr>
+    <tr>
+      <th>57</th>
+      <td>Tol'yatti</td>
+      <td>Russia</td>
+      <td>702879</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Note the use the parentheses</p>
+</div>
+</div>
+</div>
+<div class="section" id="grouping">
+<h2>Grouping<a class="headerlink" href="#grouping" title="Permalink to this headline">¶</a></h2>
+<p>If we wanted to find the total population living in these cities for each country, we <strong>could</strong> write a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop. To do this, we would have to produce a list of individual countries, loop over each country, compute the total, and append to a new list… and then put it back into a new DataFrame.</p>
+<p>This is what that would look like:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">countries</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;country&#39;</span><span class="p">])</span>
+
+<span class="n">total_pop</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">country</span> <span class="ow">in</span> <span class="n">countries</span><span class="p">:</span>
+    
+    <span class="n">country_df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;country&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">country</span><span class="p">]</span>
+    
+    <span class="n">total_pop</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">country_df</span><span class="p">[</span><span class="s1">&#39;population&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">new_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;country&#39;</span><span class="p">:</span> <span class="n">countries</span><span class="p">,</span>
+                       <span class="s1">&#39;population&#39;</span><span class="p">:</span> <span class="n">total_pop</span><span class="p">})</span>
+<span class="n">new_df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>country</th>
+      <th>population</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Russia</td>
+      <td>39954312</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>United Kingdom</td>
+      <td>12029600</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Germany</td>
+      <td>11445295</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Spain</td>
+      <td>7637517</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Ukraine</td>
+      <td>9453918</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Italy</td>
+      <td>6614141</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>France</td>
+      <td>2933362</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Romania</td>
+      <td>1877155</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Belarus</td>
+      <td>1742124</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>Hungary</td>
+      <td>1741041</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p><strong>Or</strong> we could use the <code class="docutils literal notranslate"><span class="pre">.groupby()</span></code> function.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;country&#39;</span><span class="p">)[</span><span class="s1">&#39;population&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>country
+Austria                    1691468
+Belarus                    1742124
+Belgium                    1019022
+Bosnia and Herzegovina      696731
+Bulgaria                   1152556
+Croatia                     698966
+Czech Republic             1165581
+Denmark                    1153615
+Finland                     558457
+France                     2933362
+Germany                   11445295
+Greece                      664046
+Hungary                    1741041
+Ireland                    1024027
+Italy                      6614141
+Latvia                      742572
+Lithuania                   542366
+Moldova                     635994
+Netherlands                1339835
+Norway                      580000
+Poland                     4431189
+Portugal                    517802
+Romania                    1877155
+Russia                    39954312
+Serbia                     1273651
+Spain                      7637517
+Sweden                     2087816
+Ukraine                    9453918
+United Kingdom            12029600
+Name: population, dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<p>The first argument <code class="docutils literal notranslate"><span class="pre">.groupby</span></code> takes is the <strong>which</strong> column we want group our data into (<code class="docutils literal notranslate"><span class="pre">country</span></code> in our case). Next, it takes a column (or list of columns) to summarize (<code class="docutils literal notranslate"><span class="pre">population</span></code>). Finally, this function does nothing until we specific <strong>how</strong> we want to group our data.</p>
+<p>It’s actually nice to reset the index after using <code class="docutils literal notranslate"><span class="pre">.groupby</span></code> so that we end up with another DataFrame.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">new_df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;country&#39;</span><span class="p">)[</span><span class="s1">&#39;population&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+<span class="n">new_df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>country</th>
+      <th>population</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Austria</td>
+      <td>1691468</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Belarus</td>
+      <td>1742124</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Belgium</td>
+      <td>1019022</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Bosnia and Herzegovina</td>
+      <td>696731</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Bulgaria</td>
+      <td>1152556</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Croatia</td>
+      <td>698966</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Czech Republic</td>
+      <td>1165581</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Denmark</td>
+      <td>1153615</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Finland</td>
+      <td>558457</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>France</td>
+      <td>2933362</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>We hope you will agree that the <code class="docutils literal notranslate"><span class="pre">.groupby</span></code> method is much cleaner and interpretable. It is also a lot faster which may be important when we have very large DataFrames with millions of rows.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To summarize multiple columns we could include a list of columns like so: <code class="docutils literal notranslate"><span class="pre">df.groupby('country')[['city','population']].sum()</span></code> but this would not produce anything different in our case because a string variable cannot be <strong>summed</strong>.</p>
+</div>
+</div>
+<div class="section" id="sorting">
+<h2>Sorting<a class="headerlink" href="#sorting" title="Permalink to this headline">¶</a></h2>
+<p>Similar to lists, we can <strong>sort</strong> DataFrames using the <code class="docutils literal notranslate"><span class="pre">.sort_values</span></code> function. This function takes two arguments, <code class="docutils literal notranslate"><span class="pre">by</span></code> and <code class="docutils literal notranslate"><span class="pre">ascending</span></code> which determine which column and which order we would like to sort by. So to find the 10 largest cities in Europe by population we could type:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;population&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>city</th>
+      <th>country</th>
+      <th>population</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Moscow</td>
+      <td>Russia</td>
+      <td>10381222</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>London</td>
+      <td>United Kingdom</td>
+      <td>7556900</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Saint Petersburg</td>
+      <td>Russia</td>
+      <td>5028000</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Berlin</td>
+      <td>Germany</td>
+      <td>3426354</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Madrid</td>
+      <td>Spain</td>
+      <td>3255944</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Kyiv</td>
+      <td>Ukraine</td>
+      <td>2797553</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Rome</td>
+      <td>Italy</td>
+      <td>2318895</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Paris</td>
+      <td>France</td>
+      <td>2138551</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Bucharest</td>
+      <td>Romania</td>
+      <td>1877155</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>Minsk</td>
+      <td>Belarus</td>
+      <td>1742124</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Another way of doing this would be to use the <code class="docutils literal notranslate"><span class="pre">.nlargest()</span></code> or <code class="docutils literal notranslate"><span class="pre">.nsmallest()</span></code> function. Documentation <a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.nlargest.html">here</a>.</p>
+</div>
+<div class="section" id="saving">
+<h2>Saving<a class="headerlink" href="#saving" title="Permalink to this headline">¶</a></h2>
+<p>We can save our DataFrames just as easy as reading the original file using the <code class="docutils literal notranslate"><span class="pre">.to_csv</span></code> function</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">new_df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;data/new.csv&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./demos"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="../assignments/03-assignment.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Assignment 3</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../assignments/04-assignment.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Assignment 4</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Johnny Ryan<br/>
+    
+        &copy; Copyright 2022.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
