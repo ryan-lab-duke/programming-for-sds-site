@@ -6,9 +6,13 @@ On this website you will find the course materials for GEOG 2XX taught at the [D
 
 This course...
 
-### Learning outcomes:
+## Learning outcomes:
 
 * Learn how think computationally and statistically
 
 * Improve Python skills
+
+
+## Course philosophy
+
 
