@@ -40,3 +40,30 @@ parts:
     - file: demos/05a-demo.ipynb
     - file: demos/05b-demo.ipynb
     - file: assignments/05-assignment.md
+  
+  - caption: Week 6
+    chapters:
+    - file: demos/06a-demo.ipynb
+    - file: demos/06b-demo.ipynb
+    - file: demos/06c-demo.ipynb
+    - file: assignments/06-assignment.md
+    
+  - caption: Week 7
+    chapters:
+    - file: demos/07-demo.ipynb
+    - file: assignments/07-assignment.md
+
+  - caption: Week 8
+    chapters:
+    - file: demos/08-demo.ipynb
+    - file: assignments/08-assignment.md
+
+  - caption: Week 9
+    chapters:
+    - file: demos/09-demo.ipynb
+    - file: assignments/09-assignment.md
+
+  - caption: Week 10
+    chapters:
+    - file: demos/10-demo.ipynb
+    - file: assignments/10-assignment.md
