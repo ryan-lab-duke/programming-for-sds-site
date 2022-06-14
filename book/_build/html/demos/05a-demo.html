@@ -341,6 +341,31 @@
    Anatomy of a function
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#functions-within-a-function">
+   Functions within a function
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#variable-scope">
+   Variable scope
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#functions-with-multiple-parameters">
+   Functions with multiple parameters
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#documenting-code">
+   Documenting code
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#acknowledgments">
+   Acknowledgments
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -366,6 +391,31 @@
    Anatomy of a function
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#functions-within-a-function">
+   Functions within a function
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#variable-scope">
+   Variable scope
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#functions-with-multiple-parameters">
+   Functions with multiple parameters
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#documenting-code">
+   Documenting code
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#acknowledgments">
+   Acknowledgments
+  </a>
+ </li>
 </ul>
 
                         </nav>
@@ -377,10 +427,10 @@
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="functions">
 <h1>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h1>
-<p>When we write code, we want it to be as concise as possible while retaining readability. Sometimes we find ourselves writing out the same block over and over again. If we are doing this, it may be time to define a <strong>function</strong>, a self-contained program that can perform a specific task repeatedly in your code.</p>
+<p>When we write code, we want it to be as concise as possible while retaining readability. Sometimes we find ourselves writing out the same block over and over again. If we are doing this, it may be time to define a <strong>function</strong>, a self-contained program that can perform a specific task repeatedly.</p>
 <div class="section" id="anatomy-of-a-function">
 <h2>Anatomy of a function<a class="headerlink" href="#anatomy-of-a-function" title="Permalink to this headline">¶</a></h2>
-<p>Examples can be very useful for communicating new concepts so let’s get straight into it and define our first function:</p>
+<p>Examples can be very useful for communicating new concepts so let’s get straight to it and define our first function:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fahr_to_celsius</span><span class="p">(</span><span class="n">temp_fahrenheit</span><span class="p">):</span>
@@ -400,6 +450,7 @@
 <li><p>Defining a function does nothing other than make it available for use in our notebooks.</p></li>
 <li><p>In order to use the function we need to call it using the <strong>name</strong> of the function with the provided value(s) inside <strong>parentheses</strong>.</p></li>
 </ul>
+<p>As you can probaly tell, this function converts temperatures from Fahrenheit to Celsius.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fahr_to_celsius</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
@@ -412,21 +463,358 @@
 </div>
 </div>
 </div>
-<p>We can also assign the output of the function to a new variable:</p>
+<p>We can also write a function to convert from Celsius to Kelvin:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">celsius</span> <span class="o">=</span> <span class="n">fahr_to_celsius</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">celsius_to_kelvin</span><span class="p">(</span><span class="n">temp_celsius</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">temp_celsius</span> <span class="o">+</span> <span class="mf">273.15</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The freezing point of water is </span><span class="si">{}</span><span class="s2"> K&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">celsius_to_kelvin</span><span class="p">(</span><span class="mi">0</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The freezing point of water is 273.15 K
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="functions-within-a-function">
+<h2>Functions within a function<a class="headerlink" href="#functions-within-a-function" title="Permalink to this headline">¶</a></h2>
+<p>Now say we wanted to convert from Fahrenheit to Kelvin, we could just include a function within a function.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fahr_to_kelvin</span><span class="p">(</span><span class="n">temp_fahr</span><span class="p">):</span>
+    <span class="n">temp_celsius</span> <span class="o">=</span> <span class="n">fahr_to_celsius</span><span class="p">(</span><span class="n">temp_fahr</span><span class="p">)</span>
+    <span class="n">temp_kelvin</span> <span class="o">=</span> <span class="n">celsius_to_kelvin</span><span class="p">(</span><span class="n">temp_celsius</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">temp_kelvin</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The boiling point of water is </span><span class="si">{}</span><span class="s2"> K&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">fahr_to_kelvin</span><span class="p">(</span><span class="mi">212</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The boiling point of water is 373.15 K
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="variable-scope">
+<h2>Variable scope<a class="headerlink" href="#variable-scope" title="Permalink to this headline">¶</a></h2>
+<p>When we composed our temperature conversion functions, we created variables inside of those functions called <code class="docutils literal notranslate"><span class="pre">temp_celsius</span></code> and <code class="docutils literal notranslate"><span class="pre">temp_kelvin</span></code>. We refer to these variables as <strong>local variables</strong> because they no longer exist once the function has executed. If we try to access their values outside of the function, we will encounter an error:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">temp_celsius</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Input</span> <span class="n">In</span> <span class="p">[</span><span class="mi">12</span><span class="p">],</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">temp_celsius</span>
+
+<span class="ne">NameError</span>: name &#39;temp_celsius&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<p>If we wanted to reuse the temperature in Kelvin after we converted it using <code class="docutils literal notranslate"><span class="pre">fahr_to_kelvin</span></code>, we can store the result of the function as a variable.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">celsius</span> <span class="o">=</span> <span class="n">fahr_to_kelvin</span><span class="p">(</span><span class="mi">60</span><span class="p">)</span>
 <span class="n">celsius</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>32.22222222222222
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>288.7055555555555
 </pre></div>
 </div>
 </div>
 </div>
-<p>This is an insight into how larger programs are built. We first define some basic operations, then we combine them in ever-larger chunks to produce the effect we want.</p>
+<p>Since the variable is defined outside the function, it is called a <strong>global variable</strong>.</p>
+</div>
+<div class="section" id="functions-with-multiple-parameters">
+<h2>Functions with multiple parameters<a class="headerlink" href="#functions-with-multiple-parameters" title="Permalink to this headline">¶</a></h2>
+<p>It is also possible to define a function with multiple parameters. Here we will define a simple temperature calculator function that accepts temperatures in Fahrenheit and returns the temperature in either Celsius or Kelvin. The function will have two input parameters:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">temp_fahr</span></code> = the temperature in Fahrenheit</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">convert_to</span></code> = the output units in Celsius or Kelvin (using the string <code class="docutils literal notranslate"><span class="pre">C</span></code> or <code class="docutils literal notranslate"><span class="pre">K</span></code> accordingly)</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">temp_calculator</span><span class="p">(</span><span class="n">temp_fahr</span><span class="p">,</span> <span class="n">convert_to</span><span class="p">):</span>
+    
+    <span class="k">if</span> <span class="n">convert_to</span> <span class="o">==</span> <span class="s2">&quot;C&quot;</span><span class="p">:</span>
+        
+        <span class="n">converted_temp</span> <span class="o">=</span> <span class="n">fahr_to_celsius</span><span class="p">(</span><span class="n">temp_fahr</span><span class="p">)</span>
+        
+    <span class="k">elif</span> <span class="n">convert_to</span> <span class="o">==</span> <span class="s2">&quot;K&quot;</span><span class="p">:</span>
+        
+        <span class="n">converted_temp</span> <span class="o">=</span> <span class="n">fahr_to_kelvin</span><span class="p">(</span><span class="n">temp_fahr</span><span class="p">)</span>
+        
+    <span class="k">return</span> <span class="n">converted_temp</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Note the conditional statements that check whether the desired output temperature should be in Celsius or Kelvin.</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">temp_calculator</span><span class="p">(</span><span class="mi">75</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>23.88888888888889
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">temp_calculator</span><span class="p">(</span><span class="mi">75</span><span class="p">,</span> <span class="s1">&#39;K&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>297.0388888888889
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="documenting-code">
+<h2>Documenting code<a class="headerlink" href="#documenting-code" title="Permalink to this headline">¶</a></h2>
+<p>It is important to document code, either for our future selves or for collaborators who might want to use and adapt our code. We can do that using <strong>block comments</strong> that start with a single hash sign (<code class="docutils literal notranslate"><span class="pre">#</span></code>) followed by a single space and a text string. The Python interpreter will ignore these lines and display them as a different color.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">temp_calculator</span><span class="p">(</span><span class="n">temp_fahr</span><span class="p">,</span> <span class="n">convert_to</span><span class="p">):</span>
+    
+    <span class="c1"># Check if user wants the temperature in Celsius</span>
+    <span class="k">if</span> <span class="n">convert_to</span> <span class="o">==</span> <span class="s2">&quot;C&quot;</span><span class="p">:</span>
+        
+        <span class="c1"># Convert the value to Celsius</span>
+        <span class="n">converted_temp</span> <span class="o">=</span> <span class="n">fahr_to_celsius</span><span class="p">(</span><span class="n">temp_fahr</span><span class="p">)</span>
+    
+    <span class="c1"># Check if user wants the temperature in Kelvin</span>
+    <span class="k">elif</span> <span class="n">convert_to</span> <span class="o">==</span> <span class="s2">&quot;K&quot;</span><span class="p">:</span>
+        
+        <span class="c1"># Convert the value to Kelvin</span>
+        <span class="n">converted_temp</span> <span class="o">=</span> <span class="n">fahr_to_kelvin</span><span class="p">(</span><span class="n">temp_fahr</span><span class="p">)</span>
+    
+    <span class="c1"># Return converted temperature</span>
+    <span class="k">return</span> <span class="n">converted_temp</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>When writing functions, it is good practice to include even more documentation such as the data type of the expected input/output and example usage. For example, it is not clear whether <code class="docutils literal notranslate"><span class="pre">convert_to</span></code> is expecting the letter <code class="docutils literal notranslate"><span class="pre">C</span></code> or the word <code class="docutils literal notranslate"><span class="pre">Celsius</span></code>. We can do that using a <strong>docstring</strong> which is a multi-line comment that starts and ends with triple quotes (<code class="docutils literal notranslate"><span class="pre">&quot;&quot;&quot;</span></code>).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">temp_calculator</span><span class="p">(</span><span class="n">temp_fahr</span><span class="p">,</span> <span class="n">convert_to</span><span class="p">):</span>
+    
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Function for converting temperature in Fahrenheit to Celsius or Kelvin.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    temp_fahr: &lt;numerical&gt;</span>
+<span class="sd">        Temperature value in Fahrenheit</span>
+<span class="sd">    convert_to: &lt;str&gt;</span>
+<span class="sd">        Temperature unit in either Celsius (&#39;C&#39;) or Fahrenheit (&#39;F&#39;).</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    converted_temp: &lt;float&gt;</span>
+<span class="sd">        Converted temperature.</span>
+<span class="sd">        </span>
+<span class="sd">    Example</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; temp_calculator(75, &#39;K&#39;)</span>
+<span class="sd">    297.0388888888889    </span>
+<span class="sd">    </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Check if user wants the temperature in Celsius</span>
+    <span class="k">if</span> <span class="n">convert_to</span> <span class="o">==</span> <span class="s2">&quot;C&quot;</span><span class="p">:</span>
+        
+        <span class="c1"># Convert the value to Celsius</span>
+        <span class="n">converted_temp</span> <span class="o">=</span> <span class="n">fahr_to_celsius</span><span class="p">(</span><span class="n">temp_fahr</span><span class="p">)</span>
+    
+    <span class="c1"># Check if user wants the temperature in Kelvin</span>
+    <span class="k">elif</span> <span class="n">convert_to</span> <span class="o">==</span> <span class="s2">&quot;K&quot;</span><span class="p">:</span>
+        
+        <span class="c1"># Convert the value to Kelvin</span>
+        <span class="n">converted_temp</span> <span class="o">=</span> <span class="n">fahr_to_kelvin</span><span class="p">(</span><span class="n">temp_fahr</span><span class="p">)</span>
+    
+    <span class="c1"># Return converted temperature</span>
+    <span class="k">return</span> <span class="n">converted_temp</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now it would be much easier for another person to use our function. In fact, we can use the <code class="docutils literal notranslate"><span class="pre">help()</span></code> function in Python to find out how our function should be used.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">temp_calculator</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Help on function temp_calculator in module __main__:
+
+temp_calculator(temp_fahr, convert_to)
+    Function for converting temperature in Fahrenheit to Celsius or Kelvin.
+    
+    Parameters
+    ----------
+    temp_fahr: &lt;numerical&gt;
+        Temperature value in Fahrenheit
+    convert_to: &lt;str&gt;
+        Temperature unit in either Celsius (&#39;C&#39;) or Fahrenheit (&#39;F&#39;).
+    
+    Returns
+    -------
+    converted_temp: &lt;float&gt;
+        Converted temperature.
+        
+    Examples
+    --------
+    &gt;&gt;&gt; temp_calculator(75, &#39;K&#39;)
+    297.0388888888889
+</pre></div>
+</div>
+</div>
+</div>
+<p>Producing our own functions with docstrings provides an insight into how larger software is developed in Python. We first define some basic operations, then we combine them into bigger chunks to compute what we want. In Week 2, we used several functions available in the <code class="docutils literal notranslate"><span class="pre">NumPy</span></code> library. If we call <code class="docutils literal notranslate"><span class="pre">help</span></code> on one of these functions, we will see that it contains docstrings just like the one we just wrote.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">help</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Help on function mean in module numpy:
+
+mean(a, axis=None, dtype=None, out=None, keepdims=&lt;no value&gt;, *, where=&lt;no value&gt;)
+    Compute the arithmetic mean along the specified axis.
+    
+    Returns the average of the array elements.  The average is taken over
+    the flattened array by default, otherwise over the specified axis.
+    `float64` intermediate and return values are used for integer inputs.
+    
+    Parameters
+    ----------
+    a : array_like
+        Array containing numbers whose mean is desired. If `a` is not an
+        array, a conversion is attempted.
+    axis : None or int or tuple of ints, optional
+        Axis or axes along which the means are computed. The default is to
+        compute the mean of the flattened array.
+    
+        .. versionadded:: 1.7.0
+    
+        If this is a tuple of ints, a mean is performed over multiple axes,
+        instead of a single axis or all the axes as before.
+    dtype : data-type, optional
+        Type to use in computing the mean.  For integer inputs, the default
+        is `float64`; for floating point inputs, it is the same as the
+        input dtype.
+    out : ndarray, optional
+        Alternate output array in which to place the result.  The default
+        is ``None``; if provided, it must have the same shape as the
+        expected output, but the type will be cast if necessary.
+        See :ref:`ufuncs-output-type` for more details.
+    
+    keepdims : bool, optional
+        If this is set to True, the axes which are reduced are left
+        in the result as dimensions with size one. With this option,
+        the result will broadcast correctly against the input array.
+    
+        If the default value is passed, then `keepdims` will not be
+        passed through to the `mean` method of sub-classes of
+        `ndarray`, however any non-default value will be.  If the
+        sub-class&#39; method does not implement `keepdims` any
+        exceptions will be raised.
+    
+    where : array_like of bool, optional
+        Elements to include in the mean. See `~numpy.ufunc.reduce` for details.
+    
+        .. versionadded:: 1.20.0
+    
+    Returns
+    -------
+    m : ndarray, see dtype parameter above
+        If `out=None`, returns a new array containing the mean values,
+        otherwise a reference to the output array is returned.
+    
+    See Also
+    --------
+    average : Weighted average
+    std, var, nanmean, nanstd, nanvar
+    
+    Notes
+    -----
+    The arithmetic mean is the sum of the elements along the axis divided
+    by the number of elements.
+    
+    Note that for floating-point input, the mean is computed using the
+    same precision the input has.  Depending on the input data, this can
+    cause the results to be inaccurate, especially for `float32` (see
+    example below).  Specifying a higher-precision accumulator using the
+    `dtype` keyword can alleviate this issue.
+    
+    By default, `float16` results are computed using `float32` intermediates
+    for extra precision.
+    
+    Examples
+    --------
+    &gt;&gt;&gt; a = np.array([[1, 2], [3, 4]])
+    &gt;&gt;&gt; np.mean(a)
+    2.5
+    &gt;&gt;&gt; np.mean(a, axis=0)
+    array([2., 3.])
+    &gt;&gt;&gt; np.mean(a, axis=1)
+    array([1.5, 3.5])
+    
+    In single precision, `mean` can be inaccurate:
+    
+    &gt;&gt;&gt; a = np.zeros((2, 512*512), dtype=np.float32)
+    &gt;&gt;&gt; a[0, :] = 1.0
+    &gt;&gt;&gt; a[1, :] = 0.1
+    &gt;&gt;&gt; np.mean(a)
+    0.54999924
+    
+    Computing the mean in float64 is more accurate:
+    
+    &gt;&gt;&gt; np.mean(a, dtype=np.float64)
+    0.55000000074505806 # may vary
+    
+    Specifying a where argument:
+    &gt;&gt;&gt; a = np.array([[5, 9, 13], [14, 10, 12], [11, 15, 19]])
+    &gt;&gt;&gt; np.mean(a)
+    12.0
+    &gt;&gt;&gt; np.mean(a, where=[[True], [False], [False]])
+    9.0
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="acknowledgments">
+<h2>Acknowledgments<a class="headerlink" href="#acknowledgments" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://swcarpentry.github.io/python-novice-inflammation/08-func/index.html">https://swcarpentry.github.io/python-novice-inflammation/08-func/index.html</a></p>
+<p><a class="reference external" href="https://geo-python-site.readthedocs.io/en/latest/notebooks/L4/functions.html">https://geo-python-site.readthedocs.io/en/latest/notebooks/L4/functions.html</a></p>
 </div>
 </div>
 
