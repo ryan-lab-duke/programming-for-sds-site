@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Slack &#8212; Programming for spatial data science</title>
+    <title>Plotting timeseries data &#8212; Programming for spatial data science</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -51,8 +51,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Completing assignments" href="getting-started.html" />
-    <link rel="prev" title="Schedule" href="schedule.html" />
+    <link rel="next" title="Plotting image data" href="06c-demo.html" />
+    <link rel="prev" title="Making simple plots" href="06a-demo.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -101,29 +101,29 @@
   Course information
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="general-info.html">
+  <a class="reference internal" href="../course-info/general-info.html">
    General information
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="schedule.html">
+  <a class="reference internal" href="../course-info/schedule.html">
    Schedule
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../course-info/slack.html">
    Slack
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="getting-started.html">
+  <a class="reference internal" href="../course-info/getting-started.html">
    Completing assignments
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="python.html">
+  <a class="reference internal" href="../course-info/python.html">
    Install Python (optional)
   </a>
  </li>
@@ -135,12 +135,12 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../demos/01a-demo.html">
+  <a class="reference internal" href="01a-demo.html">
    Variables, data types, and structures
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../demos/01b-demo.html">
+  <a class="reference internal" href="01b-demo.html">
    Formatting notebooks
   </a>
  </li>
@@ -157,12 +157,12 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../demos/02a-demo.html">
+  <a class="reference internal" href="02a-demo.html">
    NumPy arrays
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../demos/02b-demo.html">
+  <a class="reference internal" href="02b-demo.html">
    Tidy outputs
   </a>
  </li>
@@ -179,12 +179,12 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../demos/03a-demo.html">
+  <a class="reference internal" href="03a-demo.html">
    For loops
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../demos/03b-demo.html">
+  <a class="reference internal" href="03b-demo.html">
    Conditional statements
   </a>
  </li>
@@ -201,7 +201,7 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../demos/04-demo.html">
+  <a class="reference internal" href="04-demo.html">
    Pandas DataFrames
   </a>
  </li>
@@ -218,12 +218,12 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../demos/05a-demo.html">
+  <a class="reference internal" href="05a-demo.html">
    Functions
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../demos/05b-demo.html">
+  <a class="reference internal" href="05b-demo.html">
    Time
   </a>
  </li>
@@ -238,10 +238,20 @@
   Week 6
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../demos/06-demo.html">
-   Making plots
+  <a class="reference internal" href="06a-demo.html">
+   Making simple plots
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Plotting timeseries data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="06c-demo.html">
+   Plotting image data
   </a>
  </li>
  <li class="toctree-l1">
@@ -286,6 +296,18 @@
   </a>
  </li>
 </ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Week 10
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../assignments/10-assignment.html">
+   Assignment 10
+  </a>
+ </li>
+</ul>
 
     </div>
 </nav> <!-- To handle the deprecated key -->
@@ -326,9 +348,9 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/course-info/slack.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/demos/06b-demo.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
+                data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
                 onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -346,7 +368,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fcourse-info/slack.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fdemos/06b-demo.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -362,24 +384,28 @@
 
             <!-- Launch buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/main?urlpath=tree/book/demos/06b-demo.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
         </div>
 
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
-            </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#access-slack-workspace">
-   Access Slack workspace
-  </a>
- </li>
-</ul>
-
-            </nav>
         </div>
     </div>
 </div>
@@ -387,40 +413,20 @@
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Slack</h1>
+                <h1>Plotting timeseries data</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#access-slack-workspace">
-   Access Slack workspace
-  </a>
- </li>
-</ul>
-
-                        </nav>
                     </div>
                 </div>
             </div>
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="slack">
-<h1>Slack<a class="headerlink" href="#slack" title="Permalink to this headline">¶</a></h1>
-<p>We will use <a class="reference external" href="https://slack.com/">Slack</a> for most discussion and questions.</p>
-<a class="mb-1 reference internal image-reference" href="../_images/slack.png"><img alt="slack" class="mb-1 align-center" src="../_images/slack.png" style="width: 200px;" /></a>
-<div class="section" id="access-slack-workspace">
-<h2>Access Slack workspace<a class="headerlink" href="#access-slack-workspace" title="Permalink to this headline">¶</a></h2>
-<p>We will send an invite link to all enrolled students via email (and Canvas).. Before you can start using Slack, you should create a new account (if you don’t have one already) and accept the invitation you have received.</p>
-<p>After accepting the invitation, you can access the course Slack team via this link: <a class="reference external" href="http://xxx.slack.com">http://xxx.slack.com</a></p>
-<p>It is recommended that you use the standalone desktop app rather than the web interface. If you’re confused or uncertain about something in the lab, please ask or post a question/comment on the relevant Slack channel (e.g., #lab01).</p>
-</div>
+  <div class="tex2jax_ignore mathjax_ignore section" id="plotting-timeseries-data">
+<h1>Plotting timeseries data<a class="headerlink" href="#plotting-timeseries-data" title="Permalink to this headline">¶</a></h1>
+<p>Pandas, datetime</p>
 </div>
 
     <script type="text/x-thebe-config">
@@ -436,7 +442,7 @@
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./course-info"
+            path: "./demos"
         },
         predefinedOutput: true
     }
@@ -448,17 +454,17 @@
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="schedule.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="06a-demo.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Schedule</p>
+            <p class="prev-next-title">Making simple plots</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="getting-started.html" title="next page">
+    <a class='right-next' id="next-link" href="06c-demo.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Completing assignments</p>
+        <p class="prev-next-title">Plotting image data</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
