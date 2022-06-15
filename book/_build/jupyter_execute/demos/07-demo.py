@@ -1,8 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[ ]:
+# # Analyzing table data
 
-
-
-
+# ## Setting index column in Pandas

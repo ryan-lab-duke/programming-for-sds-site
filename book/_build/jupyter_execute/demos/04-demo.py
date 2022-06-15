@@ -95,7 +95,7 @@ df.dtypes
 
 # Here we see that population is an **integer** (with 64-bit precision) and the other two columns are **objects** (`Pandas` stores string data types as "objects" by default).
 # 
-# We can also retrieve the column names of the DataFrame using the `.column` method.
+# We can also retrieve the column names of the DataFrame using the `column` method.
 
 # In[30]:
 
@@ -103,7 +103,7 @@ df.dtypes
 df.columns
 
 
-# And, just like `NumPy` arrays, we can find the shape of our DataFrame using the `.shape` method.
+# And, just like `NumPy` arrays, we can find the shape of our DataFrame using the `shape` method.
 
 # In[31]:
 
@@ -267,7 +267,7 @@ new_df = pd.DataFrame({'country': countries,
 new_df.head(10)
 
 
-# **Or** we could use the `.groupby()` function.
+# **Or** we could use the `groupby()` function.
 
 # In[96]:
 
@@ -275,9 +275,9 @@ new_df.head(10)
 df.groupby('country')['population'].sum()
 
 
-# The first argument `.groupby` takes is the **which** column we want group our data into (`country` in our case). Next, it takes a column (or list of columns) to summarize (`population`). Finally, this function does nothing until we specific **how** we want to group our data.
+# The first argument `groupby` takes is the **which** column we want group our data into (`country` in our case). Next, it takes a column (or list of columns) to summarize (`population`). Finally, this function does nothing until we specific **how** we want to group our data.
 # 
-# It's actually nice to reset the index after using `.groupby` so that we end up with another DataFrame. 
+# It's actually nice to reset the index after using `groupby` so that we end up with another DataFrame. 
 
 # In[99]:
 
@@ -286,7 +286,7 @@ new_df = df.groupby('country')['population'].sum().reset_index()
 new_df.head(10)
 
 
-# We hope you will agree that the `.groupby` method is much cleaner and interpretable. It is also a lot faster which may be important when we have very large DataFrames with millions of rows. 
+# We hope you will agree that the `groupby` method is much cleaner and interpretable. It is also a lot faster which may be important when we have very large DataFrames with millions of rows. 
 
 # ```{note}
 # To summarize multiple columns we could include a list of columns like so: `df.groupby('country')[['city','population']].sum()` but this would not produce anything different in our case because a string variable cannot be **summed**.
@@ -294,7 +294,7 @@ new_df.head(10)
 
 # ## Sorting
 # 
-# Similar to lists, we can **sort** DataFrames using the `.sort_values` function. This function takes two arguments, `by` and `ascending` which determine which column and which order we would like to sort by. So to find the 10 largest cities in Europe by population we could type:
+# Similar to lists, we can **sort** DataFrames using the `sort_values` function. This function takes two arguments, `by` and `ascending` which determine which column and which order we would like to sort by. So to find the 10 largest cities in Europe by population we could type:
 
 # In[175]:
 
@@ -302,7 +302,7 @@ new_df.head(10)
 df.sort_values(by='population', ascending=False).head(10)
 
 
-# Another way of doing this would be to use the `.nlargest()` or `.nsmallest()` function. Documentation [here](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.nlargest.html).
+# Another way of doing this would be to use the `nlargest()` or `nsmallest()` function. Documentation [here](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.nlargest.html).
 
 # ## Saving 
 # 
