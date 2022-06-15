@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>&lt;no title&gt; &#8212; Programming for spatial data science</title>
+    <title>Analyzing table data &#8212; Programming for spatial data science</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -240,8 +240,13 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="06-demo.html">
-   Making plots
+  <a class="reference internal" href="06a-demo.html">
+   Making simple plots
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="06b-demo.html">
+   Plotting timeseries data
   </a>
  </li>
  <li class="toctree-l1">
@@ -255,7 +260,12 @@
   Week 7
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Analyzing table data
+  </a>
+ </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../assignments/07-assignment.html">
    Assignment 7
@@ -268,6 +278,11 @@
  </span>
 </p>
 <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="08-demo.html">
+   Vector processing
+  </a>
+ </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../assignments/08-assignment.html">
    Assignment 8
@@ -283,6 +298,23 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../assignments/09-assignment.html">
    Assignment 9
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Week 10
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="10-demo.html">
+   Putting it all together
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../assignments/10-assignment.html">
+   Assignment 10
   </a>
  </li>
 </ul>
@@ -388,7 +420,12 @@
                 <i class="fas fa-list"></i> Contents
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="simple visible nav section-nav flex-column">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#setting-index-column-in-pandas">
+   Setting index column in Pandas
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -399,7 +436,7 @@
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1><no title></h1>
+                <h1>Analyzing table data</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -408,7 +445,12 @@
                             <h2> Contents </h2>
                         </div>
                         <nav aria-label="Page">
-                            <ul class="simple visible nav section-nav flex-column">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#setting-index-column-in-pandas">
+   Setting index column in Pandas
+  </a>
+ </li>
 </ul>
 
                         </nav>
@@ -418,7 +460,13 @@
             
               <div>
                 
-  
+  <div class="tex2jax_ignore mathjax_ignore section" id="analyzing-table-data">
+<h1>Analyzing table data<a class="headerlink" href="#analyzing-table-data" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="setting-index-column-in-pandas">
+<h2>Setting index column in Pandas<a class="headerlink" href="#setting-index-column-in-pandas" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
     <script type="text/x-thebe-config">
     {
         requestKernel: true,
