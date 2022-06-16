@@ -415,8 +415,37 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#task-x-5-points">
-   Task X (5 points)
+  <a class="reference internal nav-link" href="#task-1-5-points">
+   Task 1 (5 points)
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#test-your-function-by-running-the-following">
+     Test your function by running the following:
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#task-2-5-points">
+   Task 2 (5 points)
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Test your function by running the following:
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#task-3-5-points">
+   Task 3 (5 points)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#task-4-5-points">
+   Task 4 (5 points)
   </a>
  </li>
 </ul>
@@ -440,8 +469,37 @@
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#task-x-5-points">
-   Task X (5 points)
+  <a class="reference internal nav-link" href="#task-1-5-points">
+   Task 1 (5 points)
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#test-your-function-by-running-the-following">
+     Test your function by running the following:
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#task-2-5-points">
+   Task 2 (5 points)
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Test your function by running the following:
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#task-3-5-points">
+   Task 3 (5 points)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#task-4-5-points">
+   Task 4 (5 points)
   </a>
  </li>
 </ul>
@@ -465,12 +523,74 @@
 </pre></div>
 </div>
 <hr class="docutils" />
-<div class="section" id="task-x-5-points">
-<h2>Task X (5 points)<a class="headerlink" href="#task-x-5-points" title="Permalink to this headline">¶</a></h2>
-<p>Convert some strings to standard time format</p>
+<div class="section" id="task-1-5-points">
+<h2>Task 1 (5 points)<a class="headerlink" href="#task-1-5-points" title="Permalink to this headline">¶</a></h2>
+<p>Write a function that checks the validity of a lon/lat pair based on their range. (i.e. longitude should be between -180 and 180, and latitude should be between -90 and 90). The function should return <code class="docutils literal notranslate"><span class="pre">False</span></code> if the pair is invalid, and <code class="docutils literal notranslate"><span class="pre">True</span></code> otherwise. The function should rely on two sub-functions <code class="docutils literal notranslate"><span class="pre">is_lon_valid</span></code> and <code class="docutils literal notranslate"><span class="pre">is_lat_valid</span></code> .</p>
+<div class="highlight-def notranslate"><div class="highlight"><pre><span></span>    # complete the function
+    return
+</pre></div>
+</div>
+<div class="highlight-def notranslate"><div class="highlight"><pre><span></span>    # complete the function
+    return
+</pre></div>
+</div>
+<div class="highlight-def notranslate"><div class="highlight"><pre><span></span>    # complete the function
+    return
+</pre></div>
+</div>
+<div class="section" id="test-your-function-by-running-the-following">
+<h3>Test your function by running the following:<a class="headerlink" href="#test-your-function-by-running-the-following" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><p>a) When Unix time reaches 2000000000 seconds, what year and day of the week will it be?</p></li>
+<li><p>a) <code class="docutils literal notranslate"><span class="pre">print(is_lat_valid(-186))</span></code></p></li>
+<li><p>b) <code class="docutils literal notranslate"><span class="pre">print(is_lon_valid(45))</span></code></p></li>
+<li><p>c) <code class="docutils literal notranslate"><span class="pre">print(is_latlon_valid(38.2,</span> <span class="pre">0.8))</span></code></p></li>
+<li><p>d) <code class="docutils literal notranslate"><span class="pre">print(is_latlon_valid(270.3,</span> <span class="pre">-30.6))</span></code></p></li>
 </ul>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="task-2-5-points">
+<h2>Task 2 (5 points)<a class="headerlink" href="#task-2-5-points" title="Permalink to this headline">¶</a></h2>
+<p>Write a function called <code class="docutils literal notranslate"><span class="pre">convert_distance</span></code> which converts between <strong>meters</strong> (<code class="docutils literal notranslate"><span class="pre">m</span></code>), <strong>kilometers</strong> (<code class="docutils literal notranslate"><span class="pre">km</span></code>), and <strong>miles</strong> (<code class="docutils literal notranslate"><span class="pre">mi</span></code>). It should handle all combinations. If <code class="docutils literal notranslate"><span class="pre">in_unit</span> <span class="pre">==</span> <span class="pre">out_unit</span></code>, just return the same value.</p>
+<div class="highlight-def notranslate"><div class="highlight"><pre><span></span>    # valid units: &#39;m&#39;,&#39;km&#39;,&#39;mi&#39;
+    
+    # complete the function
+
+    return converted_distance
+</pre></div>
+</div>
+<div class="section" id="id1">
+<h3>Test your function by running the following:<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>a) <code class="docutils literal notranslate"><span class="pre">print(convert_area(1000,'m','km'))</span></code></p></li>
+<li><p>b) <code class="docutils literal notranslate"><span class="pre">print(convert_area(100,'mi','km'))</span></code></p></li>
+<li><p>c) <code class="docutils literal notranslate"><span class="pre">print(convert_area(10,'km','mi'))</span></code></p></li>
+</ul>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="task-3-5-points">
+<h2>Task 3 (5 points)<a class="headerlink" href="#task-3-5-points" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>a) Print the current local time in ISO 8601 standard format (i.e. YYYY-MM-DD hh:mm:ss)</p></li>
+<li><p>b) Convert the string <code class="docutils literal notranslate"><span class="pre">Jun</span> <span class="pre">19,</span> <span class="pre">2022</span></code> to ISO 8601 standard format</p></li>
+<li><p>c) Convert the string <code class="docutils literal notranslate"><span class="pre">2022-06-19</span> <span class="pre">220755</span></code> to ISO 8601 standard format (time order is hours, minutes, seconds)</p></li>
+<li><p>d) What day was it in Eugene when Unix time reached 1234567890 seconds?</p></li>
+<li><p>e) What year will it be when Unix time reaches 2,000,000,000 seconds?</p></li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="task-4-5-points">
+<h2>Task 4 (5 points)<a class="headerlink" href="#task-4-5-points" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Add a title, your name, and date of this submission to your Jupyter Notebook using <strong>Markdown text</strong>.</p></li>
+<li><p>Add some more <strong>Markdown text</strong> to separate each task of this assignment.</p></li>
+</ul>
+<hr class="docutils" />
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Save your notebook to your local course folder and submit assignment (in <strong>.ipynb</strong> format) to Canvas by the deadline.</p>
+</div>
 </div>
 </div>
 
