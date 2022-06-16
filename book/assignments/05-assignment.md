@@ -19,16 +19,19 @@ jupyter lab
 Write a function that checks the validity of a lon/lat pair based on their range. (i.e. longitude should be between -180 and 180, and latitude should be between -90 and 90). The function should return `False` if the pair is invalid, and `True` otherwise. The function should rely on two sub-functions `is_lon_valid` and `is_lat_valid` .
 
 
-```def is_lon_valid(lon):
+```
+def is_lon_valid(lon):
     # complete the function
     return
 ```
-```def is_lat_valid(lat):
+```
+def is_lat_valid(lat):
     # complete the function
     return
 ```
 
-```def is_lonlat_valid(lon, lat):
+```
+def is_lonlat_valid(lon, lat):
     # complete the function
     return
 ```
@@ -48,7 +51,8 @@ Write a function that checks the validity of a lon/lat pair based on their range
 
 Write a function called `convert_distance` which converts between **meters** (`m`), **kilometers** (`km`), and **miles** (`mi`). It should handle all combinations. If `in_unit == out_unit`, just return the same value.
 
-```def convert_distance(area, in_unit, out_unit):
+```
+def convert_distance(area, in_unit, out_unit):
     # valid units: 'm','km','mi'
     
     # complete the function
@@ -58,11 +62,20 @@ Write a function called `convert_distance` which converts between **meters** (`m
 
 ### Test your function by running the following:
 
-* a) `print(convert_area(1000,'m','km'))`
+* a) 
+```
+print(convert_area(1000,'m','km'))
+```
 
-* b) `print(convert_area(100,'mi','km'))`
+* b)
+```
+print(convert_area(100,'mi','km'))
+```
 
-* c) `print(convert_area(10,'km','mi'))`
+* c) 
+```
+print(convert_area(10,'km','mi'))
+```
 
 *****************************
 ## Task 3 (5 points)

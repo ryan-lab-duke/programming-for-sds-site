@@ -526,16 +526,19 @@
 <div class="section" id="task-1-5-points">
 <h2>Task 1 (5 points)<a class="headerlink" href="#task-1-5-points" title="Permalink to this headline">¶</a></h2>
 <p>Write a function that checks the validity of a lon/lat pair based on their range. (i.e. longitude should be between -180 and 180, and latitude should be between -90 and 90). The function should return <code class="docutils literal notranslate"><span class="pre">False</span></code> if the pair is invalid, and <code class="docutils literal notranslate"><span class="pre">True</span></code> otherwise. The function should rely on two sub-functions <code class="docutils literal notranslate"><span class="pre">is_lon_valid</span></code> and <code class="docutils literal notranslate"><span class="pre">is_lat_valid</span></code> .</p>
-<div class="highlight-def notranslate"><div class="highlight"><pre><span></span>    # complete the function
-    return
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">is_lon_valid</span><span class="p">(</span><span class="n">lon</span><span class="p">):</span>
+    <span class="c1"># complete the function</span>
+    <span class="k">return</span>
 </pre></div>
 </div>
-<div class="highlight-def notranslate"><div class="highlight"><pre><span></span>    # complete the function
-    return
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">is_lat_valid</span><span class="p">(</span><span class="n">lat</span><span class="p">):</span>
+    <span class="c1"># complete the function</span>
+    <span class="k">return</span>
 </pre></div>
 </div>
-<div class="highlight-def notranslate"><div class="highlight"><pre><span></span>    # complete the function
-    return
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">is_lonlat_valid</span><span class="p">(</span><span class="n">lon</span><span class="p">,</span> <span class="n">lat</span><span class="p">):</span>
+    <span class="c1"># complete the function</span>
+    <span class="k">return</span>
 </pre></div>
 </div>
 <div class="section" id="test-your-function-by-running-the-following">
@@ -552,20 +555,34 @@
 <div class="section" id="task-2-5-points">
 <h2>Task 2 (5 points)<a class="headerlink" href="#task-2-5-points" title="Permalink to this headline">¶</a></h2>
 <p>Write a function called <code class="docutils literal notranslate"><span class="pre">convert_distance</span></code> which converts between <strong>meters</strong> (<code class="docutils literal notranslate"><span class="pre">m</span></code>), <strong>kilometers</strong> (<code class="docutils literal notranslate"><span class="pre">km</span></code>), and <strong>miles</strong> (<code class="docutils literal notranslate"><span class="pre">mi</span></code>). It should handle all combinations. If <code class="docutils literal notranslate"><span class="pre">in_unit</span> <span class="pre">==</span> <span class="pre">out_unit</span></code>, just return the same value.</p>
-<div class="highlight-def notranslate"><div class="highlight"><pre><span></span>    # valid units: &#39;m&#39;,&#39;km&#39;,&#39;mi&#39;
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">convert_distance</span><span class="p">(</span><span class="n">area</span><span class="p">,</span> <span class="n">in_unit</span><span class="p">,</span> <span class="n">out_unit</span><span class="p">):</span>
+    <span class="c1"># valid units: &#39;m&#39;,&#39;km&#39;,&#39;mi&#39;</span>
     
-    # complete the function
+    <span class="c1"># complete the function</span>
 
-    return converted_distance
+    <span class="k">return</span> <span class="n">converted_distance</span>
 </pre></div>
 </div>
 <div class="section" id="id1">
 <h3>Test your function by running the following:<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li><p>a) <code class="docutils literal notranslate"><span class="pre">print(convert_area(1000,'m','km'))</span></code></p></li>
-<li><p>b) <code class="docutils literal notranslate"><span class="pre">print(convert_area(100,'mi','km'))</span></code></p></li>
-<li><p>c) <code class="docutils literal notranslate"><span class="pre">print(convert_area(10,'km','mi'))</span></code></p></li>
+<li><p>a)</p></li>
 </ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">convert_area</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span><span class="s1">&#39;m&#39;</span><span class="p">,</span><span class="s1">&#39;km&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>b)</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">convert_area</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="s1">&#39;mi&#39;</span><span class="p">,</span><span class="s1">&#39;km&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>c)</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">convert_area</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="s1">&#39;km&#39;</span><span class="p">,</span><span class="s1">&#39;mi&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
 </div>
 </div>
 <hr class="docutils" />
