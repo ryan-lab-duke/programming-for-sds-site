@@ -296,6 +296,16 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
+  <a class="reference internal" href="09a-demo.html">
+   Raster analysis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="09b-demo.html">
+   Plotting image data
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../assignments/09-assignment.html">
    Assignment 9
   </a>
@@ -422,8 +432,8 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#daily-reservoir-data">
-   Daily reservoir data
+  <a class="reference internal nav-link" href="#daily-reservoir-levels">
+   Daily reservoir levels
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -457,8 +467,8 @@
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#daily-reservoir-data">
-   Daily reservoir data
+  <a class="reference internal nav-link" href="#daily-reservoir-levels">
+   Daily reservoir levels
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -484,8 +494,8 @@
 <h1>Plotting timeseries data<a class="headerlink" href="#plotting-timeseries-data" title="Permalink to this headline">¶</a></h1>
 <p>Most of the data that we want to plot with <code class="docutils literal notranslate"><span class="pre">Matplotlib</span></code> will be in tabular format. In the second demo of this week, we will make some plots to display daily reservoir levels of <a class="reference external" href="https://en.wikipedia.org/wiki/Fall_Creek_Lake">Fall Creek Reservoir</a> in the Willamette National Forest.</p>
 <a class="bg-primary mb-1 reference internal image-reference" href="../_images/fall_creek.jpg"><img alt="fall creek reservoir" class="bg-primary mb-1 align-center" src="../_images/fall_creek.jpg" style="width: 600px;" /></a>
-<div class="section" id="daily-reservoir-data">
-<h2>Daily reservoir data<a class="headerlink" href="#daily-reservoir-data" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="daily-reservoir-levels">
+<h2>Daily reservoir levels<a class="headerlink" href="#daily-reservoir-levels" title="Permalink to this headline">¶</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -986,7 +996,7 @@ dtype: object
 <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Air temperature (C)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">()</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_formatter</span><span class="p">(</span><span class="n">mdates</span><span class="o">.</span><span class="n">DateFormatter</span><span class="p">(</span><span class="s1">&#39;%b-</span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_major_formatter</span><span class="p">(</span><span class="n">mdates</span><span class="o">.</span><span class="n">DateFormatter</span><span class="p">(</span><span class="s1">&#39;%b </span><span class="si">%d</span><span class="s1">&#39;</span><span class="p">))</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
@@ -1235,36 +1245,36 @@ dtype: object
       <th>pacific_time</th>
     </tr>
     <tr>
-      <th>pacific_time</th>
+      <th>datetime</th>
       <th></th>
       <th></th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>2022-06-09 16:10:00</th>
+      <th>2022-06-10 00:10:00</th>
       <td>24.3</td>
-      <td>2022-06-09 08:10:00</td>
+      <td>2022-06-09 16:10:00</td>
     </tr>
     <tr>
-      <th>2022-06-09 16:15:00</th>
+      <th>2022-06-10 00:15:00</th>
       <td>24.0</td>
-      <td>2022-06-09 08:15:00</td>
+      <td>2022-06-09 16:15:00</td>
     </tr>
     <tr>
-      <th>2022-06-09 16:20:00</th>
+      <th>2022-06-10 00:20:00</th>
       <td>23.7</td>
-      <td>2022-06-09 08:20:00</td>
+      <td>2022-06-09 16:20:00</td>
     </tr>
     <tr>
-      <th>2022-06-09 16:25:00</th>
+      <th>2022-06-10 00:25:00</th>
       <td>23.1</td>
-      <td>2022-06-09 08:25:00</td>
+      <td>2022-06-09 16:25:00</td>
     </tr>
     <tr>
-      <th>2022-06-09 16:30:00</th>
+      <th>2022-06-10 00:30:00</th>
       <td>22.7</td>
-      <td>2022-06-09 08:30:00</td>
+      <td>2022-06-09 16:30:00</td>
     </tr>
     <tr>
       <th>...</th>
@@ -1272,29 +1282,29 @@ dtype: object
       <td>...</td>
     </tr>
     <tr>
-      <th>2022-06-15 09:40:00</th>
+      <th>2022-06-15 17:40:00</th>
       <td>13.9</td>
-      <td>2022-06-15 01:40:00</td>
+      <td>2022-06-15 09:40:00</td>
     </tr>
     <tr>
-      <th>2022-06-15 09:45:00</th>
+      <th>2022-06-15 17:45:00</th>
       <td>14.7</td>
-      <td>2022-06-15 01:45:00</td>
+      <td>2022-06-15 09:45:00</td>
     </tr>
     <tr>
-      <th>2022-06-15 09:50:00</th>
+      <th>2022-06-15 17:50:00</th>
       <td>14.6</td>
-      <td>2022-06-15 01:50:00</td>
+      <td>2022-06-15 09:50:00</td>
     </tr>
     <tr>
-      <th>2022-06-15 09:55:00</th>
+      <th>2022-06-15 17:55:00</th>
       <td>14.9</td>
-      <td>2022-06-15 01:55:00</td>
+      <td>2022-06-15 09:55:00</td>
     </tr>
     <tr>
-      <th>2022-06-15 10:00:00</th>
+      <th>2022-06-15 18:00:00</th>
       <td>14.8</td>
-      <td>2022-06-15 02:00:00</td>
+      <td>2022-06-15 10:00:00</td>
     </tr>
   </tbody>
 </table>
@@ -1336,23 +1346,23 @@ dtype: object
   </thead>
   <tbody>
     <tr>
-      <th>2022-06-09 08:10:00</th>
+      <th>2022-06-09 16:10:00</th>
       <td>24.3</td>
     </tr>
     <tr>
-      <th>2022-06-09 08:15:00</th>
+      <th>2022-06-09 16:15:00</th>
       <td>24.0</td>
     </tr>
     <tr>
-      <th>2022-06-09 08:20:00</th>
+      <th>2022-06-09 16:20:00</th>
       <td>23.7</td>
     </tr>
     <tr>
-      <th>2022-06-09 08:25:00</th>
+      <th>2022-06-09 16:25:00</th>
       <td>23.1</td>
     </tr>
     <tr>
-      <th>2022-06-09 08:30:00</th>
+      <th>2022-06-09 16:30:00</th>
       <td>22.7</td>
     </tr>
     <tr>
@@ -1360,23 +1370,23 @@ dtype: object
       <td>...</td>
     </tr>
     <tr>
-      <th>2022-06-15 01:40:00</th>
+      <th>2022-06-15 09:40:00</th>
       <td>13.9</td>
     </tr>
     <tr>
-      <th>2022-06-15 01:45:00</th>
+      <th>2022-06-15 09:45:00</th>
       <td>14.7</td>
     </tr>
     <tr>
-      <th>2022-06-15 01:50:00</th>
+      <th>2022-06-15 09:50:00</th>
       <td>14.6</td>
     </tr>
     <tr>
-      <th>2022-06-15 01:55:00</th>
+      <th>2022-06-15 09:55:00</th>
       <td>14.9</td>
     </tr>
     <tr>
-      <th>2022-06-15 02:00:00</th>
+      <th>2022-06-15 10:00:00</th>
       <td>14.8</td>
     </tr>
   </tbody>
