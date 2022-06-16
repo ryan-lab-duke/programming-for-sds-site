@@ -42,7 +42,7 @@ The `type()` function is useful for this task.
 *****************************
 ## Task 3 (5 points)
 
-Count the number of vowels in the sentence below using a for loop and conditional statements.
+Write a for loop that counts the number of vowels in the sentence below.
 
 ```
 vowels = 'aeiouAEIOU'

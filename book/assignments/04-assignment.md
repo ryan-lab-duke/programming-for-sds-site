@@ -55,14 +55,14 @@ Answer the following questions:
 
 ```{admonition} Click to reveal hint
 :class: tip, dropdown
-`.count()` could be useful for this task.
+`.count()` is useful for this task.
 ```
 
 * c) Which **three** regions have the lowest GDP?
 
 ```{admonition} Click to reveal hint
 :class: tip, dropdown
-`.sort_values()` and `.head()` could be useful for this task.
+`.sort_values()` and `.head()` is useful for this task.
 ```
 
 * d) Which **five** regions have the highest population density?
@@ -77,6 +77,14 @@ Write a `for` loop which saves the first letter of each country in a new list ca
 * a) What is the most common first letter of countries in this table?
 
 * b) After grouping by their first letter, countries with which first letter have the highest total *GDP*?
+
+*****************************
+
+## Task 5 (5 points)
+
+* Add a title, your name, and date of this submission to your Jupyter Notebook using **Markdown text**.
+
+* Add some more **Markdown text** to separate each task of this assignment. 
 
 *****************************
 

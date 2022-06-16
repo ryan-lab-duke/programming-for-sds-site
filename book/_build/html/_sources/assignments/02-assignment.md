@@ -15,15 +15,15 @@ jupyter lab
 *****************************
 ## Task 1 (5 points)
 
-* Make two `ndarrays`, one called `lat` and one called `lon`, that contain the latitudes and longitudes, respectively, of **five** global cities.
+* Define two **NumPy arrays** (i.e. `np.array()`), one called `lat` and one called `lon`, that contain the latitudes and longitudes, respectively, of **five** global cities.
 
 * Define a **list** containing the corresponding names of the cities (as **strings**).
 
-* Write some Python code that prints both the **name** and **latitude** of the most northly city using **f-string** formatting.
+* Print both the **name** and **latitude** of the most northly city using **f-string** formatting.
 
 * Repeat for the for city with the most easterly longitude.
 
-* Write some Python code that prints the **mean** latitude and **mean** longitude of your five cities. 
+* Print the **mean** latitude and **mean** longitude of your five cities. 
 
 Geographic coordinates for your cities can be found from [this website](https://www.latlong.net/). 
 
