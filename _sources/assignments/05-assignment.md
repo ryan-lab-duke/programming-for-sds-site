@@ -38,13 +38,21 @@ def is_lonlat_valid(lon, lat):
 
 ### Test your function by running the following:
 
-* a) `print(is_lat_valid(-186))`
+```
+print(is_lat_valid(-186))
+```
 
-* b) `print(is_lon_valid(45))`
+```
+print(is_lon_valid(45))
+```
 
-* c) `print(is_latlon_valid(38.2, 0.8))`
+```
+print(is_latlon_valid(38.2, 0.8))
+```
 
-* d) `print(is_latlon_valid(270.3, -30.6))`
+```
+print(is_latlon_valid(270.3, -30.6))
+```
 
 *****************************
 ## Task 2 (5 points)
@@ -62,17 +70,14 @@ def convert_distance(area, in_unit, out_unit):
 
 ### Test your function by running the following:
 
-* a) 
 ```
 print(convert_area(1000,'m','km'))
 ```
 
-* b)
 ```
 print(convert_area(100,'mi','km'))
 ```
 
-* c) 
 ```
 print(convert_area(10,'km','mi'))
 ```
