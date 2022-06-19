@@ -15,5 +15,47 @@ jupyter lab
 
 *****************************
 
-## Task X (5 points)
+## Task 1 (5 points)
+
+Let's get plotting!
+
+
+
+*****************************
+
+```{important} 
+Save your notebook to your local course folder and submit assignment (in **.ipynb** format) to Canvas by the deadline.
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

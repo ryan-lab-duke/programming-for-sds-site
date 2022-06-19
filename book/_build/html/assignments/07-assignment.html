@@ -51,7 +51,7 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Assignment 8" href="08-assignment.html" />
+    <link rel="next" title="Working with vector data" href="../demos/08a-demo.html" />
     <link rel="prev" title="Analyzing table data" href="../demos/07-demo.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -279,6 +279,16 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
+  <a class="reference internal" href="../demos/08a-demo.html">
+   Working with vector data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../demos/08b-demo.html">
+   Vector data analysis
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="08-assignment.html">
    Assignment 8
   </a>
@@ -410,8 +420,33 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#task-x-5-points">
-   Task X (5 points)
+  <a class="reference internal nav-link" href="#task-1-5-points">
+   Task 1 (5 points)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#task-2-5-points">
+   Task 2 (5 points)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#task-3-5-points">
+   Task 3 (5 points)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#task-4-5-points">
+   Task 4 (5 points)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#task-5-5-points">
+   Task 5 (5 points)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#task-6-5-points">
+   Task 6 (5 points)
   </a>
  </li>
 </ul>
@@ -435,8 +470,33 @@
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#task-x-5-points">
-   Task X (5 points)
+  <a class="reference internal nav-link" href="#task-1-5-points">
+   Task 1 (5 points)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#task-2-5-points">
+   Task 2 (5 points)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#task-3-5-points">
+   Task 3 (5 points)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#task-4-5-points">
+   Task 4 (5 points)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#task-5-5-points">
+   Task 5 (5 points)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#task-6-5-points">
+   Task 6 (5 points)
   </a>
  </li>
 </ul>
@@ -459,9 +519,74 @@
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jupyter</span> <span class="n">lab</span>
 </pre></div>
 </div>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>Print all answers (except Task 2 and 5) in a human-readable way using <strong>f-string</strong> formatting.</p>
+</div>
 <hr class="docutils" />
-<div class="section" id="task-x-5-points">
-<h2>Task X (5 points)<a class="headerlink" href="#task-x-5-points" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="task-1-5-points">
+<h2>Task 1 (5 points)<a class="headerlink" href="#task-1-5-points" title="Permalink to this headline">¶</a></h2>
+<p>Download the data for the assignment <a class="reference external" href="https://www.dropbox.com/s/wk0a3i9mrk9c921/electric_generation_pnw.csv?dl=0">here</a>. This dataset contains hourly sources of electricity generated in the Pacific Northwest (in MWh) between May 16, 2022 to June 14, 2022. If you are interested, the data were downloaded from <a class="reference external" href="https://www.eia.gov/electricity/gridmonitor/dashboard/electric_overview/US48/US48">https://www.eia.gov/electricity/gridmonitor/dashboard/electric_overview/US48/US48</a>.</p>
+<p>Read the data using <code class="docutils literal notranslate"><span class="pre">Pandas</span></code>, setting the <code class="docutils literal notranslate"><span class="pre">datetime</span></code> column as the <strong>index</strong>. Answer the following questions:</p>
+<ul class="simple">
+<li><p>a) How many rows and columnns are in this table?</p></li>
+<li><p>b) What are the column names?</p></li>
+<li><p>c) Which sources generate the most/least electricity <strong>on average</strong> during this time period?</p></li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="task-2-5-points">
+<h2>Task 2 (5 points)<a class="headerlink" href="#task-2-5-points" title="Permalink to this headline">¶</a></h2>
+<p>Make a visually-appealing plot showing the sources of electricity generated by wind, solar, hydro, natural gas, and coal.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="task-3-5-points">
+<h2>Task 3 (5 points)<a class="headerlink" href="#task-3-5-points" title="Permalink to this headline">¶</a></h2>
+<p>On which day was the highest/lowest <strong>mean</strong> electricity generated from <strong>all sources</strong>?</p>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Click to reveal hint</p>
+<p>Consider using <code class="docutils literal notranslate"><span class="pre">resample()</span></code>.</p>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="task-4-5-points">
+<h2>Task 4 (5 points)<a class="headerlink" href="#task-4-5-points" title="Permalink to this headline">¶</a></h2>
+<p>Make a new column called <code class="docutils literal notranslate"><span class="pre">hour</span></code> that contains the hour of the day as an <strong>integer</strong> for each row.</p>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Click to reveal hint</p>
+<p><code class="docutils literal notranslate"><span class="pre">Pandas</span></code> has some useful functions for this - <code class="docutils literal notranslate"><span class="pre">df.index.hour</span></code></p>
+</div>
+<ul class="simple">
+<li><p>a) What is the <strong>mean</strong> hour of the day when electricity generated by <strong>solar</strong> is highest/lowest? Use the highest 15 values to compute the mean.</p></li>
+<li><p>b) What is the <strong>mean</strong> hour of the day when electricity generated by <strong>natural gas</strong> is highest/lowest? Use the lowest 15 values to compute the mean.</p></li>
+</ul>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Click to reveal hint</p>
+<p>Consider using the <code class="docutils literal notranslate"><span class="pre">grouby()</span></code> function to group by hour (see demo on Week 4) and <code class="docutils literal notranslate"><span class="pre">nlargest()</span></code> or <code class="docutils literal notranslate"><span class="pre">nsmallest()</span></code> to retrieve the values.</p>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="task-5-5-points">
+<h2>Task 5 (5 points)<a class="headerlink" href="#task-5-5-points" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>a) Compute the <strong>weekly average</strong> electricity generated by wind, solar, hydro, natural gas, and coal using a <strong>rolling window</strong>.</p></li>
+<li><p>b) Make a visually-appealing plot to show this new data.</p></li>
+<li><p>b) With reference to this plot, hypothesize which sources of electricity are likely to up/down/stay the same between June 14 and June 21, 2022.</p></li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="task-6-5-points">
+<h2>Task 6 (5 points)<a class="headerlink" href="#task-6-5-points" title="Permalink to this headline">¶</a></h2>
+<p>For each source, which <strong>day of the week</strong> (i.e. Mon, Tue, Wed) was most/least electricity generated? Please print out a day of the week instead of an integer.</p>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Click to reveal hint</p>
+<p>Again, <code class="docutils literal notranslate"><span class="pre">Pandas</span></code> has some useful functions for this - <a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.DatetimeIndex.dayofweek.html"><code class="docutils literal notranslate"><span class="pre">df.index.dayofweek</span></code></a></p>
+</div>
+<hr class="docutils" />
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Save your notebook to your local course folder and submit assignment (in <strong>.ipynb</strong> format) to Canvas by the deadline.</p>
+</div>
 </div>
 </div>
 
@@ -497,10 +622,10 @@
             <p class="prev-next-title">Analyzing table data</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="08-assignment.html" title="next page">
+    <a class='right-next' id="next-link" href="../demos/08a-demo.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Assignment 8</p>
+        <p class="prev-next-title">Working with vector data</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

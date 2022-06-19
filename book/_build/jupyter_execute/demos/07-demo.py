@@ -190,9 +190,3 @@ plt.show()
 
 
 # As we can see from the figure above, the rolling windows are smoother than the original discharge data because higher frequency variability has been averaged out. These kind of operations can be useful for **removing noise** from our data.
-
-# In[ ]:
-
-
-
-

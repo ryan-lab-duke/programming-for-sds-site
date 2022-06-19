@@ -12,10 +12,15 @@ and
 ```
 jupyter lab
 ```
+
+```{attention}
+Print all answers in a human-readable way using **f-string** formatting.
+```
+
 *****************************
 ## Task 1 (5 points)
 
-Download the `world_bank_data.csv` from [here](https://www.dropbox.com/s/fzmwei67w02dlhv/world_bank_data.csv?dl=0). Read the dataset into Python and answer the following questions:
+Download the `world_bank_data.csv` from [here](https://www.dropbox.com/s/fzmwei67w02dlhv/world_bank_data.csv?dl=0). Read the dataset using `Pandas` and answer the following questions:
 
 * a) How many rows and columnns are in this table?
 
@@ -47,25 +52,23 @@ Answer the following questions:
 
 ## Task 3 (5 points)
 
-Answer the following questions:
-
-* a) Which region has the highest **mean** GNI per capita?
-
-* b) Produce a new DataFrame with the number of countries in each region
+Produce a new DataFrame that groups the countries into regions and answer the following questions:
 
 ```{admonition} Click to reveal hint
 :class: tip, dropdown
 `.count()` is useful for this task.
 ```
 
-* c) Which **three** regions have the lowest GDP?
+* a) Which region has the highest **mean** GNI per capita?
+
+* b) Which **three** regions have the lowest GDP?
 
 ```{admonition} Click to reveal hint
 :class: tip, dropdown
 `.sort_values()` and `.head()` is useful for this task.
 ```
 
-* d) Which **five** regions have the highest population density?
+* c) Which **five** regions have the highest population density?
 
 * e) What is the total population of South-eastern Asia?
 
@@ -88,5 +91,6 @@ Write a `for` loop which saves the first letter of each country in a new list ca
 
 *****************************
 
-```{important} Save your notebook to your local course folder and submit assignment (in **.ipynb** format) to Canvas by the deadline.
+```{important} 
+Save your notebook to your local course folder and submit assignment (in **.ipynb** format) to Canvas by the deadline.
 ```

@@ -15,7 +15,8 @@
 **Labs**: TBD
 
 ## Grading
-* **Assignments (90%)**: Turn in assignments on Canvas. Lab assignments are due by the end of the week (i.e. Friday 11:59 pm). Late assignments will be penalized 5% per day late. Assignments will not be accepted after seven days past the submission deadline. 
+
+* **Assignments (90%)**: Submit assignments on Canvas. Lab assignments are due by the end of the week (i.e. Friday 11:59 pm). Late assignments will be penalized 5% per day late. Assignments will not be accepted after seven days past the submission deadline. 
 
 ```{note}
 Please let the instructors know before the deadline if you anticipate a late submission - we may be able to provide an extension.
