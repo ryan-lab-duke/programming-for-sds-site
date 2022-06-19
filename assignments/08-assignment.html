@@ -42,6 +42,8 @@
     <script src="../_static/copybutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script>
         const thebe_selector = ".thebe"
@@ -52,7 +54,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Raster analysis" href="../demos/09a-demo.html" />
-    <link rel="prev" title="Assignment 7" href="07-assignment.html" />
+    <link rel="prev" title="Vector data analysis" href="../demos/08b-demo.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -278,6 +280,16 @@
  </span>
 </p>
 <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../demos/08a-demo.html">
+   Working with vector data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../demos/08b-demo.html">
+   Vector data analysis
+  </a>
+ </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Assignment 8
@@ -410,8 +422,28 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#task-x-5-points">
-   Task X (5 points)
+  <a class="reference internal nav-link" href="#task-1-5-points">
+   Task 1 (5 points)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#task-2-5-points">
+   Task 2 (5 points)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#task-3-5-points">
+   Task 3 (5 points)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#task-4-5-points">
+   Task 4 (5 points)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#task-5-5-points">
+   Task 5 (5 points)
   </a>
  </li>
 </ul>
@@ -435,8 +467,28 @@
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#task-x-5-points">
-   Task X (5 points)
+  <a class="reference internal nav-link" href="#task-1-5-points">
+   Task 1 (5 points)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#task-2-5-points">
+   Task 2 (5 points)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#task-3-5-points">
+   Task 3 (5 points)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#task-4-5-points">
+   Task 4 (5 points)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#task-5-5-points">
+   Task 5 (5 points)
   </a>
  </li>
 </ul>
@@ -459,9 +511,67 @@
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jupyter</span> <span class="n">lab</span>
 </pre></div>
 </div>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>Print all answers (except Task 3 and 4) in a human-readable way using <strong>f-string</strong> formatting.</p>
+</div>
 <hr class="docutils" />
-<div class="section" id="task-x-5-points">
-<h2>Task X (5 points)<a class="headerlink" href="#task-x-5-points" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="task-1-5-points">
+<h2>Task 1 (5 points)<a class="headerlink" href="#task-1-5-points" title="Permalink to this headline">¶</a></h2>
+<p>Download the data for the assignment <a class="reference external" href="https://www.dropbox.com/s/0oawhe0niq69nph/world_countries.zip?dl=0">here</a>. This dataset contains borders of the world, along with attribute data about population, gross domestic product, and economy classification. If you are interested, the data were downloaded from <a class="reference external" href="https://www.naturalearthdata.com/downloads/50m-cultural-vectors/50m-admin-0-countries-2/">https://www.naturalearthdata.com/downloads/50m-cultural-vectors/50m-admin-0-countries-2/</a>.</p>
+<p>Read the data using <code class="docutils literal notranslate"><span class="pre">GeoPandas</span></code> and answer the following questions:</p>
+<ul class="simple">
+<li><p>a) How many rows and columnns are in this dataset?</p></li>
+<li><p>b) How many numeric columns are in this dataset?</p></li>
+<li><p>c) What is the <strong>name</strong> of the coordinate reference system? And what are the units?</p></li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="task-2-5-points">
+<h2>Task 2 (5 points)<a class="headerlink" href="#task-2-5-points" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><p>Drop any countries that have a GDP (<code class="docutils literal notranslate"><span class="pre">GDP_MD</span></code>) or population (<code class="docutils literal notranslate"><span class="pre">POP_EST</span></code>) of <strong>zero</strong> or <strong>-99</strong> from this <code class="docutils literal notranslate"><span class="pre">GeoDataFrame</span></code>.</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>a) Print a list of the top 10 countries by GDP. Use the <code class="docutils literal notranslate"><span class="pre">ADMIN</span></code> column to report country name.</p></li>
+<li><p>b) Print a list of the top 10 countries by population</p></li>
+</ul>
+<blockquote>
+<div><p>Add a new columm called <strong>GDP_per_capita</strong> using the GDP in million dollars (<code class="docutils literal notranslate"><span class="pre">GDP_MD</span></code>) and population (<code class="docutils literal notranslate"><span class="pre">POP_EST</span></code>) columns.</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>c) What are the five countries with the lowest GDP per capita?</p></li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="task-3-5-points">
+<h2>Task 3 (5 points)<a class="headerlink" href="#task-3-5-points" title="Permalink to this headline">¶</a></h2>
+<p>Reproject and plot the data (using <code class="docutils literal notranslate"><span class="pre">plot()</span></code>) in the following coordinate reference systems.</p>
+<ul class="simple">
+<li><p>a) Bonne (EPSG:54024)</p></li>
+<li><p>b) Gall Stereographic (EPSG:54016)</p></li>
+<li><p>c) Eckert VI (EPSG:54010)</p></li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="task-4-5-points">
+<h2>Task 4 (5 points)<a class="headerlink" href="#task-4-5-points" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Make a new <code class="docutils literal notranslate"><span class="pre">GeoDataFrame</span></code> containing only the countries in Africa.</p></li>
+<li><p>Reproject this <code class="docutils literal notranslate"><span class="pre">GeoDataFrame</span></code> to Albers Equal Area Conic (<a class="reference external" href="https://epsg.io/102022">https://epsg.io/102022</a>).</p></li>
+<li><p>Calculate the <strong>area</strong> of each country.</p></li>
+<li><p>Make a chloropleth map showing population density (i.e. population per km<span class="math notranslate nohighlight">\(^2\)</span>).</p></li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="task-5-5-points">
+<h2>Task 5 (5 points)<a class="headerlink" href="#task-5-5-points" title="Permalink to this headline">¶</a></h2>
+<p>List the countries that are within 1,000 miles of the <strong>centroid</strong> of Nepal.</p>
+<hr class="docutils" />
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Save your notebook to your local course folder and submit assignment (in <strong>.ipynb</strong> format) to Canvas by the deadline.</p>
+</div>
 </div>
 </div>
 
@@ -490,11 +600,11 @@
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="07-assignment.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="../demos/08b-demo.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Assignment 7</p>
+            <p class="prev-next-title">Vector data analysis</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="../demos/09a-demo.html" title="next page">

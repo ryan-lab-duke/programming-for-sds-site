@@ -279,6 +279,16 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
+  <a class="reference internal" href="../demos/08a-demo.html">
+   Working with vector data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../demos/08b-demo.html">
+   Vector data analysis
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="08-assignment.html">
    Assignment 8
   </a>
@@ -499,10 +509,14 @@
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jupyter</span> <span class="n">lab</span>
 </pre></div>
 </div>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>Print all answers in a human-readable way using <strong>f-string</strong> formatting.</p>
+</div>
 <hr class="docutils" />
 <div class="section" id="task-1-5-points">
 <h2>Task 1 (5 points)<a class="headerlink" href="#task-1-5-points" title="Permalink to this headline">¶</a></h2>
-<p>Download the <code class="docutils literal notranslate"><span class="pre">world_bank_data.csv</span></code> from <a class="reference external" href="https://www.dropbox.com/s/fzmwei67w02dlhv/world_bank_data.csv?dl=0">here</a>. Read the dataset into Python and answer the following questions:</p>
+<p>Download the <code class="docutils literal notranslate"><span class="pre">world_bank_data.csv</span></code> from <a class="reference external" href="https://www.dropbox.com/s/fzmwei67w02dlhv/world_bank_data.csv?dl=0">here</a>. Read the dataset using <code class="docutils literal notranslate"><span class="pre">Pandas</span></code> and answer the following questions:</p>
 <ul class="simple">
 <li><p>a) How many rows and columnns are in this table?</p></li>
 <li><p>b) What are the column names?</p></li>
@@ -526,24 +540,21 @@
 <hr class="docutils" />
 <div class="section" id="task-3-5-points">
 <h2>Task 3 (5 points)<a class="headerlink" href="#task-3-5-points" title="Permalink to this headline">¶</a></h2>
-<p>Answer the following questions:</p>
-<ul class="simple">
-<li><p>a) Which region has the highest <strong>mean</strong> GNI per capita?</p></li>
-<li><p>b) Produce a new DataFrame with the number of countries in each region</p></li>
-</ul>
+<p>Produce a new DataFrame that groups the countries into regions and answer the following questions:</p>
 <div class="tip dropdown admonition">
 <p class="admonition-title">Click to reveal hint</p>
 <p><code class="docutils literal notranslate"><span class="pre">.count()</span></code> is useful for this task.</p>
 </div>
 <ul class="simple">
-<li><p>c) Which <strong>three</strong> regions have the lowest GDP?</p></li>
+<li><p>a) Which region has the highest <strong>mean</strong> GNI per capita?</p></li>
+<li><p>b) Which <strong>three</strong> regions have the lowest GDP?</p></li>
 </ul>
 <div class="tip dropdown admonition">
 <p class="admonition-title">Click to reveal hint</p>
 <p><code class="docutils literal notranslate"><span class="pre">.sort_values()</span></code> and <code class="docutils literal notranslate"><span class="pre">.head()</span></code> is useful for this task.</p>
 </div>
 <ul class="simple">
-<li><p>d) Which <strong>five</strong> regions have the highest population density?</p></li>
+<li><p>c) Which <strong>five</strong> regions have the highest population density?</p></li>
 <li><p>e) What is the total population of South-eastern Asia?</p></li>
 </ul>
 </div>

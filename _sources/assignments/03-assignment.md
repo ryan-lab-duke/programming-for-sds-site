@@ -69,11 +69,11 @@ discharge = np.array([0.35566225, 0.22860853, 1.61016786, 2.33536627, 0.8870465 
        0.42026095, 1.52437286, 0.28315257, 0.95309955, 1.5090727 ])
 ```
 
-* Our messenger can wade across river when it is flowing at **less than** 1 cubic meter per second.
+> Our messenger can wade across river when it is flowing at **less than** 1 cubic meter per second.
 
-* Our messenger can boat across the river when it is flowing **between** 1 and 2 cubic meters per second.
+> Our messenger can boat across the river when it is flowing **between** 1 and 2 cubic meters per second.
 
-* Our messenger cannot cross the river if it is flowing **greater than** 3 cubic meters per second.
+> Our messenger cannot cross the river if it is flowing **greater than** 3 cubic meters per second.
 
 
 * a) Compute how many days our messenger **can travel** across the river using a **for loop and conditional statements**
