@@ -50,7 +50,7 @@ Read the data using `GeoPandas` and answer the following questions:
 
 ## Task 3 (5 points)
 
-Reproject and plot the data (using `plot()`) in the following coordinate reference systems. 
+Reproject and plot the data (using `plot()`) in the following coordinate reference systems. Projections can be found here: https://epsg.io/. 
 
 * a) Bonne (EPSG:54024)
 
@@ -64,7 +64,7 @@ Reproject and plot the data (using `plot()`) in the following coordinate referen
 
 * Make a new `GeoDataFrame` containing only the countries in Africa. 
 
-* Reproject this `GeoDataFrame` to Albers Equal Area Conic (https://epsg.io/102022). 
+* Reproject to **Albers Equal Area Conic** (https://epsg.io/102022). 
 
 * Calculate the **area** of each country.
 
