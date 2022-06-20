@@ -154,7 +154,7 @@ f"{top_state} has the most sports stadiums in the US with {int(top_stadiums)}"
 # Our final task is to compute the distance between University of Oregon campus and all the stadiums in the dataset. 
 
 # ```{caution}
-# When computing distance or area, we must make sure that our data have a projected CRS (in meters, feet, kilometers etc.) not a geographic one (in degrees). `GeoPandas` operations are planar, whereas degrees reflect the position on a sphere. Therefore, spatial operations using degrees may not yield correct results.
+# When computing distance or area, we must ensure that our data have a **projected CRS** (in meters, feet, kilometers etc.), eather than geographic CRS (in degrees). 
 # ```
 
 # We are OK to compute distances using our stadium data because when we call the `crs` method, we can see that the Easting and Northing are in the **meters**. 

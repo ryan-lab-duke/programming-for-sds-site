@@ -7,9 +7,8 @@
 # 
 # The Python library `GeoPandas` provides somes great tools for working with vector data. As the name suggests, `GeoPandas`extends the popular data science library `pandas` by adding support for geospatial data. The core data structure in `GeoPandas` is the `geopandas.GeoDataFrame`. The key difference between a `geopandas.GeoDataFrame` and a `pandas.DataFrame` is that the `geopandas.GeoDataFrame` can store geometry columns and perform spatial operations.
 # 
-# ```{image} images/dataframe.svg
+# ```{image} images/dataframe.png
 # :alt: geodataframe
-# :class: bg-primary mb-1
 # :width: 700px
 # :align: center
 # ```

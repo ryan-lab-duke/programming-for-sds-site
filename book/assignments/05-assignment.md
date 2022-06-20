@@ -36,7 +36,7 @@ def is_lonlat_valid(lon, lat):
     return
 ```
 
-### Test your function by running the following:
+Test your function by running the following:
 
 ```
 print(is_lat_valid(-186))
@@ -68,7 +68,7 @@ def convert_distance(area, in_unit, out_unit):
     return converted_distance
 ```
 
-### Test your function by running the following:
+Test your function by running the following:
 
 ```
 print(convert_area(1000,'m','km'))

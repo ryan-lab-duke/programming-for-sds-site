@@ -547,10 +547,8 @@
 <li><p>The function definition opens with the keyword <code class="docutils literal notranslate"><span class="pre">def</span></code> followed by the <strong>name</strong> of the function and a list of <strong>parameters</strong> in parentheses.</p></li>
 <li><p>The <strong>body</strong> of the function — the code that is executed when it runs — is <strong>indented</strong> below the definition line.</p></li>
 <li><p>At the end of the function, we use a <code class="docutils literal notranslate"><span class="pre">return</span></code> statement to define the value that should be output when the function is called.</p></li>
-<li><p>Defining a function does nothing other than make it available for use in our notebooks.</p></li>
-<li><p>In order to use the function we need to call it using the <strong>name</strong> of the function with the provided value(s) inside <strong>parentheses</strong>.</p></li>
 </ul>
-<p>As you can probaly tell, this function converts temperatures from Fahrenheit to Celsius.</p>
+<p>Defining a function does nothing other than make it available for use in our notebooks. In order to use the function we need to call it using the <strong>name</strong> of the function with the provided value(s) inside <strong>parentheses</strong>. As you can probaly tell, this function converts temperatures from Fahrenheit to Celsius.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fahr_to_celsius</span><span class="p">(</span><span class="mi">90</span><span class="p">)</span>
@@ -635,7 +633,12 @@
 </div>
 </div>
 </div>
-<p>Since the variable is defined outside the function, it is called a <strong>global variable</strong>.</p>
+<p>Since the variable is defined outside the function, it is called a <strong>global variable</strong>. Understanding the difference between local and global variables is crucial since many bugs and issues are caused by misunderstanding of the two. So to recap:</p>
+<ul class="simple">
+<li><p>A <strong>global variable</strong> is visible everywhere in a notebook.</p></li>
+<li><p>A <strong>local variable</strong> is visible only within a function.</p></li>
+</ul>
+<p>Generally, we want to avoid using too many global variables when we are programming because they can make debugging more difficult.</p>
 </div>
 <div class="section" id="functions-with-multiple-parameters">
 <h2>Functions with multiple parameters<a class="headerlink" href="#functions-with-multiple-parameters" title="Permalink to this headline">¶</a></h2>

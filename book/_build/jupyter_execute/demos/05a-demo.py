@@ -3,13 +3,13 @@
 
 # # Functions
 # 
-# When we write code, we want it to be as concise as possible while retaining readability. Sometimes we find ourselves writing out the same block over and over again. If we are doing this, it may be time to define a **function**, a self-contained program that can perform a specific task repeatedly. 
+# When we write code, we want it to be as concise as possible while retaining readability. Sometimes we find ourselves writing out the same block over and over again. If we are doing this, it may be time to define a **function**, a self-contained program that can perform a specific task repeatedly.
 
 # ## Anatomy of a function
 # 
 # Examples can be very useful for communicating new concepts so let's get straight to it and define our first function:
 
-# In[7]:
+# In[2]:
 
 
 def fahr_to_celsius(temp_fahrenheit):
@@ -30,14 +30,9 @@ def fahr_to_celsius(temp_fahrenheit):
 # * At the end of the function, we use a `return` statement to define the value that should be output when the function is called.
 # 
 # 
-# * Defining a function does nothing other than make it available for use in our notebooks. 
-# 
-# 
-# * In order to use the function we need to call it using the **name** of the function with the provided value(s) inside **parentheses**. 
+# Defining a function does nothing other than make it available for use in our notebooks. In order to use the function we need to call it using the **name** of the function with the provided value(s) inside **parentheses**. As you can probaly tell, this function converts temperatures from Fahrenheit to Celsius. 
 
-# As you can probaly tell, this function converts temperatures from Fahrenheit to Celsius.
-
-# In[8]:
+# In[3]:
 
 
 fahr_to_celsius(90)
@@ -88,7 +83,13 @@ celsius = fahr_to_kelvin(60)
 celsius
 
 
-# Since the variable is defined outside the function, it is called a **global variable**.
+# Since the variable is defined outside the function, it is called a **global variable**. Understanding the difference between local and global variables is crucial since many bugs and issues are caused by misunderstanding of the two. So to recap:
+# 
+# * A **global variable** is visible everywhere in a notebook.
+# 
+# * A **local variable** is visible only within a function.
+# 
+# Generally, we want to avoid using too many global variables when we are programming because they can make debugging more difficult. 
 
 # ## Functions with multiple parameters
 # 

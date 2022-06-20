@@ -111,7 +111,8 @@ df_monthly_mean = df['temp'].resample('1M').mean()
 df_monthly_mean.head()
 
 
-# ```{tip} The frequencies after `resample` are called **offset aliases**. A table of valid offset aliases can be found here: https://pandas.pydata.org/pandas-docs/stable/user_guide/timeseries.html#offset-aliases
+# ```{tip} 
+# The frequencies after `resample` are called **offset aliases**. A table of valid offset aliases can be found here: https://pandas.pydata.org/pandas-docs/stable/user_guide/timeseries.html#offset-aliases
 # ```
 
 # Alternatively, instead of averaging the temperatures in each month, we could **sum** the **discharges** in each month:
