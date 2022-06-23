@@ -302,7 +302,7 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="09a-demo.html">
-   Raster analysis
+   Working with raster data
   </a>
  </li>
  <li class="toctree-l1">
@@ -481,6 +481,11 @@
    Matrix searching
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#acknowledgments">
+   Acknowledgments
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -544,6 +549,11 @@
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#matrix-searching">
    Matrix searching
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#acknowledgments">
+   Acknowledgments
   </a>
  </li>
 </ul>
@@ -926,7 +936,7 @@
 <div class="section" id="matrix-indexing-and-slicing">
 <h2>Matrix indexing and slicing<a class="headerlink" href="#matrix-indexing-and-slicing" title="Permalink to this headline">¶</a></h2>
 <p>We can index and slice NumPy arrays in the same way we slice Python lists - using square brackets. Remember that indexing in Python starts at <strong>0</strong>.</p>
-<p>Since the array is <strong>2D</strong>, we need to use two numbers to access elements in the arry. The order is <code class="docutils literal notranslate"><span class="pre">array[row,</span> <span class="pre">col]</span></code> So if we wanted the value in the second row and first column we would type:</p>
+<p>Since the array is <strong>2D</strong>, we need to use two numbers to access elements in the array. The order is <code class="docutils literal notranslate"><span class="pre">array[row,</span> <span class="pre">col]</span></code> So if we wanted the value in the second row and first column we would type:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dem</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
@@ -1058,6 +1068,9 @@
 </div>
 </div>
 <p>We could also use this approach to derive values from other arrays so long as they have the same shape.</p>
+</div>
+<div class="section" id="acknowledgments">
+<h2>Acknowledgments<a class="headerlink" href="#acknowledgments" title="Permalink to this headline">¶</a></h2>
 <p>This demo was inspired by <a class="reference external" href="https://numpy.org/doc/stable/user/absolute_beginners.html">NumPy docs</a>.</p>
 </div>
 </div>
