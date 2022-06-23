@@ -244,7 +244,7 @@ np.multiply(dem, 2)
 # 
 # We can index and slice NumPy arrays in the same way we slice Python lists - using square brackets. Remember that indexing in Python starts at **0**. 
 # 
-# Since the array is **2D**, we need to use two numbers to access elements in the arry. The order is `array[row, col]` So if we wanted the value in the second row and first column we would type:
+# Since the array is **2D**, we need to use two numbers to access elements in the array. The order is `array[row, col]` So if we wanted the value in the second row and first column we would type:
 
 # In[93]:
 
@@ -330,4 +330,6 @@ dem[np.where(dem > 9)]
 
 # We could also use this approach to derive values from other arrays so long as they have the same shape.
 
+# ## Acknowledgments
+# 
 # This demo was inspired by [NumPy docs](https://numpy.org/doc/stable/user/absolute_beginners.html).

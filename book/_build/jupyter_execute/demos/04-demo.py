@@ -13,7 +13,7 @@
 # 
 # The main `Pandas` data structure is called a **DataFrame** which looks similar to an Excel spreadsheets. A typical DataFrame is a 2-D array with rows, columns, indices, and column names. We can import the `Pandas` and define a DataFrame like so:
 
-# In[15]:
+# In[2]:
 
 
 import pandas as pd
@@ -40,20 +40,20 @@ df.head()
 
 # ## Reading data
 # 
-# In reality, we rarely make a table from scratch like this. Instead we **read** files that already contain data and store the contents of those files into variables. We can do this using `.read_csv()` which is a general function for reading data files separated by commas, spaces, or other common separators.
+# In reality, we rarely make a table from scratch. Instead we **read** files that already contain data and store the contents of those files into variables. We can do this using `.read_csv()` which is a general function for reading data files separated by commas, spaces, or other common separators. The function takes a **path string** and returns a `DataFrame` object. 
 
-# In[22]:
+# In[6]:
 
 
 df = pd.read_csv('data/euro_cities.csv')
 
 # "df" stands for DataFrame
-df
+type(df)
 
 
-# By returning `df` we can see that our table has 100 rows and 3 columns. A more concise way of checking what is contained in our file is the `.head()` method which only prints the first five rows of the data.
+# A concise way of checking what is contained in our `df` object is the `.head()` method which prints the first five rows of the data.
 
-# In[23]:
+# In[7]:
 
 
 df.head()
@@ -77,14 +77,6 @@ df.tail(10)
 
 # ## DataFrame properties
 # 
-# We can confirm the date type of our variable using the built-in `type()` function:
-
-# In[26]:
-
-
-type(df)
-
-
 # To check the data types of each column, we can use `Pandas` method called `.dtypes`:
 
 # In[27]:
