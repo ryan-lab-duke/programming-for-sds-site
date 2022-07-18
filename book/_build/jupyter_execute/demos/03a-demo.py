@@ -58,7 +58,7 @@ states_capitalized
 # * We defined an **empty list** (to put our capitalized place names)
 # 
 # 
-# * We initiated the loop using the standard `for item in list` syntax. This basically means "do this for every item in the list". Note that this statement must end with a **colon**. 
+# * We initiated the loop using the standard `for item in list` syntax. This basically means "...for every item in the list". Note that this statement must end with a **colon** (`:`). 
 # 
 #  
 # * The code that is executed as part of the loop must be **indented** beneath the for loop statement. The typical indentation is four <kbd>space</kbd> keys or one <kbd>Tab</kbd> key.

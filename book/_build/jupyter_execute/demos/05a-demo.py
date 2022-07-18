@@ -3,7 +3,13 @@
 
 # # Functions
 # 
-# When we write code, we want it to be as concise as possible while retaining readability. Sometimes we find ourselves writing out the same block over and over again. If we are doing this, it may be time to define a **function**, a self-contained program that can perform a specific task repeatedly.
+# When we write code, we want it to be as concise as possible while retaining readability. Sometimes we find ourselves copying and pasting the same block of code over and over again. Instead of repeating this block of code, we can bundle it up into a **function**. We've encountered some **built-in** functions already:
+# 
+# - `print()`
+# - `len()`
+# - `type()`
+# 
+# But we can also define our own functions.
 
 # ## Anatomy of a function
 # 
@@ -21,7 +27,7 @@ def fahr_to_celsius(temp_fahrenheit):
 
 # So what is going on here?
 # 
-# * The function definition opens with the keyword `def` followed by the **name** of the function and a list of **parameters** in parentheses. 
+# * The function definition opens with the keyword `def` (short for **define**) followed by the **name** of the function, a list of **parameters** in parentheses (`()`) and a colon (`:`). 
 # 
 # 
 # * The **body** of the function — the code that is executed when it runs — is **indented** below the definition line.
@@ -30,7 +36,7 @@ def fahr_to_celsius(temp_fahrenheit):
 # * At the end of the function, we use a `return` statement to define the value that should be output when the function is called.
 # 
 # 
-# Defining a function does nothing other than make it available for use in our notebooks. In order to use the function we need to call it using the **name** of the function with the provided value(s) inside **parentheses**. As you can probaly tell, this function converts temperatures from Fahrenheit to Celsius. 
+# Defining a function does nothing other than make it available for use in our notebooks. In order to use the function we need to **call** it using the **name** of the function with the provided value(s) inside **parentheses**. As you can probaly tell, this function converts temperatures from Fahrenheit to Celsius. 
 
 # In[3]:
 
@@ -224,9 +230,3 @@ help(np.mean)
 # https://swcarpentry.github.io/python-novice-inflammation/08-func/index.html
 # 
 # https://geo-python-site.readthedocs.io/en/latest/notebooks/L4/functions.html
-
-# In[ ]:
-
-
-
-

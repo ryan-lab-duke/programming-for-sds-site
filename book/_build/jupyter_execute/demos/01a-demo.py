@@ -29,7 +29,7 @@
 
 # ## Variables
 # 
-# This is great but to do something more useful with data, we need to assign its value to a **variable**. In Python, we do this using the equals sign `=`. For example, we can track the height of a tree by assigning an integer value of `30` to a variable `height_m`.
+# This is great but to do something more useful with data, we need to assign its value to a **variable**. Variables are one of the fundamental building blocks of Python. A variable is like a tiny container where you store values and data, such as filenames, words, numbers, collections of words and numbers. In Python, we can assign a variable using the equals sign `=`. For example, we can track the height of a tree by assigning an integer value of `30` to a variable `height_m`.
 
 # In[2]:
 
@@ -66,6 +66,25 @@ height_ft = height_m * 3.281
 
 tree1 = tree + '_1'
 
+
+# ### Variable names
+# 
+# It is good practice to make variable names as descriptive as possible. They can include:
+# 
+# * upper and lower-case letters (`a-z`, `A-Z`)
+# 
+# * digits (`0-9`)
+# 
+# * underscores (`_`)
+# 
+# However, variable names **cannot** include:
+# 
+# ❌ other punctuation (`-.!?@`)
+# 
+# ❌ spaces (` `)
+# 
+# ❌ a reserved Python word (e.g. `print`, `type`)
+# 
 
 # ## Built-in functions
 
@@ -132,10 +151,16 @@ int(evergreen)
 # 
 # Sometimes we might want to store a **collection of items** in a single variable. The simplest type of collection in Python is a `list` which can be defined using square brackets `[` and commas `,`.
 
-# In[6]:
+# In[2]:
 
 
 places = ['Eugene', 'Veneta', 'Noti', 'Mapleton', 'Florence']
+
+
+# In[3]:
+
+
+type(places)
 
 
 # ### Indexing

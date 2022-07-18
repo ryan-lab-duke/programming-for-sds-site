@@ -3,7 +3,7 @@
 
 # # Completing assignments
 
-# In this course we will use [**JupyterLab**](https://jupyterlab.readthedocs.io/en/stable/getting_started/overview.html) to complete assignments. JupyterLab is a **free**, web-based interactive development environment (IDE) for code development.
+# In this course we will use [**JupyterLab**](https://jupyterlab.readthedocs.io/en/stable/getting_started/overview.html) to complete assignments. JupyterLab is a **free**, interactive development environment (IDE) which runs in your web browser.
 
 # ```{admonition} Launch JupyterLab
 # We can launch JupyterLab by clicking this button: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/owel-lab/programming-for-sds-site/HEAD)
@@ -41,7 +41,7 @@ c
 # Run the cells by pressing <kbd>Shift</kbd> + <kbd>Enter</kbd>. If everything is working correctly, this code block should return the number `5`.
 
 # ```{note}
-# If you are using cloud-based computing environments (i.e. Binder) to complete weekly assignments, they can be accessed from anywhere with any computer as long as we have a good internet connection. 
+# If you are using cloud-based computing environments (i.e. Binder) to complete weekly assignments, they can be accessed from anywhere with any computer as long as you have a good internet connection. 
 # ```
 
 # ## Save assignment
@@ -59,4 +59,21 @@ c
 
 # ## Submit assignment
 # 
-# When we are finished with the assignment, we can download the notebook by clicking **File** --> **Download**. This file should be moved to your local course folder and submitte via Canvas. 
+# When you are finished with the assignment, you can download the notebook by clicking **File** --> **Download**. This `.ipynb` file should be moved to your local course folder and submitted via Canvas.
+
+# ## JupyterLab
+# 
+# These instructions are just the absolute basics. For more information about JupyterLab, we suggest referring to their docs. The following pages are particularly relevant:
+# 
+# * [The JupyterLab Interface](https://jupyterlab.readthedocs.io/en/stable/user/interface.html)
+# * [Working with Files](https://jupyterlab.readthedocs.io/en/stable/user/files.html)
+# * [The Text Editor](https://jupyterlab.readthedocs.io/en/stable/user/file_editor.html)
+# * [Notebooks](https://jupyterlab.readthedocs.io/en/stable/user/notebook.html)
+# * [Terminals](https://jupyterlab.readthedocs.io/en/stable/user/terminal.html)
+# * [Managing Kernels and Terminals](https://jupyterlab.readthedocs.io/en/stable/user/running.html)
+
+# In[ ]:
+
+
+
+

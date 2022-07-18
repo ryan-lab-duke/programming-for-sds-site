@@ -32,7 +32,7 @@ import matplotlib.pyplot as plt
 # 
 # The first way is called the **pyplot style** which relies on `Matplotlib` to automatically keep track of changes we apply to the figure. The pyplot style can be very convenient for quick interactive work. We can make a simple line graph using the [`plot`](https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.plot.html) method and add a **title** to it using the [`title`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.title.html) methods. Finally, it is good practice to add the [`show()`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.show.html) method to display the figure.
 
-# In[35]:
+# In[2]:
 
 
 plt.plot([1, 2, 3, 4])
@@ -42,7 +42,7 @@ plt.show()
 
 # The second way is called the **object-oriented style** where we explicitly create the axes and call methods on them. We recommend the object-oriented style because 1) it is easier to produce more sophisticated, multi-panel plots, 2) it is easier to re-use the code, and 3) it is the style used in many of the examples on the `Matplotlib` documentation page.
 
-# In[36]:
+# In[3]:
 
 
 fig, ax = plt.subplots()
@@ -61,7 +61,7 @@ plt.show()
 # 
 # Once we have our figure, we can customize the style using keyword arguments. Most plotting methods have styling options which are accessible when the plotting method (i.e. `plot`) is called.
 
-# In[44]:
+# In[4]:
 
 
 fig, ax = plt.subplots()
@@ -72,7 +72,7 @@ plt.show()
 
 # Another type of plot, called [`scatter`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.scatter.html), produces a scatter plot of two datasets. This type of plot allows us to customize the size of the marker, as well as the facecolor and edgecolor of the marker.
 
-# In[38]:
+# In[5]:
 
 
 fig, ax = plt.subplots()
@@ -85,7 +85,7 @@ plt.show()
 # 
 # As well as a title, we can add **x- and y-axis labels** using the [`set_xlabel`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.xlabel.html) and [`set_ylabel`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.xlabel.html) methods. The font size of labels can set using the keyword argument `fontsize`. 
 
-# In[43]:
+# In[6]:
 
 
 fig, ax = plt.subplots()
@@ -100,7 +100,7 @@ plt.show()
 # 
 # Each axis has a tick locator and formatter that allows us to change the location of tick marks along the axis.
 
-# In[68]:
+# In[7]:
 
 
 fig, ax = plt.subplots()
@@ -115,7 +115,7 @@ plt.show()
 
 # We can also set the fontsize of the tick labels using the [`tick_params`](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.tick_params.html) method.
 
-# In[67]:
+# In[8]:
 
 
 fig, ax = plt.subplots()
@@ -133,7 +133,7 @@ plt.show()
 # 
 # If we are plotting two datasets on the same figure, we might want to add a legend. We can do that by adding the keyword argument `label` to the `plot` function and calling the `legend()` function. 
 
-# In[76]:
+# In[9]:
 
 
 fig, ax = plt.subplots()
@@ -156,7 +156,7 @@ plt.show()
 # 
 # We can plot our data on two axes.
 
-# In[79]:
+# In[10]:
 
 
 fig, (ax1, ax2) = plt.subplots(ncols=2, nrows=1) # <-----
@@ -171,7 +171,7 @@ plt.show()
 # 
 # `Matplotlib` automatically adjusts the figure layout but we can change the size of the figure using the keyword argument `figsize` which accepts a numeric width and height value in inches.
 
-# In[83]:
+# In[11]:
 
 
 fig, (ax1, ax2) = plt.subplots(ncols=2, nrows=1, figsize=(12,3)) # <-----
@@ -184,7 +184,7 @@ plt.show()
 
 # We can use the keyword argument `layout=constrained` to automatically adjust the axes so that **whitespace** is minimized. It is also nice to add a grid.
 
-# In[88]:
+# In[12]:
 
 
 fig, (ax1, ax2) = plt.subplots(ncols=2, nrows=1, figsize=(12,3),
@@ -201,3 +201,9 @@ plt.show()
 # ## Acknowledgements
 # 
 # This demo was based on the `Matplotlib` tutorials https://matplotlib.org/stable/tutorials/introductory/usage.html and https://matplotlib.org/stable/tutorials/introductory/pyplot.html. 
+
+# In[ ]:
+
+
+
+

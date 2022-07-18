@@ -3,12 +3,19 @@
 
 # # Conditional statements
 # 
-# In the second part of this week we will learn how to write Python code that can make decisions using conditional statements (`if`, `elif`, `else`), comparison operators (`>`, `<`, `==`), and Boolean values (`True`, `False`).
+# Most of the time when we are programming we are asking the computer to perform certain tasks if certain conditions are met. For example:
 # 
+# * If a person in the dataset is older than 30, then print out their name
 # 
+# * If a tweet contains a specific phrase, then automatically retweet it
+# 
+# * If  then say “Congratulations, Beyoncé!
+# 
+# In the second part of this week we will learn about conditional statements (`if`, `elif`, `else`), comparison operators (`>`, `<`, `==`), and Boolean values (`True`, `False`).
+
 # ## A simple conditional statment
 # 
-# Here is a simple example. A messenger arrives at a crossroads and has to make a decision about which way to go. They decide to turn **left**. This is what the code could look like:
+# Here is an example. A messenger arrives at a crossroads and has to make a decision about which way to go. We would like them to turn **left**. This is what the code could look like:
 
 # In[21]:
 
@@ -19,7 +26,24 @@ if direction == 'left':
     print("Turns left")
 
 
-# Conditional statements are written in a similar way to `for` loops. The `if` statement checks to see whether the variable value is `True` or `False`. If a `True` is returned, then we execute the **indented** command below.
+# There are two important Python elements presented in the code above: a **comparison** and a **conditional statement**. We compared whether the variable `direction` is **equal to** the value `left`. Then we printed `Turns left` if this condition was **True**.
+
+# ## Comparisons
+# 
+# There are many ways that we can compare values with Python, such as equals (`==`), not equals (`!=`), greater than (`>`), less than (`<`), greater than or equal to (`>=`), or less than or equal to (`<=`).
+# 
+# | **Comparison operator** | **Explanation** |
+# |:-------------:|:-------------------------:|
+# | `x == y `     | `True` if x is equal to y |
+# | `x != y `     | `True` if x is not equal to y |,
+# | `x > y`       | `True` if x is greater than y |
+# | `x < y`       | `True` if x is less than y | 
+# | `x >= y`      | `True` if x is greater than or equal to y |
+# | `x <= y`      | `True` if x is less than or equal to y    |
+
+# ## Conditional statements
+# 
+# Conditional statements are written in a similar way to `for` loops. The `if` statement checks to see whether the variable value is `True` or `False`. If a `True` is returned, then we execute the **indented** command below. 
 # 
 # Alternatively, the messenger might decide to turn **right**.
 
@@ -39,10 +63,10 @@ if direction == 'left':
 # ````
 
 # This time the first statement (`if direction == 'left':`) was ignored because the value returned was `False`. Nothing was returned.
-# 
+
 # ## `elif`
 # 
-# If we wanted to add an option for turning right we could add it using an `elif` statement.
+# We can add more complexity in a conditional statement by usinga an `elif` statement. If we wanted to add an option for turning right we could write:
 
 # In[26]:
 
