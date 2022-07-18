@@ -2,6 +2,8 @@
 
 On this website you will find the course materials developed for GEOG 2XX taught at the [Department of Geography, University of Oregon](https://geography.uoregon.edu/) in Fall 2023. 
 
+"**Designed by [Johnny Ryan](https://www.johnny-ryan.com/) // Powered by [Jupyter Book](https://jupyterbook.org/)**
+
 ## Overview
 
 The goal of this course is to introduce students to basic programming concepts in Python and apply these skills to various geospatial problems. There are no pre-requisites and students do not need any previous programming experience. Each week we will have a short lecture that introduces a new topic. In the following assignment, students will apply these new concepts to solve common tasks involving geospatial data. During this course, students will become familiar with the main Python packages used for loading, processing, visualizing, and analyzing geospatial data. Students are encouraged to discuss and collaborate on the assignments. However, assignments must be completed and submitted individually. 
@@ -32,7 +34,7 @@ Python has become the leading programming introduction course in Geography and E
 
 ## Acknowledgements
 
-This course was inspired by [Melanie Walsh](https://melaniewalsh.github.io/Intro-Cultural-Analytics/welcome.html) and [David Shean](https://github.com/UW-GDA/gda_course_2021).
+This course was inspired by course material designed by [Melanie Walsh](https://melaniewalsh.github.io/Intro-Cultural-Analytics/welcome.html) and [David Shean](https://github.com/UW-GDA/gda_course_2021).
 
 
 
