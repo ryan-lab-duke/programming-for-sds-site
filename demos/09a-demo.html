@@ -37,21 +37,23 @@
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Plotting image data" href="09b-demo.html" />
+    <link rel="next" title="Remote sensing in Python" href="09b-demo.html" />
     <link rel="prev" title="Assignment 8" href="../assignments/08-assignment.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -307,7 +309,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="09b-demo.html">
-   Plotting image data
+   Remote sensing in Python
   </a>
  </li>
  <li class="toctree-l1">
@@ -466,6 +468,11 @@
    Reprojecting
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#resampling">
+   Resampling
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -516,6 +523,11 @@
    Reprojecting
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#resampling">
+   Resampling
+  </a>
+ </li>
 </ul>
 
                         </nav>
@@ -529,7 +541,7 @@
 <h1>Working with raster data<a class="headerlink" href="#working-with-raster-data" title="Permalink to this headline">¶</a></h1>
 <p>Raster data represent a matrix of cells (or pixels) organized into rows and columns (or a grid). Grid cells can represent data that changes <strong>continuously</strong> across a landscape (surface) such as elevation, air temperature, or . reflectance data from satellite imaging platforms. Grid cells can also represent <strong>discrete</strong> data such as vegetation type or land cover.</p>
 <p>We recommend three libraries for accessing and analyzing raster data in Python. The first is called <code class="docutils literal notranslate"><span class="pre">rasterio</span></code> which builds on the popular <strong>Geographic Raster Abstraction Library</strong> or <code class="docutils literal notranslate"><span class="pre">GDAL</span></code>. It supports read/write access for over 160 raster formats (e.g. GeoTIFF, NetCDF4) and includes methods for finding dataset information, reprojections, resampling, format conversion, and mosaicking. Once we have imported, resampled the data etc., we can apply fast matrix operations using <code class="docutils literal notranslate"><span class="pre">NumPy</span></code>. Finally, we may also use <code class="docutils literal notranslate"><span class="pre">xarray</span></code> which introduces labels in the form of <strong>dimensions</strong>, <strong>coordinates</strong> and <strong>attributes</strong> on top of raw NumPy-like arrays, a bit like <code class="docutils literal notranslate"><span class="pre">Pandas</span></code>.</p>
-<a class="reference internal image-reference" href="../_images/raster_matrix.png"><img alt="raster matrix" class="align-center" src="../_images/raster_matrix.png" style="width: 600px;" /></a>
+<a class="reference internal image-reference" href="../_images/raster_matrix.png"><img alt="raster matrix" class="align-center" src="../_images/raster_matrix.png" style="width: 500px;" /></a>
 <p>In this demo, we will be working with elevation data, also known as a Digital Elevation Model (DEM), of the Cascades Mountain Range that includes Mt. Rainier and Mt. Adams. The data is formatted as a <code class="docutils literal notranslate"><span class="pre">GeoTIFF</span></code> and we will open it using <code class="docutils literal notranslate"><span class="pre">rasterio</span></code> function, <code class="docutils literal notranslate"><span class="pre">open()</span></code>. This function take a <strong>path string</strong> and returns a <strong>dataset object</strong>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -744,7 +756,7 @@ Height: 3601
 </div>
 <div class="section" id="more-indexing-methods">
 <h2>More indexing methods<a class="headerlink" href="#more-indexing-methods" title="Permalink to this headline">¶</a></h2>
-<p>How would we find the index of the <strong>lowest elevation</strong> in this raster dataset? The <code class="docutils literal notranslate"><span class="pre">NumPy</span></code> <span class="xref myst"><code class="docutils literal notranslate"><span class="pre">argmin()</span></code></span> function returns the indices of the minimum values of an array.</p>
+<p>How would we find the index of the <strong>lowest elevation</strong> in this raster dataset? The <code class="docutils literal notranslate"><span class="pre">NumPy</span></code> <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.argmin.html"><code class="docutils literal notranslate"><span class="pre">argmin()</span></code></a> function returns the indices of the minimum values of an array.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">min_idx_value</span> <span class="o">=</span> <span class="n">srtm</span><span class="o">.</span><span class="n">argmin</span><span class="p">()</span>
@@ -809,10 +821,11 @@ Height: 3601
 </div>
 <div class="section" id="reprojecting">
 <h2>Reprojecting<a class="headerlink" href="#reprojecting" title="Permalink to this headline">¶</a></h2>
-<p>We could <code class="docutils literal notranslate"><span class="pre">Rasterio</span></code> to reproject raster data… but it’s quite tricky!</p>
-<a class="reference internal image-reference" href="../_images/rasterio_reproject.png"><img alt="rasterio reproject" class="align-center" src="../_images/rasterio_reproject.png" style="width: 500px;" /></a>
-<p>So instead we recommend using <a class="reference external" href="https://gdal.org/programs/index.html#raster-programs"><strong>GDAL utilities</strong></a>. We can execute these commands in jupyter notebook cells using the <code class="docutils literal notranslate"><span class="pre">!</span></code> sign.</p>
-<p>To reproject our data, we can use <a class="reference external" href="https://gdal.org/programs/gdalwarp.html#gdalwarp"><code class="docutils literal notranslate"><span class="pre">gdalwarp</span></code></a>. All we need to do is set a <strong>target spatial reference</strong> using the <code class="docutils literal notranslate"><span class="pre">-t_srs</span></code> argument followed by a space, following the <strong>input dataset</strong> and the <strong>output dataset</strong>.</p>
+<p>We could use <code class="docutils literal notranslate"><span class="pre">Rasterio</span></code> to reproject raster data… but it’s quite tricky!</p>
+<a class="reference internal image-reference" href="../_images/rasterio_reproject.png"><img alt="rasterio reproject" class="align-center" src="../_images/rasterio_reproject.png" style="width: 700px;" /></a>
+<p>Instead we recommend using <a class="reference external" href="https://gdal.org/programs/index.html#raster-programs"><strong>GDAL utilities</strong></a>. We can execute these commands in our jupyter notebook cells using the <code class="docutils literal notranslate"><span class="pre">!</span></code> sign.</p>
+<p>To reproject our data, we can use <a class="reference external" href="https://gdal.org/programs/gdalwarp.html#gdalwarp"><code class="docutils literal notranslate"><span class="pre">gdalwarp</span></code></a>. All we need to do is set a <strong>target spatial reference</strong> using the <code class="docutils literal notranslate"><span class="pre">-t_srs</span></code> flag followed by a space, the <strong>input dataset</strong>, and the <strong>output dataset</strong>. Below we set the target spatial reference to <a class="reference external" href="https://epsg.io/32610"><strong>UTM Zone 10N</strong></a> (or EPSG:32610) which is the UTM Zone for the Pacific Northwest.</p>
+<a class="reference internal image-reference" href="../_images/utm_zones.png"><img alt="utm zones" class="align-center" src="../_images/utm_zones.png" style="width: 300px;" /></a>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>gdalwarp -t_srs EPSG:32610 data/N46W122.tif data/N46W122_utm.tif
@@ -820,12 +833,132 @@ Height: 3601
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Creating output file that is 2973P x 4245L.
-Processing data/N46W122.tif [1/1] : 0Using internal nodata values (e.g. -32768) for image data/N46W122.tif.
-Copying nodata values from source data/N46W122.tif to destination data/N46W122_utm.tif.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Processing data/N46W122.tif [1/1] : 0Using internal nodata values (e.g. -32768) for image data/N46W122.tif.
 ...10...20...30...40...50...60...70...80...90...100 - done.
 </pre></div>
 </div>
+</div>
+</div>
+<p>If we navigate to our <code class="docutils literal notranslate"><span class="pre">data</span></code> folder we should see a new file called <code class="docutils literal notranslate"><span class="pre">N46W122_utm.tif</span></code>. Let’s <code class="docutils literal notranslate"><span class="pre">open</span></code> this new GeoTIFF and check that is has a new projection.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">src</span> <span class="o">=</span> <span class="n">rasterio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;data/N46W122_utm.tif&#39;</span><span class="p">)</span>
+<span class="n">src</span><span class="o">.</span><span class="n">crs</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CRS.from_epsg(32610)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">srtm</span> <span class="o">=</span> <span class="n">src</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="mi">7</span><span class="p">))</span>
+<span class="n">im</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">srtm</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Mt Rainier and Mt Adams&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">cbar</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">im</span><span class="p">,</span> <span class="n">orientation</span><span class="o">=</span><span class="s1">&#39;vertical&#39;</span><span class="p">)</span>
+<span class="n">cbar</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Elevation&#39;</span><span class="p">,</span> <span class="n">rotation</span><span class="o">=</span><span class="mi">270</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">cbar</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">get_yaxis</span><span class="p">()</span><span class="o">.</span><span class="n">labelpad</span> <span class="o">=</span> <span class="mi">20</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/09a-demo_35_0.png" src="../_images/09a-demo_35_0.png" />
+</div>
+</div>
+<p>Why does the data look so strange now? Well, since we reprojected it, our data no longer represents a rectangle/square. Since all arrays have to be rectangles/squares, our reprojection introduced some <strong>NoData values</strong> at the edges. If we have a look at our array, we see that these NoData values are indicated by the integer <code class="docutils literal notranslate"><span class="pre">-32768</span></code> which is the smallest possible value that can be represented by the <code class="docutils literal notranslate"><span class="pre">int16</span></code> data type (i.e. -32,768 to 32,767).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">srtm</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[-32768, -32768, -32768, ..., -32768, -32768, -32768],
+       [-32768, -32768, -32768, ..., -32768, -32768, -32768],
+       [-32768, -32768, -32768, ..., -32768, -32768, -32768],
+       ...,
+       [-32768, -32768, -32768, ..., -32768, -32768, -32768],
+       [-32768, -32768, -32768, ..., -32768, -32768, -32768],
+       [-32768, -32768, -32768, ..., -32768, -32768, -32768]], dtype=int16)
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can mask these NoData values by using NumPy’s <a class="reference external" href="https://numpy.org/doc/stable/reference/maskedarray.generic.html"><strong>masked array</strong></a> module that makes it easier to deal with arrays that have missing or invalid entries.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">srtm_masked</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ma</span><span class="o">.</span><span class="n">masked_array</span><span class="p">(</span><span class="n">srtm</span><span class="p">,</span> <span class="n">mask</span><span class="o">=</span><span class="p">(</span><span class="n">srtm</span> <span class="o">==</span> <span class="o">-</span><span class="mi">32768</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now when we plot the data, the NoData values are not assigned a color.`</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="mi">7</span><span class="p">))</span>
+<span class="n">im</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">srtm_masked</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Mt Rainier and Mt Adams&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">cbar</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">im</span><span class="p">,</span> <span class="n">orientation</span><span class="o">=</span><span class="s1">&#39;vertical&#39;</span><span class="p">)</span>
+<span class="n">cbar</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Elevation&#39;</span><span class="p">,</span> <span class="n">rotation</span><span class="o">=</span><span class="mi">270</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">cbar</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">get_yaxis</span><span class="p">()</span><span class="o">.</span><span class="n">labelpad</span> <span class="o">=</span> <span class="mi">20</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/09a-demo_41_0.png" src="../_images/09a-demo_41_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="resampling">
+<h2>Resampling<a class="headerlink" href="#resampling" title="Permalink to this headline">¶</a></h2>
+<p>GDAL utilites make it straightforward to change the <strong>spatial resolution</strong> of our raster dataset. To reduce the pixel size of our dataset from around 30 m to 1,000 m can be carried out using <code class="docutils literal notranslate"><span class="pre">gdalwarp</span></code>. This time, however, we specify the <code class="docutils literal notranslate"><span class="pre">-tr</span></code> flag, which stands for <strong>target resolution</strong>, followed by the pixel size we want.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>gdalwarp -tr <span class="m">1000</span> -1000 data/N46W122_utm.tif data/N46W122_utm_1000.tif
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Creating output file that is 79P x 113L.
+Processing data/N46W122_utm.tif [1/1] : 0Using internal nodata values (e.g. -32768) for image data/N46W122_utm.tif.
+Copying nodata values from source data/N46W122_utm.tif to destination data/N46W122_utm_1000.tif.
+...10...20...30...40...50...60...70...80...90...100 - done.
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now when we <code class="docutils literal notranslate"><span class="pre">open</span></code>, <code class="docutils literal notranslate"><span class="pre">read</span></code>, <code class="docutils literal notranslate"><span class="pre">mask</span></code>, and <code class="docutils literal notranslate"><span class="pre">plot</span></code> our data, we will see that it looks a lot coarser/pixelated because  each grid cell represents 1 km on the ground.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Open new raster dataset</span>
+<span class="n">src</span> <span class="o">=</span> <span class="n">rasterio</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;data/N46W122_utm_1000.tif&#39;</span><span class="p">)</span>
+
+<span class="c1"># Read new raster dataset</span>
+<span class="n">srtm_1000</span> <span class="o">=</span> <span class="n">src</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Mask data</span>
+<span class="n">srtm_1000_masked</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ma</span><span class="o">.</span><span class="n">masked_array</span><span class="p">(</span><span class="n">srtm_1000</span><span class="p">,</span> <span class="n">mask</span><span class="o">=</span><span class="p">(</span><span class="n">srtm_1000</span> <span class="o">==</span> <span class="o">-</span><span class="mi">32768</span><span class="p">))</span>
+
+<span class="c1"># Plot </span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
+<span class="n">im</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">srtm_1000_masked</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Mt Rainier and Mt Adams&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">cbar</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">im</span><span class="p">,</span> <span class="n">orientation</span><span class="o">=</span><span class="s1">&#39;vertical&#39;</span><span class="p">)</span>
+<span class="n">cbar</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Elevation&#39;</span><span class="p">,</span> <span class="n">rotation</span><span class="o">=</span><span class="mi">270</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">cbar</span><span class="o">.</span><span class="n">ax</span><span class="o">.</span><span class="n">get_yaxis</span><span class="p">()</span><span class="o">.</span><span class="n">labelpad</span> <span class="o">=</span> <span class="mi">20</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/09a-demo_45_0.png" src="../_images/09a-demo_45_0.png" />
 </div>
 </div>
 </div>
@@ -866,7 +999,7 @@ Copying nodata values from source data/N46W122.tif to destination data/N46W122_u
     <a class='right-next' id="next-link" href="09b-demo.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Plotting image data</p>
+        <p class="prev-next-title">Remote sensing in Python</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

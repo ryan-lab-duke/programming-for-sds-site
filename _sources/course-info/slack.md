@@ -12,7 +12,7 @@ We will use [Slack](https://slack.com/) for most discussion and questions.
 
 ## Access Slack workspace
 
-We will send an invite link to all enrolled students via email (and Canvas).. Before you can start using Slack, you should create a new account (if you don’t have one already) and accept the invitation you have received.
+We will send an invite link to all enrolled students via email (and Canvas). Before you can start using Slack, you should create a new account (if you don’t have one already) and accept the invitation you have received.
 
 After accepting the invitation, you can access the course Slack team via this link: http://xxx.slack.com
 

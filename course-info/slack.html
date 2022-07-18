@@ -37,17 +37,19 @@
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script>
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -302,12 +304,12 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../demos/09a-demo.html">
-   Raster analysis
+   Working with raster data
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../demos/09b-demo.html">
-   Plotting image data
+   Remote sensing in Python
   </a>
  </li>
  <li class="toctree-l1">
@@ -464,7 +466,7 @@
 <a class="mb-1 reference internal image-reference" href="../_images/slack.png"><img alt="slack" class="mb-1 align-center" src="../_images/slack.png" style="width: 200px;" /></a>
 <div class="section" id="access-slack-workspace">
 <h2>Access Slack workspace<a class="headerlink" href="#access-slack-workspace" title="Permalink to this headline">¶</a></h2>
-<p>We will send an invite link to all enrolled students via email (and Canvas).. Before you can start using Slack, you should create a new account (if you don’t have one already) and accept the invitation you have received.</p>
+<p>We will send an invite link to all enrolled students via email (and Canvas). Before you can start using Slack, you should create a new account (if you don’t have one already) and accept the invitation you have received.</p>
 <p>After accepting the invitation, you can access the course Slack team via this link: <a class="reference external" href="http://xxx.slack.com">http://xxx.slack.com</a></p>
 <p>It is recommended that you use the standalone desktop app rather than the web interface. If you’re confused or uncertain about something in the lab, please ask or post a question/comment on the relevant Slack channel (e.g., #lab01).</p>
 </div>
