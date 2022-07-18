@@ -29,10 +29,10 @@ Please let the instructors know before the deadline if you anticipate a late sub
 * All lecture slides, assignments, and guides are available on this website ([https://owel-lab.github.io/gds-applications-site/](https://owel-lab.github.io/gds-applications-site/)).
 
 
-* **Dropbox**: the data for the labs are available on Dropbox. Please see **Canvas** for link.
+* **Dropbox**: The ddata for the labs are available on Dropbox - see **Canvas** for link.
 
 
-* **Canvas**: the lecture slides and assignments will also be available on Canvas.
+* **Canvas**: Links to the lectures and assignments will also be available on Canvas.
 
 
 * **Slack**: We will use [Slack](../course-info/slack.md) for most communication and discussion. Please join the course workspace with your **UO email address** (see Canvas for link). 

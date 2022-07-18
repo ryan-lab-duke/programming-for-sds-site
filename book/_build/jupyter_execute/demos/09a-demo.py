@@ -9,7 +9,7 @@
 # 
 # ```{image} images/raster_matrix.png
 # :alt: raster matrix
-# :width: 600px
+# :width: 500px
 # :align: center
 # ```
 
@@ -160,7 +160,7 @@ cbar.ax.get_yaxis().labelpad = 20
 
 # ## More indexing methods
 # 
-# How would we find the index of the **lowest elevation** in this raster dataset? The `NumPy` [`argmin()`]('https://numpy.org/doc/stable/reference/generated/numpy.argmin.html') function returns the indices of the minimum values of an array.
+# How would we find the index of the **lowest elevation** in this raster dataset? The `NumPy` [`argmin()`](https://numpy.org/doc/stable/reference/generated/numpy.argmin.html) function returns the indices of the minimum values of an array.
 
 # In[29]:
 
@@ -204,17 +204,23 @@ cbar.ax.get_yaxis().labelpad = 20
 
 # ## Reprojecting
 # 
-# We could `Rasterio` to reproject raster data... but it’s quite tricky!
+# We could use `Rasterio` to reproject raster data... but it’s quite tricky!
 # 
 # ```{image} images/rasterio_reproject.png
 # :alt: rasterio reproject
-# :width: 500px
+# :width: 700px
 # :align: center
 # ```
 # 
-# So instead we recommend using [**GDAL utilities**](https://gdal.org/programs/index.html#raster-programs). We can execute these commands in jupyter notebook cells using the `!` sign.
+# Instead we recommend using [**GDAL utilities**](https://gdal.org/programs/index.html#raster-programs). We can execute these commands in our jupyter notebook cells using the `!` sign.
 # 
-# To reproject our data, we can use [`gdalwarp`](https://gdal.org/programs/gdalwarp.html#gdalwarp). All we need to do is set a **target spatial reference** using the `-t_srs` argument followed by a space, following the **input dataset** and the **output dataset**. 
+# To reproject our data, we can use [`gdalwarp`](https://gdal.org/programs/gdalwarp.html#gdalwarp). All we need to do is set a **target spatial reference** using the `-t_srs` argument followed by a space, the **input dataset**, and the **output dataset**. Below we set the **target spatial reference** to [UTM Zone 10N](https://epsg.io/32610) which is the UTM Zone for the Pacific Northwest. 
+# 
+# ```{image} images/utm_zones.png
+# :alt: utm zones
+# :width: 300px
+# :align: center
+# ```
 
 # In[36]:
 
@@ -222,8 +228,25 @@ cbar.ax.get_yaxis().labelpad = 20
 get_ipython().system('gdalwarp -t_srs EPSG:32610 data/N46W122.tif data/N46W122_utm.tif')
 
 
+# If we navigate to our `data` folder we should see a new file called `N46W122_utm.tif`. Let's read this new dataset and check that is has a new projection. 
+
 # In[ ]:
 
 
+src = rasterio.open('data/N46W122_utm.tif')
+src.crs
 
+
+# In[ ]:
+
+
+srtm = src.read(1)
+
+fig, ax = plt.subplots(figsize=(7,7))
+im = ax.imshow(srtm)
+
+ax.set_title("Mt Rainier and Mt Adams", fontsize=14)
+cbar = fig.colorbar(im, orientation='vertical')
+cbar.ax.set_ylabel('Elevation', rotation=270, fontsize=14)
+cbar.ax.get_yaxis().labelpad = 20
 
