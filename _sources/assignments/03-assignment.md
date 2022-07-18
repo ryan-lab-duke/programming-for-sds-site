@@ -28,10 +28,10 @@ Look for the string method you need [here](https://www.w3schools.com/python/pyth
 *****************************
 ## Task 2 (5 points)
 
-Produce a variable containing only the **strings** in this list using a for loop and conditional statements 
+Produce a variable containing only the **strings** in this list using a for loop and conditional statements
 
 ```
-shopping_list = ['Lettuce', 'Carrots', 'Bananas', 4, 10, 'Fries']
+shopping_list = ['Lettuce', 'Carrots', 'Bananas', 4, 10, 'Potatoes']
 ```
 
 ```{admonition} Click to reveal hint
@@ -47,7 +47,7 @@ Write a for loop that counts the number of vowels in the sentence below.
 ```
 vowels = 'aeiouAEIOU'
 
-sentence = 'Please leave the mail around the back'
+sentence = 'Please leave the package by the back door'
 ```
 
 ```{admonition} Click to reveal hint
@@ -58,15 +58,41 @@ The `.count()` method is useful for this task.
 *****************************
 ## Task 4 (5 points)
 
-Staying with our messenger example... here is a list of daily discharges for July.
+```
+city = 'Eugene'
+country = 'USA'
+number_months = 7
+max_monthly_temp = 66.9
 
 ```
-discharge = np.array([0.35566225, 0.22860853, 1.61016786, 2.33536627, 0.8870465 ,
-       1.59367912, 1.58019839, 0.12487782, 2.28879693, 1.46785715,
-       1.55437207, 1.51479052, 0.99618413, 2.2102335 , 2.857399  ,
-       2.60550631, 2.80640146, 2.88803859, 0.60201065, 2.8673259 ,
-       2.17486724, 1.05056674, 1.05193519, 0.30746037, 1.64589355,
-       0.42026095, 1.52437286, 0.28315257, 0.95309955, 1.5090727 ])
+
+Write a conditional statement that returns `True` if Eugene is a city in the USA.
+
+*****************************
+## Task 5 (5 points)
+
+A "cool-summer Mediterranean climate" is defined as having warm and dry summers. In this climate classification, more than four months should have average temperatures of 50 F or higher (`number_months`) **and** no average monthly temperatures should exceed 72 F (`max_monthly_temp`).
+
+* a) Write a conditional statement that returns `True` if Eugene has a cool-summer Mediterranean climate.
+
+```
+city = 'Porto'
+country = 'Portugal'
+number_months = 11
+max_monthly = 69.4
+```
+
+* b) Write a conditional statement that returns `True` if **Porto** has a cool-summer Mediterranean climate.
+
+*****************************
+## Task 6 (5 points)
+
+Here is a list of daily river discharges for July.
+
+```
+discharge = np.array([0.3, 0.2, 1.6, 2.3, 0.8, 1.5, 1.5, 0.1, 2.2, 1.4,
+       1.5, 1.5, 0.9, 2.2, 2.8, 2.6, 2.8, 2.8, 0.6, 2.8, 2.1, 1.0, 1.0, 
+       0.3, 1.6, 0.4, 1.5, 0.2, 0.9, 1.5])
 ```
 
 > Our messenger can wade across river when it is flowing at **less than** 1 cubic meter per second.
@@ -82,14 +108,6 @@ discharge = np.array([0.35566225, 0.22860853, 1.61016786, 2.33536627, 0.8870465 
 * b) Compute how many days our messenger **cannot travel** across the river using **NumPy**
 
 *****************************
-## Task 5 (5 points)
-
-Something about cities and climate classification 'hot', 'mild', or 'cold' during winter
-
-Print something like Eugene, with a mean tenperature of x is x during winter
-
-*****************************
-
 
 ```{important} Save your notebook to your local course folder and submit assignment (in **.ipynb** format) to Canvas by the deadline.
 ```

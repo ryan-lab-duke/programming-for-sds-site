@@ -391,11 +391,11 @@ const thebe_selector_output = ".output, .cell_output"
         aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
     <div class="dropdown-buttons sourcebuttons">
         <a class="repository-button"
-            href="https://owel-lab.github.io/programming-for-sds-site/intro.html"><button type="button" class="btn btn-secondary topbarbtn"
+            href="https://github.com/owel-lab/programming-for-sds-site"><button type="button" class="btn btn-secondary topbarbtn"
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://owel-lab.github.io/programming-for-sds-site/intro.html/issues/new?title=Issue%20on%20page%20%2Fdemos/03a-demo.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/owel-lab/programming-for-sds-site/issues/new?title=Issue%20on%20page%20%2Fdemos/03a-demo.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -410,6 +410,23 @@ const thebe_selector_output = ".output, .cell_output"
             class="fas fa-expand"></i></button></a>
 
             <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/owel-lab/programming-for-sds-site/HEAD/v2/gh/owel-lab/programming-for-sds-site/main?urlpath=lab/tree/book/demos/03a-demo.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
 
         </div>
 
@@ -566,7 +583,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p>OK so what happened here? There are a couple of things going on so let’s break down what we did.</p>
 <ul class="simple">
 <li><p>We defined an <strong>empty list</strong> (to put our capitalized place names)</p></li>
-<li><p>We initiated the loop using the standard <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">item</span> <span class="pre">in</span> <span class="pre">list</span></code> syntax. This basically means “do this for every item in the list”. Note that this statement must end with a <strong>colon</strong>.</p></li>
+<li><p>We initiated the loop using the standard <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">item</span> <span class="pre">in</span> <span class="pre">list</span></code> syntax. This basically means “…for every item in the list”. Note that this statement must end with a <strong>colon</strong> (<code class="docutils literal notranslate"><span class="pre">:</span></code>).</p></li>
 <li><p>The code that is executed as part of the loop must be <strong>indented</strong> beneath the for loop statement. The typical indentation is four <kbd>space</kbd> keys or one <kbd>Tab</kbd> key.</p></li>
 <li><p>For every state, we:</p>
 <ol class="simple">

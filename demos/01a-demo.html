@@ -391,11 +391,11 @@ const thebe_selector_output = ".output, .cell_output"
         aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
     <div class="dropdown-buttons sourcebuttons">
         <a class="repository-button"
-            href="https://owel-lab.github.io/programming-for-sds-site/intro.html"><button type="button" class="btn btn-secondary topbarbtn"
+            href="https://github.com/owel-lab/programming-for-sds-site"><button type="button" class="btn btn-secondary topbarbtn"
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://owel-lab.github.io/programming-for-sds-site/intro.html/issues/new?title=Issue%20on%20page%20%2Fdemos/01a-demo.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/owel-lab/programming-for-sds-site/issues/new?title=Issue%20on%20page%20%2Fdemos/01a-demo.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -410,6 +410,23 @@ const thebe_selector_output = ".output, .cell_output"
             class="fas fa-expand"></i></button></a>
 
             <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/owel-lab/programming-for-sds-site/HEAD/v2/gh/owel-lab/programming-for-sds-site/main?urlpath=lab/tree/book/demos/01a-demo.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
 
         </div>
 
@@ -434,6 +451,11 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#variable-usage">
      Variable usage
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#variable-names">
+     Variable names
     </a>
    </li>
   </ul>
@@ -515,6 +537,11 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#variable-usage">
      Variable usage
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#variable-names">
+     Variable names
     </a>
    </li>
   </ul>
@@ -617,7 +644,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <div class="section" id="variables">
 <h2>Variables<a class="headerlink" href="#variables" title="Permalink to this headline">¶</a></h2>
-<p>This is great but to do something more useful with data, we need to assign its value to a <strong>variable</strong>. In Python, we do this using the equals sign <code class="docutils literal notranslate"><span class="pre">=</span></code>. For example, we can track the height of a tree by assigning an integer value of <code class="docutils literal notranslate"><span class="pre">30</span></code> to a variable <code class="docutils literal notranslate"><span class="pre">height_m</span></code>.</p>
+<p>This is great but to do something more useful with data, we need to assign its value to a <strong>variable</strong>. Variables are one of the fundamental building blocks of Python. A variable is like a tiny container where you store values and data, such as filenames, words, numbers, collections of words and numbers. In Python, we can assign a variable using the equals sign <code class="docutils literal notranslate"><span class="pre">=</span></code>. For example, we can track the height of a tree by assigning an integer value of <code class="docutils literal notranslate"><span class="pre">30</span></code> to a variable <code class="docutils literal notranslate"><span class="pre">height_m</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">height_m</span> <span class="o">=</span> <span class="mi">30</span>
@@ -655,6 +682,19 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
+</div>
+<div class="section" id="variable-names">
+<h3>Variable names<a class="headerlink" href="#variable-names" title="Permalink to this headline">¶</a></h3>
+<p>It is good practice to make variable names as descriptive as possible. They can include:</p>
+<ul class="simple">
+<li><p>upper and lower-case letters (<code class="docutils literal notranslate"><span class="pre">a-z</span></code>, <code class="docutils literal notranslate"><span class="pre">A-Z</span></code>)</p></li>
+<li><p>digits (<code class="docutils literal notranslate"><span class="pre">0-9</span></code>)</p></li>
+<li><p>underscores (<code class="docutils literal notranslate"><span class="pre">_</span></code>)</p></li>
+</ul>
+<p>However, variable names <strong>cannot</strong> include:</p>
+<p>❌ other punctuation (<code class="docutils literal notranslate"><span class="pre">-.!?&#64;</span></code>)</p>
+<p>❌ spaces (<code class="docutils literal notranslate"> </code>)</p>
+<p>❌ a reserved Python word (e.g. <code class="docutils literal notranslate"><span class="pre">print</span></code>, <code class="docutils literal notranslate"><span class="pre">type</span></code>)</p>
 </div>
 </div>
 <div class="section" id="built-in-functions">
@@ -763,6 +803,18 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">places</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Eugene&#39;</span><span class="p">,</span> <span class="s1">&#39;Veneta&#39;</span><span class="p">,</span> <span class="s1">&#39;Noti&#39;</span><span class="p">,</span> <span class="s1">&#39;Mapleton&#39;</span><span class="p">,</span> <span class="s1">&#39;Florence&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">places</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>list
 </pre></div>
 </div>
 </div>

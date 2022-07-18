@@ -391,11 +391,11 @@ const thebe_selector_output = ".output, .cell_output"
         aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
     <div class="dropdown-buttons sourcebuttons">
         <a class="repository-button"
-            href="https://owel-lab.github.io/programming-for-sds-site/intro.html"><button type="button" class="btn btn-secondary topbarbtn"
+            href="https://github.com/owel-lab/programming-for-sds-site"><button type="button" class="btn btn-secondary topbarbtn"
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://owel-lab.github.io/programming-for-sds-site/intro.html/issues/new?title=Issue%20on%20page%20%2Fdemos/03b-demo.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/owel-lab/programming-for-sds-site/issues/new?title=Issue%20on%20page%20%2Fdemos/03b-demo.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -411,6 +411,23 @@ const thebe_selector_output = ".output, .cell_output"
 
             <!-- Launch buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/owel-lab/programming-for-sds-site/HEAD/v2/gh/owel-lab/programming-for-sds-site/main?urlpath=lab/tree/book/demos/03b-demo.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
         </div>
 
         <!-- Table of contents -->
@@ -424,6 +441,16 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#a-simple-conditional-statment">
    A simple conditional statment
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#comparisons">
+   Comparisons
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   Conditional statements
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -485,6 +512,16 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#comparisons">
+   Comparisons
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   Conditional statements
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#elif">
    <code class="docutils literal notranslate">
     <span class="pre">
@@ -528,10 +565,16 @@ const thebe_selector_output = ".output, .cell_output"
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="conditional-statements">
 <h1>Conditional statements<a class="headerlink" href="#conditional-statements" title="Permalink to this headline">¶</a></h1>
-<p>In the second part of this week we will learn how to write Python code that can make decisions using conditional statements (<code class="docutils literal notranslate"><span class="pre">if</span></code>, <code class="docutils literal notranslate"><span class="pre">elif</span></code>, <code class="docutils literal notranslate"><span class="pre">else</span></code>), comparison operators (<code class="docutils literal notranslate"><span class="pre">&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;</span></code>, <code class="docutils literal notranslate"><span class="pre">==</span></code>), and Boolean values (<code class="docutils literal notranslate"><span class="pre">True</span></code>, <code class="docutils literal notranslate"><span class="pre">False</span></code>).</p>
+<p>Most of the time when we are programming we are asking the computer to perform certain tasks if certain conditions are met. For example:</p>
+<ul class="simple">
+<li><p>If a person in the dataset is older than 30, then print out their name</p></li>
+<li><p>If a tweet contains a specific phrase, then automatically retweet it</p></li>
+<li><p>If  then say “Congratulations, Beyoncé!</p></li>
+</ul>
+<p>In the second part of this week we will learn about conditional statements (<code class="docutils literal notranslate"><span class="pre">if</span></code>, <code class="docutils literal notranslate"><span class="pre">elif</span></code>, <code class="docutils literal notranslate"><span class="pre">else</span></code>), comparison operators (<code class="docutils literal notranslate"><span class="pre">&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;</span></code>, <code class="docutils literal notranslate"><span class="pre">==</span></code>), and Boolean values (<code class="docutils literal notranslate"><span class="pre">True</span></code>, <code class="docutils literal notranslate"><span class="pre">False</span></code>).</p>
 <div class="section" id="a-simple-conditional-statment">
 <h2>A simple conditional statment<a class="headerlink" href="#a-simple-conditional-statment" title="Permalink to this headline">¶</a></h2>
-<p>Here is a simple example. A messenger arrives at a crossroads and has to make a decision about which way to go. They decide to turn <strong>left</strong>. This is what the code could look like:</p>
+<p>Here is an example. A messenger arrives at a crossroads and has to make a decision about which way to go. We would like them to turn <strong>left</strong>. This is what the code could look like:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">direction</span> <span class="o">=</span> <span class="s1">&#39;left&#39;</span>
@@ -547,6 +590,41 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
+<p>There are two important Python elements presented in the code above: a <strong>comparison</strong> and a <strong>conditional statement</strong>. We compared whether the variable <code class="docutils literal notranslate"><span class="pre">direction</span></code> is <strong>equal to</strong> the value <code class="docutils literal notranslate"><span class="pre">left</span></code>. Then we printed <code class="docutils literal notranslate"><span class="pre">Turns</span> <span class="pre">left</span></code> if this condition was <strong>True</strong>.</p>
+</div>
+<div class="section" id="comparisons">
+<h2>Comparisons<a class="headerlink" href="#comparisons" title="Permalink to this headline">¶</a></h2>
+<p>There are many ways that we can compare values with Python, such as equals (<code class="docutils literal notranslate"><span class="pre">==</span></code>), not equals (<code class="docutils literal notranslate"><span class="pre">!=</span></code>), greater than (<code class="docutils literal notranslate"><span class="pre">&gt;</span></code>), less than (<code class="docutils literal notranslate"><span class="pre">&lt;</span></code>), greater than or equal to (<code class="docutils literal notranslate"><span class="pre">&gt;=</span></code>), or less than or equal to (<code class="docutils literal notranslate"><span class="pre">&lt;=</span></code>).</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:center head"><p><strong>Comparison operator</strong></p></th>
+<th class="text-align:center head"><p><strong>Explanation</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">==</span> <span class="pre">y</span> </code></p></td>
+<td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">True</span></code> if x is equal to y</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">!=</span> <span class="pre">y</span> </code></p></td>
+<td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">True</span></code> if x is not equal to y</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">&gt;</span> <span class="pre">y</span></code></p></td>
+<td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">True</span></code> if x is greater than y</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">&lt;</span> <span class="pre">y</span></code></p></td>
+<td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">True</span></code> if x is less than y</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">&gt;=</span> <span class="pre">y</span></code></p></td>
+<td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">True</span></code> if x is greater than or equal to y</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">&lt;=</span> <span class="pre">y</span></code></p></td>
+<td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">True</span></code> if x is less than or equal to y</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="id1">
+<h2>Conditional statements<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <p>Conditional statements are written in a similar way to <code class="docutils literal notranslate"><span class="pre">for</span></code> loops. The <code class="docutils literal notranslate"><span class="pre">if</span></code> statement checks to see whether the variable value is <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code>. If a <code class="docutils literal notranslate"><span class="pre">True</span></code> is returned, then we execute the <strong>indented</strong> command below.</p>
 <p>Alternatively, the messenger might decide to turn <strong>right</strong>.</p>
 <div class="cell docutils container">
@@ -570,7 +648,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <div class="section" id="elif">
 <h2><code class="docutils literal notranslate"><span class="pre">elif</span></code><a class="headerlink" href="#elif" title="Permalink to this headline">¶</a></h2>
-<p>If we wanted to add an option for turning right we could add it using an <code class="docutils literal notranslate"><span class="pre">elif</span></code> statement.</p>
+<p>We can add more complexity in a conditional statement by usinga an <code class="docutils literal notranslate"><span class="pre">elif</span></code> statement. If we wanted to add an option for turning right we could write:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">direction</span> <span class="o">=</span> <span class="s1">&#39;right&#39;</span>

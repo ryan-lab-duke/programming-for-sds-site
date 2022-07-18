@@ -391,11 +391,11 @@ const thebe_selector_output = ".output, .cell_output"
         aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
     <div class="dropdown-buttons sourcebuttons">
         <a class="repository-button"
-            href="https://owel-lab.github.io/programming-for-sds-site/intro.html"><button type="button" class="btn btn-secondary topbarbtn"
+            href="https://github.com/owel-lab/programming-for-sds-site"><button type="button" class="btn btn-secondary topbarbtn"
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://owel-lab.github.io/programming-for-sds-site/intro.html/issues/new?title=Issue%20on%20page%20%2Fcourse-info/getting-started.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/owel-lab/programming-for-sds-site/issues/new?title=Issue%20on%20page%20%2Fcourse-info/getting-started.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -410,6 +410,23 @@ const thebe_selector_output = ".output, .cell_output"
             class="fas fa-expand"></i></button></a>
 
             <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/owel-lab/programming-for-sds-site/HEAD/v2/gh/owel-lab/programming-for-sds-site/main?urlpath=lab/tree/book/course-info/getting-started.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
 
         </div>
 
@@ -439,6 +456,11 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#submit-assignment">
    Submit assignment
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#jupyterlab">
+   JupyterLab
   </a>
  </li>
 </ul>
@@ -481,6 +503,11 @@ const thebe_selector_output = ".output, .cell_output"
    Submit assignment
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#jupyterlab">
+   JupyterLab
+  </a>
+ </li>
 </ul>
 
                         </nav>
@@ -492,7 +519,7 @@ const thebe_selector_output = ".output, .cell_output"
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="completing-assignments">
 <h1>Completing assignments<a class="headerlink" href="#completing-assignments" title="Permalink to this headline">¶</a></h1>
-<p>In this course we will use <a class="reference external" href="https://jupyterlab.readthedocs.io/en/stable/getting_started/overview.html"><strong>JupyterLab</strong></a> to complete assignments. JupyterLab is a <strong>free</strong>, web-based interactive development environment (IDE) for code development.</p>
+<p>In this course we will use <a class="reference external" href="https://jupyterlab.readthedocs.io/en/stable/getting_started/overview.html"><strong>JupyterLab</strong></a> to complete assignments. JupyterLab is a <strong>free</strong>, interactive development environment (IDE) which runs in your web browser.</p>
 <div class="admonition-launch-jupyterlab admonition">
 <p class="admonition-title">Launch JupyterLab</p>
 <p>We can launch JupyterLab by clicking this button: <a class="reference external" href="https://mybinder.org/v2/gh/owel-lab/programming-for-sds-site/HEAD"><img alt="Binder" src="https://mybinder.org/badge_logo.svg" /></a></p>
@@ -545,6 +572,18 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="section" id="submit-assignment">
 <h2>Submit assignment<a class="headerlink" href="#submit-assignment" title="Permalink to this headline">¶</a></h2>
 <p>When you are finished with the assignment, you can download the notebook by clicking <strong>File</strong> –&gt; <strong>Download</strong>. This <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> file should be moved to your local course folder and submitted via Canvas.</p>
+</div>
+<div class="section" id="jupyterlab">
+<h2>JupyterLab<a class="headerlink" href="#jupyterlab" title="Permalink to this headline">¶</a></h2>
+<p>These instructions are just the absolute basics. For more information about JupyterLab, we suggest referring to their docs. The following pages are particularly relevant:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://jupyterlab.readthedocs.io/en/stable/user/interface.html">The JupyterLab Interface</a></p></li>
+<li><p><a class="reference external" href="https://jupyterlab.readthedocs.io/en/stable/user/files.html">Working with Files</a></p></li>
+<li><p><a class="reference external" href="https://jupyterlab.readthedocs.io/en/stable/user/file_editor.html">The Text Editor</a></p></li>
+<li><p><a class="reference external" href="https://jupyterlab.readthedocs.io/en/stable/user/notebook.html">Notebooks</a></p></li>
+<li><p><a class="reference external" href="https://jupyterlab.readthedocs.io/en/stable/user/terminal.html">Terminals</a></p></li>
+<li><p><a class="reference external" href="https://jupyterlab.readthedocs.io/en/stable/user/running.html">Managing Kernels and Terminals</a></p></li>
+</ul>
 </div>
 </div>
 
