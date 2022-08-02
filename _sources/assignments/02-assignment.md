@@ -50,14 +50,14 @@ The units of the coordinates are in meters.
 Print both your answers in a human-readable way using **f-string** formatting.
 
 *****************************
-## Task 3 (5 points)
+## Task 3 (6 points)
 
 ```
 array = np.array([[6, 7, 4, 9, 0, 4, 2, 3, 8, 2],
        [2, 3, 2, 0, 4, 8, 7, 7, 9, 2],
        [0, 4, 9, 3, 9, 7, 0, 1, 1, 1],
        [5, 7, 3, 5, 0, 1, 7, 0, 5, 9],
-       [3, 3, 9, 8, 4, 6, 2, 0, 6, 4],
+       [3, 3, 10, 8, 4, 6, 2, 0, 6, 4],
        [5, 5, 2, 1, 6, 1, 4, 8, 3, 1],
        [7, 7, 9, 9, 1, 3, 5, 6, 7, 3],
        [9, 0, 7, 9, 5, 2, 9, 3, 6, 1],
@@ -77,12 +77,12 @@ Copy and paste this array into your notebook and answer the following questions:
 
 * e) How many values are greater than 7?
 
+* f) What is the **index** of the highest value?
+
 *****************************
 ## Task 4 (5 points)
 
 * Add a title, your name, and date of this submission to your Jupyter Notebook using **Markdown text**.
-
-* Add some more **Markdown text** to separate each task of this assignment. 
 
 *****************************
 

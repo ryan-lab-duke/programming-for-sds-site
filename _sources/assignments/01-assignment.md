@@ -1,9 +1,6 @@
 # Assignment 1
 
-Follow the instructions [here](../course-info/getting-started.ipynb) to launch a JupyterLab virtual environment and make a new Jupyter Notebook. Alternatively, we can just click this button: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/owel-lab/programming-for-sds-site/HEAD). 
-
-
-Of course, you are also welcome to install Python locally following [these instructions](../course-info/python.md). 
+There are two options for completing this assignment. Either follow the instructions [here](../course-info/getting-started.ipynb) to launch a **virtual JupyterLab  environment**. Or... install Python **locally** following [these instructions](../course-info/python.md). 
 
 *****************************
 ## Task 1
@@ -15,11 +12,11 @@ Sign up for Slack and send a message to the `#lab01` channel with your name, maj
 
 In your new Jupyter Notebook, write some **Python code** that returns the following:
 
-* a) the length of the Willamette River (187 miles) in kilometers
+* a) a variable named `willamette` that contains the length of the Willamette River (187 miles) in kilometers
 
-* b) the length of the McKenzie River (145 km) in miles
+* b) a variable named `mckenzie` that contains the length of the McKenzie River (145 km) in miles
 
-* c) the combined length of the Willamette and McKenzie rivers in kilometers
+* c) a variable named `combined` that contains the combined length of the Willamette and McKenzie rivers in kilometers
 
 Note that we can convert from **miles** to **kilometers** by multiplying the length value by 1.609. 
 
@@ -65,7 +62,7 @@ Copy and paste this list into your notebook and write some Python code to answer
 
 * Add a title, your name, and date of this submission to your Jupyter Notebook using **Markdown text**.
 
-* Add some more **Markdown text** to separate each task of this assignment. 
+* Add some more **Markdown text** to separate each task of this assignment and make answers to questions clear.
 
 
 ```{important} Save your notebook to your local course folder and submit assignment (in **.ipynb** format) to Canvas by the deadline.

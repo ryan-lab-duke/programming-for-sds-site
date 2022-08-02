@@ -458,6 +458,11 @@ const thebe_selector_output = ".output, .cell_output"
    Rolling windows
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#linear-regression">
+   Linear regression
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -498,6 +503,11 @@ const thebe_selector_output = ".output, .cell_output"
    Rolling windows
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#linear-regression">
+   Linear regression
+  </a>
+ </li>
 </ul>
 
                         </nav>
@@ -509,7 +519,7 @@ const thebe_selector_output = ".output, .cell_output"
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="analyzing-table-data">
 <h1>Analyzing table data<a class="headerlink" href="#analyzing-table-data" title="Permalink to this headline">¶</a></h1>
-<p>We will be analyzing temperature (in C) and discharge data (in cubic feet per second) from the <a class="reference external" href="https://en.wikipedia.org/wiki/Middle_Fork_Willamette_River">Middle Fork of the Willamette River</a> near Jasper.</p>
+<p>In this week, we will analyze some real-world data, building on the techniques we covered in Week 4. Our dataset contains water temperature (in C) and discharge (in cubic feet per second) from the <a class="reference external" href="https://en.wikipedia.org/wiki/Middle_Fork_Willamette_River">Middle Fork of the Willamette River</a> near Jasper. This river drains an area of the Cascade Range southeast of Eugene. The <a class="reference external" href="https://waterdata.usgs.gov/monitoring-location/14150000/#parameterCode=00065&amp;period=P7D">gauge</a> is located in Elijah Bristow State Park, a few miles below Dexter Reservoir.</p>
 <div class="section" id="visualize">
 <h2>Visualize<a class="headerlink" href="#visualize" title="Permalink to this headline">¶</a></h2>
 <p>With any new project, it is usually a good practice to visualize the data to get a sense of what we are working with.</p>
@@ -636,7 +646,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_build/jupyter_execute/demos/07-demo_3_0.png" src="_build/jupyter_execute/demos/07-demo_3_0.png" />
+<img alt="../_images/07-demo_3_0.png" src="../_images/07-demo_3_0.png" />
 </div>
 </div>
 </div>
@@ -1136,7 +1146,7 @@ Freq: 10D, Name: discharge, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_build/jupyter_execute/demos/07-demo_25_0.png" src="_build/jupyter_execute/demos/07-demo_25_0.png" />
+<img alt="../_images/07-demo_25_0.png" src="../_images/07-demo_25_0.png" />
 </div>
 </div>
 </div>
@@ -1178,10 +1188,59 @@ Freq: 10D, Name: discharge, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_build/jupyter_execute/demos/07-demo_29_0.png" src="_build/jupyter_execute/demos/07-demo_29_0.png" />
+<img alt="../_images/07-demo_29_0.png" src="../_images/07-demo_29_0.png" />
 </div>
 </div>
 <p>As we can see from the figure above, the rolling windows are smoother than the original discharge data because higher frequency variability has been averaged out. These kind of operations can be useful for <strong>removing noise</strong> from our data.</p>
+</div>
+<div class="section" id="linear-regression">
+<h2>Linear regression<a class="headerlink" href="#linear-regression" title="Permalink to this headline">¶</a></h2>
+<p>One of the most common tasks in spatial data science is to determine whether there is a statistically significant relationship between two (or more) variables. In the first plot we made, it looked like river discharge and water temperature were <strong>negatively correlated</strong> (i.e. as discharge increases, water temperature decreases). We can determine whether this correlation is statistically significant by performing <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.linregress.html">linear regression</a> using the <code class="docutils literal notranslate"><span class="pre">scipy</span></code> library.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">linregress</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">slope</span><span class="p">,</span> <span class="n">intercept</span><span class="p">,</span> <span class="n">r</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">se</span> <span class="o">=</span> <span class="n">linregress</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;discharge&#39;</span><span class="p">],</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;temp&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;R-squared: </span><span class="si">{</span><span class="n">r</span><span class="o">**</span><span class="mi">2</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;p-value: </span><span class="si">{</span><span class="n">p</span><span class="si">:</span><span class="s2">.5f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>R$^2$: 0.235
+ p-value: 0.00000
+</pre></div>
+</div>
+</div>
+</div>
+<p>We find that the two variables are significantly <strong>linearly</strong> correlated (<em>p</em>-value) with a correlation coefficient (R-sqaured) of 0.235. Let’s plot the two variables on a scatter plot.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;discharge&#39;</span><span class="p">],</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;temp&#39;</span><span class="p">],</span> <span class="n">s</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;River discharge (cubic ft s$^{-1}$)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Temperature (C)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">ls</span><span class="o">=</span><span class="s1">&#39;dashed&#39;</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/07-demo_36_0.png" src="../_images/07-demo_36_0.png" />
+</div>
+</div>
+<p>Although there is significant linear correlation, it does not look like a linear relationship is the best fit between these two variables. When discharges are low (&lt; 4000), water temperature rapidly decreases with as discharge increases. But when discharges are high (&gt; 4000), water temperature do not appear very sensitive to changing discharge. Instead a polynomial regression might provide a better fit but we will leave that for another day.</p>
 </div>
 </div>
 

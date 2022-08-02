@@ -559,7 +559,7 @@ const thebe_selector_output = ".output, .cell_output"
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="pandas-dataframes">
 <h1>Pandas DataFrames<a class="headerlink" href="#pandas-dataframes" title="Permalink to this headline">¶</a></h1>
-<p>One of the pillars Spatial Data Science is a Python library called <code class="docutils literal notranslate"><span class="pre">Pandas</span></code> which provides functions to import tabular data from various file formats (e.g. <code class="docutils literal notranslate"><span class="pre">.csv</span></code>, <code class="docutils literal notranslate"><span class="pre">.xlsx</span></code>) and many other data manipulation operations such as merging, reshaping, selecting, cleaning, and wrangling. In this week, we will introduce some basic <code class="docutils literal notranslate"><span class="pre">Pandas</span></code> operations. In Week 7, we will progress to more advanced usage of <code class="docutils literal notranslate"><span class="pre">Pandas</span></code>.</p>
+<p>One of the pillars spatial data science is a Python library called <code class="docutils literal notranslate"><span class="pre">Pandas</span></code> which provides functions to import tabular data from various file formats (e.g. <code class="docutils literal notranslate"><span class="pre">.csv</span></code>, <code class="docutils literal notranslate"><span class="pre">.xlsx</span></code>) and many other data manipulation operations such as merging, reshaping, selecting, cleaning, and wrangling. In this week, we will introduce some basic <code class="docutils literal notranslate"><span class="pre">Pandas</span></code> operations. In Week 7, we will progress to more advanced usage of <code class="docutils literal notranslate"><span class="pre">Pandas</span></code>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The name “Pandas” is derived from the “panel data”, an econometrics term for data sets that include observations over multiple time periods.</p>
@@ -1187,7 +1187,7 @@ Name: 6, dtype: object
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The city with the highest poputlation in Europe is Moscow&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;The city with the largest population in Europe is Moscow&#39;
 </pre></div>
 </div>
 </div>
@@ -1696,7 +1696,7 @@ Name: country, Length: 100, dtype: bool
 </table>
 </div></div></div>
 </div>
-<p><strong>Or</strong> we could use the <code class="docutils literal notranslate"><span class="pre">groupby()</span></code> function.</p>
+<p>But a better way of doing this would be to use the <code class="docutils literal notranslate"><span class="pre">groupby()</span></code> function.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;country&#39;</span><span class="p">)[</span><span class="s1">&#39;population&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
@@ -1740,7 +1740,7 @@ Name: population, dtype: int64
 </div>
 </div>
 <p>The first argument <code class="docutils literal notranslate"><span class="pre">groupby</span></code> takes is the <strong>which</strong> column we want group our data into (<code class="docutils literal notranslate"><span class="pre">country</span></code> in our case). Next, it takes a column (or list of columns) to summarize (<code class="docutils literal notranslate"><span class="pre">population</span></code>). Finally, this function does nothing until we specific <strong>how</strong> we want to group our data.</p>
-<p>It’s actually nice to reset the index after using <code class="docutils literal notranslate"><span class="pre">groupby</span></code> so that we end up with another DataFrame.</p>
+<p>It’s actually nice to <strong>reset the index</strong> after using <code class="docutils literal notranslate"><span class="pre">groupby</span></code> so that we end up with a DataFrame (rather than a Series).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">new_df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;country&#39;</span><span class="p">)[</span><span class="s1">&#39;population&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
@@ -1749,82 +1749,10 @@ Name: population, dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>country</th>
-      <th>population</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>Austria</td>
-      <td>1691468</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Belarus</td>
-      <td>1742124</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Belgium</td>
-      <td>1019022</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>Bosnia and Herzegovina</td>
-      <td>696731</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>Bulgaria</td>
-      <td>1152556</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>Croatia</td>
-      <td>698966</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>Czech Republic</td>
-      <td>1165581</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>Denmark</td>
-      <td>1153615</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>Finland</td>
-      <td>558457</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>France</td>
-      <td>2933362</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>pandas.core.frame.DataFrame
+</pre></div>
+</div>
+</div>
 </div>
 <p>We hope you will agree that the <code class="docutils literal notranslate"><span class="pre">groupby</span></code> method is much cleaner and interpretable. It is also a lot faster which may be important when we have very large DataFrames with millions of rows.</p>
 <div class="admonition note">
