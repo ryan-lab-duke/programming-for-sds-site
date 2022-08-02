@@ -30,7 +30,7 @@ Python has become one of the most popular programming languages in spatial data 
 
 ## Acknowledgements
 
-This course was inspired by course material designed by [Melanie Walsh](https://melaniewalsh.github.io/Intro-Cultural-Analytics/welcome.html) and [David Shean](https://github.com/UW-GDA/gda_course_2021).
+This course was inspired by course material designed by [Melanie Walsh](https://melaniewalsh.github.io/Intro-Cultural-Analytics/welcome.html), [David Shean](https://github.com/UW-GDA/gda_course_2021), and the [University of Helsinki](https://geo-python-site.readthedocs.io/en/latest/). 
 
 
 

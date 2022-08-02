@@ -2,7 +2,6 @@
 
 The course will be held in Fall 2023 at the University of Oregon. The schedule below will be updated once teaching dates are finalized. The course runs for ten weeks and the themes for each week are listed below. See the [General information](../course-info/general-info.md) page for more information about course logistics.
 
-| ----------- |------------|-------------------------------------------|
 | **Week**    |  **Date**  | **Topic**                                 |
 | ----------- |------------|-------------------------------------------|
 | 1           | TBD        | Variables, data types, and structures     | 
@@ -15,4 +14,4 @@ The course will be held in Fall 2023 at the University of Oregon. The schedule b
 | 8           | TBD        | Working with vector data                  |
 | 9           | TBD        | Raster analysis                           |
 | 10          | TBD        | Putting it all together                   |
-| ----------- |------------|-------------------------------------------|
+

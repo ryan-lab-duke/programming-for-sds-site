@@ -63,7 +63,6 @@ city = 'Eugene'
 country = 'USA'
 number_months = 7
 max_monthly_temp = 66.9
-
 ```
 
 Write a conditional statement that returns `True` if Eugene is a city in the USA.
