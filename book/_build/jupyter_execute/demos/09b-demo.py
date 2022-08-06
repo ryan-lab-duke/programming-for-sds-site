@@ -8,7 +8,7 @@
 # ```{image} images/landsat_bands.jpg
 # :alt: landsat 8 bands
 # :class: bg-primary mb-1
-# :width: 500px
+# :width: 600px
 # :align: center
 # ```
 
@@ -195,7 +195,7 @@ plt.show()
 rgb_255.min(), rgb_255.max()
 
 
-# One way of dealing with this is to **stretch** the image using a **percentile clip**. This techniuqes redistributes all pixel values between 0 and 255. In our case, all values of 0 will remain at 0, values of 123 will become 255, and the rest of the values will be spread proportionally in between. 
+# One way of dealing with this is to **stretch** the image using a **percentile clip**. This technique redistributes all pixel values between 0 and 255. In our case, all values of 0 will remain at 0, values of 123 will become 255, and the rest of the values will be spread proportionally in between. 
 
 # In[138]:
 
