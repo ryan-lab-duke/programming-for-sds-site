@@ -54,7 +54,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Assignment 9" href="../assignments/09-assignment.html" />
-    <link rel="prev" title="Working with raster data" href="09a-demo.html" />
+    <link rel="prev" title="Raster analysis with Rasterio" href="09a-demo.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -287,7 +287,12 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="08a-demo.html">
-   Working with vector data
+   Vector data with
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     GeoPandas
+    </span>
+   </code>
   </a>
  </li>
  <li class="toctree-l1">
@@ -309,7 +314,12 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="09a-demo.html">
-   Working with raster data
+   Raster analysis with
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     Rasterio
+    </span>
+   </code>
   </a>
  </li>
  <li class="toctree-l1 current active">
@@ -494,7 +504,7 @@ const thebe_selector_output = ".output, .cell_output"
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="remote-sensing-in-python">
 <h1>Remote sensing in Python<a class="headerlink" href="#remote-sensing-in-python" title="Permalink to this headline">¶</a></h1>
-<p>In the second part of this week, we will use some of functions provided by <code class="docutils literal notranslate"><span class="pre">rasterio</span></code> to analyze some remote sensing imagery. The data we will be using is a <strong>Landsat 8</strong> image over Florence, OR acquired in July 2021. Future courses (e.g. GEOG485 Remote Sensing 1) will cover remote sensing in more detail but the main thing to understand here is that remote sesning data often contains <strong>multiple files</strong>. Each file represents a different <strong>band</strong> which represents the reflectance in a <strong>specific wavelength</strong> (e.g. red, green, or blue). Below are the band designations for Landsat 8.</p>
+<p>In the second part of this week, we will use some of functions provided by <code class="docutils literal notranslate"><span class="pre">rasterio</span></code> to analyze remote sensing imagery. The data we will be using is a <strong>Landsat 8</strong> image over Florence, OR acquired in July 2021. Future courses (e.g. GEOG485: Remote Sensing 1) will cover remote sensing in more detail but the main thing to understand here is that remote sensing data often contains <strong>multiple files</strong>. Each file is a different <strong>band</strong> which represents the reflectance in a <strong>specific wavelength</strong> (e.g. red, green, or blue). Below are the band designations for Landsat 8.</p>
 <a class="bg-primary mb-1 reference internal image-reference" href="../_images/landsat_bands.jpg"><img alt="landsat 8 bands" class="bg-primary mb-1 align-center" src="../_images/landsat_bands.jpg" style="width: 600px;" /></a>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -579,7 +589,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p>So let’s go ahead and read these two bands.</p>
 <div class="admonition caution">
 <p class="admonition-title">Caution</p>
-<p>Remember that, in Python, arrays are zero indexed, so the first band (i.e. 0) corresponds to band 1.</p>
+<p>Remember that Python uses zero indexing, so the first band (i.e. 0) corresponds to band 1.</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -793,7 +803,7 @@ const thebe_selector_output = ".output, .cell_output"
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Working with raster data</p>
+            <p class="prev-next-title">Raster analysis with <code class="docutils literal notranslate"><span class="pre">Rasterio</span></code></p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="../assignments/09-assignment.html" title="next page">

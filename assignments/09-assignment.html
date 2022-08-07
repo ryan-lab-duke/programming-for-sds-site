@@ -287,7 +287,12 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../demos/08a-demo.html">
-   Working with vector data
+   Vector data with
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     GeoPandas
+    </span>
+   </code>
   </a>
  </li>
  <li class="toctree-l1">
@@ -309,7 +314,12 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../demos/09a-demo.html">
-   Working with raster data
+   Raster analysis with
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     Rasterio
+    </span>
+   </code>
   </a>
  </li>
  <li class="toctree-l1">
@@ -427,8 +437,28 @@ const thebe_selector_output = ".output, .cell_output"
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#task-x-5-points">
-   Task X (5 points)
+  <a class="reference internal nav-link" href="#task-1-4-points">
+   Task 1 (4 points)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#task-2-8-points">
+   Task 2 (8 points)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#task-3-5-points">
+   Task 3 (5 points)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#task-4-3-points">
+   Task 4 (3 points)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#task-5-5-points">
+   Task 5 (5 points)
   </a>
  </li>
 </ul>
@@ -452,8 +482,28 @@ const thebe_selector_output = ".output, .cell_output"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#task-x-5-points">
-   Task X (5 points)
+  <a class="reference internal nav-link" href="#task-1-4-points">
+   Task 1 (4 points)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#task-2-8-points">
+   Task 2 (8 points)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#task-3-5-points">
+   Task 3 (5 points)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#task-4-3-points">
+   Task 4 (3 points)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#task-5-5-points">
+   Task 5 (5 points)
   </a>
  </li>
 </ul>
@@ -477,8 +527,71 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 <hr class="docutils" />
-<div class="section" id="task-x-5-points">
-<h2>Task X (5 points)<a class="headerlink" href="#task-x-5-points" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="task-1-4-points">
+<h2>Task 1 (4 points)<a class="headerlink" href="#task-1-4-points" title="Permalink to this headline">¶</a></h2>
+<p>Download the data for the assignment from <a class="reference external" href="https://www.dropbox.com/sh/zop198jg5dksrgv/AACKuC1KjASxVTrix3FfOR-ja?dl=0">here</a>. This is <a class="reference external" href="https://www.worldclim.org/">WorldClim</a> version 2.1 <strong>monthly precipitation data</strong> averaged across the 1970-2000 period. The spatial resolution is <strong>2.5 minutes</strong> (around 21 km<sup>2</sup> at the equator). The numbers in the file name represent the month of the year (January is <code class="docutils literal notranslate"><span class="pre">01</span></code>; December is <code class="docutils literal notranslate"><span class="pre">12</span></code>).</p>
+<p>Read in the January precipitation data (i.e. <code class="docutils literal notranslate"><span class="pre">wc2.1_2.5m_prec_01.tif</span></code>) and answer the following questions:</p>
+<ul class="simple">
+<li><p>a) How many rows and columns does this raster have?</p></li>
+<li><p>b) What is the coordinate reference system?</p></li>
+<li><p>c) What is the data type?</p></li>
+<li><p>d) What value represents <strong>NoData</strong></p></li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="task-2-8-points">
+<h2>Task 2 (8 points)<a class="headerlink" href="#task-2-8-points" title="Permalink to this headline">¶</a></h2>
+<p>Mask the <strong>NoData</strong> values and answer the following questions about the January precipitation data:</p>
+<ul class="simple">
+<li><p>a) Which row/column index represents the highest precipitation?</p></li>
+<li><p>b) Which row/column index represents the lowest precipitation?</p></li>
+<li><p>c) What is the longitude/latitude of the highest precipitation?</p></li>
+<li><p>d) What is the longitude/latitude of the lowest precipitation?</p></li>
+<li><p>e) What is the precipitation at grid cell index <code class="docutils literal notranslate"><span class="pre">1500</span></code>, <code class="docutils literal notranslate"><span class="pre">1200</span></code>?</p></li>
+<li><p>f) What is the precipitation at <strong>87.8 E, 54.8 N</strong>?</p></li>
+<li><p>g) What is the precipitation at <strong>-5.1 N, 24.7 E</strong>?</p></li>
+<li><p>h) What is the precipitation at <strong>46.4 N, -106.8 E</strong>?</p></li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="task-3-5-points">
+<h2>Task 3 (5 points)<a class="headerlink" href="#task-3-5-points" title="Permalink to this headline">¶</a></h2>
+<p>Read in the July precipitation data (i.e. <code class="docutils literal notranslate"><span class="pre">wc2.1_2.5m_prec_07.tif</span></code>, mask the <strong>NoData</strong> values, and provide the <strong>longitude/latitude</strong> for the following:</p>
+<ul class="simple">
+<li><p>a) Location with the largest absolute difference between January vs. July precipitation.</p></li>
+<li><p>b) Location with the smallest absolute difference between January vs. July precipitation?</p></li>
+<li><p>c) Location with the largest combined January and July precipitation?</p></li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="task-4-3-points">
+<h2>Task 4 (3 points)<a class="headerlink" href="#task-4-3-points" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>a) Make a plot showing the <strong>mean annual precipitation</strong> for the world (i.e. by averaging over all twelve files).</p></li>
+</ul>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Click to reveal hint</p>
+<p>Remember to specify the axis when using <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.nanmean.html"><code class="docutils literal notranslate"><span class="pre">np.nanmean</span></code></a>.</p>
+</div>
+<ul class="simple">
+<li><p>b) Compute the <strong>standard deviation</strong> of precipitation across all twelve files and make a plot showing new variable.</p></li>
+</ul>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Click to reveal hint</p>
+<p>Consider using <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.nanstd.html"><code class="docutils literal notranslate"><span class="pre">np.nanstd</span></code></a>.</p>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="task-5-5-points">
+<h2>Task 5 (5 points)<a class="headerlink" href="#task-5-5-points" title="Permalink to this headline">¶</a></h2>
+<p>Download the Landsat data from <a class="reference external" href="https://www.dropbox.com/sh/k3bkxwa2j9fovta/AADX4yZiIAEHiG9VPcyCON2pa?dl=0">here</a> and display the following:</p>
+<ul class="simple">
+<li><p>a) a <a class="reference external" href="https://www.usgs.gov/landsat-missions/normalized-difference-moisture-index">Normalized Difference Moisture Index</a> image (i.e. (Band 5 - Band 6) / (Band 5 + Band 6))</p></li>
+<li><p>b) a <a class="reference external" href="https://www.usgs.gov/media/images/common-landsat-band-rgb-composites">color infrared composite</a> (i.e. bands 5, 4, 3) with a percentile stretch.</p></li>
+<li><p>c) a <a class="reference external" href="https://www.usgs.gov/media/images/common-landsat-band-rgb-composites">false color composite</a> (i.e. bands 7, 5, 3) with a percentile stretch.</p></li>
+</ul>
+<hr class="docutils" />
+<p><code class="docutils literal notranslate"><span class="pre">{important}</span> <span class="pre">Save</span> <span class="pre">your</span> <span class="pre">notebook</span> <span class="pre">to</span> <span class="pre">your</span> <span class="pre">local</span> <span class="pre">course</span> <span class="pre">folder</span> <span class="pre">and</span> <span class="pre">submit</span> <span class="pre">assignment</span> <span class="pre">(in</span> <span class="pre">**.ipynb**</span> <span class="pre">format)</span> <span class="pre">to</span> <span class="pre">Canvas</span> <span class="pre">by</span> <span class="pre">the</span> <span class="pre">deadline.</span></code></p>
 </div>
 </div>
 
