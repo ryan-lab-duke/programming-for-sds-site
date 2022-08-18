@@ -29,19 +29,18 @@ array = np.array([[6, 7, 4, 9, 0, 4, 2, 3, 8, 2],
        [4, 6, 7, 9, 5, 4, 9, 1, 1, 7]])
 ```
 
-Copy and paste this array into your notebook and answer the following questions:
+Copy and paste this 2D array into your notebook and answer the following questions:
 
 * a) How many rows and columns does this array have?
 
-* b) What is the mean value of the seventh row?
+* b) What is the mean and standard deviation of this array?
 
-* c) What is the standard deviation of the third column?
+* c) How many values are equal to 0?
 
-* d) How many values are equal to 0?
+* d) How many values are greater than 7?
 
-* e) How many values are greater than 7?
+* e) What is the mean value of the seventh row?
 
-* f) What is the **index** of the highest value?
 
 *****************************
 
@@ -84,7 +83,27 @@ Geographic coordinates for your cities can be found from [this website](https://
 
 
 *****************************
+
 ## Task 4 (5 points)
+
+```
+array = np.array([[[178, 189, 567], [145, 239, 445], [197, 345, 678]], [[56, 78, 190], [46, 10, 11], [6, 2, 1]], [[45, 118, 203], [72, 119, 34], [87, 9, 5]]])
+```
+
+Copy and paste this array into your notebook and answer the following questions:
+
+* a) How many dimensions does this array have?
+
+* b) What is the mean and standard deviation of this array?
+
+* c) How many values are less than 10?
+
+* d) What is the **index** of the highest value?
+
+* e) What is the **index** of the lowest value?
+
+*****************************
+## Task 5 (5 points)
 
 * Add a title, your name, and date of this submission to your Jupyter Notebook using **Markdown text**.
 

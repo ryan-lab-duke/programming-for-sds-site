@@ -23,7 +23,7 @@ Note that we can convert from **miles** to **kilometers** by multiplying the len
 *****************************
 ## Task 3 (5 points)
 
-Write some **Markdown** text that describes the **data types** of the following variables:
+Write some **Python code** that prints the **data types** of the following variables:
 
 ```
 a) city = 'Eugene'
