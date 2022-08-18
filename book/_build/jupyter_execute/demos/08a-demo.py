@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Working with vector data
+# # Vector data with `GeoPandas`
 # 
 # If you have taken **GEOG181: Our Digital Earth** or **GEOG481: GIScience I**, you will be well aware of the **vector data model** which represents features on the Earth's surface as points, lines or polygons. Vector data is extremely useful for storing and representing data that has discrete boundaries, such as borders, buildings, streets, and roads. Online mapping applications, such as Google Maps and Open Street Map, use this format to display data. 
 # 
@@ -34,7 +34,8 @@ gdf.head()
 type(gdf)
 
 
-# ```{note} The `geometry` column is the **active geometry**. Spatial methods used on the `GeoDataFrame` will use these geometries.
+# ```{note} 
+# The `geometry` column is the **active geometry**. Spatial methods used on the `GeoDataFrame` will use these geometries.
 # ```
 
 # ## Geometric properties

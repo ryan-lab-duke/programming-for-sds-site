@@ -287,7 +287,12 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="08a-demo.html">
-   Working with vector data
+   Vector data with
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     GeoPandas
+    </span>
+   </code>
   </a>
  </li>
  <li class="toctree-l1">
@@ -309,7 +314,12 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="09a-demo.html">
-   Working with raster data
+   Raster analysis with
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     Rasterio
+    </span>
+   </code>
   </a>
  </li>
  <li class="toctree-l1">
@@ -438,6 +448,43 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sampling-raster-data-with-point-file">
+   Sampling raster data with point file
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#reproject-to-same-coordinate-system">
+     Reproject to same coordinate system
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#overlay-analysis">
+   Overlay analysis
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#zonal-stats">
+     Zonal stats?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#clip-a-raster">
+   Clip a raster
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -450,6 +497,43 @@ const thebe_selector_output = ".output, .cell_output"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#sampling-raster-data-with-point-file">
+   Sampling raster data with point file
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#reproject-to-same-coordinate-system">
+     Reproject to same coordinate system
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#overlay-analysis">
+   Overlay analysis
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#zonal-stats">
+     Zonal stats?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#clip-a-raster">
+   Clip a raster
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -458,6 +542,22 @@ const thebe_selector_output = ".output, .cell_output"
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="putting-it-all-together">
 <h1>Putting it all together<a class="headerlink" href="#putting-it-all-together" title="Permalink to this headline">¶</a></h1>
+<p>Raster and vector data together</p>
+<div class="section" id="sampling-raster-data-with-point-file">
+<h2>Sampling raster data with point file<a class="headerlink" href="#sampling-raster-data-with-point-file" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="reproject-to-same-coordinate-system">
+<h3>Reproject to same coordinate system<a class="headerlink" href="#reproject-to-same-coordinate-system" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="overlay-analysis">
+<h2>Overlay analysis<a class="headerlink" href="#overlay-analysis" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="zonal-stats">
+<h3>Zonal stats?<a class="headerlink" href="#zonal-stats" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="clip-a-raster">
+<h2>Clip a raster<a class="headerlink" href="#clip-a-raster" title="Permalink to this headline">¶</a></h2>
+</div>
 </div>
 
     <script type="text/x-thebe-config">

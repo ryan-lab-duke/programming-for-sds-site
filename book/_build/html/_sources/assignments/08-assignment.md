@@ -22,7 +22,7 @@ Print all answers (except Task 3 and 4) in a human-readable way using **f-string
 
 ## Task 1 (5 points)
 
-Download the data for the assignment [here](https://www.dropbox.com/s/0oawhe0niq69nph/world_countries.zip?dl=0). This dataset contains borders of the world, along with attribute data about population, gross domestic product, and economy classification. If you are interested, the data were downloaded from https://www.naturalearthdata.com/downloads/50m-cultural-vectors/50m-admin-0-countries-2/. 
+Download the data for the assignment [here](https://www.dropbox.com/s/0oawhe0niq69nph/world_countries.zip?dl=0). This dataset contains the geographic boundaries for all countries in the world, along with attribute data about country population, gross domestic product, and economy. If you are interested, the data were downloaded from [here](https://www.naturalearthdata.com/downloads/50m-cultural-vectors/50m-admin-0-countries-2/). 
 
 Read the data using `GeoPandas` and answer the following questions:
 
@@ -74,7 +74,7 @@ Reproject and plot the data (using `plot()`) in the following coordinate referen
 
 ## Task 5 (5 points)
 
-List the countries that are within 1,000 miles of the **centroid** of Nepal. 
+List the countries that are within 1,000 **miles** of the **centroid** of Nepal. 
 
 *****************************
 

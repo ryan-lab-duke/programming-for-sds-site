@@ -13,44 +13,8 @@ and
 jupyter lab
 ```
 *****************************
+
 ## Task 1 (5 points)
-
-* Define two **NumPy arrays** (i.e. `np.array()`), one called `lat` and one called `lon`, that contain the latitudes and longitudes, respectively, of **five** global cities.
-
-* Define a **list** containing the corresponding names of the cities (as **strings**).
-
-* Print both the **name** and **latitude** of the most northly city using **f-string** formatting.
-
-* Repeat for the for city with the most easterly longitude.
-
-* Print the **mean** latitude and **mean** longitude of your five cities. 
-
-Geographic coordinates for your cities can be found from [this website](https://www.latlong.net/). 
-
-*****************************
-## Task 2 (5 points)
-
-* a) Calculate the Euclidean distance between Point A (10 E, 10 N) and Point B (30 E, 30 N) using NumPy and the following formula.
-
-$$
-  distance = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}
-$$
-
-```{admonition} Click to reveal hint
-:class: tip, dropdown
-Consider using `np.sqrt` and `np.square`.
-```
-
-* b) Calculate the Euclidean distance between Los Angeles (385213 E, 3768641 N) and Eugene (493046 E, 4877663 N) **in kilometers**.
-
-```{hint}
-The units of the coordinates are in meters.
-```
-
-Print both your answers in a human-readable way using **f-string** formatting.
-
-*****************************
-## Task 3 (6 points)
 
 ```
 array = np.array([[6, 7, 4, 9, 0, 4, 2, 3, 8, 2],
@@ -80,13 +44,54 @@ Copy and paste this array into your notebook and answer the following questions:
 * f) What is the **index** of the highest value?
 
 *****************************
+
+## Task 2 (5 points)
+
+* a) Calculate the Euclidean distance between Point A (10 E, 10 N) and Point B (30 E, 30 N) using NumPy and the following formula.
+
+$$
+  distance = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}
+$$
+
+```{admonition} Click to reveal hint
+:class: tip, dropdown
+Consider using `np.sqrt` and `np.square`.
+```
+
+* b) Calculate the Euclidean distance between Los Angeles (385213 E, 3768641 N) and Eugene (493046 E, 4877663 N) **in kilometers**.
+
+```{hint}
+The units of the coordinates are in meters.
+```
+
+Print both your answers in a human-readable way using **f-string** formatting.
+
+*****************************
+
+## Task 3 (5 points)
+
+* Define two **NumPy arrays** (i.e. `np.array()`), one called `lat` and one called `lon`, that contain the latitudes and longitudes, respectively, of **five** global cities.
+
+* Define a **list** containing the corresponding names of the cities (as **strings**).
+
+* Print both the **name** and **latitude** of the most northly city using **f-string** formatting.
+
+* Repeat for the for city with the most easterly longitude.
+
+* Print the **mean** latitude and **mean** longitude of your five cities. 
+
+Geographic coordinates for your cities can be found from [this website](https://www.latlong.net/). 
+
+
+*****************************
 ## Task 4 (5 points)
 
 * Add a title, your name, and date of this submission to your Jupyter Notebook using **Markdown text**.
 
 *****************************
 
-```{important} Save your notebook to your local course folder and submit assignment (in **.ipynb** format) to Canvas by the deadline.
+```{important} 
+Save your notebook to your local course folder and submit assignment (in **.ipynb** format) to Canvas by the deadline.
 ```
 
 

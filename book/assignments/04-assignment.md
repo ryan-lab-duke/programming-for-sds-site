@@ -81,13 +81,6 @@ Write a `for` loop which saves the first letter of each country in a new list ca
 
 * b) After grouping by their first letter, countries with which first letter have the highest total *GDP*?
 
-*****************************
-
-## Task 5 (5 points)
-
-* Add a title, your name, and date of this submission to your Jupyter Notebook using **Markdown text**.
-
-* Add some more **Markdown text** to separate each task of this assignment. 
 
 *****************************
 

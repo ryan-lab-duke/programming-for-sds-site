@@ -95,13 +95,6 @@ print(convert_area(10,'km','mi'))
 
 * e) What year will it be when Unix time reaches 2,000,000,000 seconds?
 
-*****************************
-
-## Task 4 (5 points)
-
-* Add a title, your name, and date of this submission to your Jupyter Notebook using **Markdown text**.
-
-* Add some more **Markdown text** to separate each task of this assignment. 
 
 *****************************
 
