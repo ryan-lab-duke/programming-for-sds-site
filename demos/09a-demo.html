@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Raster analysis with Rasterio &#8212; Programming for spatial data science</title>
+    <title>Raster data analysis &#8212; Programming for spatial data science</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -287,17 +287,12 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="08a-demo.html">
-   Vector data with
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     GeoPandas
-    </span>
-   </code>
+   Vector data analysis
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="08b-demo.html">
-   Vector data analysis
+   More vector data analysis
   </a>
  </li>
  <li class="toctree-l1">
@@ -314,12 +309,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Raster analysis with
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     Rasterio
-    </span>
-   </code>
+   Raster data analysis
   </a>
  </li>
  <li class="toctree-l1">
@@ -340,8 +330,13 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="10-demo.html">
-   Putting it all together
+  <a class="reference internal" href="10a-demo.html">
+   Sampling raster data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="10b-demo.html">
+   Classifying raster data
   </a>
  </li>
  <li class="toctree-l1">
@@ -503,7 +498,7 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Raster analysis with Rasterio</h1>
+                <h1>Raster data analysis</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -562,12 +557,13 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="raster-analysis-with-rasterio">
-<h1>Raster analysis with <code class="docutils literal notranslate"><span class="pre">Rasterio</span></code><a class="headerlink" href="#raster-analysis-with-rasterio" title="Permalink to this headline">¶</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="raster-data-analysis">
+<h1>Raster data analysis<a class="headerlink" href="#raster-data-analysis" title="Permalink to this headline">¶</a></h1>
 <p>Raster data represent a matrix of cells (or pixels) organized into rows and columns (or a grid). Grid cells can represent data that changes <strong>continuously</strong> across a landscape (surface) such as elevation, air temperature, or . reflectance data from satellite imaging platforms. Grid cells can also represent <strong>discrete</strong> data such as vegetation type or land cover.</p>
 <p>We recommend three libraries for accessing and analyzing raster data in Python. The first is called <code class="docutils literal notranslate"><span class="pre">rasterio</span></code> which builds on the popular <strong>Geographic Raster Abstraction Library</strong> or <code class="docutils literal notranslate"><span class="pre">GDAL</span></code>. It supports read/write access for over 160 raster formats (e.g. GeoTIFF, NetCDF4) and includes methods for finding dataset information, reprojections, resampling, format conversion, and mosaicking. Once we have imported, resampled the data etc., we can apply fast matrix operations using <code class="docutils literal notranslate"><span class="pre">NumPy</span></code>. Finally, we may also use <code class="docutils literal notranslate"><span class="pre">xarray</span></code> which introduces labels in the form of <strong>dimensions</strong>, <strong>coordinates</strong> and <strong>attributes</strong> on top of raw NumPy-like arrays, a bit like <code class="docutils literal notranslate"><span class="pre">Pandas</span></code>.</p>
 <a class="reference internal image-reference" href="../_images/raster_matrix.png"><img alt="raster matrix" class="align-center" src="../_images/raster_matrix.png" style="width: 500px;" /></a>
-<p>In this demo, we will be working with elevation data, also known as a Digital Elevation Model (DEM), of the Cascades Mountain Range that includes Mt. Rainier and Mt. Adams. The data is formatted as a <code class="docutils literal notranslate"><span class="pre">GeoTIFF</span></code> and we will open it using <code class="docutils literal notranslate"><span class="pre">rasterio</span></code> function, <code class="docutils literal notranslate"><span class="pre">open()</span></code>. This function take a <strong>path string</strong> and returns a <strong>dataset object</strong>.</p>
+<p>In this demo, we will be working with elevation data, also known as a Digital Elevation Model (DEM), of the Cascades Mountain Range that includes Mt. Rainier and Mt. Adams.</p>
+<p>The data is formatted as a <code class="docutils literal notranslate"><span class="pre">GeoTIFF</span></code> and we will open it using <code class="docutils literal notranslate"><span class="pre">rasterio</span></code> function, <code class="docutils literal notranslate"><span class="pre">open()</span></code>. This function take a <strong>path string</strong> and returns a <strong>dataset object</strong>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">rasterio</span>

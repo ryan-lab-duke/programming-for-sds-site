@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vector data with GeoPandas &#8212; Programming for spatial data science</title>
+    <title>Vector data analysis &#8212; Programming for spatial data science</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -53,7 +53,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Vector data analysis" href="08b-demo.html" />
+    <link rel="next" title="More vector data analysis" href="08b-demo.html" />
     <link rel="prev" title="Assignment 7" href="../assignments/07-assignment.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -287,17 +287,12 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Vector data with
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     GeoPandas
-    </span>
-   </code>
+   Vector data analysis
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="08b-demo.html">
-   Vector data analysis
+   More vector data analysis
   </a>
  </li>
  <li class="toctree-l1">
@@ -314,12 +309,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="09a-demo.html">
-   Raster analysis with
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     Rasterio
-    </span>
-   </code>
+   Raster data analysis
   </a>
  </li>
  <li class="toctree-l1">
@@ -340,8 +330,13 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="10-demo.html">
-   Putting it all together
+  <a class="reference internal" href="10a-demo.html">
+   Sampling raster data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="10b-demo.html">
+   Classifying raster data
   </a>
  </li>
  <li class="toctree-l1">
@@ -493,7 +488,7 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Vector data with GeoPandas</h1>
+                <h1>Vector data analysis</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -542,10 +537,10 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="vector-data-with-geopandas">
-<h1>Vector data with <code class="docutils literal notranslate"><span class="pre">GeoPandas</span></code><a class="headerlink" href="#vector-data-with-geopandas" title="Permalink to this headline">¶</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="vector-data-analysis">
+<h1>Vector data analysis<a class="headerlink" href="#vector-data-analysis" title="Permalink to this headline">¶</a></h1>
 <p>If you have taken <strong>GEOG181: Our Digital Earth</strong> or <strong>GEOG481: GIScience I</strong>, you will be well aware of the <strong>vector data model</strong> which represents features on the Earth’s surface as points, lines or polygons. Vector data is extremely useful for storing and representing data that has discrete boundaries, such as borders, buildings, streets, and roads. Online mapping applications, such as Google Maps and Open Street Map, use this format to display data.</p>
-<p>The Python library <code class="docutils literal notranslate"><span class="pre">GeoPandas</span></code> provides somes great tools for working with vector data. As the name suggests, <code class="docutils literal notranslate"><span class="pre">GeoPandas</span></code>extends the popular data science library <code class="docutils literal notranslate"><span class="pre">pandas</span></code> by adding support for geospatial data. The core data structure in <code class="docutils literal notranslate"><span class="pre">GeoPandas</span></code> is the <code class="docutils literal notranslate"><span class="pre">geopandas.GeoDataFrame</span></code>. The key difference between a <code class="docutils literal notranslate"><span class="pre">geopandas.GeoDataFrame</span></code> and a <code class="docutils literal notranslate"><span class="pre">pandas.DataFrame</span></code> is that the <code class="docutils literal notranslate"><span class="pre">geopandas.GeoDataFrame</span></code> can store geometry columns and perform spatial operations.</p>
+<p>The Python library <code class="docutils literal notranslate"><span class="pre">GeoPandas</span></code> provides somes great tools for working with vector data. As the name suggests, <code class="docutils literal notranslate"><span class="pre">GeoPandas</span></code>extends the popular data science library <code class="docutils literal notranslate"><span class="pre">pandas</span></code> by adding support for geospatial data. The core data structure in <code class="docutils literal notranslate"><span class="pre">GeoPandas</span></code> is the <code class="docutils literal notranslate"><span class="pre">geopandas.GeoDataFrame</span></code>. The key difference between the two is that a <code class="docutils literal notranslate"><span class="pre">geopandas.GeoDataFrame</span></code> can store geometry data and perform spatial operations.</p>
 <a class="reference internal image-reference" href="../_images/dataframe.png"><img alt="geodataframe" class="align-center" src="../_images/dataframe.png" style="width: 700px;" /></a>
 <p>The <code class="docutils literal notranslate"><span class="pre">geometry</span></code> column can contain any geometry type (e.g. points, lines, polygons) or even a mixture.</p>
 <div class="section" id="reading-files">
@@ -1361,7 +1356,7 @@ Datum: World Geodetic System 1984 ensemble
     <a class='right-next' id="next-link" href="08b-demo.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Vector data analysis</p>
+        <p class="prev-next-title">More vector data analysis</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
