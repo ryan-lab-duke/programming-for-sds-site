@@ -200,7 +200,7 @@ plt.show()
 
 # ## Acknowledgements
 # 
-# This demo was based on the `Matplotlib` tutorials https://matplotlib.org/stable/tutorials/introductory/usage.html and https://matplotlib.org/stable/tutorials/introductory/pyplot.html. 
+# This demo was based on the `Matplotlib` tutorials [here](https://matplotlib.org/stable/tutorials/introductory/usage.html) and [here](https://matplotlib.org/stable/tutorials/introductory/pyplot.html).
 
 # In[ ]:
 

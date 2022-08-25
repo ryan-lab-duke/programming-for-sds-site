@@ -99,7 +99,7 @@ time.strftime("%a, %b %d %Y %I:%M:%S %p %Z", time.localtime())
 
 
 # ```{note}
-# For more options see the following table: https://docs.python.org/3/library/time.html#time.strftime
+# For more options see the following [table](https://docs.python.org/3/library/time.html#time.strftime).
 # ```
 
 # ## Convert a string to a standard time format

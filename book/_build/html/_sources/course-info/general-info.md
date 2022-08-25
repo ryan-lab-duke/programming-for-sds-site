@@ -26,7 +26,7 @@ Please let the instructors know before the deadline if you anticipate a late sub
 
 ## Course website
 
-* All lecture slides, assignments, and guides are available on this website ([https://owel-lab.github.io/gds-applications-site/](https://owel-lab.github.io/gds-applications-site/)).
+* All lecture slides, assignments, and guides are available on [this website](https://owel-lab.github.io/gds-applications-site/).
 
 
 * **Dropbox**: The ddata for the labs are available on Dropbox - see **Canvas** for link.

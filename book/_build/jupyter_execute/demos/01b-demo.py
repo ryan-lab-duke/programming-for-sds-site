@@ -85,7 +85,7 @@
 
 # ## References
 # 
-# A useful review of Markdown syntax can be found here: https://www.markdownguide.org/basic-syntax
+# A useful review of Markdown syntax can be found [here](https://www.markdownguide.org/basic-syntax).
 
 # In[ ]:
 

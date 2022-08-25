@@ -16,7 +16,7 @@ The goal of this course is to introduce students to basic programming concepts i
 
 * Perform basic data analysis on table, vector, and raster data
 
-* Visualize different types of data using Python
+* Visualize different types of data
 
 * Recognize the importance of open-source software
 

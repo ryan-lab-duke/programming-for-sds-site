@@ -99,7 +99,7 @@ plt.show()
 
 
 # ```{note}
-# We formatted the dates using an abbreviated month name (`%b`) followed by a new line (`\n`) followed by the year (`%Y`). See this table for more options: https://docs.python.org/3/library/time.html#time.strftime.
+# We formatted the dates using an abbreviated month name (`%b`) followed by a new line (`\n`) followed by the year (`%Y`). See this [table](https://docs.python.org/3/library/time.html#time.strftime) for more options.
 # ```
 
 # ## 5-minute air temperature
