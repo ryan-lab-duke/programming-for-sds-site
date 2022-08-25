@@ -266,7 +266,7 @@ np.sum(dem, axis=1)
 # ```
 
 # ```{note}
-# In a 3D array, the third axis would be `axis=2`.
+# In a 3D array, the third (or depth) axis would be `axis=2`.
 # ```
 
 # ## Matrix operations

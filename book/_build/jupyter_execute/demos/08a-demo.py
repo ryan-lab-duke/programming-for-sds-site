@@ -1,11 +1,11 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Vector data with `GeoPandas`
+# # Vector data analysis
 # 
 # If you have taken **GEOG181: Our Digital Earth** or **GEOG481: GIScience I**, you will be well aware of the **vector data model** which represents features on the Earth's surface as points, lines or polygons. Vector data is extremely useful for storing and representing data that has discrete boundaries, such as borders, buildings, streets, and roads. Online mapping applications, such as Google Maps and Open Street Map, use this format to display data. 
 # 
-# The Python library `GeoPandas` provides somes great tools for working with vector data. As the name suggests, `GeoPandas`extends the popular data science library `pandas` by adding support for geospatial data. The core data structure in `GeoPandas` is the `geopandas.GeoDataFrame`. The key difference between a `geopandas.GeoDataFrame` and a `pandas.DataFrame` is that the `geopandas.GeoDataFrame` can store geometry columns and perform spatial operations.
+# The Python library `GeoPandas` provides somes great tools for working with vector data. As the name suggests, `GeoPandas`extends the popular data science library `pandas` by adding support for geospatial data. The core data structure in `GeoPandas` is the `geopandas.GeoDataFrame`. The key difference between the two is that a `geopandas.GeoDataFrame` can store geometry data and perform spatial operations.
 # 
 # ```{image} images/dataframe.png
 # :alt: geodataframe

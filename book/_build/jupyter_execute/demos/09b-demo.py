@@ -12,11 +12,10 @@
 # :align: center
 # ```
 
-# In[2]:
+# In[1]:
 
 
 import matplotlib.pyplot as plt
-from mpl_toolkits.axes_grid1 import make_axes_locatable
 
 import numpy as np
 import rasterio
@@ -25,7 +24,7 @@ import glob
 
 # We can make a variable containing all the Landsat 8 files using the [`glob`](https://docs.python.org/3/library/glob.html) module which finds all the pathnames matching a specified pattern according to the rules used by the Unix shell. For example, `*.tif` returns all files in the `data/landsat/` folder that have the `.tif` file type.
 
-# In[5]:
+# In[2]:
 
 
 # Define list of Landsat bands
@@ -35,7 +34,7 @@ files
 
 # One of these bands can be opened in the same way we did in the previous lecture (i.e. `.open` and `.read`)
 
-# In[6]:
+# In[3]:
 
 
 # Open a single band
@@ -45,7 +44,7 @@ band_1 = src.read(1)
 
 # The dataset's **profile** returns a dictionary containing the parameters that we returned individually before (i.e. `.bounds`, `.transform`).
 
-# In[8]:
+# In[4]:
 
 
 # Find metadata (e.g. driver, data type, coordinate reference system, transform etc.)
@@ -54,7 +53,7 @@ print(src.profile)
 
 # We can plot a figure showing our data like so:
 
-# In[10]:
+# In[5]:
 
 
 # Plot dataset
@@ -77,7 +76,7 @@ plt.show()
 # Remember that Python uses zero indexing, so the first band (i.e. 0) corresponds to band 1.
 # ```
 
-# In[99]:
+# In[6]:
 
 
 src_4 = rasterio.open(files[3])
@@ -93,14 +92,14 @@ band_5 = src_5.read(1)
 # Note that we have to make sure our bands are converted to `float` datatypes before dividing.
 # ```
 
-# In[100]:
+# In[7]:
 
 
 np.seterr(divide='ignore', invalid='ignore')
 ndvi = (band_5.astype(float) - band_4.astype(float)) / (band_5.astype(float) + band_4.astype(float))
 
 
-# In[101]:
+# In[8]:
 
 
 # Plot dataset
@@ -117,7 +116,7 @@ plt.show()
 # 
 # > NDWI = (Band 3 - Band 5) / (Band 3 + Band 5)
 
-# In[102]:
+# In[9]:
 
 
 src_3 = rasterio.open(files[2])
@@ -126,7 +125,7 @@ band_3 = src_3.read(1)
 ndwi = (band_3.astype(float) - band_5.astype(float)) / (band_3.astype(float) + band_5.astype(float))
 
 
-# In[103]:
+# In[10]:
 
 
 # Plot dataset
@@ -145,14 +144,14 @@ plt.show()
 # 
 # We can actually pass a 3-band array to [`.imshow`](https://matplotlib.org/3.3.3/api/_as_gen/matplotlib.pyplot.imshow.html) and plot it as an RGB image because it is such a common image format. First, we will read the blue band and stack it with the red and green bands.
 
-# In[113]:
+# In[11]:
 
 
 src_2 = rasterio.open(files[1])
 band_2 = src_2.read(1)
 
 
-# In[114]:
+# In[12]:
 
 
 # Produce a new array by stacking the RGB bands
@@ -161,7 +160,7 @@ rgb = np.dstack((band_4, band_3, band_2))
 
 # We know the the datatype of the image is `uint16`, which stands for unsigned 16-bit integer.
 
-# In[122]:
+# In[13]:
 
 
 src_2.profile['dtype']
@@ -169,7 +168,7 @@ src_2.profile['dtype']
 
 # But `.imshow` requires our data to have a range of 0-255 or 0-1. We can scale the pixel values by dividing by the maximum `uint16` value (i.e. 2^16) and multiplying by our desired max value (i.e. 2^8). We also have to convert the variable to an `uint8` data type.
 
-# In[129]:
+# In[14]:
 
 
 # Scale data
@@ -177,7 +176,7 @@ rgb_255 = np.uint8((rgb / 65536) * 255)
 rgb_255.dtype
 
 
-# In[130]:
+# In[15]:
 
 
 # Plot as RGB image
@@ -189,7 +188,7 @@ plt.show()
 
 # This looks great but is pretty dark because the range of pixel values is much less than 255 so there it is difficult to differentiate colors. 
 
-# In[137]:
+# In[16]:
 
 
 rgb_255.min(), rgb_255.max()
@@ -197,7 +196,7 @@ rgb_255.min(), rgb_255.max()
 
 # One way of dealing with this is to **stretch** the image using a **percentile clip**. This technique redistributes all pixel values between 0 and 255. In our case, all values of 0 will remain at 0, values of 123 will become 255, and the rest of the values will be spread proportionally in between. 
 
-# In[138]:
+# In[17]:
 
 
 def percentile_stretch(array, pct = [2, 98]):
@@ -214,7 +213,7 @@ def percentile_stretch(array, pct = [2, 98]):
 array = percentile_stretch(rgb_255)
 
 
-# In[139]:
+# In[18]:
 
 
 # Plot as RGB image
@@ -225,3 +224,27 @@ plt.show()
 
 
 # This looks much nicer.
+
+# In[23]:
+
+
+#Test write file
+with rasterio.open(
+        "data/ndwi.tif",
+        mode="w",
+        driver="GTiff",
+        height=ndwi.shape[0],
+        width=ndwi.shape[1],
+        count=1,
+        dtype=ndwi.dtype,
+        crs=src.crs,
+        transform=src.transform,
+) as new_dataset:
+        new_dataset.write(ndwi, 1)
+
+
+# In[ ]:
+
+
+
+

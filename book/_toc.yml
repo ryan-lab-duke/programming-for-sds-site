@@ -67,5 +67,6 @@ parts:
 
   - caption: Week 10
     chapters:
-    - file: demos/10-demo.ipynb
+    - file: demos/10a-demo.ipynb
+    - file: demos/10b-demo.ipynb
     - file: assignments/10-assignment.md

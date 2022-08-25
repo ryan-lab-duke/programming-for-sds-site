@@ -31,7 +31,7 @@
 # 
 # This is great but to do something more useful with data, we need to assign its value to a **variable**. Variables are one of the fundamental building blocks of Python. A variable is like a tiny container where you store values and data, such as filenames, words, numbers, collections of words and numbers. In Python, we can assign a variable using the equals sign `=`. For example, we can track the height of a tree by assigning an integer value of `30` to a variable `height_m`.
 
-# In[2]:
+# In[1]:
 
 
 height_m = 30
@@ -39,7 +39,7 @@ height_m = 30
 
 # We can also make a **string** variable by adding single (`'`) or double quotes (`"`) around some text. 
 
-# In[3]:
+# In[2]:
 
 
 tree = 'douglas_fir'
@@ -53,7 +53,7 @@ tree = 'douglas_fir'
 
 # Once we have data stored with variable names, we can make use of it in calculations. We may want to store our tree height value in feet as well as meters
 
-# In[4]:
+# In[3]:
 
 
 height_ft = height_m * 3.281
@@ -61,7 +61,7 @@ height_ft = height_m * 3.281
 
 # Likewise, we might want to add a suffix to our tree so we can identify it later.
 
-# In[7]:
+# In[4]:
 
 
 tree1 = tree + '_1'
@@ -71,11 +71,11 @@ tree1 = tree + '_1'
 # 
 # It is good practice to make variable names as descriptive as possible. They can include:
 # 
-# * upper and lower-case letters (`a-z`, `A-Z`)
+# ✅ upper and lower-case letters (`a-z`, `A-Z`)
 # 
-# * digits (`0-9`)
+# ✅ digits (`0-9`)
 # 
-# * underscores (`_`)
+# ✅ underscores (`_`)
 # 
 # However, variable names **cannot** include:
 # 
@@ -90,13 +90,13 @@ tree1 = tree + '_1'
 
 # Python has a number of built-in functions to carry out common tasks with data and variables. For example, we can use the `print` function to **display information** to the screen.
 
-# In[8]:
+# In[5]:
 
 
 print(height_ft)
 
 
-# In[9]:
+# In[6]:
 
 
 print(tree1)
@@ -110,13 +110,13 @@ print(tree1)
 
 # Python also has a built-in function called `type` which outputs a value's **data type**
 
-# In[10]:
+# In[7]:
 
 
 type(height_ft)
 
 
-# In[11]:
+# In[8]:
 
 
 type(tree1)
@@ -133,20 +133,20 @@ type(tree1)
 # 
 # We can use another built-in function to change the data type of our variable (e.g. to `int`).
 
-# In[12]:
+# In[9]:
 
 
 int(height_ft)
 
 
-# In[21]:
+# In[10]:
 
 
 evergreen = True
 type(evergreen)
 
 
-# In[20]:
+# In[11]:
 
 
 int(evergreen)

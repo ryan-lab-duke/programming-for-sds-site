@@ -13,5 +13,5 @@ The course will be held in Fall 2023 at the University of Oregon. The schedule b
 | 7           | TBD        | [Analyzing table data](../demos/07-demo.ipynb)                                               |
 | 8           | TBD        | [Vector data with `GeoPandas`](../demos/08a-demo.ipynb)                                      |
 | 9           | TBD        | [Raster analysis with `Rasterio`](../demos/09a-demo.ipynb)                                   |
-| 10          | TBD        | [Putting it all together](../demos/10-demo.ipynb)                                            |
+| 10          | TBD        | [Putting it all together](../demos/10a-demo.ipynb)                                            |
 
