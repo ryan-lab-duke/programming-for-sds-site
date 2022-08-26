@@ -532,12 +532,13 @@ const thebe_selector_output = ".output, .cell_output"
   <div class="tex2jax_ignore mathjax_ignore section" id="for-loops">
 <h1>For loops<a class="headerlink" href="#for-loops" title="Permalink to this headline">¶</a></h1>
 <p>In progamming, we often want to repeat the same operation many times without having to re-type the same instructions.</p>
+<a class="bg-primary mb-1 reference internal image-reference" href="../_images/west.jpg"><img alt="west" class="bg-primary mb-1 align-center" src="../_images/west.jpg" style="width: 300px;" /></a>
 <div class="section" id="the-problem">
 <h2>The problem<a class="headerlink" href="#the-problem" title="Permalink to this headline">¶</a></h2>
 <p>Let’s say someone had provided us with a list of of states nearby but they didn’t capitalize the first letter!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">states</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;washington&#39;</span><span class="p">,</span> <span class="s1">&#39;oregon&#39;</span><span class="p">,</span> <span class="s1">&#39;california&#39;</span><span class="p">,</span> <span class="s1">&#39;arizona&#39;</span><span class="p">,</span> <span class="s1">&#39;nevada&#39;</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">states</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;washington&#39;</span><span class="p">,</span> <span class="s1">&#39;oregon&#39;</span><span class="p">,</span> <span class="s1">&#39;california&#39;</span><span class="p">,</span> <span class="s1">&#39;arizona&#39;</span><span class="p">,</span> <span class="s1">&#39;nevada&#39;</span><span class="p">,</span> <span class="s1">&#39;idaho&#39;</span><span class="p">,</span> <span class="s1">&#39;utah&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -550,14 +551,16 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="n">state3</span> <span class="o">=</span> <span class="n">states</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span>
 <span class="n">state4</span> <span class="o">=</span> <span class="n">states</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span>
 <span class="n">state5</span> <span class="o">=</span> <span class="n">states</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span>
+<span class="n">state6</span> <span class="o">=</span> <span class="n">states</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span>
+<span class="n">state7</span> <span class="o">=</span> <span class="n">states</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span>
 
-<span class="n">states_capitalized</span> <span class="o">=</span> <span class="p">[</span><span class="n">state1</span><span class="p">,</span> <span class="n">state2</span><span class="p">,</span> <span class="n">state3</span><span class="p">,</span> <span class="n">state4</span><span class="p">,</span> <span class="n">state5</span><span class="p">]</span>
+<span class="n">states_capitalized</span> <span class="o">=</span> <span class="p">[</span><span class="n">state1</span><span class="p">,</span> <span class="n">state2</span><span class="p">,</span> <span class="n">state3</span><span class="p">,</span> <span class="n">state4</span><span class="p">,</span> <span class="n">state5</span><span class="p">,</span> <span class="n">state6</span><span class="p">,</span> <span class="n">state7</span><span class="p">]</span>
 <span class="n">states_capitalized</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Washington&#39;, &#39;Oregon&#39;, &#39;California&#39;, &#39;Arizona&#39;, &#39;Nevada&#39;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Washington&#39;, &#39;Oregon&#39;, &#39;California&#39;, &#39;Arizona&#39;, &#39;Nevada&#39;, &#39;Idaho&#39;, &#39;Utah&#39;]
 </pre></div>
 </div>
 </div>
@@ -585,7 +588,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Washington&#39;, &#39;Oregon&#39;, &#39;California&#39;, &#39;Arizona&#39;, &#39;Nevada&#39;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Washington&#39;, &#39;Oregon&#39;, &#39;California&#39;, &#39;Arizona&#39;, &#39;Nevada&#39;, &#39;Idaho&#39;, &#39;Utah&#39;]
 </pre></div>
 </div>
 </div>
@@ -610,7 +613,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;nevada&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;utah&#39;
 </pre></div>
 </div>
 </div>
@@ -622,7 +625,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Nevada&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Utah&#39;
 </pre></div>
 </div>
 </div>
@@ -638,7 +641,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>range(0, 5)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>range(0, 5)
 </pre></div>
 </div>
 </div>
@@ -658,7 +661,7 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define empty list</span>
 <span class="n">states_capitalized</span> <span class="o">=</span> <span class="p">[]</span>
 
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">7</span><span class="p">):</span>
     
     <span class="c1"># Print iteration</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
@@ -679,9 +682,11 @@ const thebe_selector_output = ".output, .cell_output"
 2
 3
 4
+5
+6
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Washington&#39;, &#39;Oregon&#39;, &#39;California&#39;, &#39;Arizona&#39;, &#39;Nevada&#39;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Washington&#39;, &#39;Oregon&#39;, &#39;California&#39;, &#39;Arizona&#39;, &#39;Nevada&#39;, &#39;Idaho&#39;, &#39;Utah&#39;]
 </pre></div>
 </div>
 </div>
@@ -697,7 +702,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p>This might seem a strange, convoluted way of doing the same thing as before but it is quite useful. Let’s say we had another list containing the total area of these states:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">area</span> <span class="o">=</span> <span class="p">[</span><span class="mi">184661</span><span class="p">,</span> <span class="mi">254799</span><span class="p">,</span> <span class="mi">423967</span><span class="p">,</span> <span class="mi">295234</span><span class="p">,</span> <span class="mi">286380</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">area</span> <span class="o">=</span> <span class="p">[</span><span class="mi">184661</span><span class="p">,</span> <span class="mi">254799</span><span class="p">,</span> <span class="mi">423967</span><span class="p">,</span> <span class="mi">295234</span><span class="p">,</span> <span class="mi">286380</span><span class="p">,</span> <span class="mi">216630</span><span class="p">,</span> <span class="mi">219890</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -717,6 +722,8 @@ The total area of Oregon is 254799 square kilometers
 The total area of California is 423967 square kilometers
 The total area of Arizona is 295234 square kilometers
 The total area of Nevada is 286380 square kilometers
+The total area of Idaho is 216630 square kilometers
+The total area of Utah is 219890 square kilometers
 </pre></div>
 </div>
 </div>

@@ -17,6 +17,13 @@ jupyter lab
 Print all answers (except Task 3 and 4) in a human-readable way using **f-string** formatting.
 ```
 
+```{image} images/projections.png
+:alt: projections
+:class: bg-primary mb-1
+:width: 600px
+:align: center
+```
+
 *****************************
 
 

@@ -7,6 +7,13 @@ There are two options for completing this assignment. Either follow the instruct
 
 Sign up for Slack and send a message to the `#lab01` channel with your name, major, and favourite place to eat in Eugene. 
 
+```{image} images/willamette-valley.webp
+:alt: willamette valley
+:class: bg-primary mb-1
+:width: 500px
+:align: center
+```
+
 *****************************
 ## Task 2 (5 points)
 
