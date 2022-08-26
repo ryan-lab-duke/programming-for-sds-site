@@ -13,6 +13,13 @@ and
 jupyter lab
 ```
 
+```{image} images/mowich_glacier.jpg
+:alt: mowich
+:class: bg-primary mb-1
+:width: 600px
+:align: center
+```
+
 *****************************
 
 ## Task 1 (15 points)

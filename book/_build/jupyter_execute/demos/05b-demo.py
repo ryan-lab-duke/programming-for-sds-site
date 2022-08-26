@@ -4,6 +4,13 @@
 # # Time
 # 
 # Converting between time and date formats is a common task but one that is deceptively tricky. Tt can be difficult to keep track of what days or times are being referenced while dealing with different date formats, time zones, daylight savings time, and so on. Fortunately for us, Python has several modules that make it somewhat easier.
+# 
+# ```{image} images/clock.webp
+# :alt: clock
+# :class: bg-primary mb-1
+# :width: 500px
+# :align: center
+# ```
 
 # ## Standard date formats
 # 

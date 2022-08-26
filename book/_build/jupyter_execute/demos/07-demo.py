@@ -4,6 +4,13 @@
 # # Analyzing table data
 # 
 # In this week, we will analyze some real-world data, building on the techniques we covered in Week 4. Our dataset contains water temperature (in C) and discharge (in cubic feet per second) from the [Middle Fork of the Willamette River](https://en.wikipedia.org/wiki/Middle_Fork_Willamette_River) near Jasper. This river drains an area of the Cascade Range southeast of Eugene. The [gauge](https://waterdata.usgs.gov/monitoring-location/14150000/#parameterCode=00065&period=P7D) is located in Elijah Bristow State Park, a few miles below Dexter Reservoir. 
+# 
+# ```{image} images/willamette.jpg
+# :alt: willamette
+# :class: bg-primary mb-1
+# :width: 600px
+# :align: center
+# ```
 
 # ## Visualize
 # 

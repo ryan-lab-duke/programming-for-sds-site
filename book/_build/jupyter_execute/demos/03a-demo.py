@@ -5,19 +5,26 @@
 # 
 # In progamming, we often want to repeat the same operation many times without having to re-type the same instructions. 
 # 
+# ```{image} images/west.jpg
+# :alt: west
+# :class: bg-primary mb-1
+# :width: 300px
+# :align: center
+# ```
+# 
 # ## The problem
 # 
 # Let's say someone had provided us with a list of of states nearby but they didn't capitalize the first letter!
 
-# In[27]:
+# In[4]:
 
 
-states = ['washington', 'oregon', 'california', 'arizona', 'nevada']
+states = ['washington', 'oregon', 'california', 'arizona', 'nevada', 'idaho', 'utah']
 
 
 # We could use the string method `.capitalize()` to change the first letter of each item in the list to uppercase like so:
 
-# In[28]:
+# In[6]:
 
 
 state1 = states[0].capitalize()
@@ -25,8 +32,10 @@ state2 = states[1].capitalize()
 state3 = states[2].capitalize()
 state4 = states[3].capitalize()
 state5 = states[4].capitalize()
+state6 = states[5].capitalize()
+state7 = states[6].capitalize()
 
-states_capitalized = [state1, state2, state3, state4, state5]
+states_capitalized = [state1, state2, state3, state4, state5, state6, state7]
 states_capitalized
 
 
@@ -36,7 +45,7 @@ states_capitalized
 # 
 # For loops **iterate** over lists, repeating the same instructions for each element. We can write one like this:
 
-# In[29]:
+# In[7]:
 
 
 # Define empty list
@@ -72,13 +81,13 @@ states_capitalized
 
 # Note that the variables `state` and `new_name` used in the for loop are just normal variables and still exist after the loop has completed. They are equal to the **last** item in the list. 
 
-# In[30]:
+# In[9]:
 
 
 state
 
 
-# In[31]:
+# In[10]:
 
 
 new_name
@@ -88,7 +97,7 @@ new_name
 # 
 # We can use a loop to iterate over any collection of values in Python. For example, we can also write a loop that performs a calculation for a sequence of integers using the built-in function called `range`. 
 
-# In[36]:
+# In[11]:
 
 
 range(5)
@@ -108,13 +117,13 @@ range(5)
 
 # We can write the same for loop as before to capitalize the state names.
 
-# In[35]:
+# In[13]:
 
 
 # Define empty list
 states_capitalized = []
 
-for i in range(5):
+for i in range(7):
     
     # Print iteration
     print(i)
@@ -138,15 +147,15 @@ states_capitalized
 # 
 # This might seem a strange, convoluted way of doing the same thing as before but it is quite useful. Let's say we had another list containing the total area of these states:
 
-# In[41]:
+# In[16]:
 
 
-area = [184661, 254799, 423967, 295234, 286380]
+area = [184661, 254799, 423967, 295234, 286380, 216630, 219890]
 
 
 # We could use the index approach to print pairs in a single loop:
 
-# In[44]:
+# In[17]:
 
 
 for i in range(len(states_capitalized)):
@@ -157,3 +166,9 @@ for i in range(len(states_capitalized)):
 # ```{note}
 # In the example above, we used the **length** of the states list in the `range()` function but we could have just as easily used the length of the area list to define `i` since both lists are the same length.
 # ```
+
+# In[ ]:
+
+
+
+

@@ -9,6 +9,13 @@
 # The name "Pandas" is derived from the "panel data", an econometrics term for data sets that include observations over multiple time periods.
 # ```
 # 
+# ```{image} images/terminology.webp
+# :alt: terminology
+# :class: bg-primary mb-1
+# :width: 500px
+# :align: center
+# ```
+# 
 # ## Data structure
 # 
 # The main `Pandas` data structure is called a **DataFrame** which looks similar to an Excel spreadsheets. A typical DataFrame is a 2-D array with rows, columns, indices, and column names. We can import the `Pandas` and define a DataFrame like so:
@@ -50,6 +57,13 @@ df = pd.read_csv('data/euro_cities.csv')
 # "df" stands for DataFrame
 type(df)
 
+
+# ```{image} images/eurostar.png
+# :alt: eurostar
+# :class: bg-primary mb-1
+# :width: 500px
+# :align: center
+# ```
 
 # A concise way of checking what is contained in our `df` object is the `.head()` method which prints the first five rows of the data.
 

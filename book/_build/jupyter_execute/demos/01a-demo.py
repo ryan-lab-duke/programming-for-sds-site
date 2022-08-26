@@ -49,6 +49,13 @@ tree = 'douglas_fir'
 # Python is "dynamically typed" meaning that it automatically interprets the correct data type at run-time
 # ```
 
+# ```{image} images/trees.jpg
+# :alt: trees
+# :class: bg-primary mb-1
+# :width: 300px
+# :align: center
+# ```
+
 # ### Variable usage
 
 # Once we have data stored with variable names, we can make use of it in calculations. We may want to store our tree height value in feet as well as meters

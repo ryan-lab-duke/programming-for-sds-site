@@ -17,6 +17,13 @@ jupyter lab
 Print all answers (except Task 2 and 5) in a human-readable way using **f-string** formatting.
 ```
 
+```{image} images/substation.jpg
+:alt: substation
+:class: bg-primary mb-1
+:width: 500px
+:align: center
+```
+
 *****************************
 
 ## Task 1 (5 points)

@@ -17,7 +17,7 @@
 # 
 # ```{image} images/rainier_adams.jpg
 # :alt: rainier_adams
-# :width: 700px
+# :width: 600px
 # :align: center
 # ```
 # 

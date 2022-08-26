@@ -5,6 +5,13 @@
 # 
 # In the second demo of this week, we will introduce the basics of vector data analysis in Python with an example. We have two shapefiles. The first shapefile contains the name, location, and capacity of all major sports stadiums in the United States as **points**. The second shapefile contains the states on the United States as **polygons**. An alien would like to know which state contains the highest number of stadiums, the highest number of seats, and the closest and furthest stadiums from University of Oregon's campus. 
 
+# ```{image} images/autzen.jpg
+# :alt: autzen
+# :class: bg-primary mb-1
+# :width: 600px
+# :align: center
+# ```
+
 # In[248]:
 
 

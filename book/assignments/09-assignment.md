@@ -13,6 +13,13 @@ and
 jupyter lab
 ```
 
+```{image} images/rain.webp
+:alt: rain
+:class: bg-primary mb-1
+:width: 600px
+:align: center
+```
+
 *****************************
 
 ## Task 1 (4 points)
