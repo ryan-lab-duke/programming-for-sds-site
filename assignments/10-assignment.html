@@ -51,6 +51,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="prev" title="Classifying raster data" href="../demos/10b-demo.html" />
@@ -431,8 +433,13 @@ const thebe_selector_output = ".output, .cell_output"
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#task-x-5-points">
-   Task X (5 points)
+  <a class="reference internal nav-link" href="#task-1-15-points">
+   Task 1 (15 points)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#task-2-15-points">
+   Task 2 (15 points)
   </a>
  </li>
 </ul>
@@ -456,8 +463,13 @@ const thebe_selector_output = ".output, .cell_output"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#task-x-5-points">
-   Task X (5 points)
+  <a class="reference internal nav-link" href="#task-1-15-points">
+   Task 1 (15 points)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#task-2-15-points">
+   Task 2 (15 points)
   </a>
  </li>
 </ul>
@@ -481,8 +493,33 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 <hr class="docutils" />
-<div class="section" id="task-x-5-points">
-<h2>Task X (5 points)<a class="headerlink" href="#task-x-5-points" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="task-1-15-points">
+<h2>Task 1 (15 points)<a class="headerlink" href="#task-1-15-points" title="Permalink to this headline">¶</a></h2>
+<p>Download elevation data for Mt Rainier <a class="reference external" href="https://www.dropbox.com/s/ej4rdh93qkhlyj7/N46W122.tif?dl=0">here</a> and a shapefile containing the outlines of the major glaciers <a class="reference external" href="https://www.dropbox.com/sh/oxk2gs8uuuhvbuf/AACruLfktDICu8PxMZ6wKqoka?dl=0">here</a>. The shapefile is from the <a class="reference external" href="https://www.glims.org/">Global Land Ice Measurements from Space (GLIMS) project</a> which has mapped the extent of all glaciers on Earth.</p>
+<ul class="simple">
+<li><p>a) Which are the five largest glaciers by <strong>area</strong>?</p></li>
+<li><p>b) Which five glaciers have the <strong>highest mean</strong> elevation?</p></li>
+<li><p>c) Which five glaciers have the <strong>highest minimum</strong> elevation?</p></li>
+<li><p>d) Which five glaciers span the most elevation (i.e. difference between maximum and minimum elevation)?</p></li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="task-2-15-points">
+<h2>Task 2 (15 points)<a class="headerlink" href="#task-2-15-points" title="Permalink to this headline">¶</a></h2>
+<p>Download the Landsat data from <a class="reference external" href="https://www.dropbox.com/sh/k3bkxwa2j9fovta/AADX4yZiIAEHiG9VPcyCON2pa?dl=0">here</a>.</p>
+<ul class="simple">
+<li><p>a) Compute a <a class="reference external" href="https://www.usgs.gov/landsat-missions/landsat-normalized-difference-vegetation-index">Normalized Difference Vegetation Index</a> using bands 4 and 5.</p></li>
+<li><p>b) Compute a <a class="reference external" href="https://www.usgs.gov/landsat-missions/normalized-difference-moisture-index">Normalized Difference Moisture Index</a> using bands 5 and 6.</p></li>
+<li><p>c) Find the area of water in the <strong>NDWI</strong> image.</p></li>
+<li><p>d) Find the area of sand in <strong>Band 1</strong> image</p></li>
+<li><p>e) Calculate the area of <strong>healthy vegetation</strong> and <strong>non-vegetation</strong> in the <strong>NDVI</strong> image. Note that you may need to subtract the sand and water pixels from non-vegetation classification - a pixel should only have one land cover.</p></li>
+<li><p>f) Compute the area of all four land covers in <span class="math notranslate nohighlight">\(km^{2}\)</span>.</p></li>
+</ul>
+<hr class="docutils" />
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Save your notebook to your local course folder and submit assignment (in <strong>.ipynb</strong> format) to Canvas by the deadline.</p>
+</div>
 </div>
 </div>
 
