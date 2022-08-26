@@ -30,7 +30,7 @@ df.head()
 # ```
 # ````
 
-# So what do we have here? We now have a small table containing countries in the United Kingdom and their capital cities. The table has **two labeled columns**, one called "city" and one called "country". The table has **four rows**, with each row corresponding to an **index** between 0 and 3. 
+# So what do we have here? We now have a small table containing countries in the United Kingdom and their capital cities. The table has **two labeled columns**, one called `city` and one called `country`. The table has **four rows**, with each row corresponding to an **index** between 0 and 3. 
 
 # ````{margin}
 # ```{note}

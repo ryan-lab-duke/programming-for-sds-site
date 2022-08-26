@@ -459,8 +459,8 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#sampling-the-data">
-   Sampling the data
+  <a class="reference internal nav-link" href="#sampling-the-data-using-points">
+   Sampling the data using points
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -469,8 +469,8 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#regionprops">
-   Regionprops
+  <a class="reference internal nav-link" href="#sampling-grid-cells-using-polygons">
+   Sampling grid cells using polygons
   </a>
  </li>
 </ul>
@@ -504,8 +504,8 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#sampling-the-data">
-   Sampling the data
+  <a class="reference internal nav-link" href="#sampling-the-data-using-points">
+   Sampling the data using points
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -514,8 +514,8 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#regionprops">
-   Regionprops
+  <a class="reference internal nav-link" href="#sampling-grid-cells-using-polygons">
+   Sampling grid cells using polygons
   </a>
  </li>
 </ul>
@@ -529,12 +529,13 @@ const thebe_selector_output = ".output, .cell_output"
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="sampling-raster-data">
 <h1>Sampling raster data<a class="headerlink" href="#sampling-raster-data" title="Permalink to this headline">¶</a></h1>
-<p>Many GIS tasks involve both raster and vector data. In this demo, we have a shapefile containing the coordinates of four campsites in Mt. Rainier and we want to extract the elevation from a corresponding raster file (that was introduced in <a class="reference internal" href="09a-demo.html"><span class="doc std std-doc">Week 9</span></a>.</p>
+<p>Many GIS tasks involve both raster and vector data. In this demo, we have a shapefile containing the coordinates of four campsites in Mt. Rainier and we would like to extract elevation data from a corresponding raster file (that was introduced in <a class="reference internal" href="09a-demo.html"><span class="doc std std-doc">Week 9</span></a>).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">rasterio</span>
 <span class="kn">from</span> <span class="nn">rasterio.mask</span> <span class="kn">import</span> <span class="n">mask</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">geopandas</span> <span class="k">as</span> <span class="nn">gpd</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
@@ -548,6 +549,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 </div>
+<a class="bg-primary mb-1 reference internal image-reference" href="../_images/rainier.jpeg"><img alt="rainier" class="bg-primary mb-1 align-center" src="../_images/rainier.jpeg" style="width: 600px;" /></a>
 <div class="section" id="check-coordinates">
 <h2>Check coordinates<a class="headerlink" href="#check-coordinates" title="Permalink to this headline">¶</a></h2>
 <p>Before we can extract the elevation values beneath the points, we must check that the two datasets have the same coordinate reference system.</p>
@@ -585,10 +587,11 @@ Datum: World Geodetic System 1984 ensemble
 </div>
 </div>
 </div>
-<p>It looks they are both projected in <strong>WGS84 (EPSG:4325)</strong> so we can move onto the next step.</p>
+<p>It looks they are both projected in <strong>WGS84 (EPSG:4326)</strong> so we can move onto the next step.</p>
 </div>
 <div class="section" id="plot">
 <h2>Plot<a class="headerlink" href="#plot" title="Permalink to this headline">¶</a></h2>
+<p>It’s always useful to plot the data so we know it has been read correctly.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Plot data</span>
@@ -602,13 +605,13 @@ Datum: World Geodetic System 1984 ensemble
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/10a-demo_7_0.png" src="../_images/10a-demo_7_0.png" />
+<img alt="../_images/10a-demo_8_0.png" src="../_images/10a-demo_8_0.png" />
 </div>
 </div>
 </div>
-<div class="section" id="sampling-the-data">
-<h2>Sampling the data<a class="headerlink" href="#sampling-the-data" title="Permalink to this headline">¶</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">Rasterio's</span></code> <a class="reference external" href="https://rasterio.readthedocs.io/en/latest/api/rasterio.sample.html"><code class="docutils literal notranslate"><span class="pre">sample</span></code></a> function expects a list of x, y coordinate pairs so we need to convert our <code class="docutils literal notranslate"><span class="pre">geometry</span></code> column using list comprehension.</p>
+<div class="section" id="sampling-the-data-using-points">
+<h2>Sampling the data using points<a class="headerlink" href="#sampling-the-data-using-points" title="Permalink to this headline">¶</a></h2>
+<p>To sample the raster data at the campsite locations we can use <code class="docutils literal notranslate"><span class="pre">Rasterio's</span></code> <a class="reference external" href="https://rasterio.readthedocs.io/en/latest/api/rasterio.sample.html"><code class="docutils literal notranslate"><span class="pre">sample</span></code></a> function. This function expects a list of x, y coordinate pairs so we need to convert our <code class="docutils literal notranslate"><span class="pre">geometry</span></code> column using list comprehension.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">coord_list</span> <span class="o">=</span> <span class="p">[(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">campsites</span><span class="p">[</span><span class="s1">&#39;geometry&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">x</span> <span class="p">,</span> <span class="n">campsites</span><span class="p">[</span><span class="s1">&#39;geometry&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">y</span><span class="p">)]</span>
@@ -699,8 +702,8 @@ Datum: World Geodetic System 1984 ensemble
 </div>
 <div class="section" id="buffer-points">
 <h2>Buffer points<a class="headerlink" href="#buffer-points" title="Permalink to this headline">¶</a></h2>
-<p>Sometimes it might be a little risky to sample only one cell per point. There may be errors or artifacts in the unerlying raster. A more robust method would be to sample multiple raster grid cells surrounding a point. To do this we could <strong>buffer</strong> the points by a set distance and sample the raster values again.</p>
-<p><code class="docutils literal notranslate"><span class="pre">GeoPandas</span></code> has a method called <a class="reference external" href="https://geopandas.org/en/stable/docs/reference/api/geopandas.GeoSeries.buffer.html"><code class="docutils literal notranslate"><span class="pre">buffer</span></code></a> which expects a <strong>distance</strong> around each object. Since our shapefile is in WGS84 coordinate system, this distance would have to be in <strong>degrees</strong> which is a little confusing. A better option would be to reproject our shapefile so we can enter a buffer distance in <strong>meters</strong>.</p>
+<p>Sometimes it might be a little risky to sample only one cell per point. There may be errors or artifacts in the unerlying raster. A more robust method would be to sample multiple raster grid cells surrounding a point. To do this we could <strong>buffer</strong> the points by a set distance and sample the raster values within the buffer.</p>
+<p><code class="docutils literal notranslate"><span class="pre">GeoPandas</span></code> has a method called <a class="reference external" href="https://geopandas.org/en/stable/docs/reference/api/geopandas.GeoSeries.buffer.html"><code class="docutils literal notranslate"><span class="pre">buffer</span></code></a> which expects a <strong>distance</strong> around each object. Since our shapefile is in WGS84 coordinate system, this distance would have to be in <strong>degrees</strong> which is a little confusing. A better option would be to reproject our shapefile into a <strong>projected coordinate system</strong> so we can enter a buffer distance in <strong>meters</strong>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">campsites_utm</span> <span class="o">=</span> <span class="n">campsites</span><span class="o">.</span><span class="n">to_crs</span><span class="p">(</span><span class="s1">&#39;EPSG:32610&#39;</span><span class="p">)</span>
@@ -793,189 +796,70 @@ Datum: World Geodetic System 1984 ensemble
 </div>
 </div>
 </div>
-<p>To sample raster grid cells within polygons (rather than points) we use another <code class="docutils literal notranslate"><span class="pre">Rasterio</span></code> function called <a class="reference external" href="https://rasterio.readthedocs.io/en/latest/api/rasterio.mask.html"><code class="docutils literal notranslate"><span class="pre">mask.mask</span></code></a>. This function has a few arguments. The first is the raster dataset (i.e. <code class="docutils literal notranslate"><span class="pre">src</span></code> in our case). The second argument is the shape to mask. In the docs, it notes that the shapes must be:</p>
-<blockquote>
-<div><p>a GeoJSON-like dict or an object that implements the Python geo interface protocol (such as a Shapely Polygon)”</p>
-</div></blockquote>
-<p>So we will have to specify only the <strong>geometry</strong> of our <code class="docutils literal notranslate"><span class="pre">GeoPandas</span></code> DataFrame, not the DataFrame object itself. The <strong>Invert</strong> argument determines whether pixels inside or outside shapes will be masked. The <strong>nodata</strong> argument allows us to set the no data value (i.e. values of pixels outside the mask).</p>
+</div>
+<div class="section" id="sampling-grid-cells-using-polygons">
+<h2>Sampling grid cells using polygons<a class="headerlink" href="#sampling-grid-cells-using-polygons" title="Permalink to this headline">¶</a></h2>
+<p>There is a package called <a class="reference external" href="https://pythonhosted.org/rasterstats/"><code class="docutils literal notranslate"><span class="pre">rasterstats</span></code></a> that makes this task pretty straightforward. In the docs, it recommends installing using <code class="docutils literal notranslate"><span class="pre">pip</span></code>. We can actually do this directly from a Jupyter Notebook by using the <code class="docutils literal notranslate"><span class="pre">!</span></code> mark which allows us execute commands from the underlying operating system.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">campsite_mask</span><span class="p">,</span> <span class="n">transform</span> <span class="o">=</span> <span class="n">mask</span><span class="p">(</span><span class="n">src</span><span class="p">,</span> <span class="n">campsites</span><span class="o">.</span><span class="n">geometry</span><span class="p">,</span> <span class="n">invert</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">nodata</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>Now when we plot our data, we should see four small dots that represent elevation values within 500 m of the campsites. All other elevation values are assigned a no data values.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">campsite_mask</span><span class="p">[</span><span class="mi">0</span><span class="p">,:,:])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip install rasterstats
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x7f2433f9c580&gt;
-</pre></div>
-</div>
-<img alt="../_images/10a-demo_21_1.png" src="../_images/10a-demo_21_1.png" />
-</div>
-</div>
-</div>
-<div class="section" id="regionprops">
-<h2>Regionprops<a class="headerlink" href="#regionprops" title="Permalink to this headline">¶</a></h2>
-<p>The challenge is to extract the values of grid cells within the buffer.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">skimage.measure</span> <span class="kn">import</span> <span class="n">label</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>Convert to binary array (i.e. ones and zeros)</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">campsites</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">campsite_mask</span><span class="p">[</span><span class="mi">0</span><span class="p">,:,:]</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: rasterstats in /home/johnny/anaconda3/envs/gds/lib/python3.8/site-packages (0.17.0)
+Requirement already satisfied: simplejson in /home/johnny/anaconda3/envs/gds/lib/python3.8/site-packages (from rasterstats) (3.17.6)
+Requirement already satisfied: affine&lt;3.0 in /home/johnny/anaconda3/envs/gds/lib/python3.8/site-packages (from rasterstats) (2.3.0)
+Requirement already satisfied: fiona in /home/johnny/anaconda3/envs/gds/lib/python3.8/site-packages (from rasterstats) (1.8.20)
+Requirement already satisfied: shapely in /home/johnny/anaconda3/envs/gds/lib/python3.8/site-packages (from rasterstats) (1.8.0)
+Requirement already satisfied: numpy&gt;=1.9 in /home/johnny/anaconda3/envs/gds/lib/python3.8/site-packages (from rasterstats) (1.22.1)
+Requirement already satisfied: cligj&gt;=0.4 in /home/johnny/anaconda3/envs/gds/lib/python3.8/site-packages (from rasterstats) (0.7.2)
+Requirement already satisfied: rasterio&gt;=1.0 in /home/johnny/anaconda3/envs/gds/lib/python3.8/site-packages (from rasterstats) (1.2.10)
+Requirement already satisfied: click&gt;=4.0 in /home/johnny/anaconda3/envs/gds/lib/python3.8/site-packages (from cligj&gt;=0.4-&gt;rasterstats) (8.0.3)
+Requirement already satisfied: certifi in /home/johnny/anaconda3/envs/gds/lib/python3.8/site-packages (from rasterio&gt;=1.0-&gt;rasterstats) (2022.6.15)
+Requirement already satisfied: attrs in /home/johnny/anaconda3/envs/gds/lib/python3.8/site-packages (from rasterio&gt;=1.0-&gt;rasterstats) (21.4.0)
+Requirement already satisfied: snuggs&gt;=1.4.1 in /home/johnny/anaconda3/envs/gds/lib/python3.8/site-packages (from rasterio&gt;=1.0-&gt;rasterstats) (1.4.7)
+Requirement already satisfied: setuptools in /home/johnny/anaconda3/envs/gds/lib/python3.8/site-packages (from rasterio&gt;=1.0-&gt;rasterstats) (60.5.0)
+Requirement already satisfied: click-plugins in /home/johnny/anaconda3/envs/gds/lib/python3.8/site-packages (from rasterio&gt;=1.0-&gt;rasterstats) (1.1.1)
+Requirement already satisfied: munch in /home/johnny/anaconda3/envs/gds/lib/python3.8/site-packages (from fiona-&gt;rasterstats) (2.5.0)
+Requirement already satisfied: six&gt;=1.7 in /home/johnny/anaconda3/envs/gds/lib/python3.8/site-packages (from fiona-&gt;rasterstats) (1.16.0)
+Requirement already satisfied: pyparsing&gt;=2.1.6 in /home/johnny/anaconda3/envs/gds/lib/python3.8/site-packages (from snuggs&gt;=1.4.1-&gt;rasterio&gt;=1.0-&gt;rasterstats) (3.0.7)
 </pre></div>
 </div>
 </div>
 </div>
-<p>Label image</p>
+<p>After successfully installing <code class="docutils literal notranslate"><span class="pre">rasterstats</span></code>, we can go ahead and import the function we need.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">label_img</span> <span class="o">=</span> <span class="n">label</span><span class="p">(</span><span class="n">campsites</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">rasterstats</span> <span class="kn">import</span> <span class="n">zonal_stats</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>Print unique labels</p>
+<p>The <a class="reference external" href="https://pythonhosted.org/rasterstats/manual.html#zonal-statistics"><code class="docutils literal notranslate"><span class="pre">zonal_stats</span></code></a> function requires a shapefile or polygon, a raster file or array, the geotransform of the array, and the stats we’d like to compute.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">label_img</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">stats</span> <span class="o">=</span> <span class="n">zonal_stats</span><span class="p">(</span><span class="n">campsites</span><span class="o">.</span><span class="n">geometry</span><span class="p">,</span> <span class="n">elevations</span><span class="p">,</span> <span class="n">affine</span><span class="o">=</span><span class="n">src</span><span class="o">.</span><span class="n">transform</span><span class="p">,</span> 
+            <span class="n">stats</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;mean&#39;</span><span class="p">,</span> <span class="s1">&#39;std&#39;</span><span class="p">,</span> <span class="s1">&#39;count&#39;</span><span class="p">],</span> <span class="n">nodata</span><span class="o">=</span><span class="n">src</span><span class="o">.</span><span class="n">nodata</span><span class="p">)</span>
+<span class="n">stats</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0, 1, 2, 3, 4])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[{&#39;mean&#39;: 1538.70367278798, &#39;count&#39;: 1198, &#39;std&#39;: 61.23086259469099},
+ {&#39;mean&#39;: 1380.375312760634, &#39;count&#39;: 1199, &#39;std&#39;: 75.87074248803795},
+ {&#39;mean&#39;: 638.1961602671118, &#39;count&#39;: 1198, &#39;std&#39;: 33.699186100766795},
+ {&#39;mean&#39;: 1007.7948290241868, &#39;count&#39;: 1199, &#39;std&#39;: 58.850863432257526}]
 </pre></div>
 </div>
 </div>
 </div>
+<p>The <code class="docutils literal notranslate"><span class="pre">mean</span></code> value provides a robust measure of elevation surrounding each campsite. By including the <code class="docutils literal notranslate"><span class="pre">count</span></code> option we can see that there were 1198/1199 grid cells sampled for each 500 m buffer. The <code class="docutils literal notranslate"><span class="pre">std</span></code> option provides the variance of elevations in the buffer.</p>
+<p>We can add these data to our original GeoDataFrame. Luckily for us, <code class="docutils literal notranslate"><span class="pre">Pandas</span></code> can implicitly convert a <strong>list of dictionaries</strong> to a <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>. Since <code class="docutils literal notranslate"><span class="pre">zonal_stats</span></code> preserves the order of campsites, we can use the index to <strong>merge</strong> the two DataFrames.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">elevations</span><span class="p">[</span><span class="n">label_img</span> <span class="o">==</span> <span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(12962407,)
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">elevations</span><span class="p">[</span><span class="n">label_img</span> <span class="o">==</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(1198,)
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">elevations</span><span class="p">[</span><span class="n">label_img</span> <span class="o">==</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span> <span class="n">elevations</span><span class="p">[</span><span class="n">label_img</span> <span class="o">==</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(1538.70367278798, 61.23086259469098)
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">elevations</span><span class="p">[</span><span class="n">label_img</span> <span class="o">==</span> <span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span> <span class="n">elevations</span><span class="p">[</span><span class="n">label_img</span> <span class="o">==</span> <span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(1380.375312760634, 75.87074248803795)
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">elevations</span><span class="p">[</span><span class="n">label_img</span> <span class="o">==</span> <span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span> <span class="n">elevations</span><span class="p">[</span><span class="n">label_img</span> <span class="o">==</span> <span class="mi">3</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(1007.7948290241868, 58.850863432257526)
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">elevations</span><span class="p">[</span><span class="n">label_img</span> <span class="o">==</span> <span class="mi">4</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span> <span class="n">elevations</span><span class="p">[</span><span class="n">label_img</span> <span class="o">==</span> <span class="mi">4</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(638.1961602671118, 33.699186100766795)
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">argwhere</span><span class="p">(</span><span class="n">label_img</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[226, 488],
-       [226, 489],
-       [226, 490],
-       ...,
-       [257, 498],
-       [257, 499],
-       [257, 500]])
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rasterio</span><span class="o">.</span><span class="n">transform</span><span class="o">.</span><span class="n">rowcol</span><span class="p">(</span><span class="n">src</span><span class="o">.</span><span class="n">transform</span><span class="p">,</span> <span class="n">campsites</span><span class="p">[</span><span class="s1">&#39;geometry&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">campsites</span><span class="p">[</span><span class="s1">&#39;geometry&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">y</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">argwhere</span><span class="p">(</span><span class="n">label_img</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">campsites</span><span class="p">[</span><span class="s1">&#39;geometry&#39;</span><span class="p">]</span><span class="o">.</span><span class="p">,</span> <span class="n">campsites</span><span class="p">[</span><span class="s1">&#39;geometry&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">y</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(-121.86309568977, 46.9328599291782)
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">campsites</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">campsite_stats</span> <span class="o">=</span> <span class="n">campsites</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">stats</span><span class="p">),</span> <span class="n">left_index</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">right_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">campsite_stats</span>
 </pre></div>
 </div>
 </div>
@@ -1002,6 +886,12 @@ Datum: World Geodetic System 1984 ensemble
       <th>lat</th>
       <th>lon</th>
       <th>geometry</th>
+      <th>elevation</th>
+      <th>buffer</th>
+      <th>mean</th>
+      <th>count</th>
+      <th>std</th>
+      <th>median</th>
     </tr>
   </thead>
   <tbody>
@@ -1010,34 +900,57 @@ Datum: World Geodetic System 1984 ensemble
       <td>mowich lake</td>
       <td>46.932860</td>
       <td>-121.863096</td>
-      <td>POINT (-121.86310 46.93286)</td>
+      <td>POINT (586541.645 5198330.423)</td>
+      <td>[1505]</td>
+      <td>POLYGON ((-121.85653 46.93279, -121.85657 46.9...</td>
+      <td>1538.703673</td>
+      <td>1198</td>
+      <td>61.230863</td>
+      <td>1527.0</td>
     </tr>
     <tr>
       <th>1</th>
       <td>white river</td>
       <td>46.902402</td>
       <td>-121.644124</td>
-      <td>POINT (-121.64412 46.90240)</td>
+      <td>POINT (603268.211 5195210.763)</td>
+      <td>[1331]</td>
+      <td>POLYGON ((-121.63756 46.90232, -121.63760 46.9...</td>
+      <td>1380.375313</td>
+      <td>1199</td>
+      <td>75.870742</td>
+      <td>1353.0</td>
     </tr>
     <tr>
       <th>2</th>
       <td>ohanapecosh</td>
       <td>46.738614</td>
       <td>-121.566675</td>
-      <td>POINT (-121.56668 46.73861)</td>
+      <td>POINT (609498.970 5177115.438)</td>
+      <td>[609]</td>
+      <td>POLYGON ((-121.56013 46.73853, -121.56018 46.7...</td>
+      <td>638.196160</td>
+      <td>1198</td>
+      <td>33.699186</td>
+      <td>632.0</td>
     </tr>
     <tr>
       <th>3</th>
       <td>cougar rock</td>
       <td>46.767626</td>
       <td>-121.794055</td>
-      <td>POINT (-121.79406 46.76763)</td>
+      <td>POINT (592078.991 5180047.801)</td>
+      <td>[975]</td>
+      <td>POLYGON ((-121.78751 46.76756, -121.78755 46.7...</td>
+      <td>1007.794829</td>
+      <td>1199</td>
+      <td>58.850863</td>
+      <td>986.0</td>
     </tr>
   </tbody>
 </table>
 </div></div></div>
 </div>
-<p>It got a little messy at the end there but that’s par for the course in geospatial analysis.</p>
 </div>
 </div>
 
