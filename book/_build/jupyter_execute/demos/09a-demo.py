@@ -5,6 +5,13 @@
 # 
 # Raster data represent a matrix of cells (or pixels) organized into rows and columns (or a grid). Grid cells can represent data that changes **continuously** across a landscape (surface) such as elevation, air temperature, or . reflectance data from satellite imaging platforms. Grid cells can also represent **discrete** data such as vegetation type or land cover. 
 # 
+# ```{image} images/rainier_adams.jpg
+# :alt: rainier_adams
+# :width: 600px
+# :align: center
+# ```
+# 
+# 
 # We recommend three libraries for accessing and analyzing raster data in Python. The first is called `rasterio` which builds on the popular **Geographic Raster Abstraction Library** or `GDAL`. It supports read/write access for over 160 raster formats (e.g. GeoTIFF, NetCDF4) and includes methods for finding dataset information, reprojections, resampling, format conversion, and mosaicking. Once we have imported, resampled the data etc., we can apply fast matrix operations using `NumPy`. Finally, we may also use `xarray` which introduces labels in the form of **dimensions**, **coordinates** and **attributes** on top of raw NumPy-like arrays, a bit like `Pandas`.
 # 
 # ```{image} images/raster_matrix.png
@@ -13,13 +20,47 @@
 # :align: center
 # ```
 
-# In this demo, we will be working with elevation data, also known as a Digital Elevation Model (DEM), of the Cascades Mountain Range that includes Mt. Rainier and Mt. Adams. 
+# ## Review of raster data
 # 
-# ```{image} images/rainier_adams.jpg
-# :alt: rainier_adams
+# * Raster data represent a matrix of cells (or pixels) organized into rows and columns (or a grid)
+# 
+# ```{image} images/raster_concept.png
+# :alt: raster_concept
+# :width: 500px
+# :align: center
+# ```
+
+# ## Examples: surface maps
+# 
+# * Grid cells can represent data that changes **continuously** across a landscape (surface) such as elevation or air temperature.
+# 
+# ```{image} images/elevation.gif
+# :alt: elevation
+# :width: 400px
+# :align: center
+# ```
+
+# ## Examples: satellite imagery
+# 
+# * Grid cells can represent from a satellite imagaing platforms such as reflectance.
+# 
+# ```{image} images/satellite.gif
+# :alt: satellite
+# :width: 400px
+# :align: center
+# ```
+
+# ### Examples: classification maps
+# 
+# * Grid cells can also represent **discrete** data (e.g. vegetation type or land cover).
+# 
+# ```{image} images/classification.gif
+# :alt: elevation
 # :width: 600px
 # :align: center
 # ```
+
+# In this demo, we will be working with elevation data, also known as a Digital Elevation Model (DEM), of the Cascades Mountain Range that includes Mt. Rainier and Mt. Adams. 
 # 
 # The data is formatted as a `GeoTIFF` and we will open it using `rasterio` function, `open()`. This function take a **path string** and returns a **dataset object**.
 

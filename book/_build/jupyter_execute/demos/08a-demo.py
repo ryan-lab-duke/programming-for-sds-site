@@ -3,9 +3,9 @@
 
 # # Vector data analysis
 # 
-# If you have taken **GEOG181: Our Digital Earth** or **GEOG481: GIScience I**, you will be well aware of the **vector data model** which represents features on the Earth's surface as points, lines or polygons. Vector data is extremely useful for storing and representing data that has discrete boundaries, such as borders, buildings, streets, and roads. Online mapping applications, such as Google Maps and Open Street Map, use this format to display data. 
+# The **vector data model** represents features on the Earth's surface as **points**, **lines** or **polygons**. Vector data is useful for storing and representing data that has discrete boundaries, such as borders, buildings, streets, and roads. Online mapping applications, such as **Google Maps** and **OpenStreetMap**, use this format to display data. 
 # 
-# The Python library `GeoPandas` provides somes great tools for working with vector data. As the name suggests, `GeoPandas`extends the popular data science library `pandas` by adding support for geospatial data. The core data structure in `GeoPandas` is the `geopandas.GeoDataFrame`. The key difference between the two is that a `geopandas.GeoDataFrame` can store geometry data and perform spatial operations.
+# The Python library `GeoPandas` provides somes great tools for working with vector data. As the name suggests, `GeoPandas` extends the popular data science library `Pandas` by adding support for geospatial data. The core data structure in `GeoPandas` is the `GeoDataFrame`. The key difference between the two is that a `GeoDataFrame` can store geometry data and perform spatial operations.
 # 
 # ```{image} images/dataframe.png
 # :alt: geodataframe
@@ -17,7 +17,7 @@
 # 
 # ## Reading files
 # 
-# Assuming we have a file containing both data and geometry (e.g. GeoPackage, GeoJSON, Shapefile), we can read it using `geopandas.read_file()`, which automatically detects the filetype and creates a `GeoDataFrame`. In the this demo, we will be working with a shapefile that contains the states of the contiguous United States. 
+# Assuming we have a file containing both data and geometry (e.g. GeoPackage, GeoJSON, Shapefile), we can read it using `read_file()`, which automatically detects the filetype and creates a `GeoDataFrame`. In the this demo, we will be working with a shapefile that contains the states of the contiguous United States. 
 
 # In[97]:
 
@@ -142,7 +142,7 @@ gdf[gdf['area'] > 3.5e+11].plot()
 gdf.crs
 
 
-# We can reproject a our data using the `to_crs()` method.
+# We can reproject a our data using the `to_crs` method.
 
 # In[66]:
 

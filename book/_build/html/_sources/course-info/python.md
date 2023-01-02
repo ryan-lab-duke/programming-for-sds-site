@@ -19,7 +19,7 @@ If the command returns a version number of conda (e.g. `conda 4.11.0`) everythin
 
 ## Create course environment
 
-The Python libraries needed for this course can be installed using an `environment.yml` file which can be downloaded from [here](https://www.dropbox.com/s/51cg60ycckz2u20/environment.yml?dl=0). 
+The Python libraries needed for this course can be installed using an `environment.yml` file which can be downloaded from [here](https://www.dropbox.com/s/vq6yf1acpypdrf2/environment.yml?dl=0). 
 
 You can install `environment.yml` by opening an Anaconda Prompt (Windows) or Terminal (Mac), navigating to the file (i.e. `cd Downloads/`) and running the following command:
 

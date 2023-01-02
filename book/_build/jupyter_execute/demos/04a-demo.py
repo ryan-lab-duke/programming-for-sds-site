@@ -47,7 +47,7 @@ df.head()
 
 # ## Reading data
 # 
-# In reality, we rarely make a table from scratch. Instead we **read** files that already contain data and store the contents of those files into variables. We can do this using `.read_csv()` which is a general function for reading data files separated by commas, spaces, or other common separators. The function takes a **path string** and returns a `DataFrame` object. 
+# In reality, we rarely make a table from scratch. Instead we **read** files that already contain data and store the contents of those files into variables. We can do this using `read_csv` which is a general function for reading data files separated by commas, spaces, or other common separators. The function takes a **path string** and returns a `DataFrame` object. 
 
 # In[2]:
 
@@ -65,7 +65,7 @@ type(df)
 # :align: center
 # ```
 
-# A concise way of checking what is contained in our `df` object is the `.head()` method which prints the first five rows of the data.
+# A concise way of checking what is contained in our `df` object is the `head` method which prints the first five rows of the data.
 
 # In[3]:
 
@@ -91,7 +91,7 @@ df.tail(10)
 
 # ## DataFrame properties
 # 
-# To check the data types of each column, we can use `Pandas` method called `.dtypes`:
+# To check the data types of each column, we can use `Pandas` method called `dtypes`:
 
 # In[6]:
 
@@ -133,7 +133,7 @@ df['city']
 df[['city', 'country']]
 
 
-# We can select specific rows using the `.iloc` method.
+# We can select specific rows using the `iloc` method.
 
 # In[11]:
 
@@ -149,7 +149,7 @@ df.iloc[6]
 df.iloc[0:10]
 
 
-# If we wanted to find the city with the highest/lowest population we could use `.idxmax()`/`idxmin()` which returns the index of the highest/lowest value in the column.
+# If we wanted to find the city with the highest/lowest population we could use `idxmax`/`idxmin` which returns the index of the highest/lowest value in the column.
 
 # In[13]:
 
@@ -169,7 +169,7 @@ f"The city with the largest population in Europe is {city_high}"
 
 # ## Descriptive statistics
 # 
-# `Pandas` provides basic functions to calculate descriptive statistics - similar to what we might usuaally do with Microsoft Excel.
+# `Pandas` provides basic functions to calculate descriptive statistics - similar to what we might usually do with Microsoft Excel.
 
 # In[15]:
 
@@ -189,7 +189,7 @@ df['population'].max()
 df['population'].min()
 
 
-# We can get all descriptive statistics at once using the `describe()` function
+# We can get all descriptive statistics at once using the `describe` function
 
 # In[18]:
 
@@ -197,7 +197,7 @@ df['population'].min()
 df['population'].describe()
 
 
-# Where the `25%, 50%, and 75%` are the [inter-quartile ranges](https://en.wikipedia.org/wiki/Quartile). Often the output of `describe()` is more readable if we **round** these data to two decimal places.
+# Where the `25%, 50%, and 75%` are the [inter-quartile ranges](https://en.wikipedia.org/wiki/Quartile). Often the output of `describe` is more readable if we **round** these data to two decimal places.
 
 # In[19]:
 
@@ -273,7 +273,7 @@ new_df = pd.DataFrame({'country': countries,
 new_df.head(10)
 
 
-# But a better way of doing this would be to use the `groupby()` function.
+# But a better way of doing this would be to use the `groupby` function.
 
 # In[30]:
 
@@ -281,7 +281,7 @@ new_df.head(10)
 df.groupby('country')['population'].sum()
 
 
-# The first argument `groupby` takes is the **which** column we want group our data into (`country` in our case). Next, it takes a column (or list of columns) to summarize (`population`). Finally, this function does nothing until we specific **how** we want to group our data.
+# The first argument `groupby` accepts is the **column** we want group our data into (`country` in our case). The next argument is the column (or list of columns) to summarize (`population`). Finally, this function does nothing until we specify **how** we want to group our data.
 # 
 # It's actually nice to **reset the index** after using `groupby` so that we end up with a DataFrame (rather than a Series). 
 
@@ -308,11 +308,11 @@ new_df.head(10)
 df.sort_values(by='population', ascending=False).head(10)
 
 
-# Another way of doing this would be to use the `nlargest()` or `nsmallest()` function. Documentation [here](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.nlargest.html).
+# Another way of doing this would be to use the `nlargest` or `nsmallest` function. Documentation [here](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.nlargest.html).
 
 # ## Saving 
 # 
-# We can save our DataFrames just as easy as reading the original file using the `.to_csv` function
+# We can save our DataFrames just as easy as reading the original file using the `to_csv` function
 
 # In[112]:
 
