@@ -37,12 +37,9 @@
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script>let toggleHintShow = 'Click to show';</script>
-    <script>let toggleHintHide = 'Click to hide';</script>
-    <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -449,6 +446,28 @@ const thebe_selector_output = ".output, .cell_output"
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#review-of-raster-data">
+   Review of raster data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#examples-surface-maps">
+   Examples: surface maps
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#examples-satellite-imagery">
+   Examples: satellite imagery
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#examples-classification-maps">
+     Examples: classification maps
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#dataset-attributes">
    Dataset attributes
   </a>
@@ -509,6 +528,28 @@ const thebe_selector_output = ".output, .cell_output"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#review-of-raster-data">
+   Review of raster data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#examples-surface-maps">
+   Examples: surface maps
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#examples-satellite-imagery">
+   Examples: satellite imagery
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#examples-classification-maps">
+     Examples: classification maps
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#dataset-attributes">
    Dataset attributes
   </a>
@@ -560,10 +601,36 @@ const thebe_selector_output = ".output, .cell_output"
   <div class="tex2jax_ignore mathjax_ignore section" id="raster-data-analysis">
 <h1>Raster data analysis<a class="headerlink" href="#raster-data-analysis" title="Permalink to this headline">¶</a></h1>
 <p>Raster data represent a matrix of cells (or pixels) organized into rows and columns (or a grid). Grid cells can represent data that changes <strong>continuously</strong> across a landscape (surface) such as elevation, air temperature, or . reflectance data from satellite imaging platforms. Grid cells can also represent <strong>discrete</strong> data such as vegetation type or land cover.</p>
+<a class="reference internal image-reference" href="../_images/rainier_adams.jpg"><img alt="rainier_adams" class="align-center" src="../_images/rainier_adams.jpg" style="width: 600px;" /></a>
 <p>We recommend three libraries for accessing and analyzing raster data in Python. The first is called <code class="docutils literal notranslate"><span class="pre">rasterio</span></code> which builds on the popular <strong>Geographic Raster Abstraction Library</strong> or <code class="docutils literal notranslate"><span class="pre">GDAL</span></code>. It supports read/write access for over 160 raster formats (e.g. GeoTIFF, NetCDF4) and includes methods for finding dataset information, reprojections, resampling, format conversion, and mosaicking. Once we have imported, resampled the data etc., we can apply fast matrix operations using <code class="docutils literal notranslate"><span class="pre">NumPy</span></code>. Finally, we may also use <code class="docutils literal notranslate"><span class="pre">xarray</span></code> which introduces labels in the form of <strong>dimensions</strong>, <strong>coordinates</strong> and <strong>attributes</strong> on top of raw NumPy-like arrays, a bit like <code class="docutils literal notranslate"><span class="pre">Pandas</span></code>.</p>
 <a class="reference internal image-reference" href="../_images/raster_matrix.png"><img alt="raster matrix" class="align-center" src="../_images/raster_matrix.png" style="width: 500px;" /></a>
+<div class="section" id="review-of-raster-data">
+<h2>Review of raster data<a class="headerlink" href="#review-of-raster-data" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Raster data represent a matrix of cells (or pixels) organized into rows and columns (or a grid)</p></li>
+</ul>
+<a class="reference internal image-reference" href="../_images/raster_concept.png"><img alt="raster_concept" class="align-center" src="../_images/raster_concept.png" style="width: 500px;" /></a>
+</div>
+<div class="section" id="examples-surface-maps">
+<h2>Examples: surface maps<a class="headerlink" href="#examples-surface-maps" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Grid cells can represent data that changes <strong>continuously</strong> across a landscape (surface) such as elevation or air temperature.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../_images/elevation.gif"><img alt="elevation" class="align-center" src="../_images/elevation.gif" style="width: 400px;" /></a>
+</div>
+<div class="section" id="examples-satellite-imagery">
+<h2>Examples: satellite imagery<a class="headerlink" href="#examples-satellite-imagery" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Grid cells can represent from a satellite imagaing platforms such as reflectance.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../_images/satellite.gif"><img alt="satellite" class="align-center" src="../_images/satellite.gif" style="width: 400px;" /></a>
+<div class="section" id="examples-classification-maps">
+<h3>Examples: classification maps<a class="headerlink" href="#examples-classification-maps" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Grid cells can also represent <strong>discrete</strong> data (e.g. vegetation type or land cover).</p></li>
+</ul>
+<a class="reference internal image-reference" href="../_images/classification.gif"><img alt="elevation" class="align-center" src="../_images/classification.gif" style="width: 600px;" /></a>
 <p>In this demo, we will be working with elevation data, also known as a Digital Elevation Model (DEM), of the Cascades Mountain Range that includes Mt. Rainier and Mt. Adams.</p>
-<a class="reference internal image-reference" href="../_images/rainier_adams.jpg"><img alt="rainier_adams" class="align-center" src="../_images/rainier_adams.jpg" style="width: 600px;" /></a>
 <p>The data is formatted as a <code class="docutils literal notranslate"><span class="pre">GeoTIFF</span></code> and we will open it using <code class="docutils literal notranslate"><span class="pre">rasterio</span></code> function, <code class="docutils literal notranslate"><span class="pre">open()</span></code>. This function take a <strong>path string</strong> and returns a <strong>dataset object</strong>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -586,6 +653,8 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><code class="docutils literal notranslate"><span class="pre">src</span></code> stands for <strong>source</strong></p>
+</div>
+</div>
 </div>
 </div>
 <div class="section" id="dataset-attributes">
@@ -715,7 +784,7 @@ Height: 3601
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/09a-demo_19_0.png" src="../_images/09a-demo_19_0.png" />
+<img alt="../_images/09a-demo_23_0.png" src="../_images/09a-demo_23_0.png" />
 </div>
 </div>
 </div>
@@ -772,7 +841,7 @@ Height: 3601
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/09a-demo_24_0.png" src="../_images/09a-demo_24_0.png" />
+<img alt="../_images/09a-demo_28_0.png" src="../_images/09a-demo_28_0.png" />
 </div>
 </div>
 </div>
@@ -837,7 +906,7 @@ Height: 3601
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/09a-demo_30_0.png" src="../_images/09a-demo_30_0.png" />
+<img alt="../_images/09a-demo_34_0.png" src="../_images/09a-demo_34_0.png" />
 </div>
 </div>
 </div>
@@ -924,7 +993,7 @@ Height: 3601
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/09a-demo_40_0.png" src="../_images/09a-demo_40_0.png" />
+<img alt="../_images/09a-demo_44_0.png" src="../_images/09a-demo_44_0.png" />
 </div>
 </div>
 <p>Why does the data look so strange now? Well, since we reprojected it, our data no longer represents a rectangle/square. Since all arrays have to be rectangles/squares, our reprojection introduced some <strong>NoData values</strong> at the edges. If we have a look at our array, we see that these NoData values are indicated by the integer <code class="docutils literal notranslate"><span class="pre">-32768</span></code> which is the smallest possible value that can be represented by the <code class="docutils literal notranslate"><span class="pre">int16</span></code> data type (i.e. -32,768 to 32,767).</p>
@@ -968,7 +1037,7 @@ Height: 3601
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/09a-demo_46_0.png" src="../_images/09a-demo_46_0.png" />
+<img alt="../_images/09a-demo_50_0.png" src="../_images/09a-demo_50_0.png" />
 </div>
 </div>
 </div>
@@ -1014,7 +1083,7 @@ Copying nodata values from source data/N46W122_utm.tif to destination data/N46W1
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/09a-demo_50_0.png" src="../_images/09a-demo_50_0.png" />
+<img alt="../_images/09a-demo_54_0.png" src="../_images/09a-demo_54_0.png" />
 </div>
 </div>
 </div>

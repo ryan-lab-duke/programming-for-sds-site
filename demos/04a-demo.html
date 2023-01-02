@@ -37,12 +37,9 @@
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script>let toggleHintShow = 'Click to show';</script>
-    <script>let toggleHintHide = 'Click to hide';</script>
-    <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -655,7 +652,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <div class="section" id="reading-data">
 <h2>Reading data<a class="headerlink" href="#reading-data" title="Permalink to this headline">¶</a></h2>
-<p>In reality, we rarely make a table from scratch. Instead we <strong>read</strong> files that already contain data and store the contents of those files into variables. We can do this using <code class="docutils literal notranslate"><span class="pre">.read_csv()</span></code> which is a general function for reading data files separated by commas, spaces, or other common separators. The function takes a <strong>path string</strong> and returns a <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> object.</p>
+<p>In reality, we rarely make a table from scratch. Instead we <strong>read</strong> files that already contain data and store the contents of those files into variables. We can do this using <code class="docutils literal notranslate"><span class="pre">read_csv</span></code> which is a general function for reading data files separated by commas, spaces, or other common separators. The function takes a <strong>path string</strong> and returns a <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> object.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/euro_cities.csv&#39;</span><span class="p">)</span>
@@ -672,7 +669,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <a class="bg-primary mb-1 reference internal image-reference" href="../_images/eurostar.png"><img alt="eurostar" class="bg-primary mb-1 align-center" src="../_images/eurostar.png" style="width: 500px;" /></a>
-<p>A concise way of checking what is contained in our <code class="docutils literal notranslate"><span class="pre">df</span></code> object is the <code class="docutils literal notranslate"><span class="pre">.head()</span></code> method which prints the first five rows of the data.</p>
+<p>A concise way of checking what is contained in our <code class="docutils literal notranslate"><span class="pre">df</span></code> object is the <code class="docutils literal notranslate"><span class="pre">head</span></code> method which prints the first five rows of the data.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -903,7 +900,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <div class="section" id="dataframe-properties">
 <h2>DataFrame properties<a class="headerlink" href="#dataframe-properties" title="Permalink to this headline">¶</a></h2>
-<p>To check the data types of each column, we can use <code class="docutils literal notranslate"><span class="pre">Pandas</span></code> method called <code class="docutils literal notranslate"><span class="pre">.dtypes</span></code>:</p>
+<p>To check the data types of each column, we can use <code class="docutils literal notranslate"><span class="pre">Pandas</span></code> method called <code class="docutils literal notranslate"><span class="pre">dtypes</span></code>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">dtypes</span>
@@ -1063,7 +1060,7 @@ Name: city, Length: 100, dtype: object
 <p>100 rows × 2 columns</p>
 </div></div></div>
 </div>
-<p>We can select specific rows using the <code class="docutils literal notranslate"><span class="pre">.iloc</span></code> method.</p>
+<p>We can select specific rows using the <code class="docutils literal notranslate"><span class="pre">iloc</span></code> method.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span>
@@ -1175,7 +1172,7 @@ Name: 6, dtype: object
 </table>
 </div></div></div>
 </div>
-<p>If we wanted to find the city with the highest/lowest population we could use <code class="docutils literal notranslate"><span class="pre">.idxmax()</span></code>/<code class="docutils literal notranslate"><span class="pre">idxmin()</span></code> which returns the index of the highest/lowest value in the column.</p>
+<p>If we wanted to find the city with the highest/lowest population we could use <code class="docutils literal notranslate"><span class="pre">idxmax</span></code>/<code class="docutils literal notranslate"><span class="pre">idxmin</span></code> which returns the index of the highest/lowest value in the column.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;population&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">idxmax</span><span class="p">()</span>
@@ -1207,7 +1204,7 @@ Name: 6, dtype: object
 </div>
 <div class="section" id="descriptive-statistics">
 <h2>Descriptive statistics<a class="headerlink" href="#descriptive-statistics" title="Permalink to this headline">¶</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">Pandas</span></code> provides basic functions to calculate descriptive statistics - similar to what we might usuaally do with Microsoft Excel.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Pandas</span></code> provides basic functions to calculate descriptive statistics - similar to what we might usually do with Microsoft Excel.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;population&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
@@ -1244,7 +1241,7 @@ Name: 6, dtype: object
 </div>
 </div>
 </div>
-<p>We can get all descriptive statistics at once using the <code class="docutils literal notranslate"><span class="pre">describe()</span></code> function</p>
+<p>We can get all descriptive statistics at once using the <code class="docutils literal notranslate"><span class="pre">describe</span></code> function</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;population&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
@@ -1265,7 +1262,7 @@ Name: population, dtype: float64
 </div>
 </div>
 </div>
-<p>Where the <code class="docutils literal notranslate"><span class="pre">25%,</span> <span class="pre">50%,</span> <span class="pre">and</span> <span class="pre">75%</span></code> are the <a class="reference external" href="https://en.wikipedia.org/wiki/Quartile">inter-quartile ranges</a>. Often the output of <code class="docutils literal notranslate"><span class="pre">describe()</span></code> is more readable if we <strong>round</strong> these data to two decimal places.</p>
+<p>Where the <code class="docutils literal notranslate"><span class="pre">25%,</span> <span class="pre">50%,</span> <span class="pre">and</span> <span class="pre">75%</span></code> are the <a class="reference external" href="https://en.wikipedia.org/wiki/Quartile">inter-quartile ranges</a>. Often the output of <code class="docutils literal notranslate"><span class="pre">describe</span></code> is more readable if we <strong>round</strong> these data to two decimal places.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">round</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;population&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">describe</span><span class="p">(),</span> <span class="mi">2</span><span class="p">)</span>
@@ -1708,7 +1705,7 @@ Name: country, Length: 100, dtype: bool
 </table>
 </div></div></div>
 </div>
-<p>But a better way of doing this would be to use the <code class="docutils literal notranslate"><span class="pre">groupby()</span></code> function.</p>
+<p>But a better way of doing this would be to use the <code class="docutils literal notranslate"><span class="pre">groupby</span></code> function.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;country&#39;</span><span class="p">)[</span><span class="s1">&#39;population&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
@@ -1751,7 +1748,7 @@ Name: population, dtype: int64
 </div>
 </div>
 </div>
-<p>The first argument <code class="docutils literal notranslate"><span class="pre">groupby</span></code> takes is the <strong>which</strong> column we want group our data into (<code class="docutils literal notranslate"><span class="pre">country</span></code> in our case). Next, it takes a column (or list of columns) to summarize (<code class="docutils literal notranslate"><span class="pre">population</span></code>). Finally, this function does nothing until we specific <strong>how</strong> we want to group our data.</p>
+<p>The first argument <code class="docutils literal notranslate"><span class="pre">groupby</span></code> accepts is the <strong>column</strong> we want group our data into (<code class="docutils literal notranslate"><span class="pre">country</span></code> in our case). The next argument is the column (or list of columns) to summarize (<code class="docutils literal notranslate"><span class="pre">population</span></code>). Finally, this function does nothing until we specify <strong>how</strong> we want to group our data.</p>
 <p>It’s actually nice to <strong>reset the index</strong> after using <code class="docutils literal notranslate"><span class="pre">groupby</span></code> so that we end up with a DataFrame (rather than a Series).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1870,11 +1867,11 @@ Name: population, dtype: int64
 </table>
 </div></div></div>
 </div>
-<p>Another way of doing this would be to use the <code class="docutils literal notranslate"><span class="pre">nlargest()</span></code> or <code class="docutils literal notranslate"><span class="pre">nsmallest()</span></code> function. Documentation <a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.nlargest.html">here</a>.</p>
+<p>Another way of doing this would be to use the <code class="docutils literal notranslate"><span class="pre">nlargest</span></code> or <code class="docutils literal notranslate"><span class="pre">nsmallest</span></code> function. Documentation <a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.nlargest.html">here</a>.</p>
 </div>
 <div class="section" id="saving">
 <h2>Saving<a class="headerlink" href="#saving" title="Permalink to this headline">¶</a></h2>
-<p>We can save our DataFrames just as easy as reading the original file using the <code class="docutils literal notranslate"><span class="pre">.to_csv</span></code> function</p>
+<p>We can save our DataFrames just as easy as reading the original file using the <code class="docutils literal notranslate"><span class="pre">to_csv</span></code> function</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">new_df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;data/new.csv&#39;</span><span class="p">)</span>

@@ -37,12 +37,9 @@
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script>let toggleHintShow = 'Click to show';</script>
-    <script>let toggleHintHide = 'Click to hide';</script>
-    <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -539,13 +536,13 @@ const thebe_selector_output = ".output, .cell_output"
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="vector-data-analysis">
 <h1>Vector data analysis<a class="headerlink" href="#vector-data-analysis" title="Permalink to this headline">¶</a></h1>
-<p>If you have taken <strong>GEOG181: Our Digital Earth</strong> or <strong>GEOG481: GIScience I</strong>, you will be well aware of the <strong>vector data model</strong> which represents features on the Earth’s surface as points, lines or polygons. Vector data is extremely useful for storing and representing data that has discrete boundaries, such as borders, buildings, streets, and roads. Online mapping applications, such as Google Maps and Open Street Map, use this format to display data.</p>
-<p>The Python library <code class="docutils literal notranslate"><span class="pre">GeoPandas</span></code> provides somes great tools for working with vector data. As the name suggests, <code class="docutils literal notranslate"><span class="pre">GeoPandas</span></code>extends the popular data science library <code class="docutils literal notranslate"><span class="pre">pandas</span></code> by adding support for geospatial data. The core data structure in <code class="docutils literal notranslate"><span class="pre">GeoPandas</span></code> is the <code class="docutils literal notranslate"><span class="pre">geopandas.GeoDataFrame</span></code>. The key difference between the two is that a <code class="docutils literal notranslate"><span class="pre">geopandas.GeoDataFrame</span></code> can store geometry data and perform spatial operations.</p>
+<p>The <strong>vector data model</strong> represents features on the Earth’s surface as <strong>points</strong>, <strong>lines</strong> or <strong>polygons</strong>. Vector data is useful for storing and representing data that has discrete boundaries, such as borders, buildings, streets, and roads. Online mapping applications, such as <strong>Google Maps</strong> and <strong>OpenStreetMap</strong>, use this format to display data.</p>
+<p>The Python library <code class="docutils literal notranslate"><span class="pre">GeoPandas</span></code> provides somes great tools for working with vector data. As the name suggests, <code class="docutils literal notranslate"><span class="pre">GeoPandas</span></code> extends the popular data science library <code class="docutils literal notranslate"><span class="pre">Pandas</span></code> by adding support for geospatial data. The core data structure in <code class="docutils literal notranslate"><span class="pre">GeoPandas</span></code> is the <code class="docutils literal notranslate"><span class="pre">GeoDataFrame</span></code>. The key difference between the two is that a <code class="docutils literal notranslate"><span class="pre">GeoDataFrame</span></code> can store geometry data and perform spatial operations.</p>
 <a class="reference internal image-reference" href="../_images/dataframe.png"><img alt="geodataframe" class="align-center" src="../_images/dataframe.png" style="width: 700px;" /></a>
 <p>The <code class="docutils literal notranslate"><span class="pre">geometry</span></code> column can contain any geometry type (e.g. points, lines, polygons) or even a mixture.</p>
 <div class="section" id="reading-files">
 <h2>Reading files<a class="headerlink" href="#reading-files" title="Permalink to this headline">¶</a></h2>
-<p>Assuming we have a file containing both data and geometry (e.g. GeoPackage, GeoJSON, Shapefile), we can read it using <code class="docutils literal notranslate"><span class="pre">geopandas.read_file()</span></code>, which automatically detects the filetype and creates a <code class="docutils literal notranslate"><span class="pre">GeoDataFrame</span></code>. In the this demo, we will be working with a shapefile that contains the states of the contiguous United States.</p>
+<p>Assuming we have a file containing both data and geometry (e.g. GeoPackage, GeoJSON, Shapefile), we can read it using <code class="docutils literal notranslate"><span class="pre">read_file()</span></code>, which automatically detects the filetype and creates a <code class="docutils literal notranslate"><span class="pre">GeoDataFrame</span></code>. In the this demo, we will be working with a shapefile that contains the states of the contiguous United States.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">geopandas</span> <span class="k">as</span> <span class="nn">gpd</span>
@@ -1156,7 +1153,7 @@ Datum: North American Datum 1983
 </div>
 </div>
 </div>
-<p>We can reproject a our data using the <code class="docutils literal notranslate"><span class="pre">to_crs()</span></code> method.</p>
+<p>We can reproject a our data using the <code class="docutils literal notranslate"><span class="pre">to_crs</span></code> method.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gdf_reproject</span> <span class="o">=</span> <span class="n">gdf</span><span class="o">.</span><span class="n">to_crs</span><span class="p">(</span><span class="s1">&#39;EPSG:4326&#39;</span><span class="p">)</span>
