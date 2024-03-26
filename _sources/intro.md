@@ -1,6 +1,6 @@
-# Welcome to Programming for Spatial Data Science 2023!
+# Welcome to Programming for Spatial Data Science 2024!
 
-On this website you will find the course materials developed for GEOG 2XX taught at the [Department of Geography, University of Oregon](https://geography.uoregon.edu/) in Fall 2023. 
+On this website you will find the course materials developed for GEOG 2XX taught at the [Department of Geography, University of Oregon](https://geography.uoregon.edu/) in Spring 2024. 
 
 **Designed by [Johnny Ryan](https://www.johnny-ryan.com/) // Powered by [Jupyter Book](https://jupyterbook.org/)**
 
@@ -26,7 +26,7 @@ The goal of this course is to introduce students to basic programming concepts i
 
 ## Python 
 
-Python has become one of the most popular programming languages in spatial data science. One of the main reasons for this is that it is very **user-friendly**. Python is categorized as a "**high-level**" language meaning that it has a higher level of abstraction (or distance) from machine binary code (0s and 1s). Python code is therefore very **readabable** (for those who know English) and the learning curve is relatively smooth. Python is **free to use** and supported by an extremely large ecosystem of **libraries and packages**. Python is a **versatile** programming language commonly used for web development, data analytics, GIS, and even machine learning. Finally, the Python community is **mature and supportive**. Python was created over 30 years ago and the community now includes developers of **all skill levels**. It is therefore easy to find accessible documentation, guides, and tutorials on the internet.
+Python has become one of the most popular programming languages in spatial data science. One of the main reasons for this is that it is very **user-friendly**. Python is categorized as a "**high-level**" language meaning that it has a higher level of abstraction (or distance) from machine binary code (0s and 1s). Python code is therefore very **readable** (for those who know English) and the learning curve is relatively smooth. Python is **free to use** and supported by an extremely large ecosystem of **libraries and packages**. Python is a **versatile** programming language commonly used for web development, data analytics, GIS, and even machine learning. Finally, the Python community is **mature and supportive**. Python was created over 30 years ago and the community now includes developers of **all skill levels**. It is therefore easy to find accessible documentation, guides, and tutorials on the internet.
 
 ## Acknowledgements
 
