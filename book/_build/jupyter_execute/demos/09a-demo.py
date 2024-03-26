@@ -62,7 +62,7 @@
 
 # In this demo, we will be working with elevation data, also known as a Digital Elevation Model (DEM), of the Cascades Mountain Range that includes Mt. Rainier and Mt. Adams. 
 # 
-# The data is formatted as a `GeoTIFF` and we will open it using `rasterio` function, `open()`. This function take a **path string** and returns a **dataset object**.
+# The data is formatted as a `GeoTIFF` and we will open it using `rasterio` function, `open()`. This function takes a **path string** and returns a **dataset object**.
 
 # In[11]:
 

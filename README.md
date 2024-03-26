@@ -1,6 +1,6 @@
 # Programming for Spatial Data Science
 
-This repository hosts the code for the online textbook, **Programming for Spatial Data Science** designed by [Johnny Ryan](https://www.johnny-ryan.com/). The textbook can be accessed at [https://owel-lab.github.io/programming-for-sds-site/](https://owel-lab.github.io/programming-for-sds-site/). 
+This repository hosts the code for the online textbook, **Programming for Spatial Data Science** designed by [Johnny Ryan](https://www.johnny-ryan.com/). The textbook can be accessed at [https://cleo-lab.github.io/programming-for-sds-site/](https://cleo-lab.github.io/programming-for-sds-site/). 
 
 The goal of this course is to introduce students to basic programming concepts in Python and apply these skills to various geospatial problems. There are no pre-requisites and students do not need any previous programming experience. Each week we will have a short lecture that introduces a new topic. In the following assignment, students will apply these new concepts to solve common tasks involving geospatial data. During this course, students will become familiar with the main Python packages used for importing, analyzing, and visualizing geospatial data.
 
@@ -22,9 +22,9 @@ The goal of this course is to introduce students to basic programming concepts i
 
 ## Repository Structure
 
-The Python package [`jupyter-book`](https://jupyterbook.org/intro.html#install-jupyter-book) processes the Jupyter notebook files from this repository and outputs them as the publication-quality HTML files that generate the [corresponding website](https://owel-lab.github.io/programming-for-sds-site/).
+The Python package [`jupyter-book`](https://jupyterbook.org/intro.html#install-jupyter-book) processes the Jupyter notebook files from this repository and outputs them as the publication-quality HTML files that generate the [corresponding website](https://cleo-lab.github.io/programming-for-sds-site/).
 
-The HTML files are currently hidden in this branch of the GitHub repository but can be found in the [gh-pages branch](https://github.com/owel-lab/programming-for-sds-site/tree/gh-pages).
+The HTML files are currently hidden in this branch of the GitHub repository but can be found in the [gh-pages branch](https://github.com/cleo-lab/programming-for-sds-site/tree/gh-pages).
 
 ## Build
 
