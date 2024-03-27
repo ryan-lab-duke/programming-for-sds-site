@@ -59,7 +59,7 @@ c
 
 # ## Submit assignment
 # 
-# When you are finished with the assignment, you can download the notebook by clicking **File** --> **Download**. This `.ipynb` file should be moved to your local course folder and submitted via Canvas.
+# When you are finished with the assignment, you can download the notebook by clicking **File** --> **Save and Export Notebook As** --> **PDF**. This `.pdf` file should be moved to your local course folder and submitted via Canvas.
 
 # ## JupyterLab
 # 

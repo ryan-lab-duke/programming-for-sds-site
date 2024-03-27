@@ -8,7 +8,6 @@ parts:
     chapters:
     - file: course-info/general-info.md
     - file: course-info/schedule.md
-    - file: course-info/slack.md
     - file: course-info/getting-started.ipynb
     - file: course-info/python.md
 
@@ -23,6 +22,7 @@ parts:
     - file: demos/02a-demo.ipynb
     - file: demos/02b-demo.ipynb
     - file: assignments/02-assignment.md
+    - file: activities/02-activity.ipynb
 
   - caption: Week 3
     chapters:

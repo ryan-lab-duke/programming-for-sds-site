@@ -1,6 +1,6 @@
 # Welcome to Programming for Spatial Data Science 2024!
 
-On this website you will find the course materials developed for GEOG 2XX taught at the [Department of Geography, University of Oregon](https://geography.uoregon.edu/) in Spring 2024. 
+On this website you will find the course materials developed for GEOG399L taught at the [Department of Geography, University of Oregon](https://geography.uoregon.edu/) in Spring 2024. 
 
 **Designed by [Johnny Ryan](https://www.johnny-ryan.com/) // Powered by [Jupyter Book](https://jupyterbook.org/)**
 

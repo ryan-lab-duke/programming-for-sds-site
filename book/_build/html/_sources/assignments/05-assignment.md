@@ -98,6 +98,6 @@ print(convert_area(10,'km','mi'))
 
 *****************************
 
-```{important} Save your notebook to your local course folder and submit assignment (in **.ipynb** format) to Canvas by the deadline.
+```{important} Save your notebook to your local course folder and submit assignment (in **.pdf** format) to Canvas by the deadline.
 ```
 

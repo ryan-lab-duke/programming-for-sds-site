@@ -24,7 +24,7 @@ Let's get plotting!
 *****************************
 
 ```{important} 
-Save your notebook to your local course folder and submit assignment (in **.ipynb** format) to Canvas by the deadline.
+Save your notebook to your local course folder and submit assignment (in **.pdf** format) to Canvas by the deadline.
 ```
 
 

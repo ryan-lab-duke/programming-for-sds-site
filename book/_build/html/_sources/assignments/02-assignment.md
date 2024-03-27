@@ -2,7 +2,6 @@
 
 If you are using the virtual environment, launch JupyterLab by clicking this button: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/owel-lab/programming-for-sds-site/HEAD).
 
-
 If you have installed Python locally, launch JupyterLab by running:
 
 ```
@@ -107,10 +106,12 @@ Copy and paste this array into your notebook and answer the following questions:
 
 * Add a title, your name, and date of this submission to your Jupyter Notebook using **Markdown text**.
 
+* Add some more **Markdown text** to separate each task of this assignment and use **f-strings** to make yours answers clear.
+
 *****************************
 
 ```{important} 
-Save your notebook to your local course folder and submit assignment (in **.ipynb** format) to Canvas by the deadline.
+Save your notebook to your local course folder and submit assignment (in **.pdf** format) to Canvas by the deadline.
 ```
 
 

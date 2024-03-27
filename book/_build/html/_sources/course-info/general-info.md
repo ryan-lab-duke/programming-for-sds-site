@@ -32,8 +32,5 @@ Please let the instructors know before the deadline if you anticipate a late sub
 * **Dropbox**: The ddata for the labs are available on Dropbox - see **Canvas** for link.
 
 
-* **Canvas**: Links to the lectures and assignments will also be available on Canvas.
-
-
-* **Slack**: We will use [Slack](../course-info/slack.md) for most communication and discussion. Please join the course workspace with your **UO email address** (see Canvas for link). 
+* **Canvas**: Links to the lectures and assignments will also be available on Canvas. 
 

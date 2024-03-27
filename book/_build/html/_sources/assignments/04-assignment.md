@@ -85,5 +85,5 @@ Write a `for` loop which saves the first letter of each country in a new list ca
 *****************************
 
 ```{important} 
-Save your notebook to your local course folder and submit assignment (in **.ipynb** format) to Canvas by the deadline.
+Save your notebook to your local course folder and submit assignment (in **.pdf** format) to Canvas by the deadline.
 ```

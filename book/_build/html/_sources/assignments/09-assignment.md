@@ -103,6 +103,6 @@ Download the Landsat data from [here](https://www.dropbox.com/sh/k3bkxwa2j9fovta
 *****************************
 
 ```{important}
-Save your notebook to your local course folder and submit assignment (in **.ipynb** format) to Canvas by the deadline.
+Save your notebook to your local course folder and submit assignment (in **.pdf** format) to Canvas by the deadline.
 ```
 
