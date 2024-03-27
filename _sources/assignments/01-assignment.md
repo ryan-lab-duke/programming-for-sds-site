@@ -2,17 +2,18 @@
 
 There are two options for completing this assignment. Either follow the instructions [here](../course-info/getting-started.ipynb) to launch a **virtual JupyterLab  environment**. Or... install Python **locally** following [these instructions](../course-info/python.md). 
 
-*****************************
-## Task 1
-
-Sign up for Slack and send a message to the `#lab01` channel with your name, major, and favourite place to eat in Eugene. 
-
 ```{image} images/willamette-valley.webp
 :alt: willamette valley
 :class: bg-primary mb-1
 :width: 500px
 :align: center
 ```
+
+*****************************
+## Task 1 (5 points)
+
+* Complete the background survey on Canvas.
+
 
 *****************************
 ## Task 2 (5 points)
@@ -69,10 +70,10 @@ Copy and paste this list into your notebook and write some Python code to answer
 
 * Add a title, your name, and date of this submission to your Jupyter Notebook using **Markdown text**.
 
-* Add some more **Markdown text** to separate each task of this assignment and make answers to questions clear.
+* Add some more **Markdown text** to separate each task of this assignment and use **f-strings** to make yours answers clear.
 
 
-```{important} Save your notebook to your local course folder and submit assignment (in **.ipynb** format) to Canvas by the deadline.
+```{important} Save your notebook to your local course folder and submit assignment (in **.pdf** format) to Canvas by the deadline.
 ```
 
 

@@ -86,7 +86,7 @@ List the countries that are within 1,000 **miles** of the **centroid** of Nepal.
 *****************************
 
 ```{important} 
-Save your notebook to your local course folder and submit assignment (in **.ipynb** format) to Canvas by the deadline.
+Save your notebook to your local course folder and submit assignment (in **.pdf** format) to Canvas by the deadline.
 ```
 
 

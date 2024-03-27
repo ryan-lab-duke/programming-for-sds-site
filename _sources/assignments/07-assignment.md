@@ -2,7 +2,6 @@
 
 If you are using the virtual environment, launch JupyterLab by clicking this button: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/owel-lab/programming-for-sds-site/HEAD).
 
-
 If you have installed Python locally, launch JupyterLab by running:
 
 ```
@@ -99,7 +98,7 @@ Again, `Pandas` has some useful functions for this - [`df.index.dayofweek`](http
 *****************************
 
 ```{important} 
-Save your notebook to your local course folder and submit assignment (in **.ipynb** format) to Canvas by the deadline.
+Save your notebook to your local course folder and submit assignment (in **.pdf** format) to Canvas by the deadline.
 ```
 
 
