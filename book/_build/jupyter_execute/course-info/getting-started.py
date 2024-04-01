@@ -59,7 +59,9 @@ c
 
 # ## Submit assignment
 # 
-# When you are finished with the assignment, you can download the notebook by clicking **File** --> **Save and Export Notebook As** --> **PDF**. This `.pdf` file should be moved to your local course folder and submitted via Canvas.
+# This can be a little tricky. We recommend using `ctrl + p` (or `command + p`) &rarr; **Save as PDF**. You could also download the notebook by clicking **File** --> **Save and Export Notebook As** --> **PDF** but you may need to install some other packages.
+# 
+# When you are finished with the assignment, the `.pdf` file should be moved to your local course folder and submitted via Canvas.
 
 # ## JupyterLab
 # 

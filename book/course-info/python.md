@@ -4,7 +4,7 @@ You are welcome to install Python on your own computer. In order to do this, you
 
 ## Install Miniconda
 
-The latest version of Miniconda can be accessed from the [dowload page](https://docs.conda.io/en/latest/miniconda.html). In this course we will be using **Python 3.8** so download the corresponding package for your operating system.
+The latest version of Miniconda can be accessed from the [dowload page](https://docs.conda.io/en/latest/miniconda.html). Download the corresponding package for your operating system.
 
 ## Test installation
 

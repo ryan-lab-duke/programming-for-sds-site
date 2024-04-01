@@ -1,24 +1,6 @@
 # Programming for Spatial Data Science
 
-This repository hosts the code for the online textbook, **Programming for Spatial Data Science** designed by [Johnny Ryan](https://www.johnny-ryan.com/). The textbook can be accessed at [https://cleo-lab.github.io/programming-for-sds-site/](https://cleo-lab.github.io/programming-for-sds-site/). 
-
-The goal of this course is to introduce students to basic programming concepts in Python and apply these skills to various geospatial problems. There are no pre-requisites and students do not need any previous programming experience. Each week we will have a short lecture that introduces a new topic. In the following assignment, students will apply these new concepts to solve common tasks involving geospatial data. During this course, students will become familiar with the main Python packages used for importing, analyzing, and visualizing geospatial data.
-
-### Learning outcomes:
-
-* Acquire basic Python coding skills
-
-* Implement common programming techniques (e.g. conditional statements, loops, functions).
-
-* Become familiar with object-oriented programming
-
-* Identify common geospatial data formats and appropriate Python packages to work with them
-
-* Perform basic data analysis on table, vector, and raster data
-
-* Visualize different types of data
-
-* Recognize the importance of open-source software
+This repository hosts the code for the online textbook, **Programming for Spatial Data Science** designed by [Johnny Ryan](https://www.johnny-ryan.com/). 
 
 ## Repository Structure
 
@@ -37,6 +19,10 @@ The book can be updated by running:
 ## Acknowledgments
 
 This course was inspired by course material designed by [Melanie Walsh](https://melaniewalsh.github.io/Intro-Cultural-Analytics/welcome.html), [David Shean](https://github.com/UW-GDA/gda_course_2021), and the [University of Helsinki](https://geo-python-site.readthedocs.io/en/latest/). 
+
+## License
+
+This book is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) License](https://creativecommons.org/licenses/by-nc-sa/4.0/).
 
 
 
