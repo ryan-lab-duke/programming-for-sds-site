@@ -77,7 +77,7 @@ A "cool-summer Mediterranean climate" is defined as having warm and dry summers.
 ```
 city = 'Porto'
 country = 'Portugal'
-number_months = 11
+number_months_50 = 11
 max_monthly = 69.4
 ```
 
