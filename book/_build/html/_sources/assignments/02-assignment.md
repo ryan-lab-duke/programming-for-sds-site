@@ -1,6 +1,6 @@
 # Assignment 2
 
-If you are using the virtual environment, launch JupyterLab by clicking this button: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/owel-lab/programming-for-sds-site/HEAD).
+If you are using the virtual environment, launch JupyterLab by clicking this button: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/owel-lab/programming-for-sds-site/HEAD)
 
 If you have installed Python locally, launch JupyterLab by running:
 
@@ -18,11 +18,11 @@ jupyter lab
 
 In your new Jupyter Notebook, write some **Python code** that returns the following:
 
-* a) a variable named `willamette` that contains the length of the Willamette River (187 miles) in kilometers
+* a) a variable named `willamette` that contains the length of the Willamette River (187 miles) **in kilometers**
 
-* b) a variable named `mckenzie` that contains the length of the McKenzie River (145 km) in miles
+* b) a variable named `mckenzie` that contains the length of the McKenzie River (145 km) **in miles**
 
-* c) a variable named `combined` that contains the combined length of the Willamette and McKenzie rivers in kilometers
+* c) a variable named `combined` that contains the combined length of the Willamette and McKenzie rivers **in kilometers**
 
 Note that we can convert from **miles** to **kilometers** by multiplying the length value by 1.609. 
 
@@ -59,6 +59,11 @@ Copy and paste this list into your notebook and write some Python code to answer
 
 * b) Which is the seventh item in this list?
 
+```{admonition} Click to reveal hint
+:class: tip, dropdown
+Remember that Python indexing starts at **zero**.
+```
+
 * c) Which is the last item in this list?
 
 * d) After sorting alphabetically, which is fifth item in the list?
@@ -80,6 +85,10 @@ array = np.array([[6, 7, 4, 9, 0, 4, 2, 3, 8, 2],
        [9, 0, 7, 9, 5, 2, 9, 3, 6, 1],
        [1, 2, 4, 0, 6, 7, 4, 2, 8, 8],
        [4, 6, 7, 9, 5, 4, 9, 1, 1, 7]])
+```
+
+```{hint}
+Remember to `import numpy as np`.
 ```
 
 Copy and paste this 2D array into your notebook and answer the following questions:
@@ -121,43 +130,6 @@ Print both your answers in a human-readable way using **f-string** formatting.
 *****************************
 
 ## Task 6 (5 points)
-
-* Define two **NumPy arrays** (i.e. `np.array()`), one called `lat` and one called `lon`, that contain the latitudes and longitudes, respectively, of **five** global cities.
-
-* Define a **list** containing the corresponding names of the cities (as **strings**).
-
-* Print both the **name** and **latitude** of the most northly city using **f-string** formatting.
-
-* Repeat for the for city with the most easterly longitude.
-
-* Print the **mean** latitude and **mean** longitude of your five cities. 
-
-Geographic coordinates for your cities can be found from [this website](https://www.latlong.net/). 
-
-
-*****************************
-
-## Task 7 (5 points)
-
-```
-array = np.array([[[178, 189, 567], [145, 239, 445], [197, 345, 678]], [[56, 78, 190], [46, 10, 11], [6, 2, 1]], [[45, 118, 203], [72, 119, 34], [87, 9, 5]]])
-```
-
-Copy and paste this array into your notebook and answer the following questions:
-
-* a) How many dimensions does this array have?
-
-* b) What is the mean and standard deviation of this array?
-
-* c) How many values are less than 10?
-
-* d) What is the **index** of the highest value?
-
-* e) What is the **index** of the lowest value?
-
-*****************************
-
-## Task 8 (5 points)
 
 * Add a title, your name, and date of this submission to your Jupyter Notebook using **Markdown text**.
 

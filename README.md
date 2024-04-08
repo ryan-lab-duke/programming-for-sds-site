@@ -1,6 +1,6 @@
 # Programming for Spatial Data Science
 
-This repository hosts the code for the online textbook, **Programming for Spatial Data Science** designed by [Johnny Ryan](https://www.johnny-ryan.com/). 
+This repository hosts the code for the online textbook **Programming for Spatial Data Science** designed by [Johnny Ryan](https://www.johnny-ryan.com/). 
 
 ## Repository Structure
 

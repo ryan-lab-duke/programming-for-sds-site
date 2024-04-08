@@ -1,6 +1,6 @@
 # Assignment 3
 
-If you are using the virtual environment, launch JupyterLab by clicking this button: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/owel-lab/programming-for-sds-site/HEAD).
+If you are using the virtual environment, launch JupyterLab by clicking this button: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/owel-lab/programming-for-sds-site/HEAD)
 
 
 If you have installed Python locally, launch JupyterLab by running:
@@ -16,6 +16,43 @@ jupyter lab
 
 ## Task 1 (5 points)
 
+* Define two **NumPy arrays** (i.e. `np.array()`), one called `lat` and one called `lon`, that contain the latitudes and longitudes, respectively, of **five** global cities.
+
+* Define a **list** containing the corresponding names of the cities (as **strings**).
+
+* Print both the **name** and **latitude** of the most northly city using **f-string** formatting.
+
+* Repeat for the for city with the most easterly longitude.
+
+* Print the **mean** latitude and **mean** longitude of your five cities. 
+
+Geographic coordinates for your cities can be found from [this website](https://www.latlong.net/). 
+
+
+*****************************
+
+## Task 2 (5 points)
+
+```
+array = np.array([[[178, 189, 567], [145, 239, 445], [197, 345, 678]], [[56, 78, 190], [46, 10, 11], [6, 2, 1]], [[45, 118, 203], [72, 119, 34], [87, 9, 5]]])
+```
+
+Copy and paste this array into your notebook and answer the following questions:
+
+* a) How many dimensions does this array have?
+
+* b) What is the mean and standard deviation of this array?
+
+* c) How many values are less than 10?
+
+* d) What is the **index** of the highest value?
+
+* e) What is the **index** of the lowest value?
+
+*****************************
+
+## Task 3 (5 points)
+
 Write a **for loop** that converts this list of vegetables from uppercase to lowercase.
 
 ```
@@ -26,7 +63,7 @@ veggies = ['LETTUCE', 'CARROT', 'PEA', 'CABBAGE']
 Look for the string method you need [here](https://www.w3schools.com/python/python_ref_string.asp)
 ```
 *****************************
-## Task 2 (5 points)
+## Task 4 (5 points)
 
 Produce a variable containing only the **strings** in this list using a for loop and conditional statements
 
@@ -40,7 +77,7 @@ The `type()` function is useful for this task.
 ```
 
 *****************************
-## Task 3 (5 points)
+## Task 5 (5 points)
 
 Write a for loop that counts the number of vowels in the sentence below.
 
@@ -56,7 +93,7 @@ The `.count()` method is useful for this task.
 ```
 
 *****************************
-## Task 4 (5 points)
+## Task 6 (5 points)
 
 ```
 city = 'Eugene'
@@ -68,7 +105,7 @@ max_monthly_temp = 66.9
 Write a conditional statement that returns `True` if Eugene is a city in the USA.
 
 *****************************
-## Task 5 (5 points)
+## Task 7 (5 points)
 
 A "cool-summer Mediterranean climate" is defined as having warm and dry summers. In this climate classification, more than four months should have average temperatures of 50 F or higher (`number_months`) **and** no average monthly temperatures should exceed 72 F (`max_monthly_temp`).
 
@@ -84,7 +121,7 @@ max_monthly = 69.4
 * b) Write a conditional statement that returns `True` if **Porto** has a cool-summer Mediterranean climate.
 
 *****************************
-## Task 6 (5 points)
+## Task 8 (5 points)
 
 Here is a list of daily river discharges for July.
 

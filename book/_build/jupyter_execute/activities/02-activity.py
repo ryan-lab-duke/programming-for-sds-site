@@ -14,7 +14,7 @@
 # 
 # Examples of spatial autocorrelation over a 5×5 regular grid.
 
-# In[39]:
+# In[1]:
 
 
 # Import modules
@@ -34,9 +34,9 @@ grid_b = np.array([[1, 0, 1, 0, 1],
                    [1, 0, 1, 0, 1]]).astype('int8')
 
 grid_c = np.array([[1, 0, 0, 0, 0],
-                   [0, 1, 0, 1, 0],
-                   [1, 0, 1, 0, 1],
-                   [0, 1, 0, 1, 0],
+                   [0, 0, 0, 1, 0],
+                   [0, 1, 1, 0, 1],
+                   [1, 0, 0, 1, 0],
                    [1, 0, 1, 0, 1]]).astype('int8')
 
 
@@ -80,8 +80,6 @@ grid_c = np.array([[1, 0, 0, 0, 0],
 # * d) In which grid does the value of element `[1,1]` exhbit **positive** spatial autocorrelation?
 # 
 # * e) In which grid does the value of element `[1,1]` exhbit **negative** spatial autocorrelation?
-# 
-# * f) In which grid does the value of element `[1,1]` exhbit spatial randomness?
 # 
 # *****************************
 # 
