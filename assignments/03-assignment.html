@@ -458,6 +458,16 @@ const thebe_selector_output = ".output, .cell_output"
    Task 6 (5 points)
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#task-7-5-points">
+   Task 7 (5 points)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#task-8-5-points">
+   Task 8 (5 points)
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -508,6 +518,16 @@ const thebe_selector_output = ".output, .cell_output"
    Task 6 (5 points)
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#task-7-5-points">
+   Task 7 (5 points)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#task-8-5-points">
+   Task 8 (5 points)
+  </a>
+ </li>
 </ul>
 
                         </nav>
@@ -519,7 +539,7 @@ const thebe_selector_output = ".output, .cell_output"
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="assignment-3">
 <h1>Assignment 3<a class="headerlink" href="#assignment-3" title="Permalink to this headline">¶</a></h1>
-<p>If you are using the virtual environment, launch JupyterLab by clicking this button: <a class="reference external" href="https://mybinder.org/v2/gh/owel-lab/programming-for-sds-site/HEAD"><img alt="Binder" src="https://mybinder.org/badge_logo.svg" /></a>.</p>
+<p>If you are using the virtual environment, launch JupyterLab by clicking this button: <a class="reference external" href="https://mybinder.org/v2/gh/owel-lab/programming-for-sds-site/HEAD"><img alt="Binder" src="https://mybinder.org/badge_logo.svg" /></a></p>
 <p>If you have installed Python locally, launch JupyterLab by running:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">activate</span> <span class="n">sds</span>
 </pre></div>
@@ -531,6 +551,33 @@ const thebe_selector_output = ".output, .cell_output"
 <hr class="docutils" />
 <div class="section" id="task-1-5-points">
 <h2>Task 1 (5 points)<a class="headerlink" href="#task-1-5-points" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Define two <strong>NumPy arrays</strong> (i.e. <code class="docutils literal notranslate"><span class="pre">np.array()</span></code>), one called <code class="docutils literal notranslate"><span class="pre">lat</span></code> and one called <code class="docutils literal notranslate"><span class="pre">lon</span></code>, that contain the latitudes and longitudes, respectively, of <strong>five</strong> global cities.</p></li>
+<li><p>Define a <strong>list</strong> containing the corresponding names of the cities (as <strong>strings</strong>).</p></li>
+<li><p>Print both the <strong>name</strong> and <strong>latitude</strong> of the most northly city using <strong>f-string</strong> formatting.</p></li>
+<li><p>Repeat for the for city with the most easterly longitude.</p></li>
+<li><p>Print the <strong>mean</strong> latitude and <strong>mean</strong> longitude of your five cities.</p></li>
+</ul>
+<p>Geographic coordinates for your cities can be found from <a class="reference external" href="https://www.latlong.net/">this website</a>.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="task-2-5-points">
+<h2>Task 2 (5 points)<a class="headerlink" href="#task-2-5-points" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[[</span><span class="mi">178</span><span class="p">,</span> <span class="mi">189</span><span class="p">,</span> <span class="mi">567</span><span class="p">],</span> <span class="p">[</span><span class="mi">145</span><span class="p">,</span> <span class="mi">239</span><span class="p">,</span> <span class="mi">445</span><span class="p">],</span> <span class="p">[</span><span class="mi">197</span><span class="p">,</span> <span class="mi">345</span><span class="p">,</span> <span class="mi">678</span><span class="p">]],</span> <span class="p">[[</span><span class="mi">56</span><span class="p">,</span> <span class="mi">78</span><span class="p">,</span> <span class="mi">190</span><span class="p">],</span> <span class="p">[</span><span class="mi">46</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">],</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">]],</span> <span class="p">[[</span><span class="mi">45</span><span class="p">,</span> <span class="mi">118</span><span class="p">,</span> <span class="mi">203</span><span class="p">],</span> <span class="p">[</span><span class="mi">72</span><span class="p">,</span> <span class="mi">119</span><span class="p">,</span> <span class="mi">34</span><span class="p">],</span> <span class="p">[</span><span class="mi">87</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">5</span><span class="p">]]])</span>
+</pre></div>
+</div>
+<p>Copy and paste this array into your notebook and answer the following questions:</p>
+<ul class="simple">
+<li><p>a) How many dimensions does this array have?</p></li>
+<li><p>b) What is the mean and standard deviation of this array?</p></li>
+<li><p>c) How many values are less than 10?</p></li>
+<li><p>d) What is the <strong>index</strong> of the highest value?</p></li>
+<li><p>e) What is the <strong>index</strong> of the lowest value?</p></li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="task-3-5-points">
+<h2>Task 3 (5 points)<a class="headerlink" href="#task-3-5-points" title="Permalink to this headline">¶</a></h2>
 <p>Write a <strong>for loop</strong> that converts this list of vegetables from uppercase to lowercase.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">veggies</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;LETTUCE&#39;</span><span class="p">,</span> <span class="s1">&#39;CARROT&#39;</span><span class="p">,</span> <span class="s1">&#39;PEA&#39;</span><span class="p">,</span> <span class="s1">&#39;CABBAGE&#39;</span><span class="p">]</span>
 </pre></div>
@@ -541,8 +588,8 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <hr class="docutils" />
-<div class="section" id="task-2-5-points">
-<h2>Task 2 (5 points)<a class="headerlink" href="#task-2-5-points" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="task-4-5-points">
+<h2>Task 4 (5 points)<a class="headerlink" href="#task-4-5-points" title="Permalink to this headline">¶</a></h2>
 <p>Produce a variable containing only the <strong>strings</strong> in this list using a for loop and conditional statements</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">shopping_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Lettuce&#39;</span><span class="p">,</span> <span class="s1">&#39;Carrots&#39;</span><span class="p">,</span> <span class="s1">&#39;Bananas&#39;</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;Potatoes&#39;</span><span class="p">]</span>
 </pre></div>
@@ -553,8 +600,8 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <hr class="docutils" />
-<div class="section" id="task-3-5-points">
-<h2>Task 3 (5 points)<a class="headerlink" href="#task-3-5-points" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="task-5-5-points">
+<h2>Task 5 (5 points)<a class="headerlink" href="#task-5-5-points" title="Permalink to this headline">¶</a></h2>
 <p>Write a for loop that counts the number of vowels in the sentence below.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">vowels</span> <span class="o">=</span> <span class="s1">&#39;aeiouAEIOU&#39;</span>
 
@@ -567,8 +614,8 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <hr class="docutils" />
-<div class="section" id="task-4-5-points">
-<h2>Task 4 (5 points)<a class="headerlink" href="#task-4-5-points" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="task-6-5-points">
+<h2>Task 6 (5 points)<a class="headerlink" href="#task-6-5-points" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">city</span> <span class="o">=</span> <span class="s1">&#39;Eugene&#39;</span>
 <span class="n">country</span> <span class="o">=</span> <span class="s1">&#39;USA&#39;</span>
 <span class="n">number_months</span> <span class="o">=</span> <span class="mi">7</span>
@@ -578,8 +625,8 @@ const thebe_selector_output = ".output, .cell_output"
 <p>Write a conditional statement that returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if Eugene is a city in the USA.</p>
 </div>
 <hr class="docutils" />
-<div class="section" id="task-5-5-points">
-<h2>Task 5 (5 points)<a class="headerlink" href="#task-5-5-points" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="task-7-5-points">
+<h2>Task 7 (5 points)<a class="headerlink" href="#task-7-5-points" title="Permalink to this headline">¶</a></h2>
 <p>A “cool-summer Mediterranean climate” is defined as having warm and dry summers. In this climate classification, more than four months should have average temperatures of 50 F or higher (<code class="docutils literal notranslate"><span class="pre">number_months</span></code>) <strong>and</strong> no average monthly temperatures should exceed 72 F (<code class="docutils literal notranslate"><span class="pre">max_monthly_temp</span></code>).</p>
 <ul class="simple">
 <li><p>a) Write a conditional statement that returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if Eugene has a cool-summer Mediterranean climate.</p></li>
@@ -595,8 +642,8 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </div>
 <hr class="docutils" />
-<div class="section" id="task-6-5-points">
-<h2>Task 6 (5 points)<a class="headerlink" href="#task-6-5-points" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="task-8-5-points">
+<h2>Task 8 (5 points)<a class="headerlink" href="#task-8-5-points" title="Permalink to this headline">¶</a></h2>
 <p>Here is a list of daily river discharges for July.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">discharge</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">1.6</span><span class="p">,</span> <span class="mf">2.3</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="mf">2.2</span><span class="p">,</span> <span class="mf">1.4</span><span class="p">,</span>
        <span class="mf">1.5</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">,</span> <span class="mf">2.2</span><span class="p">,</span> <span class="mf">2.8</span><span class="p">,</span> <span class="mf">2.6</span><span class="p">,</span> <span class="mf">2.8</span><span class="p">,</span> <span class="mf">2.8</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">,</span> <span class="mf">2.8</span><span class="p">,</span> <span class="mf">2.1</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> 
