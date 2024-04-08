@@ -574,14 +574,16 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="section" id="degree-day-factor">
 <h3>Degree day factor<a class="headerlink" href="#degree-day-factor" title="Permalink to this headline">¶</a></h3>
 <p>A degree day factor (also known as the melt factor) is the amount of melt that occurs <strong>per positive degree day</strong>. Degree day factors are expressed as meters of water-equivalent per degree per day (mm w.e. °C-1 day-1). So if the degree day factor was 0.003 m w.e. °C-1 d-1 and the average daily temperature is +1°C, then the daily melt will be 0.003 m w.e. If the average temperature is +2°C, then there will be 0.006 m w.e. of melt on that day. However, if the average temperature is -1°C, then there will not be any melt on that day.</p>
-<p>So when mean daily air temperature &gt; 0°C:
-$<span class="math notranslate nohighlight">\(
-  melt = melt_factor * temperature
-\)</span>$</p>
-<p>When mean daily air temperature &lt; 0°C:
-$<span class="math notranslate nohighlight">\(
+<p>So when mean daily air temperature &gt; 0°C:</p>
+<div class="math notranslate nohighlight">
+\[
+  melt = melt factor * temperature
+\]</div>
+<p>When mean daily air temperature &lt; 0°C:</p>
+<div class="math notranslate nohighlight">
+\[
   melt = 0
-\)</span>$</p>
+\]</div>
 <p>Let’s assume that the melt factor is equal to <code class="docutils literal notranslate"><span class="pre">0.003</span></code>.</p>
 <ul class="simple">
 <li><p>Write a for loop that keeps track of <strong>melt</strong> over our study period.</p></li>
