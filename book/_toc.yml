@@ -29,6 +29,7 @@ parts:
     - file: demos/03a-demo.ipynb
     - file: demos/03b-demo.ipynb
     - file: assignments/03-assignment.md
+    - file: activities/03-activity.ipynb
 
   - caption: Week 4
     chapters:
