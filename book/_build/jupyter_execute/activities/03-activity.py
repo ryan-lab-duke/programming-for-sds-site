@@ -12,9 +12,9 @@
 # :align: center
 # ```
 # 
-# In this activity, we will use `for` loops and conditional statements to model glacier melt. We will use a simple (but common) approach called the **positive degree day method** which assumes that the amount of snow and ice that melts is assumed to be proportional to the number of positive degree days. 
+# In this activity, we will use `for` loops and conditional statements to model glacier melt. We will use a simple (but common) approach called the **positive degree day method** which assumes that the amount of melt is proportional to the number of positive degree days. 
 # 
-# To explain this method, we will take one step at a time... First, import the data below into your notebook.
+# To explain this method, we will take one step at a time... first, import the data below into your notebook.
 # 
 # ```
 # data = np.array([11.2,11.4,9.8,12.1,11.6,11.6,12.5,12.0,8.2,9.1,8.5,9.6,12.8,15.4,13.5,8.9,12.5,14.1,14.0,14.4,13.9,14.2,
