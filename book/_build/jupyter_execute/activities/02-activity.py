@@ -69,7 +69,7 @@ grid_c = np.array([[1, 0, 0, 0, 0],
 # 
 # ## Task 2 (12 points)
 # 
-# * a) What is the mean of the rook neighborhoods for element `[1,1]` in `grid_a`, `grid_b` and `grid_c`?
+# * a) What is the mean of the rook neighborhoods for element `[1,1]` in `grid_a`, `grid_b` and `grid_c`? (not including element `[1,1]`)
 # 
 # * b) Repeat **(a)** but for bishop neighborhoods.
 # 
