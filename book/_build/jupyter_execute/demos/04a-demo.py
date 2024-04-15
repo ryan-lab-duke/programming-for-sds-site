@@ -3,7 +3,7 @@
 
 # # Pandas DataFrames I
 # 
-# One of the pillars spatial data science is a Python library called `Pandas` which provides functions to import tabular data from various file formats (e.g. `.csv`, `.xlsx`) and many other data manipulation operations such as merging, reshaping, selecting, cleaning, and wrangling. In this week, we will introduce some basic `Pandas` operations. In Week 7, we will progress to more advanced usage of `Pandas`. 
+# One of the pillars **spatial data science** is a Python library called `Pandas` which provides functions to import tabular data from various file formats (e.g. `.csv`, `.xlsx`) and many other data manipulation operations such as merging, reshaping, selecting, cleaning, and wrangling. In this week, we will introduce some basic `Pandas` operations. In Week 7, we will progress to more advanced usage of `Pandas`. 
 # 
 # ```{note}
 # The name "Pandas" is derived from the "panel data", an econometrics term for data sets that include observations over multiple time periods.

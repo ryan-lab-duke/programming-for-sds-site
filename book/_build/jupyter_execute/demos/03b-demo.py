@@ -9,7 +9,7 @@
 # 
 # * If a tweet contains a specific phrase, then automatically retweet it
 # 
-# * If  then say “Congratulations, Beyoncé!
+# * If  then say “Congratulations!"
 # 
 # In the second part of this week we will learn about conditional statements (`if`, `elif`, `else`), comparison operators (`>`, `<`, `==`), and Boolean values (`True`, `False`).
 

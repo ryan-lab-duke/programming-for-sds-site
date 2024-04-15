@@ -36,6 +36,7 @@ parts:
     - file: demos/04a-demo.ipynb
     - file: demos/04b-demo.ipynb
     - file: assignments/04-assignment.md
+    - file: activities/04-activity.ipynb
     
   - caption: Week 5
     chapters:
