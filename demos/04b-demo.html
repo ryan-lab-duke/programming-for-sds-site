@@ -451,8 +451,13 @@ const thebe_selector_output = ".output, .cell_output"
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#adding-columns">
-   Adding columns
+  <a class="reference internal nav-link" href="#combining-data-from-multiple-tables">
+   Combining data from multiple tables
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#joining-multiple-tables-by-a-common-identifier">
+   Joining multiple tables by a common identifier
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -461,8 +466,13 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#merge-dataframes">
-   Merge DataFrames
+  <a class="reference internal nav-link" href="#adding-columns">
+   Adding columns
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#acknowledgments">
+   Acknowledgments
   </a>
  </li>
 </ul>
@@ -486,8 +496,13 @@ const thebe_selector_output = ".output, .cell_output"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#adding-columns">
-   Adding columns
+  <a class="reference internal nav-link" href="#combining-data-from-multiple-tables">
+   Combining data from multiple tables
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#joining-multiple-tables-by-a-common-identifier">
+   Joining multiple tables by a common identifier
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -496,8 +511,13 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#merge-dataframes">
-   Merge DataFrames
+  <a class="reference internal nav-link" href="#adding-columns">
+   Adding columns
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#acknowledgments">
+   Acknowledgments
   </a>
  </li>
 </ul>
@@ -511,15 +531,983 @@ const thebe_selector_output = ".output, .cell_output"
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="pandas-dataframes-ii">
 <h1>Pandas DataFrames II<a class="headerlink" href="#pandas-dataframes-ii" title="Permalink to this headline">¶</a></h1>
-<p>Since <code class="docutils literal notranslate"><span class="pre">Pandas</span></code> provides such an extensive set of tools for working with table data, it is worth doing another demo on it.</p>
-<div class="section" id="adding-columns">
-<h2>Adding columns<a class="headerlink" href="#adding-columns" title="Permalink to this headline">¶</a></h2>
+<p>Since <code class="docutils literal notranslate"><span class="pre">Pandas</span></code> provides such an extensive set of tools for working with table data, it is worth doing another demo on it. In this demo, we will import a new dataset called <code class="docutils literal notranslate"><span class="pre">air_quality_no2_long.csv</span></code> which provides air quality data (Nitrogen Dioxide) from the measurement stations FR04014, BETR801 and London Westminster in Paris, Antwerp, and London, respectively.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">df1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/air_quality_no2_long.csv&#39;</span><span class="p">)</span>
+<span class="n">df1</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>city</th>
+      <th>country</th>
+      <th>date.utc</th>
+      <th>location</th>
+      <th>parameter</th>
+      <th>value</th>
+      <th>unit</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Paris</td>
+      <td>FR</td>
+      <td>2019-06-21 00:00:00+00:00</td>
+      <td>FR04014</td>
+      <td>no2</td>
+      <td>20.0</td>
+      <td>µg/m³</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Paris</td>
+      <td>FR</td>
+      <td>2019-06-20 23:00:00+00:00</td>
+      <td>FR04014</td>
+      <td>no2</td>
+      <td>21.8</td>
+      <td>µg/m³</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Paris</td>
+      <td>FR</td>
+      <td>2019-06-20 22:00:00+00:00</td>
+      <td>FR04014</td>
+      <td>no2</td>
+      <td>26.5</td>
+      <td>µg/m³</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Paris</td>
+      <td>FR</td>
+      <td>2019-06-20 21:00:00+00:00</td>
+      <td>FR04014</td>
+      <td>no2</td>
+      <td>24.9</td>
+      <td>µg/m³</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Paris</td>
+      <td>FR</td>
+      <td>2019-06-20 20:00:00+00:00</td>
+      <td>FR04014</td>
+      <td>no2</td>
+      <td>21.4</td>
+      <td>µg/m³</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Let’s say we had another air quality dataset, except this time for particulate matter less than 2.5 micrometers (PM2.5).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/air_quality_pm25_long.csv&#39;</span><span class="p">)</span>
+<span class="n">df2</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>city</th>
+      <th>country</th>
+      <th>date.utc</th>
+      <th>location</th>
+      <th>parameter</th>
+      <th>value</th>
+      <th>unit</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Antwerpen</td>
+      <td>BE</td>
+      <td>2019-06-18 06:00:00+00:00</td>
+      <td>BETR801</td>
+      <td>pm25</td>
+      <td>18.0</td>
+      <td>µg/m³</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Antwerpen</td>
+      <td>BE</td>
+      <td>2019-06-17 08:00:00+00:00</td>
+      <td>BETR801</td>
+      <td>pm25</td>
+      <td>6.5</td>
+      <td>µg/m³</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Antwerpen</td>
+      <td>BE</td>
+      <td>2019-06-17 07:00:00+00:00</td>
+      <td>BETR801</td>
+      <td>pm25</td>
+      <td>18.5</td>
+      <td>µg/m³</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Antwerpen</td>
+      <td>BE</td>
+      <td>2019-06-17 06:00:00+00:00</td>
+      <td>BETR801</td>
+      <td>pm25</td>
+      <td>16.0</td>
+      <td>µg/m³</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Antwerpen</td>
+      <td>BE</td>
+      <td>2019-06-17 05:00:00+00:00</td>
+      <td>BETR801</td>
+      <td>pm25</td>
+      <td>7.5</td>
+      <td>µg/m³</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="section" id="combining-data-from-multiple-tables">
+<h2>Combining data from multiple tables<a class="headerlink" href="#combining-data-from-multiple-tables" title="Permalink to this headline">¶</a></h2>
+<p>If we wanted a single DataFrame that included both these tables, we could use the <code class="docutils literal notranslate"><span class="pre">concat</span></code> function. The <code class="docutils literal notranslate"><span class="pre">concat</span></code> function performs the operation along one of the axes (row-wise or column-wise). By default concatenation is along <code class="docutils literal notranslate"><span class="pre">axis=0</span></code>, so the resulting table combines the <strong>rows</strong> of the input tables.</p>
+<a class="bg-primary mb-1 reference internal image-reference" href="../_images/concat_row.svg"><img alt="../_images/concat_row.svg" class="bg-primary mb-1 align-center" src="../_images/concat_row.svg" width="500px" /></a>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">air_quality</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df1</span><span class="p">,</span> <span class="n">df2</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It’s useful to know the shape of the DataFrames before (and after) the concatenation so we know that it worked as expected.</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df1</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">df2</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">air_quality</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>((2068, 7), (1110, 7), (3178, 7))
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can also check that the DataFrames were concatenated properly by sorting by the <code class="docutils literal notranslate"><span class="pre">date.utc</span></code> columns. If we do so, we will find both <code class="docutils literal notranslate"><span class="pre">no2</span></code> and <code class="docutils literal notranslate"><span class="pre">pm25</span></code> values contained in the <strong>parameter</strong> column.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">air_quality</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s2">&quot;date.utc&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>city</th>
+      <th>country</th>
+      <th>date.utc</th>
+      <th>location</th>
+      <th>parameter</th>
+      <th>value</th>
+      <th>unit</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1109</th>
+      <td>London</td>
+      <td>GB</td>
+      <td>2019-05-07 01:00:00+00:00</td>
+      <td>London Westminster</td>
+      <td>pm25</td>
+      <td>8.0</td>
+      <td>µg/m³</td>
+    </tr>
+    <tr>
+      <th>2067</th>
+      <td>London</td>
+      <td>GB</td>
+      <td>2019-05-07 01:00:00+00:00</td>
+      <td>London Westminster</td>
+      <td>no2</td>
+      <td>23.0</td>
+      <td>µg/m³</td>
+    </tr>
+    <tr>
+      <th>1098</th>
+      <td>Antwerpen</td>
+      <td>BE</td>
+      <td>2019-05-07 01:00:00+00:00</td>
+      <td>BETR801</td>
+      <td>no2</td>
+      <td>50.5</td>
+      <td>µg/m³</td>
+    </tr>
+    <tr>
+      <th>1003</th>
+      <td>Paris</td>
+      <td>FR</td>
+      <td>2019-05-07 01:00:00+00:00</td>
+      <td>FR04014</td>
+      <td>no2</td>
+      <td>25.0</td>
+      <td>µg/m³</td>
+    </tr>
+    <tr>
+      <th>100</th>
+      <td>Antwerpen</td>
+      <td>BE</td>
+      <td>2019-05-07 01:00:00+00:00</td>
+      <td>BETR801</td>
+      <td>pm25</td>
+      <td>12.5</td>
+      <td>µg/m³</td>
+    </tr>
+    <tr>
+      <th>2066</th>
+      <td>London</td>
+      <td>GB</td>
+      <td>2019-05-07 02:00:00+00:00</td>
+      <td>London Westminster</td>
+      <td>no2</td>
+      <td>19.0</td>
+      <td>µg/m³</td>
+    </tr>
+    <tr>
+      <th>1097</th>
+      <td>Antwerpen</td>
+      <td>BE</td>
+      <td>2019-05-07 02:00:00+00:00</td>
+      <td>BETR801</td>
+      <td>no2</td>
+      <td>45.0</td>
+      <td>µg/m³</td>
+    </tr>
+    <tr>
+      <th>1002</th>
+      <td>Paris</td>
+      <td>FR</td>
+      <td>2019-05-07 02:00:00+00:00</td>
+      <td>FR04014</td>
+      <td>no2</td>
+      <td>27.7</td>
+      <td>µg/m³</td>
+    </tr>
+    <tr>
+      <th>99</th>
+      <td>Antwerpen</td>
+      <td>BE</td>
+      <td>2019-05-07 02:00:00+00:00</td>
+      <td>BETR801</td>
+      <td>pm25</td>
+      <td>14.0</td>
+      <td>µg/m³</td>
+    </tr>
+    <tr>
+      <th>1108</th>
+      <td>London</td>
+      <td>GB</td>
+      <td>2019-05-07 02:00:00+00:00</td>
+      <td>London Westminster</td>
+      <td>pm25</td>
+      <td>8.0</td>
+      <td>µg/m³</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+<div class="section" id="joining-multiple-tables-by-a-common-identifier">
+<h2>Joining multiple tables by a common identifier<a class="headerlink" href="#joining-multiple-tables-by-a-common-identifier" title="Permalink to this headline">¶</a></h2>
+<p>The coordinates of the air quality measurement stations are stored in a separate file. It would be useful if we could add the coordinate information to the original air quality DataFrame. To do this, we can use the <code class="docutils literal notranslate"><span class="pre">merge</span></code> function.</p>
+<a class="bg-primary mb-1 reference internal image-reference" href="../_images/merge_left.svg"><img alt="../_images/merge_left.svg" class="bg-primary mb-1 align-center" src="../_images/merge_left.svg" width="700px" /></a>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">stations_coord</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/air_quality_stations.csv&#39;</span><span class="p">)</span>
+<span class="n">stations_coord</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>location</th>
+      <th>coordinates.latitude</th>
+      <th>coordinates.longitude</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>BELAL01</td>
+      <td>51.23619</td>
+      <td>4.38522</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>BELHB23</td>
+      <td>51.17030</td>
+      <td>4.34100</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>BELLD01</td>
+      <td>51.10998</td>
+      <td>5.00486</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>BELLD02</td>
+      <td>51.12038</td>
+      <td>5.02155</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>BELR833</td>
+      <td>51.32766</td>
+      <td>4.36226</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Both tables have the column <code class="docutils literal notranslate"><span class="pre">location</span></code> in common which is used as a <code class="docutils literal notranslate"><span class="pre">key</span></code> to combine the information. By choosing the <code class="docutils literal notranslate"><span class="pre">left</span></code> merge, only the locations available in the <code class="docutils literal notranslate"><span class="pre">air_quality</span></code> (left) table, i.e. <code class="docutils literal notranslate"><span class="pre">FR04014</span></code>, <code class="docutils literal notranslate"><span class="pre">BETR801</span></code> and <code class="docutils literal notranslate"><span class="pre">London</span> <span class="pre">Westminster</span></code>, are returned in the new table.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">air_quality</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">air_quality</span><span class="p">,</span> <span class="n">stations_coord</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s2">&quot;left&quot;</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s2">&quot;location&quot;</span><span class="p">)</span>
+<span class="n">air_quality</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>city</th>
+      <th>country</th>
+      <th>date.utc</th>
+      <th>location</th>
+      <th>parameter</th>
+      <th>value</th>
+      <th>unit</th>
+      <th>coordinates.latitude</th>
+      <th>coordinates.longitude</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Paris</td>
+      <td>FR</td>
+      <td>2019-06-21 00:00:00+00:00</td>
+      <td>FR04014</td>
+      <td>no2</td>
+      <td>20.0</td>
+      <td>µg/m³</td>
+      <td>48.83724</td>
+      <td>2.3939</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Paris</td>
+      <td>FR</td>
+      <td>2019-06-20 23:00:00+00:00</td>
+      <td>FR04014</td>
+      <td>no2</td>
+      <td>21.8</td>
+      <td>µg/m³</td>
+      <td>48.83724</td>
+      <td>2.3939</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Paris</td>
+      <td>FR</td>
+      <td>2019-06-20 22:00:00+00:00</td>
+      <td>FR04014</td>
+      <td>no2</td>
+      <td>26.5</td>
+      <td>µg/m³</td>
+      <td>48.83724</td>
+      <td>2.3939</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Paris</td>
+      <td>FR</td>
+      <td>2019-06-20 21:00:00+00:00</td>
+      <td>FR04014</td>
+      <td>no2</td>
+      <td>24.9</td>
+      <td>µg/m³</td>
+      <td>48.83724</td>
+      <td>2.3939</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Paris</td>
+      <td>FR</td>
+      <td>2019-06-20 20:00:00+00:00</td>
+      <td>FR04014</td>
+      <td>no2</td>
+      <td>21.4</td>
+      <td>µg/m³</td>
+      <td>48.83724</td>
+      <td>2.3939</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>We have one more table to merge with our original DataFrame. This table is called <code class="docutils literal notranslate"><span class="pre">air_quality_paramters</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">air_quality_parameters</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/air_quality_parameters.csv&#39;</span><span class="p">)</span>
+<span class="n">air_quality_parameters</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>description</th>
+      <th>name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>bc</td>
+      <td>Black Carbon</td>
+      <td>BC</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>co</td>
+      <td>Carbon Monoxide</td>
+      <td>CO</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>no2</td>
+      <td>Nitrogen Dioxide</td>
+      <td>NO2</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>o3</td>
+      <td>Ozone</td>
+      <td>O3</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>pm10</td>
+      <td>Particulate matter less than 10 micrometers in...</td>
+      <td>PM10</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>pm25</td>
+      <td>Particulate matter less than 2.5 micrometers i...</td>
+      <td>PM2.5</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Note that, compared to the previous example, there is <strong>no common column name</strong>. However, the <code class="docutils literal notranslate"><span class="pre">parameter</span></code> column in the <code class="docutils literal notranslate"><span class="pre">air_quality</span></code> table and the <code class="docutils literal notranslate"><span class="pre">id</span></code> column in the <code class="docutils literal notranslate"><span class="pre">air_quality_parameters</span></code> table both provide the measured variable in a common format. We could rename one of the columns. Alternatively, we could use the <code class="docutils literal notranslate"><span class="pre">left_on</span></code> and <code class="docutils literal notranslate"><span class="pre">right_on</span></code> arguments to make the link between the two tables.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">air_quality</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">air_quality</span><span class="p">,</span> <span class="n">air_quality_parameters</span><span class="p">,</span>
+                       <span class="n">how</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">,</span> <span class="n">left_on</span><span class="o">=</span><span class="s1">&#39;parameter&#39;</span><span class="p">,</span> <span class="n">right_on</span><span class="o">=</span><span class="s1">&#39;id&#39;</span><span class="p">)</span>
+<span class="n">air_quality</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>city</th>
+      <th>country</th>
+      <th>date.utc</th>
+      <th>location</th>
+      <th>parameter</th>
+      <th>value</th>
+      <th>unit</th>
+      <th>coordinates.latitude</th>
+      <th>coordinates.longitude</th>
+      <th>id</th>
+      <th>description</th>
+      <th>name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Paris</td>
+      <td>FR</td>
+      <td>2019-06-21 00:00:00+00:00</td>
+      <td>FR04014</td>
+      <td>no2</td>
+      <td>20.0</td>
+      <td>µg/m³</td>
+      <td>48.83724</td>
+      <td>2.3939</td>
+      <td>no2</td>
+      <td>Nitrogen Dioxide</td>
+      <td>NO2</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Paris</td>
+      <td>FR</td>
+      <td>2019-06-20 23:00:00+00:00</td>
+      <td>FR04014</td>
+      <td>no2</td>
+      <td>21.8</td>
+      <td>µg/m³</td>
+      <td>48.83724</td>
+      <td>2.3939</td>
+      <td>no2</td>
+      <td>Nitrogen Dioxide</td>
+      <td>NO2</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Paris</td>
+      <td>FR</td>
+      <td>2019-06-20 22:00:00+00:00</td>
+      <td>FR04014</td>
+      <td>no2</td>
+      <td>26.5</td>
+      <td>µg/m³</td>
+      <td>48.83724</td>
+      <td>2.3939</td>
+      <td>no2</td>
+      <td>Nitrogen Dioxide</td>
+      <td>NO2</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Paris</td>
+      <td>FR</td>
+      <td>2019-06-20 21:00:00+00:00</td>
+      <td>FR04014</td>
+      <td>no2</td>
+      <td>24.9</td>
+      <td>µg/m³</td>
+      <td>48.83724</td>
+      <td>2.3939</td>
+      <td>no2</td>
+      <td>Nitrogen Dioxide</td>
+      <td>NO2</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Paris</td>
+      <td>FR</td>
+      <td>2019-06-20 20:00:00+00:00</td>
+      <td>FR04014</td>
+      <td>no2</td>
+      <td>21.4</td>
+      <td>µg/m³</td>
+      <td>48.83724</td>
+      <td>2.3939</td>
+      <td>no2</td>
+      <td>Nitrogen Dioxide</td>
+      <td>NO2</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
 </div>
 <div class="section" id="dropping-columns">
 <h2>Dropping columns<a class="headerlink" href="#dropping-columns" title="Permalink to this headline">¶</a></h2>
+<p>There are various ways to drop one or multiple columns from a Dataframe. The easiest is the use the <code class="docutils literal notranslate"><span class="pre">drop</span></code> function.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># First create a new variable so that we add it later</span>
+<span class="n">name</span> <span class="o">=</span> <span class="n">air_quality</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span>
+</pre></div>
 </div>
-<div class="section" id="merge-dataframes">
-<h2>Merge DataFrames<a class="headerlink" href="#merge-dataframes" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">air_quality</span> <span class="o">=</span> <span class="n">air_quality</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;name&#39;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">air_quality</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>city</th>
+      <th>country</th>
+      <th>date.utc</th>
+      <th>location</th>
+      <th>parameter</th>
+      <th>value</th>
+      <th>unit</th>
+      <th>coordinates.latitude</th>
+      <th>coordinates.longitude</th>
+      <th>id</th>
+      <th>description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Paris</td>
+      <td>FR</td>
+      <td>2019-06-21 00:00:00+00:00</td>
+      <td>FR04014</td>
+      <td>no2</td>
+      <td>20.0</td>
+      <td>µg/m³</td>
+      <td>48.83724</td>
+      <td>2.3939</td>
+      <td>no2</td>
+      <td>Nitrogen Dioxide</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Paris</td>
+      <td>FR</td>
+      <td>2019-06-20 23:00:00+00:00</td>
+      <td>FR04014</td>
+      <td>no2</td>
+      <td>21.8</td>
+      <td>µg/m³</td>
+      <td>48.83724</td>
+      <td>2.3939</td>
+      <td>no2</td>
+      <td>Nitrogen Dioxide</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Paris</td>
+      <td>FR</td>
+      <td>2019-06-20 22:00:00+00:00</td>
+      <td>FR04014</td>
+      <td>no2</td>
+      <td>26.5</td>
+      <td>µg/m³</td>
+      <td>48.83724</td>
+      <td>2.3939</td>
+      <td>no2</td>
+      <td>Nitrogen Dioxide</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Paris</td>
+      <td>FR</td>
+      <td>2019-06-20 21:00:00+00:00</td>
+      <td>FR04014</td>
+      <td>no2</td>
+      <td>24.9</td>
+      <td>µg/m³</td>
+      <td>48.83724</td>
+      <td>2.3939</td>
+      <td>no2</td>
+      <td>Nitrogen Dioxide</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Paris</td>
+      <td>FR</td>
+      <td>2019-06-20 20:00:00+00:00</td>
+      <td>FR04014</td>
+      <td>no2</td>
+      <td>21.4</td>
+      <td>µg/m³</td>
+      <td>48.83724</td>
+      <td>2.3939</td>
+      <td>no2</td>
+      <td>Nitrogen Dioxide</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+<div class="section" id="adding-columns">
+<h2>Adding columns<a class="headerlink" href="#adding-columns" title="Permalink to this headline">¶</a></h2>
+<p>Likewise, we can add columns. To do this we can define a new columns (i.e. <code class="docutils literal notranslate"><span class="pre">name</span></code>) and set it equal to a list of values.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">air_quality</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">name</span>
+<span class="n">air_quality</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>city</th>
+      <th>country</th>
+      <th>date.utc</th>
+      <th>location</th>
+      <th>parameter</th>
+      <th>value</th>
+      <th>unit</th>
+      <th>coordinates.latitude</th>
+      <th>coordinates.longitude</th>
+      <th>id</th>
+      <th>description</th>
+      <th>name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Paris</td>
+      <td>FR</td>
+      <td>2019-06-21 00:00:00+00:00</td>
+      <td>FR04014</td>
+      <td>no2</td>
+      <td>20.0</td>
+      <td>µg/m³</td>
+      <td>48.83724</td>
+      <td>2.3939</td>
+      <td>no2</td>
+      <td>Nitrogen Dioxide</td>
+      <td>NO2</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Paris</td>
+      <td>FR</td>
+      <td>2019-06-20 23:00:00+00:00</td>
+      <td>FR04014</td>
+      <td>no2</td>
+      <td>21.8</td>
+      <td>µg/m³</td>
+      <td>48.83724</td>
+      <td>2.3939</td>
+      <td>no2</td>
+      <td>Nitrogen Dioxide</td>
+      <td>NO2</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Paris</td>
+      <td>FR</td>
+      <td>2019-06-20 22:00:00+00:00</td>
+      <td>FR04014</td>
+      <td>no2</td>
+      <td>26.5</td>
+      <td>µg/m³</td>
+      <td>48.83724</td>
+      <td>2.3939</td>
+      <td>no2</td>
+      <td>Nitrogen Dioxide</td>
+      <td>NO2</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Paris</td>
+      <td>FR</td>
+      <td>2019-06-20 21:00:00+00:00</td>
+      <td>FR04014</td>
+      <td>no2</td>
+      <td>24.9</td>
+      <td>µg/m³</td>
+      <td>48.83724</td>
+      <td>2.3939</td>
+      <td>no2</td>
+      <td>Nitrogen Dioxide</td>
+      <td>NO2</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Paris</td>
+      <td>FR</td>
+      <td>2019-06-20 20:00:00+00:00</td>
+      <td>FR04014</td>
+      <td>no2</td>
+      <td>21.4</td>
+      <td>µg/m³</td>
+      <td>48.83724</td>
+      <td>2.3939</td>
+      <td>no2</td>
+      <td>Nitrogen Dioxide</td>
+      <td>NO2</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This will only work if the new data has the <strong>same number of rows</strong> as the original DataFrame.</p>
+</div>
+</div>
+<div class="section" id="acknowledgments">
+<h2>Acknowledgments<a class="headerlink" href="#acknowledgments" title="Permalink to this headline">¶</a></h2>
+<p>This demo was inspired by the <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/getting_started/intro_tutorials/08_combine_dataframes.html">Pandas API reference tutorial</a>.</p>
 </div>
 </div>
 
