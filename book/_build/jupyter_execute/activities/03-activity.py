@@ -7,7 +7,6 @@
 # 
 # ```{image} images/aws.png
 # :alt: aws
-# :class: bg-primary mb-1
 # :width: 600px
 # :align: center
 # ```
@@ -83,7 +82,7 @@
 
 # ### Task 4 (5 points)
 # 
-# Snow is much brighter than glacier ice so it therefore absorbs less solar radiation. To account for this, positive degree day models usually include two different melt factors (one for ice and one for snow).
+# Glacier ice is much darker than snow so it absorbs less solar radiation. Glacier ice therefore melts at a faster rate than snow. To account for this, positive degree day models usually include two different melt factors (one for ice and one for snow).
 # 
 # Let's assume that our melt factor for ice is `0.008` and the melt factor for snow is `0.003`.
 # 
@@ -91,3 +90,9 @@
 # 
 # * What is the total melt that occurs during our study period? How much larger is it than the previous model that assumed a constant melt factor of `0.003`?
 # 
+
+# In[ ]:
+
+
+
+

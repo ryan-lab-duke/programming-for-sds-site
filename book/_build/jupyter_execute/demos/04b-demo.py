@@ -27,8 +27,7 @@ df2.head()
 # If we wanted a single DataFrame that included both these tables, we could use the `concat` function. The `concat` function performs the operation along one of the axes (row-wise or column-wise). By default concatenation is along `axis=0`, so the resulting table combines the **rows** of the input tables. 
 # 
 # ```{image} images/concat_row.svg
-# :class: bg-primary mb-1
-# :width: 500px
+# :width: 700px
 # :align: center
 # ```
 
@@ -61,8 +60,7 @@ air_quality.sort_values("date.utc").head(10)
 # The coordinates of the air quality measurement stations are stored in a separate file. It would be useful if we could add the coordinate information to the original air quality DataFrame. To do this, we can use the `merge` function. 
 # 
 # ```{image} images/merge_left.svg
-# :class: bg-primary mb-1
-# :width: 700px
+# :width: 900px
 # :align: center
 # ```
 # 

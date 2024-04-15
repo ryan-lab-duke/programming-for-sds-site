@@ -717,7 +717,7 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="section" id="combining-data-from-multiple-tables">
 <h2>Combining data from multiple tables<a class="headerlink" href="#combining-data-from-multiple-tables" title="Permalink to this headline">¶</a></h2>
 <p>If we wanted a single DataFrame that included both these tables, we could use the <code class="docutils literal notranslate"><span class="pre">concat</span></code> function. The <code class="docutils literal notranslate"><span class="pre">concat</span></code> function performs the operation along one of the axes (row-wise or column-wise). By default concatenation is along <code class="docutils literal notranslate"><span class="pre">axis=0</span></code>, so the resulting table combines the <strong>rows</strong> of the input tables.</p>
-<a class="bg-primary mb-1 reference internal image-reference" href="../_images/concat_row.svg"><img alt="../_images/concat_row.svg" class="bg-primary mb-1 align-center" src="../_images/concat_row.svg" width="500px" /></a>
+<a class="reference internal image-reference" href="../_images/concat_row.svg"><img alt="../_images/concat_row.svg" class="align-center" src="../_images/concat_row.svg" width="700px" /></a>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">air_quality</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df1</span><span class="p">,</span> <span class="n">df2</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
@@ -885,7 +885,7 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="section" id="joining-multiple-tables-by-a-common-identifier">
 <h2>Joining multiple tables by a common identifier<a class="headerlink" href="#joining-multiple-tables-by-a-common-identifier" title="Permalink to this headline">¶</a></h2>
 <p>The coordinates of the air quality measurement stations are stored in a separate file. It would be useful if we could add the coordinate information to the original air quality DataFrame. To do this, we can use the <code class="docutils literal notranslate"><span class="pre">merge</span></code> function.</p>
-<a class="bg-primary mb-1 reference internal image-reference" href="../_images/merge_left.svg"><img alt="../_images/merge_left.svg" class="bg-primary mb-1 align-center" src="../_images/merge_left.svg" width="700px" /></a>
+<a class="reference internal image-reference" href="../_images/merge_left.svg"><img alt="../_images/merge_left.svg" class="align-center" src="../_images/merge_left.svg" width="900px" /></a>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">stations_coord</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;data/air_quality_stations.csv&#39;</span><span class="p">)</span>
