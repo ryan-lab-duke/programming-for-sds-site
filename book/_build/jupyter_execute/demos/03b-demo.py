@@ -28,9 +28,7 @@ if direction == 'left':
 
 # There are two important Python elements presented in the code above: a **comparison** and a **conditional statement**. We compared whether the variable `direction` is **equal to** the value `left`. Then we printed `Turns left` if this condition was **True**. 
 
-# ## Conditional statements
-# 
-# We introduced comparisons [previous week](../demos/02a-demo.ipynb#comparison-operators). Conditional statements are written in a similar way to `for` loops. The `if` statement checks to see whether the variable value is `True` or `False`. If a `True` is returned, then we execute the **indented** command below. 
+# Conditional statements are written in a similar way to `for` loops. The `if` statement checks to see whether the variable value is `True` or `False`. If a `True` is returned, then we execute the **indented** command below. 
 # 
 # Alternatively, the messenger might decide to turn **right**.
 
@@ -102,7 +100,7 @@ else:
     print("Stay straight")
 
 
-# The command beneath the `else` statement will be executed if all `if` and `elif` statements return `**False**`. 
+# The command beneath the `else` statement will be executed if all `if` and `elif` statements return `False`. 
 
 # ```{note}
 # The `else` clause is optional. If it is present, there can be only one and it must be specified last.
