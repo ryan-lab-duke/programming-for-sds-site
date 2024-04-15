@@ -16,23 +16,6 @@ jupyter lab
 
 ## Task 1 (5 points)
 
-* Define two **NumPy arrays** (i.e. `np.array()`), one called `lat` and one called `lon`, that contain the latitudes and longitudes, respectively, of **five** global cities.
-
-* Define a **list** containing the corresponding names of the cities (as **strings**).
-
-* Print both the **name** and **latitude** of the most northly city using **f-string** formatting.
-
-* Repeat for the for city with the most easterly longitude.
-
-* Print the **mean** latitude and **mean** longitude of your five cities. 
-
-Geographic coordinates for your cities can be found from [this website](https://www.latlong.net/). 
-
-
-*****************************
-
-## Task 2 (5 points)
-
 ```
 array = np.array([[[178, 189, 567], [145, 239, 445], [197, 345, 678]], [[56, 78, 190], [46, 10, 11], [6, 2, 1]], [[45, 118, 203], [72, 119, 34], [87, 9, 5]]])
 ```
@@ -45,83 +28,70 @@ Copy and paste this array into your notebook and answer the following questions:
 
 * c) How many values are less than 10?
 
-* d) What is the **index** of the highest value?
+* d) What is the **index** of the highest value? Looking for three numbers here (i.e. an index for each dimension).
+
+```{admonition} Click to reveal hint
+:class: tip, dropdown
+The `np.where()` function is useful for this task.
+```
 
 * e) What is the **index** of the lowest value?
 
 *****************************
 
-## Task 3 (5 points)
+## Task 2 (5 points)
 
-Write a **for loop** that converts this list of vegetables from uppercase to lowercase.
+* Define a **list** containing the names of **five** cities (as **strings**).
 
-```
-veggies = ['LETTUCE', 'CARROT', 'PEA', 'CABBAGE']
-```
+* Define two **NumPy arrays** (i.e. `np.array()`), one called `lat` and one called `lon`, that contain the latitudes and longitudes, respectively, of **five** global cities to **two decimal places**.
+
+* Print the **name** and **latitude** of the most northly city using **f-string** formatting.
+
+* Repeat for the for city with the most easterly longitude.
+
+* Print the **mean** latitude and **mean** longitude of your five cities to **two decimal places**. 
+
+Geographic coordinates for your cities can be found from [this website](https://www.latlong.net/). 
+
+*****************************
+
+## Task 3 (10 points)
+
+
+* Write a for loop that **prints** each city followed by its latitude and longitude (two decimal places). 
+
+* Write a **for loop** that converts every character of your cities to uppercase.
 
 ```{hint}
 Look for the string method you need [here](https://www.w3schools.com/python/python_ref_string.asp)
 ```
+
+* Write a for loop that **counts** the number of characters of each city and saves it to a new list.
+
+* Write a for loop that prints the name of the city, only if its more northerly than the mean latitude of all your cities (i.e. `np.mean(lat)`)
+
+### Extra credit (5 points)
+
+* Write a for loop that counts the number of vowels in each city. 
+
+```{admonition} Click to reveal hint
+:class: tip, dropdown
+The `count()` method is useful for this task.
+```
+
 *****************************
 ## Task 4 (5 points)
 
-Produce a variable containing only the **strings** in this list using a for loop and conditional statements
+* Combine a for loop with a conditional statement that returns `True` for every city that is located in the **Northern Hemisphere** (and **False** if not).
 
-```
-shopping_list = ['Lettuce', 'Carrots', 'Bananas', 4, 10, 'Potatoes']
-```
+Make a new list of containing the countries and continents of your cities.
 
-```{admonition} Click to reveal hint
-:class: tip, dropdown
-The `type()` function is useful for this task.
-```
+* Combine a for loop with a conditional statement that returns `True` for every city that is **not** located in **Asia** (and **False** if not).
+
+* Combine a for loop with a conditional statement that returns `True` for every city that is located in the **USA** (and **False** if not).
 
 *****************************
 ## Task 5 (5 points)
-
-Write a for loop that counts the number of vowels in the sentence below.
-
-```
-vowels = 'aeiouAEIOU'
-
-sentence = 'Please leave the package by the back door'
-```
-
-```{admonition} Click to reveal hint
-:class: tip, dropdown
-The `.count()` method is useful for this task.
-```
-
-*****************************
-## Task 6 (5 points)
-
-```
-city = 'Eugene'
-country = 'USA'
-number_months = 7
-max_monthly_temp = 66.9
-```
-
-Write a conditional statement that returns `True` if Eugene is a city in the USA.
-
-*****************************
-## Task 7 (5 points)
-
-A "cool-summer Mediterranean climate" is defined as having warm and dry summers. In this climate classification, more than four months should have average temperatures of 50 F or higher (`number_months`) **and** no average monthly temperatures should exceed 72 F (`max_monthly_temp`).
-
-* a) Write a conditional statement that returns `True` if Eugene has a cool-summer Mediterranean climate.
-
-```
-city = 'Porto'
-country = 'Portugal'
-number_months_50 = 11
-max_monthly = 69.4
-```
-
-* b) Write a conditional statement that returns `True` if **Porto** has a cool-summer Mediterranean climate.
-
-*****************************
-## Task 8 (5 points)
 
 Here is a list of daily river discharges for July.
 
@@ -138,10 +108,9 @@ discharge = np.array([0.3, 0.2, 1.6, 2.3, 0.8, 1.5, 1.5, 0.1, 2.2, 1.4,
 > Our messenger cannot cross the river if it is flowing **greater than** 3 cubic meters per second.
 
 
-* a) Compute how many days our messenger **can travel** across the river using a **for loop and conditional statements**
+* a) Compute how many days our messenger can travel across the river **by foot** using a **for loop and conditional statements**
 
-
-* b) Compute how many days our messenger **cannot travel** across the river using **NumPy**
+* b) Compute how many days our messenger can travel across the river **by boat** using a **for loop and conditional statements**
 
 *****************************
 
