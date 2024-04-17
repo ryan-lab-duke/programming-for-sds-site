@@ -1,0 +1,299 @@
+,name,street,town,state,zipcode,annual_rounds,ownership,year_built,green_fees
+0,MeadowWood Golf Course,E 24501 Valley Way,Liberty Lake,WA,99019,"25,000 (estimated)",Public,1987,$23.00
+1,Desert Canyon Golf Resort,1201 Desert Canyon Blvd,Orondo,WA,98843,"30,000 (estimated)",Resort,1993,$89.00
+2,Plateau Club,25625 E Platueau Dr,Sammamish,WA,98074,"30,000 (estimated)",Private,1998,$65.00
+3,Grays Harbor Country Club,5300 Central Park Dr,Aberdeen,WA,98520,"40,000 (estimated)",Private,1913,$25.00
+4,Generation I & II Course at Lake Land Village Golf Course,E 200 Old Ranch Rd,Allyn,WA,98524,"35,000 (estimated)",Semi-Private,1972,$27.00
+5,Generation I & III Course at Lake Land Village Golf Course,E 200 Old Ranch Rd,Allyn,WA,98524,"35,000 (estimated)",Semi-Private,1998,$27.00
+6,Generation II & III Course at Lake Land Village Golf Course,E 200 Old Ranch Rd,Allyn,WA,98524,"35,000 (estimated)",Semi-Private,1998,$27.00
+7,Similk Golf Course,12518 Christianson Rd,Anacortes,WA,98221,"36,000 (estimated)",Public,1988,$22.00
+8,Riviera Country Club,11019 Country Club Dr,Anderson Island,WA,98303,N/A,Private,1968,$18.00
+9,Gleneagle Golf Course,7619 Country Club Dr,Arlington,WA,98223,"40,000 (estimated)",Public,1993,$29.00
+10,Auburn Golf Course,29630 Green River Rd Se,Auburn,WA,98092,"70,000 (estimated)",Public,1970,$32.00
+11,Jade Greens Golf Club,18330 Se Lake Holm Rd,Auburn,WA,98092,"27,000 (estimated)",Public,1990,$24.00
+12,Washington National Golf Club,14330 Se Husky Way,Auburn,WA,98092,N/A,Public,2000,$90.00
+13,Meadowmeer Golf & Country Club,8530 Renny Ln Ne,Bainbridge Island,WA,98110,"65,000 (estimated)",Semi-Private,1971,$23.00
+14,Wing Point Golf & Country Club,811 Cherry Ave,Bainbridge Island,WA,98110,"85,000 (estimated)",Private,1963,$50.00
+15,Bellevue Municipal Golf Course,5500 140th Ave Ne,Bellevue,WA,98005,"78,000 (estimated)",Public,1968,$31.00
+16,Crossroads Par 3 Golf Course,16000 Ne 10th St,Bellevue,WA,98008,N/A,Public,1962,$10.00
+17,Glendale Country Club,13440 Main St,Bellevue,WA,98005,"36,000 (estimated)",Private,1956,$110.00
+18,Tam OShanter Golf & Country Club,1313 183rd Ave Ne,Bellevue,WA,98008,"30,000 (estimated)",Private,1965,$35.00
+19,Bellingham Golf & Country Club,3729 Meridian St,Bellingham,WA,98225,"38,000 (estimated)",Private,1912,$45.00
+20,Lake Padden Municipal Golf Course,4882 Samish Way,Bellingham,WA,98226,"70,000 (estimated)",Public,1970,$22.00
+21,North Bellingham Golf Course,205 W Smith Rd,Bellingham,WA,98226,"35,000 (estimated)",Public,1995,$32.47
+22,Pro Golf Center Golf Course,5022 Guide Meridian Rd,Bellingham,WA,98226,N/A,Public,,$6.00
+23,Shuksan Golf Club,1500 E Axton Rd,Bellingham,WA,98226,"30,000 (estimated)",Public,1994,$26.00
+24,Sudden Valley Golf & Country Club,2145 Lake Whatcom Blvd,Bellingham,WA,98226,"35,000 (estimated)",Semi-Private,1970,$37.00
+25,Birch Bay Golf Club,7878 Birch Bay Dr,Blaine,WA,98230,"35,000 (estimated)",Public,1983,$23.00
+26,Birch Bay Village Golf Course,8169 Cowichan Rd,Blaine,WA,98230,N/A,Private,1960,$15.00
+27,Loomis Trail Course at Semiahmoo Golf & Country Club,8720 Semiahmoo Pkwy,Blaine,WA,98230,"55,000 (estimated)",Semi-Private,1992,$69.00
+28,Semiahmoo Course at Semiahmoo Golf & Country Club,8720 Semiahmoo Pkwy,Blaine,WA,98230,"55,000 (estimated)",Semi-Private,1987,$69.00
+29,Wayne Public Golf Course,16721 96th Ave Ne,Bothell,WA,98011,"65,000 (estimated)",Public,1931,$18.00
+30,Kitsap Golf & Country Club,3885 Nw Golf Club Hill Rd,Bremerton,WA,98312,"30,000 (estimated)",Private,1920,$40.00
+31,Rolling Hills Golf Course,2485 Ne Mcwilliams Rd,Bremerton,WA,98311,"55,000 (estimated)",Public,1972,$24.00
+32,The Cascade Course at Gold Mountain Golf Course,7263 W Belfair Valley Rd,Bremerton,WA,98312,"70,000 (estimated)",Public,1971,$26.00
+33,The Olympic Course at Gold Mountain Golf Course,7263 W Belfair Valley Rd,Bremerton,WA,98312,"70,000 (estimated)",Public,1996,$36.00
+34,Lake Woods Golf Club,240 State Park Rd,Bridgeport,WA,98813,"26,000 (estimated)",Semi-Private,1963,$18.00
+35,Cedars Golf Club,15001 Ne 181st St,Brush Prairie,WA,98606,"40,000 (estimated)",Public,1975,$26.00
+36,Hartwood Golf Course,12506 Ne 152nd Ave,Brush Prairie,WA,98606,"17,000 (estimated)",Public,1996,$20.00
+37,North West Course at Avalon Golf Club,19345 Kelleher Rd,Burlington,WA,98233,"45,000 (estimated)",Public,1991,$45.00
+38,Skagit Golf & Country Club,1493 Country Club Dr,Burlington,WA,98233,"55,000 (estimated)",Private,1933,$40.00
+39,South North Course at Avalon Golf Club,19345 Kelleher Rd,Burlington,WA,98233,"45,000 (estimated)",Public,1991,$45.00
+40,West South Course at Avalon Golf Club,19345 Kelleher Rd,Burlington,WA,98233,"45,000 (estimated)",Public,1991,$45.00
+41,Camaloch Golf Club,326 Ne Camano Dr,Camano Island,WA,98292,"35,000 (estimated)",Public,,$25.00
+42,Camas Meadows Golf Club,4105 N W Camas Meadows Dr,Camas,WA,98607,N/A,Public,2000,$75.00
+43,Carnation Golf Course,1810 W Snoqualmie River Rd Ne,Carnation,WA,98014,"40,000 (estimated)",Public,1966,$32.00
+44,Carson Hot Springs Golf Course & Resort,1 St Martin Rd,Carson,WA,98610,"17,000 (estimated)",Resort,1990,$25.00
+45,Mount Cashmere Golf Course,6404 Kimber Rd,Cashmere,WA,98815,N/A,Public,1998,$15.00
+46,Skyline Golf Course,20 Randall Dr,Cathlamet,WA,98612,"35,000 (estimated)",Public,1971,$15.00
+47,Centralia Public Golf Course,1012 Duffy St,Centralia,WA,98531,"10,000 (estimated)",Public,1943,$13.00
+48,East West Course at Newaukum Valley Golf Course,153 Newaukum Golf Dr,Chehalis,WA,98532,"35,000 (estimated)",Public,1994,$20.00
+49,Riverside Golf Club,1451 Nw Airport Rd,Chehalis,WA,98532,"30,000 (estimated)",Public,1927,$27.00
+50,South East Course at Newaukum Valley Golf Course,153 Newaukum Golf Dr,Chehalis,WA,98532,"35,000 (estimated)",Public,1994,$22.00
+51,South West Course at Newaukum Valley Golf Course,153 Newaukum Golf Dr,Chehalis,WA,98532,"35,000 (estimated)",Public,,$20.00
+52,Lake Chelan Golf Course,1501 Golf Course Dr,Chelan,WA,98816,"35,000 (estimated)",Public,1964,$27.00
+53,Fairways at West Terrace,9810 W Melville Rd,Cheney,WA,99004,"30,000 (estimated)",Public,1987,$20.00
+54,18-Hole Course at Chewelah Golf & Country Club,2537 Sand Canyon Rd,Chewelah,WA,99109,"30,000 (estimated)",Semi-Private,1976,$22.00
+55,9-Hole Course at Chewelah Golf & Country Club,2537 Sand Canyon Rd,Chewelah,WA,99109,"30,000 (estimated)",Semi-Private,2001,$22.00
+56,Clarkston Golf & Country Club,1676 Elm St,Clarkston,WA,99403,"27,000 (estimated)",Private,1933,$45.00
+57,Quail Ridge Golf Course,3600 Swallows Nest Dr,Clarkston,WA,99403,"45,000 (estimated)",Public,1970,$19.00
+58,Sun Country Golf Resort,841 St Andrews Dr,Cle Elum,WA,98922,"35,000 (estimated)",Public,1973,$20.00
+59,Island Greens,3890 E French Rd,Clinton,WA,98236,"17,000 (estimated)",Public,1989,$14.00
+60,Colfax Golf Club,2402 N Cedar St,Colfax,WA,99111,"44,000 (estimated)",Public,1927,$18.00
+61,Dominion Meadows Golf Club,1861 E Hawthorne Ave,Colville,WA,99114,N/A,Public,2002,$18.00
+62,Highland Golf Course,2200 1st St,Cosmopolis,WA,98537,"35,000 (estimated)",Public,1932,$19.00
+63,Vic Meyers Golf Course,Route 1,Coulee City,WA,99115,"17,000 (estimated)",Public,1949,$16.00
+64,Dakota Creek Golf & Country Club,3258 Haynie Rd,Custer,WA,98240,N/A,Public,1989,$22.00
+65,Grandview Golf Course,7738 Portal Way,Custer,WA,98240,"36,000 (estimated)",Public,,$23.00
+66,Touchet Valley Golf Course,209 N Pine St,Dayton,WA,99328,"11,000 (estimated)",Public,1915,$16.00
+67,Deer Park Golf Club,1201 Country Club Dr,Deer Park,WA,99006,"35,000 (estimated)",Public,1996,$21.00
+68,Wenatchee Golf & Country Club,1602 Country Club Dr,East Wenatchee,WA,98802,"22,000 (estimated)",Private,1923,$49.00
+69,Orcas Island Country Golf Club,Route 1,Eastsound,WA,98245,N/A,Public,1969,$30.00
+70,Tanwax Greens Golf Course,36510 Mountain Hwy E,Eatonville,WA,98328,N/A,Public,1998,$22.00
+71,Banks Lake Golf & Country Club,19849 Luidolph Rd Ne,Electric City,WA,99123,"12,000 (estimated)",Semi-Private,1985,$20.00
+72,Ellensburg Golf Club,3231 Thorp Hwy S,Ellensburg,WA,98926,"42,000 (estimated)",Public,1940,$24.00
+73,Oaksridge Golf Course,1052 Monte Elma,Elma,WA,98541,"27,000 (estimated)",Public,1951,$15.00
+74,Enumclaw Golf Course,45220 288th Ave Se,Enumclaw,WA,98022,"29,000 (estimated)",Public,1947,$19.00
+75,Oasis Park Golf Course,2541 Basin St Sw,Ephrata,WA,98823,N/A,Public,1980,$9.00
+76,Everett Golf & Country Club,1500 52nd St,Everett,WA,98203,"40,000 (estimated)",Private,1910,$85.00
+77,Hat Island Golf Course,Hat Island,Everett,WA,98201,N/A,Private,1969,$15.00
+78,Legion Memorial Golf Course,144 W Marine View Dr,Everett,WA,98201,"27,000 (estimated)",Public,1931,$30.00
+79,Walter E. Hall Memorial Golf Course,1226 W Casino Rd,Everett,WA,98204,N/A,Public,1934,$22.00
+80,Evergreen Golf Course,413 E Main St,Everson,WA,98247,"27,000 (estimated)",Public,1959,$12.00
+81,Raspberry Ridge Golf Course,6827 Hannegan Rd,Everson,WA,98247,"35,000 (estimated)",Public,1984,$17.00
+82,Snoqualmie Falls Golf Course,35109 Se Fish Hatchery Rd,Fall City,WA,98024,"60,000 (estimated)",Public,1963,$26.00
+83,Tall Chief Golf Course,1313 W Snoqualmie Rd Se,Fall City,WA,98024,"30,000 (estimated)",Public,1963,$25.00
+84,Twin Rivers Golf Course,4446 Preston Fall City Rd Se,Fall City,WA,98024,"21,000 (estimated)",Public,1994,$24.00
+85,Twin Lakes Golf & Country Club,3583 Sw 320th St,Federal Way,WA,98023,"35,000 (estimated)",Private,1966,$45.00
+86,Sandy Point Golf Course,4460 Decadure Dr,Ferndale,WA,98248,N/A,Private,1970,$5.00
+87,Wayne Olsen Riverside Golf,5799 Riverside Dr,Ferndale,WA,98248,"35,000 (estimated)",Public,1932,$13.00
+88,Fircrest Golf Club,1500 Regents Blvd,Fircrest,WA,98466,"45,000 (estimated)",Private,1925,$95.00
+89,Blue Green Course at Fort Lewis Golf Course,Mounts Rd,Fort Lewis,WA,98433,N/A,Public,1979,$23.00
+90,Green Red Course at Fort Lewis Golf Course,Mounts Rd,Fort Lewis,WA,98433,N/A,Public,1979,$23.00
+91,Red Blue Course at Fort Lewis Golf Course,Mounts Rd,Fort Lewis,WA,98433,N/A,Public,1930,$23.00
+92,Holmes Harbor Golf Club,5023 Harbor Hills Dr,Freeland,WA,98249,"17,000 (estimated)",Public,1994,$25.00
+93,San Juan Golf & Country Club,2261 Golf Course Rd,Friday Harbor,WA,98250,N/A,Semi-Private,1960,$40.00
+94,Canterwood Golf Club,12606 54th Ave Nw,Gig Harbor,WA,98332,"30,000 (estimated)",Private,1988,$50.00
+95,Gig Harbor Golf & Country Club,6909 Artondale Dr Nw,Gig Harbor,WA,98335,"15,000 (estimated)",Private,1958,$40.00
+96,Madrona Links Golf Course,3604 22nd Ave Nw,Gig Harbor,WA,98335,"50,000 (estimated)",Public,1978,$23.00
+97,Ironwood Green Golf Course,8136 Hwy 12,Glenoma,WA,98336,"2,500 (estimated)",Public,1984,$10.00
+98,Goldendale Golf Club,1901 N Columbus Ave,Goldendale,WA,98620,"30,000 (estimated)",Semi-Private,1942,$20.00
+99,Harrington Golf & Country Club,700 S Second St,Harrington,WA,99134,"12,000 (estimated)",Semi-Private,1957,$18.00
+100,Lake Cushman Golf Course,N 210 W Fairway Dr,Hoodsport,WA,98548,N/A,Semi-Private,1965,$16.00
+101,Three Rivers Golf Course,2222 S River Rd,Kelso,WA,98626,"60,000 (estimated)",Public,1983,$21.00
+102,Inglewood Country Club,6505 Inglewood,Kenmore,WA,98111,"35,000 (estimated)",Private,1923,$100.00
+103,Canyon Lakes Golf Course,3700 W Canyon Lakes Dr,Kennewick,WA,99337,"56,000 (estimated)",Public,1981,$38.00
+104,Columbia Park Golf Course,7422 W Clearwater,Kennewick,WA,99336,"20,000 (estimated)",Public,1936,$10.00
+105,Tri-City Country Club,314 N Underwood St,Kennewick,WA,99336,N/A,Semi-Private,1963,$30.00
+106,Druids Glen,29925 207th Ave Se,Kent,WA,98042,"38,000 (estimated)",Public,1997,$48.00
+107,Eighteen Hole Course at Riverbend Golf Complex,2020 W Meeker Ave,Kent,WA,98032,"55,000 (estimated)",Public,1989,$37.00
+108,Par 3 Course at Riverbend Golf Complex,2020 W Meeker Ave,Kent,WA,98032,"55,000 (estimated)",Public,1961,$14.00
+109,The Links Course at Golf Club at Hawks Prairie,8383 Vicwood Ln,Lacey,WA,98516,N/A,Public,1999,$43.00
+110,The Woodlands Course at Golf Club at Hawks Prairie,8383 Vicwood Ln,Lacey,WA,98516,N/A,Public,1996,$43.00
+111,Useless Bay Golf & Country Club,5725 S Country Club Dr,Langley,WA,98260,"25,000 (estimated)",Private,1968,$38.00
+112,Kahler Glen Golf Course,20700-A Clubhouse Dr,Leavenworth,WA,98826,N/A,Resort,1990,$24.00
+113,Leavenworth Golf Club,9101 Icicle Rd,Leavenworth,WA,98826,"45,000 (estimated)",Semi-Private,1927,$25.00
+114,Liberty Lake Golf Course,24403 E Sprague Ave,Liberty Lake,WA,99019,"52,000 (estimated)",Public,1955,$22.00
+115,Valley View Golf Course,Liberty Lake Dr,Liberty Lake,WA,99019,"30,000 (estimated)",Public,1974,$14.00
+116,Peninsula Golf Course,9604 Hwy 103,Long Beach,WA,98631,N/A,Public,1947,$15.00
+117,Longview Country Club,41 Country Club Dr,Longview,WA,98632,"32,000 (estimated)",Private,1926,$30.00
+118,Mint Valley Golf Course,4002 Pennsylvania St,Longview,WA,98632,"50,000 (estimated)",Public,1976,$22.00
+119,Lopez Island Golf Club,Airport Rd,Lopez,WA,98261,"24,000 (estimated)",Semi-Private,1968,$20.00
+120,Homestead Farms Golf Resort & Convention Center,115 E Homestead Blvd,Lynden,WA,98264,"35,000 (estimated)",Semi-Private,1993,$40.00
+121,Lynnwood Municipal Golf Course,20200 68th Ave W,Lynnwood,WA,98036,"60,000 (estimated)",Public,1991,$20.00
+122,Three Lakes Golf Course,2695 Golf Dr,Malaga,WA,98828,"55,000 (estimated)",Semi-Private,1953,$25.00
+123,M A 8 Golf,455 Wapato Lake Rd,Manson,WA,98831,N/A,Public,1992,$22.00
+124,Elk Run Golf Club,22500 Se 275th Pl,Maple Valley,WA,98038,"50,000 (estimated)",Public,1989,$30.00
+125,Lake Wilderness Golf Course,25400 Witte Rd Se,Maple Valley,WA,98038,N/A,Public,,$25.00
+126,Links at Olson Mansion,21401 244th Ave Se,Maple Valley,WA,98038,"30,000 (estimated)",Public,1995,$28.00
+127,Cedarcrest Golf Course,6810 84th St Ne,Marysville,WA,98270,"55,000 (estimated)",Public,1927,$22.00
+128,Champion Course at Battle Creek Public Golf,6006 Meridian Ave N,Marysville,WA,98271,"45,000 (estimated)",Public,1990,$25.00
+129,Par 3 Course at Battle Creek Public Golf,6006 Meridian Ave N,Marysville,WA,98271,"45,000 (estimated)",Public,1990,$14.00
+130,Desert Aire Golf Course,215 Desert Aire Dr N,Mattawa,WA,99349,"20,000 (estimated)",Semi-Private,1978,$25.00
+131,Whispering Firs Golf Club,Bldg 888,Mcchord Afb,WA,98438,"45,000 (estimated)",Military,1961,$27.00
+132,Overlake Golf & Country Club,8000 Ne 16th St,Medina,WA,98039,"25,000 (estimated)",Private,1952,$100.00
+133,Mill Creek Country Club,15500 Country Club Dr,Mill Creek,WA,98012,N/A,Private,1976,$52.00
+134,Blue Boy West Golf Course,27927 Florence Acres Rd,Monroe,WA,98272,"34,000 (estimated)",Public,1990,$17.00
+135,Monroe Golf Course,22110 Old Owen Rd,Monroe,WA,98272,"15,000 (estimated)",Public,1927,$18.00
+136,Moses Lake Golf Club,1181 Rd F-2 Ne,Moses Lake,WA,98837,"40,000 (estimated)",Private,1956,$45.00
+137,Moses Pointe Golf Resort,4524 Westshore Drive Ne,Moses Lake,WA,98837,N/A,Semi-Private,1999,$45.00
+138,South Campus Golf,1475 E Nelson Rd,Moses Lake,WA,98837,"20,000 (estimated)",Public,1990,$12.00
+139,Eaglemont Golf Club,4127 Eaglemont Dr,Mount Vernon,WA,98274,"30,000 (estimated)",Semi-Private,1992,$54.00
+140,Overlook Golf Course,1753 State Hwy 9,Mount Vernon,WA,98273,"20,000 (estimated)",Public,1985,$18.50
+141,Ballinger Lakes Golf Course,23000 Lakeview Dr,Mountlake Terrace,WA,98043,"30,000 (estimated)",Public,1958,$16.00
+142,Nile Shrine Golf Course,6601 244th St Sw,Mountlake Terrace,WA,98043,"60,000 (estimated)",Semi-Private,1968,$25.00
+143,Harbour Pointe Golf Club,11817 Harbour Pointe Blvd,Mukilteo,WA,98275,N/A,Public,1990,$52.00
+144,China Creek Course at Golf Club at Newcastle,15500 Six Penny Ln,Newcastle,WA,98059,"25,000 (estimated)",Public,2000,$90.00
+145,Coal Creek Course at Golf Club at Newcastle,15500 Six Penny Ln,Newcastle,WA,98059,"25,000 (estimated)",Public,1999,$150.00
+146,Sundance Golf Course,9725 N Nine Mile Rd,Nine Mile Falls,WA,99026,"50,000 (estimated)",Public,1963,$17.00
+147,Cascade Golf Course,14303 436th Ave Se,North Bend,WA,98045,"35,000 (estimated)",Public,1957,$26.00
+148,Beacon Rock Public Golf,Mile Post 37 Hwy 14,North Bonneville,WA,98639,"27,000 (estimated)",Public,1969,$22.00
+149,Gallery Golf Course,Whidbey Island Us Navy Air Sta,Oak Harbor,WA,98278,"40,000 (estimated)",Military,1948,$23.00
+150,Whidbey Golf & Country Club,2430 Fairway Ln,Oak Harbor,WA,98277,"24,000 (estimated)",Private,1961,$25.00
+151,Surfside Golf Course,31508 J Pl,Ocean Park,WA,98640,"24,000 (estimated)",Public,1969,$20.00
+152,Ocean Shores Golf Course,500 Canal Dr Ne,Ocean Shores,WA,98569,"32,000 (estimated)",Public,1967,$25.00
+153,Odessa Golf Club & RV Park,Hwy 28,Odessa,WA,99159,N/A,Public,1966,$17.50
+154,Capitol City Golf Club,5225 Yelm Hwy Se,Olympia,WA,98503,N/A,Public,1962,$23.00
+155,Delphi Golf Club,6340 Neylon Dr Sw,Olympia,WA,98512,N/A,Semi-Private,1974,$16.50
+156,Indian Summer Golf & Country Club,5900 Troon Ln Se,Olympia,WA,98501,"75,000 (estimated)",Private,1992,$80.00
+157,Olympia Country & Golf Club,3636 Country Club Dr Nw,Olympia,WA,98502,"40,000 (estimated)",Private,1926,$43.20
+158,Scott Lake Golf Course,11746 Scott Creek Dr Sw,Olympia,WA,98512,N/A,Public,1964,$16.00
+159,Okanogan Valley Golf Club,Pogue Rd,Omak,WA,98841,"14,000 (estimated)",Semi-Private,1946,$20.00
+160,Oroville Golf Club,3468-A Orville-Loomis Rd,Oroville,WA,98844,N/A,Semi-Private,1959,$20.00
+161,Cedars Course at High Cedars Golf Club,14604 149th St Court E,Orting,WA,98360,N/A,Public,1971,$40.00
+162,Executive Nine Course at High Cedars Golf Club,14604 149th St Court E,Orting,WA,98360,N/A,Public,1990,$20.00
+163,Othello Golf Club,2269 W Bench Rd,Othello,WA,99344,"12,000 (estimated)",Public,1965,$18.00
+164,Potholes Golf Course,7037 Hwy 262 E,Othello,WA,99344,"32,500 (estimated)",Public,1994,$16.00
+165,High Valley Country Club,633 Cannon Rd,Packwood,WA,98361,"23,000 (estimated)",Private,1960,$10.00
+166,Sun Willows Golf Course,2035 N 20th Ave,Pasco,WA,99301,"65,000 (estimated)",Public,1982,$18.00
+167,Alta Lake Golf Resort,140 Alta Lake Rd,Pateros,WA,98846,N/A,Resort,1993,$22.00
+168,Pomeroy Golf Course,1611 Arlington St,Pomeroy,WA,99347,"13,000 (estimated)",Public,1932,$12.00
+169,Peninsula Golf Club,824 S Lindberg Rd,Port Angeles,WA,98362,"30,000 (estimated)",Private,1921,$20.00
+170,Tide Timber Course at Port Ludlow Resort,751 Highland Dr,Port Ludlow,WA,98365,N/A,Resort,1975,$55.00
+171,Timber Trail Course at Port Ludlow Resort,751 Highland Dr,Port Ludlow,WA,98365,N/A,Resort,1993,$55.00
+172,Trail Tide Course at Port Ludlow Resort,751 Highland Dr,Port Ludlow,WA,98365,N/A,Resort,1993,$55.00
+173,Grows Vineyard Greens Closed For Renovation,5180 Country Club Way Se,Port Orchard,WA,98367,"19,000 (estimated)",Public,1963,$15.00
+174,Horseshoe Lake Golf Course,1250 Sw Club House Ct,Port Orchard,WA,98367,"40,000 (estimated)",Public,1992,$33.00
+175,Ladley Links Golf Course,7382 View Park Rd Se,Port Orchard,WA,98367,N/A,Public,1996,$18.00
+176,McCormick Woods Golf Course,5155 Mccormick Woods Dr Sw,Port Orchard,WA,98367,"38,000 (estimated)",Public,1988,$55.00
+177,Trophy Lake Golf & Casting Club,3900 Sw Lake Flora Rd,Port Orchard,WA,98367,N/A,Resort,1999,$70.00
+178,Village Greens Golf Course,2298 Fircrest Dr Se,Port Orchard,WA,98366,N/A,Public,1963,$14.00
+179,Discovery Bay Golf Club,7401 Cape George Rd,Port Townsend,WA,98368,"25,000 (estimated)",Public,1925,$32.00
+180,Port Townsend Golf Club,1948 Blaine St,Port Townsend,WA,98368,N/A,Public,,$18.00
+181,WSU Public Golf Course,N Fairway Rd,Pullman,WA,99164,"42,000 (estimated)",Public,1954,$15.00
+182,Blue Gold Course at Lipoma Firs Golf Course,18615 110th Ave E,Puyallup,WA,98374,"60,000 (estimated)",Public,1989,$24.00
+183,Gold Green Course at Lipoma Firs Golf Course,18615 110th Ave E,Puyallup,WA,98374,"60,000 (estimated)",Public,1989,$24.00
+184,Green Blue Course at Lipoma Firs Golf Course,18615 110th Ave E,Puyallup,WA,98374,"60,000 (estimated)",Public,1989,$24.00
+185,Linden Golf & Country Club,2519 E Main Ave,Puyallup,WA,98372,"37,000 (estimated)",Private,1924,$40.00
+186,Crescent Bar Resort,8894 Crescent Bar Rd Nw Ste 1,Quincy,WA,98848,N/A,Public,1965,$24.00
+187,Quincy Golf Club,17056 Rd 5 Nw,Quincy,WA,98848,"17,000 (estimated)",Public,1986,$20.00
+188,Maple Grove Golf,175 State Route,Randle,WA,98377,"15,000 (estimated)",Public,1985,$10.00
+189,Willapa Harbor Golf Course,2424 Fowler,Raymond,WA,98577,"30,000 (estimated)",Public,1926,$18.00
+190,Coyote Creek Course at Willows Run Golf Club,10402 Willows Rd Ne,Redmond,WA,98052,"60,000 (estimated)",Public,1994,$55.00
+191,Eagles Talon Course at Willows Run Golf Club,10402 Willows Rd Ne,Redmond,WA,98052,"60,000 (estimated)",Public,1999,$55.00
+192,East South Course at Sahalee Country Club,21200 Ne Sahalee Country Club Dr,Redmond,WA,98053,"42,000 (estimated)",Private,1969,$200.00
+193,Heron Links Course at Willows Run Golf Club,10402 Willows Rd Ne,Redmond,WA,98052,"60,000 (estimated)",Public,1999,$26.00
+194,North East Course at Sahalee Country Club,21200 Ne Sahalee Country Club Dr,Redmond,WA,98053,"42,000 (estimated)",Private,1969,$200.00
+195,Rainbow Run Putting Course at Willows Run Golf Club,10402 Willows Rd Ne,Redmond,WA,98052,"60,000 (estimated)",Public,1999,$15.00
+196,South North Course at Sahalee Country Club,21200 Ne Sahalee Country Club Dr,Redmond,WA,98053,"42,000 (estimated)",Private,1969,$200.00
+197,Trilogy Golf Club,11825 Trilogy Parkway Ne,Redmond,WA,98053,N/A,Public,2003,$69.00
+198,Fairwood Golf & Country Club,17070 140th Ave Se,Renton,WA,98058,"39,000 (estimated)",Private,1966,$55.00
+199,Maplewood Golf Course,4050 Maple Valley Hwy,Renton,WA,98058,"100,000 (estimated)",Public,1952,$28.00
+200,Sheridan Greens Golf Course,380 Sheridan Rd,Republic,WA,99166,N/A,Public,1987,$12.00
+201,Buckskin Golf Ranch,1790 Bronco Ln,Richland,WA,99352,N/A,Public,1999,$12.00
+202,Columbia Point Golf Course,225 Columbia Point Dr,Richland,WA,99352,"44,000 (estimated)",Public,1997,$30.00
+203,Horn Rapids Golf Club,2800 Clubhouse Ln,Richland,WA,99352,"40,000 (estimated)",Semi-Private,1994,$36.00
+204,Meadow Springs Country Club,700 Country Club Pl,Richland,WA,99352,"33,000 (estimated)",Private,1971,$45.00
+205,West Richland Municipal Golf,4000 Fallon Dr,Richland,WA,99353,N/A,Public,1950,$12.50
+206,Tri-Mountain Golf Course,1701 Nw 299th St,Ridgefield,WA,98642,"53,000 (estimated)",Public,1994,$34.00
+207,Ritzville Municipal Golf,104 E 10th Ave,Ritzville,WA,99169,"10,000 (estimated)",Public,1940,$18.00
+208,Rock Island Golf Course,314 Saunders Rd,Rock Island,WA,98850,"25,000 (estimated)",Public,1975,$18.00
+209,Royal City Public Golf Course,13702 Dodson Rd S,Royal City,WA,99357,N/A,Public,1991,$14.00
+210,St. John Golf & Country Club,Lancaster Hwy,Saint John,WA,99171,N/A,Public,1935,$10.00
+211,Tyee Valley Golf Club,2401 S 192nd St,Seatac,WA,98188,"35,000 (estimated)",Public,1968,$20.00
+212,Broadmoor Golf Club,2340 Broadmoor Dr E,Seattle,WA,98112,"27,000 (estimated)",Private,1927,$100.00
+213,Glen Acres Golf & Country Club,1000 S 112th St,Seattle,WA,98168,"30,000 (estimated)",Private,1926,$30.00
+214,Greenlake Golf Course,5701 W Green Lake Way N,Seattle,WA,98103,N/A,Public,1950,$6.00
+215,Interbay Family Golf Center,2501 15th Ave W,Seattle,WA,98119,N/A,Public,1998,$26.00
+216,Par 3 Course at Jefferson Park Golf Club,4101 Beacon Ave S,Seattle,WA,98108,"90,000 (estimated)",Public,1912,$10.00
+217,Par Three Course at Jackson Park Golf Course,1000 Ne 135th St,Seattle,WA,98125,"75,000 (estimated)",Public,1934,$10.00
+218,Rainier Golf & Country Club,11133 Des Moines Memorial Dr S,Seattle,WA,98168,"30,000 (estimated)",Private,1919,$70.00
+219,Regulation Course at Jackson Park Golf Course,1000 Ne 135th St,Seattle,WA,98125,"75,000 (estimated)",Public,1934,$22.00
+220,Regulation Course at Jefferson Park Golf Club,4101 Beacon Ave S,Seattle,WA,98108,"90,000 (estimated)",Public,1912,$31.00
+221,Sand Point Country Club,8333 55th Ave Ne,Seattle,WA,98115,"27,000 (estimated)",Private,1934,$85.00
+222,Seattle Golf Club,210 Nw 145th St,Seattle,WA,98177,"20,000 (estimated)",Private,1907,$40.00
+223,West Seattle Golf Course,4470 35th Ave Sw,Seattle,WA,98126,"65,000 (estimated)",Public,1939,$28.00
+224,Sauk Mountain View Golf Course,839 Fruitdale Rd,Sedro Woolley,WA,98284,N/A,Public,1964,$17.00
+225,Yakima Elks Golf & Country Club,Golf Course Rd,Selah,WA,98942,"30,000 (estimated)",Private,N/A,$30.00
+226,Dungeness Golf & Country Club,1965 Woodcock Rd,Sequim,WA,98382,"50,000 (estimated)",Public,1970,$26.00
+227,SunLand Golf & Country Club,109 Hilltop Dr,Sequim,WA,98382,"38,000 (estimated)",Private,1964,$35.00
+228,Bayshore Golf Club,3800 E Hwy 3,Shelton,WA,98584,"25,000 (estimated)",Semi-Private,1948,$18.00
+229,Lake Limerick Country Club,E 810 St Andrews Dr,Shelton,WA,98584,"15,000 (estimated)",Semi-Private,1967,$22.00
+230,Echo Falls Country Club,20414 121st Ave Se,Snohomish,WA,98296,"44,000 (estimated)",Public,1990,$47.00
+231,Flowing Lake Golf Course,5001 Weber Rd,Snohomish,WA,98290,"15,000 (estimated)",Public,1995,$21.00
+232,Kenwanda Golf Course,14030 Kenwanda Dr,Snohomish,WA,98296,"36,000 (estimated)",Public,1962,$25.00
+233,Lobo Country Club,12015 84th St Se,Snohomish,WA,98290,N/A,Public,1980,$14.00
+234,Snohomish Public Golf Course,7806 147th Ave Se,Snohomish,WA,98290,"45,000 (estimated)",Public,1967,$25.00
+235,Mount Si Golf Course,9010 Boalch Ave Se,Snoqualmie,WA,98065,"55,000 (estimated)",Public,1927,$40.00
+236,TPC at Snoqualmie Ridge,36005 Se Ridge St,Snoqualmie,WA,98065,N/A,Private,1998,N/A
+237,Lakeview Golf Country Club,19547 Golf Club Rd Nw,Soap Lake,WA,98851,"20,000 (estimated)",Private,1953,$30.00
+238,Classic Golf Club,4908 208th St E,Spanaway,WA,98387,"40,000 (estimated)",Public,1991,$45.00
+239,Creek at Qualchan,301 E Meadow Ln Rd,Spokane,WA,99224,"35,000 (estimated)",Public,1992,$22.50
+240,Downriver Golf Course,3225 N Columbia Circle,Spokane,WA,99205,"60,000 (estimated)",Public,1920,$18.50
+241,Eagle Ridge,5840 S Meadow Lane Rd,Spokane,WA,99224,N/A,Public,1998,$10.00
+242,Esmeralda Golf Course,3933 E Courtland Ave,Spokane,WA,99217,"63,000 (estimated)",Public,1956,$18.50
+243,Hangman Valley Golf Course,E 2210 Hangman Valley Rd,Spokane,WA,99223,"75,000 (estimated)",Public,1968,$22.00
+244,Indian Canyon Golf Course,4304 W West Dr,Spokane,WA,99224,"46,000 (estimated)",Public,1935,$25.00
+245,Manito Golf & Country Club,5303 S Hatch Rd,Spokane,WA,99223,N/A,Private,1922,$65.00
+246,Painted Hills Golf Course,4403 S Dishman Mica Rd,Spokane,WA,99206,"22,000 (estimated)",Public,1988,$17.00
+247,Pine Acres Par 3 Golf Course & Driving Range,11912 N Division St,Spokane,WA,99218,"21,000 (estimated)",Public,1964,$9.50
+248,Spokane Country Club,W 2010 Waikiki Rd,Spokane,WA,99218,"26,000 (estimated)",Private,1898,$35.00
+249,Wandermere Golf Course,13700 N Division St,Spokane,WA,99208,"30,000 (estimated)",Public,1929,$20.00
+250,Kayak Point Golf Course,15711 Marine Dr,Stanwood,WA,98292,"50,000 (estimated)",Public,1977,$33.00
+251,Skamania Lodge Golf Course,1131 Sw Skamania Lodge Way,Stevenson,WA,98648,"20,000 (estimated)",Resort,1993,$40.00
+252,Peaceful Valley Country Club,8225 Kendall Rd,Sumas,WA,98295,N/A,Semi-Private,1978,$15.00
+253,Sumner Meadows Golf Links,14802 Golf Links Drive,Sumner,WA,98390,"55,000 (estimated)",Public,1995,$34.00
+254,Tapps Island Golf Course,20818 Island Pkwy E,Sumner,WA,98390,"40,000 (estimated)",Public,1981,$24.00
+255,Black Rock Golf Club,31 Ray Rd,Sunnyside,WA,98944,"25,000 (estimated)",Semi-Private,1942,$21.50
+256,Allenmore Public Golf Course,2125 S Cedar St,Tacoma,WA,98405,N/A,Public,1916,$26.00
+257,Brookdale Golf Club,1802 Brookdale Rd E,Tacoma,WA,98445,"35,000 (estimated)",Public,1931,$20.00
+258,Fort Steilacoom Golf Course,8202 87th Ave Sw,Tacoma,WA,98498,N/A,Public,1961,$16.00
+259,Highlands Golf Course,1400 N Highland Pkwy,Tacoma,WA,98406,"25,000 (estimated)",Public,1968,$13.00
+260,Lake Spanaway Golf Course,15602 Pacific Ave S,Tacoma,WA,98444,"50,000 (estimated)",Public,1967,$22.00
+261,Meadow Park Course at Meadow Park Golf Course,7108 Lakewood Dr W,Tacoma,WA,98467,"100,000 (estimated)",Public,1917,$24.00
+262,North Shore Golf Club,4101 North Shore Blvd Ne,Tacoma,WA,98422,"65,000 (estimated)",Public,1962,$30.00
+263,Oakbrook Golf & Country Club,8102 Zircon Dr Sw,Tacoma,WA,98498,"40,000 (estimated)",Private,1969,$75.00
+264,Pacific Lutheran University Golf Course,754 124th St S,Tacoma,WA,98444,"42,000 (estimated)",Public,1939,$15.00
+265,Tacoma Country & Golf Club,13204 Country Club Dr Sw,Tacoma,WA,98498,"25,000 (estimated)",Private,1894,$85.00
+266,Williams Nine Course at Meadow Park Golf Course,7108 Lakewood Dr W,Tacoma,WA,98467,"100,000 (estimated)",Public,1917,$12.00
+267,Tekoa Golf Course,Hwy 27 & Golf Course Rd,Tekoa,WA,99033,"10,000 (estimated)",Semi-Private,1959,$15.00
+268,Mt. Adams Country Club,1250 Rocky Ford Rd,Toppenish,WA,98948,N/A,Semi-Private,1914,$21.00
+269,Pheasant Creek Golf Course,1432 Touchet N Rd,Touchet,WA,99360,"2,500 (estimated)",Public,2002,$10.00
+270,Foster Golf Links,13500 Interurban Ave S,Tukwila,WA,98168,"80,000 (estimated)",Public,1925,$19.00
+271,Airport Golf Center,8080 Center St Sw,Tumwater,WA,98501,"20,000 (estimated)",Public,1996,$12.00
+272,Tumwater Valley Golf Club,4611 Tumwater Valley Dr Se,Tumwater,WA,98501,"42,000 (estimated)",Public,1970,$30.00
+273,Alderbrook Golf Club,330 E Country Club Dr E,Union,WA,98592,"25,000 (estimated)",Semi-Private,1965,$40.00
+274,Bowyers Par 3 Golf Course,11608 Ne 119th St,Vancouver,WA,98662,"40,000 (estimated)",Semi-Private,1960,$14.00
+275,Club Green Meadows,7703 Ne 72nd Ave,Vancouver,WA,98661,"40,000 (estimated)",Private,1950,$35.00
+276,Fairway Village Golf Course,15509 Se Fernwood Dr,Vancouver,WA,98683,N/A,Public,1982,$18.00
+277,Green Mountain Golf Course,2917 Ne Ingle Rd,Vancouver,WA,98682,N/A,Resort,1999,$39.00
+278,Lakeview Par 3 Golf Challenge,2425 Nw 69th St,Vancouver,WA,98665,"40,000 (estimated)",Public,1982,$13.00
+279,Pine Crest Golf Course,2415 Nw 143rd St,Vancouver,WA,98685,N/A,Public,1965,$8.00
+280,Royal Oaks Country Club,8917 Ne Fourth Plain Blvd,Vancouver,WA,98662,"40,000 (estimated)",Private,1947,$90.00
+281,Vashon Island Golf & Country Club,24615 75th Ave Sw,Vashon,WA,98070,"20,000 (estimated)",Private,1930,$30.00
+282,Veterans Memorial Golf Club,201 E Rees,Walla Walla,WA,99362,"43,000 (estimated)",Public,1948,$18.00
+283,Walla Walla Country Club,1390 Country Club Rd,Walla Walla,WA,99362,"35,000 (estimated)",Private,1923,$50.00
+284,Sage Hills Golf Club,10400 Sagehill Rd Se,Warden,WA,98857,"25,000 (estimated)",Public,1965,$22.00
+285,Orchard Hills Golf Club,605 39th St,Washougal,WA,98671,N/A,Private,1939,$30.00
+286,Husum Hills Golf Course,820 Hwy 141,White Salmon,WA,98672,N/A,Public,1958,$20.00
+287,Big Bend Golf & Country Club,Golf Course Rd,Wilbur,WA,99185,"16,000 (estimated)",Semi-Private,,$18.00
+288,Bear Creek Golf Course,8a Bear Creek Golf Course Rd,Winthrop,WA,98862,"20,000 (estimated)",Public,1969,$20.00
+289,Bear Creek Country Club,13737 202nd Ave Ne,Woodinville,WA,98072,N/A,Private,1982,$65.00
+290,Wellington Hills Golf Course,7026 240th St Se,Woodinville,WA,98072,N/A,Public,1934,$15.00
+291,Lewis River Golf Course,3209 Lewis River Rd,Woodland,WA,98674,"38,000 (estimated)",Public,1967,$45.00
+292,Apple Tree Golf Course,8804 Occidental Ave,Yakima,WA,98903,"35,000 (estimated)",Public,1992,$60.00
+293,Fisher Park Golf Course,2301 Fruitvale Blvd,Yakima,WA,98902,"25,000 (estimated)",Public,1961,$12.00
+294,Suntides Golf Course,231 Pence Rd,Yakima,WA,98908,N/A,Public,1974,$20.00
+295,Westwood West Golf Course,6408 Tieton Dr,Yakima,WA,98908,N/A,Public,1964,$22.00
+296,Yakima Country Club,500 Country Club Dr,Yakima,WA,98901,"25,000 (estimated)",Private,1956,$75.00
+297,Nisqually Valley Golf Course,15425 Mosman St Sw,Yelm,WA,98597,"45,000 (estimated)",Public,1960,$20.00

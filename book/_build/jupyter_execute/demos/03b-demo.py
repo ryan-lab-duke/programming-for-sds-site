@@ -17,7 +17,7 @@
 # 
 # Here is an example. A messenger arrives at a crossroads and has to make a decision about which way to go. We would like them to turn **left**. This is what the code could look like:
 
-# In[21]:
+# In[1]:
 
 
 direction = 'left'
@@ -32,7 +32,7 @@ if direction == 'left':
 # 
 # Alternatively, the messenger might decide to turn **right**.
 
-# In[25]:
+# In[2]:
 
 
 direction = 'right'
@@ -51,9 +51,9 @@ if direction == 'left':
 
 # ## `elif`
 # 
-# We can add more complexity in a conditional statement by usinga an `elif` statement. If we wanted to add an option for turning right we could write:
+# We can add more complexity in a conditional statement by using an `elif` statement. If we wanted to add an option for turning right we could write:
 
-# In[26]:
+# In[3]:
 
 
 direction = 'right'
@@ -70,7 +70,7 @@ elif direction == 'right':
 
 # What happens if our messenger wanted to go **straight**?
 
-# In[28]:
+# In[4]:
 
 
 direction = 'straight'
@@ -87,7 +87,7 @@ elif direction == 'right':
 # 
 # To catch these alternative options, we can add an `else` statement.
 
-# In[29]:
+# In[5]:
 
 
 direction = 'straight'
@@ -121,7 +121,7 @@ else:
 # 
 # Our conditional statements are not limited to strings, we can also use numbers. In addition, we might want to include logical operators such as `and`, `or`, and `not` into our conditions. We can do this as follows:
 
-# In[52]:
+# In[6]:
 
 
 temperature = 60
@@ -140,17 +140,17 @@ else:
 
 # ## Keeping track
 # 
-# We can use boolean conditional statements and `+=` operator to keep track of values. `+=` adds another value to the current value of the variable. Let's say our messenger wanted to buy an apple and an orange but did not know what fruit the shops had in stock. First we visit the fruit stand: 
+# We can use boolean conditional statements and `+=` operator to keep track of values. `+=` adds another value to the current value of the variable. Let's say our messenger wanted to buy an apple and an orange but did not know what fruit the shops had in stock.
 
-# In[65]:
+# In[7]:
 
 
-fruit_stand = ['lemons', 'oranges']
+fruit_stand = ['lemons', 'pears']
 food = 0
 
 if fruit_stand.count('apples') > 0:
     food += 1
-if fruit_stand.count('pears') > 0:
+if fruit_stand.count('oranges') > 0:
     food += 1
 else:
     pass
@@ -170,7 +170,7 @@ food
 
 # Unfortunately, there were no apples and oranges for sale so our messenger still has no fruit to eat.
 
-# In[1]:
+# In[8]:
 
 
 corner_shop = ['apples', 'oranges', 'pears', 'melons', 'grapefruits']
@@ -178,7 +178,7 @@ items = 0
 
 if corner_shop.count('apples') > 0:
     items += 1
-if corner_shop.count('pears') > 0:
+if corner_shop.count('oranges') > 0:
     items += 1
 else:
     pass
@@ -192,24 +192,30 @@ items
 # 
 # Conditional statements are often combined with for loops. Let's say we wanted to calculate how many days the messenger could cross the pass and deliver mail over a 50-day period. 
 
-# In[2]:
+# In[12]:
 
 
 # Import package
 import numpy as np
 
-# Make a new array of random temperatures between 10 and 60 for 50 days
-temperatures = np.random.randint(10, 60, 50) 
+# Make a new array of random temperatures between 10 and 100 for 50 days
+temperatures = np.random.randint(10, 100, 50)
 
 # Set days equal to zero
 days = 0
 
 # Loop over every day
 for i in temperatures:
-    if (i > 90) or (i < 30):
+    if (i < 90) and (i > 30):
         days += 1        
     else: 
         pass
 
 print(f"The messenger delivered mail on {days} days")
+
+
+# In[ ]:
+
+
+
 

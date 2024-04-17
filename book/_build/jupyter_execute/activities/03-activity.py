@@ -23,6 +23,8 @@
 # ```
 # 
 
+# *****************************
+# 
 # ## Task 1 (5 points)
 # 
 # This dataset contains mean air temperature from a weather station that was installed on Hayden Glacier in the Oregon Cascades between Jul 2 and Sep 30 (91 days). Let's first get some intuition about our dataset. 
@@ -35,6 +37,8 @@
 # 
 # * How many days was the air temperature below 0°C?
 
+# *****************************
+# 
 # ## Task 2 (5 points)
 # 
 # ### Degree day factor
@@ -65,6 +69,8 @@
 # * What is the total melt that occurs durnig our study period?
 # 
 
+# *****************************
+# 
 # ### Task 3 (5 points)
 # 
 # Glaciers consist mainly of ice but, during the winter, they are covered in a layer of snow. We can use our melt model to keep track of the snow depth (as well as melt). 
@@ -80,6 +86,8 @@
 # Don't worry if it's negative number.
 # ```
 
+# *****************************
+# 
 # ### Task 4 (5 points)
 # 
 # Glacier ice is much darker than snow so it absorbs less solar radiation. Glacier ice therefore melts at a faster rate than snow. To account for this, positive degree day models usually include two different melt factors (one for ice and one for snow).
@@ -91,8 +99,14 @@
 # * What is the total melt that occurs during our study period? How much larger is it than the previous model that assumed a constant melt factor of `0.003`?
 # 
 
-# In[ ]:
-
-
-
-
+# *****************************
+# 
+# ## Task 5 (0 points)
+# 
+# * Add a title, your name, and date of this submission to your Jupyter Notebook using **Markdown text**.
+# 
+# * Add some more **Markdown text** to separate each task of this assignment and use **f-strings** to make yours answers clear.
+# 
+# ```{important} 
+# Save your notebook to your local course folder and submit assignment (in **.pdf** format) to Canvas by the deadline.
+# ```
