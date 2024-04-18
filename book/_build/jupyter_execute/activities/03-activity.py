@@ -3,6 +3,17 @@
 
 # # Practice activity
 # 
+# If you have installed Python locally, launch JupyterLab by running:
+# 
+# ```
+# conda activate sds
+# ```
+# and
+# 
+# ```
+# jupyter lab
+# ```
+# 
 # ## Glacier melt modeling
 # 
 # ```{image} images/aws.png
@@ -71,7 +82,7 @@
 
 # *****************************
 # 
-# ### Task 3 (5 points)
+# ## Task 3 (5 points)
 # 
 # Glaciers consist mainly of ice but, during the winter, they are covered in a layer of snow. We can use our melt model to keep track of the snow depth (as well as melt). 
 # 
@@ -88,7 +99,7 @@
 
 # *****************************
 # 
-# ### Task 4 (5 points)
+# ## Task 4 (5 points)
 # 
 # Glacier ice is much darker than snow so it absorbs less solar radiation. Glacier ice therefore melts at a faster rate than snow. To account for this, positive degree day models usually include two different melt factors (one for ice and one for snow).
 # 

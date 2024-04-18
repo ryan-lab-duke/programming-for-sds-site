@@ -3,6 +3,17 @@
 
 # # Practice activity
 # 
+# If you have installed Python locally, launch JupyterLab by running:
+# 
+# ```
+# conda activate sds
+# ```
+# and
+# 
+# ```
+# jupyter lab
+# ```
+# 
 # ## Golf courses in Oregon
 # 
 # In this activity, we will use `Pandas` to conduct some data analysis on golf courses in Oregon. The data can be downloaded [here](https://www.dropbox.com/scl/fi/7reqx12fh954vi2tjb5p7/golf-oregon.csv?rlkey=musbdorxqutxe2e4ck2aihko3&dl=0) and [here](https://www.dropbox.com/scl/fi/x93b8cr6qmedvturck00u/or-zip-codes-data.csv?rlkey=7ffg3jma51rmnc1614vc3eacg&dl=0). The first dataset is a table of golf courses in Oregon. The second dataset is provides population data for each zip code in Oregon.  

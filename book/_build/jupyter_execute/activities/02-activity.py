@@ -3,6 +3,17 @@
 
 # # Practice activity
 # 
+# If you have installed Python locally, launch JupyterLab by running:
+# 
+# ```
+# conda activate sds
+# ```
+# and
+# 
+# ```
+# jupyter lab
+# ```
+# 
 # ## Checkerboards and spatial autocorrelation
 # 
 # ```{image} images/checkerboard.png

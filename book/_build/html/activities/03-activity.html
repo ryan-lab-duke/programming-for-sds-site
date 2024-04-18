@@ -477,17 +477,17 @@ const thebe_selector_output = ".output, .cell_output"
      Degree day factor
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#task-3-5-points">
-     Task 3 (5 points)
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#task-4-5-points">
-     Task 4 (5 points)
-    </a>
-   </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#task-3-5-points">
+   Task 3 (5 points)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#task-4-5-points">
+   Task 4 (5 points)
+  </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#task-5-0-points">
@@ -534,17 +534,17 @@ const thebe_selector_output = ".output, .cell_output"
      Degree day factor
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#task-3-5-points">
-     Task 3 (5 points)
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#task-4-5-points">
-     Task 4 (5 points)
-    </a>
-   </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#task-3-5-points">
+   Task 3 (5 points)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#task-4-5-points">
+   Task 4 (5 points)
+  </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#task-5-0-points">
@@ -562,6 +562,14 @@ const thebe_selector_output = ".output, .cell_output"
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="practice-activity">
 <h1>Practice activity<a class="headerlink" href="#practice-activity" title="Permalink to this headline">¶</a></h1>
+<p>If you have installed Python locally, launch JupyterLab by running:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">activate</span> <span class="n">sds</span>
+</pre></div>
+</div>
+<p>and</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jupyter</span> <span class="n">lab</span>
+</pre></div>
+</div>
 <div class="section" id="glacier-melt-modeling">
 <h2>Glacier melt modeling<a class="headerlink" href="#glacier-melt-modeling" title="Permalink to this headline">¶</a></h2>
 <a class="reference internal image-reference" href="../_images/aws.png"><img alt="aws" class="align-center" src="../_images/aws.png" style="width: 600px;" /></a>
@@ -613,9 +621,10 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p>What is the total melt that occurs durnig our study period?</p></li>
 </ul>
 </div>
+</div>
 <hr class="docutils" />
 <div class="section" id="task-3-5-points">
-<h3>Task 3 (5 points)<a class="headerlink" href="#task-3-5-points" title="Permalink to this headline">¶</a></h3>
+<h2>Task 3 (5 points)<a class="headerlink" href="#task-3-5-points" title="Permalink to this headline">¶</a></h2>
 <p>Glaciers consist mainly of ice but, during the winter, they are covered in a layer of snow. We can use our melt model to keep track of the snow depth (as well as melt).</p>
 <p>Let’s assume our snow depth at the start of our study period is equal to <code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">m</span></code>.</p>
 <ul class="simple">
@@ -629,14 +638,13 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <hr class="docutils" />
 <div class="section" id="task-4-5-points">
-<h3>Task 4 (5 points)<a class="headerlink" href="#task-4-5-points" title="Permalink to this headline">¶</a></h3>
+<h2>Task 4 (5 points)<a class="headerlink" href="#task-4-5-points" title="Permalink to this headline">¶</a></h2>
 <p>Glacier ice is much darker than snow so it absorbs less solar radiation. Glacier ice therefore melts at a faster rate than snow. To account for this, positive degree day models usually include two different melt factors (one for ice and one for snow).</p>
 <p>Let’s assume that our melt factor for ice is <code class="docutils literal notranslate"><span class="pre">0.008</span></code> and the melt factor for snow is <code class="docutils literal notranslate"><span class="pre">0.003</span></code>.</p>
 <ul class="simple">
 <li><p>Modify your for loop so that it accounts for the different melt rates of snow and ice.</p></li>
 <li><p>What is the total melt that occurs during our study period? How much larger is it than the previous model that assumed a constant melt factor of <code class="docutils literal notranslate"><span class="pre">0.003</span></code>?</p></li>
 </ul>
-</div>
 </div>
 <hr class="docutils" />
 <div class="section" id="task-5-0-points">
