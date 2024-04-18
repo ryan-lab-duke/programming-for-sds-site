@@ -24,6 +24,7 @@ def is_lon_valid(lon):
     # complete the function
     return
 ```
+
 ```
 def is_lat_valid(lat):
     # complete the function
