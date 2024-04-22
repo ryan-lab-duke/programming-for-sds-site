@@ -2,7 +2,7 @@
 
 If you are using the virtual environment, launch JupyterLab by clicking this button: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/owel-lab/programming-for-sds-site/HEAD)
 
-
+<!-- #region -->
 If you have installed Python locally, launch JupyterLab by running:
 
 ```
@@ -15,6 +15,13 @@ jupyter lab
 
 ```{attention}
 Print all answers in a human-readable way using **f-string** formatting.
+```
+
+
+```{image} images/world_map.png
+:alt: world
+:width: 800px
+:align: center
 ```
 
 *****************************
@@ -80,7 +87,7 @@ Write a `for` loop which saves the first letter of each country in a new list ca
 * a) What is the most common first letter of countries in this table?
 
 * b) After grouping by their first letter, countries with which first letter have the highest total *GDP*?
-
+<!-- #endregion -->
 
 *****************************
 
