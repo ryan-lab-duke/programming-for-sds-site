@@ -54,7 +54,7 @@
 # 
 # ### Degree day factor
 # 
-# A degree day factor (also known as the melt factor) is the amount of melt that occurs **per positive degree day**. Degree day factors are expressed as meters of water-equivalent per degree per day (mm w.e. °C-1 day-1). So if the degree day factor was 0.003 m w.e. °C-1 d-1 and the average daily temperature is +1°C, then the daily melt will be 0.003 m w.e. If the average temperature is +2°C, then there will be 0.006 m w.e. of melt on that day. However, if the average temperature is -1°C, then there will not be any melt on that day.
+# A degree day factor (also known as the melt factor) is the amount of melt that occurs **per positive degree day**. Degree day factors are expressed as meters of water-equivalent per degree per day (m w.e. °C-1 day-1). So if the degree day factor was 0.003 m w.e. °C-1 d-1 and the average daily temperature is +1°C, then the daily melt will be 0.003 m w.e. If the average temperature is +2°C, then there will be 0.006 m w.e. of melt on that day. However, if the average temperature is -1°C, then there will not be any melt on that day.
 # 
 # So when mean daily air temperature > 0°C:
 # 
@@ -74,10 +74,10 @@
 # 
 # ```{admonition} Click to reveal hint
 # :class: tip, dropdown
-# The boolean conditional statements (i.e. `if` and `else`) will be useful here, as is the `+=` operator.
+# The boolean conditional statements (i.e. `if` and `else`) will be useful here, as well as the `+=` operator.
 # ```
 # 
-# * What is the total melt that occurs durnig our study period?
+# * What is the total melt that occurs during our study period?
 # 
 
 # *****************************
