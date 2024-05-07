@@ -63,7 +63,7 @@ Produce a new DataFrame that groups the countries into regions and answer the fo
 
 ```{admonition} Click to reveal hint
 :class: tip, dropdown
-`count()` is useful for this task.
+`groupby()` is useful for this task.
 ```
 
 * a) Which region has the highest **mean** GNI per capita?
