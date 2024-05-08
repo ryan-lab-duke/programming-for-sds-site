@@ -182,7 +182,7 @@ ax2.plot([4,3,2,1],color='red', linewidth=3, linestyle='dotted')
 plt.show()
 
 
-# We can use the keyword argument `layout=constrained` to automatically adjust the axes so that **whitespace** is minimized. It is also nice to add a grid.
+# We can use the keyword argument `layout='constrained'` to automatically adjust the axes so that **whitespace** is minimized. It is also nice to add a grid.
 
 # In[12]:
 

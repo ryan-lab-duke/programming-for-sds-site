@@ -50,7 +50,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Analyzing table data" href="../demos/07-demo.html" />
+    <link rel="next" title="Practice activity" href="../activities/06-activity.html" />
     <link rel="prev" title="Plotting timeseries data" href="../demos/06b-demo.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -266,6 +266,11 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Assignment 6
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../activities/06-activity.html">
+   Practice activity
   </a>
  </li>
 </ul>
@@ -521,6 +526,10 @@ const thebe_selector_output = ".output, .cell_output"
 <h2>Plotting weather station data<a class="headerlink" href="#plotting-weather-station-data" title="Permalink to this headline">¶</a></h2>
 <p>In this activity, we will use <code class="docutils literal notranslate"><span class="pre">Pandas</span></code> and <code class="docutils literal notranslate"><span class="pre">Matplotlib</span></code> to make some visually-appealing plots of meteorological data which was collected by a weather station installed at Hayden Glacier in the Oregon Cascades. The data can be downloaded <a class="reference external" href="https://www.dropbox.com/scl/fi/e69nmu4ywewlqd4kuo96t/hayden-glacier-aws-data-daily.csv?rlkey=pnoip8gcp0582ar4tewilhx9t&amp;st=c9kfslby&amp;dl=0">here</a>. This dataset is similar to the one we used back in Week 3. Although this time, all the data have been provided as a <strong>.csv</strong> file. The dataset includes the following variables: pressure (mbar), solar radiation (W/m2), air temperature (C), relative humidity (%), wind speed (m/s), gust speed (m/s), wind direction (degrees), and rainfall (mm).</p>
 <a class="reference internal image-reference" href="../_images/aws.jpg"><img alt="aws" class="align-center" src="../_images/aws.jpg" style="width: 600px;" /></a>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We will be giving bonus points to students that go beyond the instructions and format their plots especially nicely.</p>
+</div>
 </div>
 <hr class="docutils" />
 <div class="section" id="task-1-10-points">
@@ -528,9 +537,9 @@ const thebe_selector_output = ".output, .cell_output"
 <p>Read the data and answer the following questions:</p>
 <ul class="simple">
 <li><p>a) What time period does the data represent?</p></li>
-<li><p>b) Plot one variable using <strong>pyplot style</strong> (i.e. <code class="docutils literal notranslate"><span class="pre">plt.plot()</span></code>), including axis labels, a gridded background, and customized linestyle, linewdith, and color.</p></li>
-<li><p>c) Plot another variable, this time using the <strong>object-oriented style</strong> (i.e. <code class="docutils literal notranslate"><span class="pre">ax.plot()</span></code>), including axis labels, a gridded background, and customized linestyle, linewdith, and color.</p></li>
-<li><p>d) Make a multi-panel figure with two rows and one column that plots two different variables (one variable in each). Customize these plots again to include axis labels, a gridded background, and customized linestyle, linewdith, and color. This time, also add a legend.</p></li>
+<li><p>b) Plot one variable using <strong>pyplot style</strong> (i.e. <code class="docutils literal notranslate"><span class="pre">plt.plot()</span></code>), including axis labels, a gridded background, and customized linestyle, linewidth, and color.</p></li>
+<li><p>c) Plot another variable, this time using the <strong>object-oriented style</strong> (i.e. <code class="docutils literal notranslate"><span class="pre">ax.plot()</span></code>), including axis labels, a gridded background, and customized linestyle, linewidth, and color.</p></li>
+<li><p>d) Make a multi-panel figure with two rows and one column that plots two different variables (one variable in each). Customize these plots again to include axis labels, a gridded background, and customized linestyle, linewidth, and color. This time, also add a legend.</p></li>
 <li><p>Bonus point:</p></li>
 </ul>
 </div>
@@ -547,10 +556,6 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p>g) Add an arrow that points to the highest air temperature value that says “highest value”</p></li>
 <li><p>h) Limit the x-axis from Jul 02 to Sep 30.</p></li>
 </ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>We will be taking points off if any of the labels are outside of the figure panel. We will also give bonus points to plots that are nicely formatted.</p>
-</div>
 </div>
 <hr class="docutils" />
 <div class="section" id="task-3-5-points">
@@ -558,7 +563,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="simple">
 <li><p>a) Make a four panelled figure with two columns and two rows. In each panel, show the relationship between two variables (i.e. a <strong>scatterplot</strong>).</p></li>
 <li><p>b) Annotate the figure so that each panel is labelled (a), (b), (c), and (d).</p></li>
-<li><p>c) Label the y-axes of each panel. Label only the x-axes of panels (c) and (d)</p></li>
+<li><p>c) Label the x- and y-axes of each panel.</p></li>
 <li><p>d) Customize the size and facecolors of the dots in the plots.</p></li>
 <li><p>e) Add a grid to each panel.</p></li>
 </ul>
@@ -602,10 +607,10 @@ const thebe_selector_output = ".output, .cell_output"
             <p class="prev-next-title">Plotting timeseries data</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../demos/07-demo.html" title="next page">
+    <a class='right-next' id="next-link" href="../activities/06-activity.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Analyzing table data</p>
+        <p class="prev-next-title">Practice activity</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

@@ -270,6 +270,11 @@ const thebe_selector_output = ".output, .cell_output"
    Assignment 6
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="06-activity.html">
+   Practice activity
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -587,10 +592,10 @@ const thebe_selector_output = ".output, .cell_output"
 <h2>Task 1 (5 points)<a class="headerlink" href="#task-1-5-points" title="Permalink to this headline">¶</a></h2>
 <p>This dataset contains mean air temperature from a weather station that was installed on Hayden Glacier in the Oregon Cascades between Jul 2 and Sep 30 (91 days). Let’s first get some intuition about our dataset.</p>
 <ul class="simple">
-<li><p>What was the mean air temperature?</p></li>
-<li><p>What was the lowest/highest air temperaterature recorded?</p></li>
-<li><p>How many days was the air temperature above 0°C?</p></li>
-<li><p>How many days was the air temperature below 0°C?</p></li>
+<li><p>a) What was the mean air temperature?</p></li>
+<li><p>b) What was the lowest/highest air temperaterature recorded?</p></li>
+<li><p>c) How many days was the air temperature above 0°C?</p></li>
+<li><p>d) How many days was the air temperature below 0°C?</p></li>
 </ul>
 </div>
 <hr class="docutils" />
@@ -611,14 +616,14 @@ const thebe_selector_output = ".output, .cell_output"
 \]</div>
 <p>Let’s assume that the melt factor is equal to <code class="docutils literal notranslate"><span class="pre">0.003</span></code>.</p>
 <ul class="simple">
-<li><p>Write a for loop that keeps track of <strong>melt</strong> over our study period.</p></li>
+<li><p>a) Write a for loop that keeps track of <strong>melt</strong> over our study period.</p></li>
 </ul>
 <div class="tip dropdown admonition">
 <p class="admonition-title">Click to reveal hint</p>
 <p>The boolean conditional statements (i.e. <code class="docutils literal notranslate"><span class="pre">if</span></code> and <code class="docutils literal notranslate"><span class="pre">else</span></code>) will be useful here, as well as the <code class="docutils literal notranslate"><span class="pre">+=</span></code> operator.</p>
 </div>
 <ul class="simple">
-<li><p>What is the total melt that occurs during our study period?</p></li>
+<li><p>b) What is the total melt that occurs during our study period?</p></li>
 </ul>
 </div>
 </div>
@@ -628,8 +633,8 @@ const thebe_selector_output = ".output, .cell_output"
 <p>Glaciers consist mainly of ice but, during the winter, they are covered in a layer of snow. We can use our melt model to keep track of the snow depth (as well as melt).</p>
 <p>Let’s assume our snow depth at the start of our study period is equal to <code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">m</span></code>.</p>
 <ul class="simple">
-<li><p>Modify your for loop so that it keeps track of the <strong>snow depth</strong> during our study period.</p></li>
-<li><p>By the end of the season, what is the snow depth?</p></li>
+<li><p>a) Modify your for loop so that it keeps track of the <strong>snow depth</strong> during our study period.</p></li>
+<li><p>b) By the end of the season, what is the snow depth?</p></li>
 </ul>
 <div class="tip dropdown admonition">
 <p class="admonition-title">Click to reveal hint</p>
@@ -642,8 +647,8 @@ const thebe_selector_output = ".output, .cell_output"
 <p>Glacier ice is much darker than snow so it absorbs less solar radiation. Glacier ice therefore melts at a faster rate than snow. To account for this, positive degree day models usually include two different melt factors (one for ice and one for snow).</p>
 <p>Let’s assume that our melt factor for ice is <code class="docutils literal notranslate"><span class="pre">0.008</span></code> and the melt factor for snow is <code class="docutils literal notranslate"><span class="pre">0.003</span></code>.</p>
 <ul class="simple">
-<li><p>Modify your for loop so that it accounts for the different melt rates of snow and ice.</p></li>
-<li><p>What is the total melt that occurs during our study period? How much larger is it than the previous model that assumed a constant melt factor of <code class="docutils literal notranslate"><span class="pre">0.003</span></code>?</p></li>
+<li><p>a) Modify your for loop so that it accounts for the different melt rates of snow and ice.</p></li>
+<li><p>b) What is the total melt that occurs during our study period? How much larger is it than the previous model that assumed a constant melt factor of <code class="docutils literal notranslate"><span class="pre">0.003</span></code>?</p></li>
 </ul>
 </div>
 <hr class="docutils" />

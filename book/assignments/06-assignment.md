@@ -23,6 +23,9 @@ In this activity, we will use `Pandas` and `Matplotlib` to make some visually-ap
 :align: center
 ```
 
+```{note} 
+We will be giving bonus points to students that go beyond the instructions and format their plots especially nicely.
+```
 
 *****************************
 
@@ -32,11 +35,11 @@ Read the data and answer the following questions:
 
 * a) What time period does the data represent?
 
-* b) Plot one variable using **pyplot style** (i.e. `plt.plot()`), including axis labels, a gridded background, and customized linestyle, linewdith, and color.
+* b) Plot one variable using **pyplot style** (i.e. `plt.plot()`), including axis labels, a gridded background, and customized linestyle, linewidth, and color.
 
-* c) Plot another variable, this time using the **object-oriented style** (i.e. `ax.plot()`), including axis labels, a gridded background, and customized linestyle, linewdith, and color.
+* c) Plot another variable, this time using the **object-oriented style** (i.e. `ax.plot()`), including axis labels, a gridded background, and customized linestyle, linewidth, and color.
 
-* d) Make a multi-panel figure with two rows and one column that plots two different variables (one variable in each). Customize these plots again to include axis labels, a gridded background, and customized linestyle, linewdith, and color. This time, also add a legend. 
+* d) Make a multi-panel figure with two rows and one column that plots two different variables (one variable in each). Customize these plots again to include axis labels, a gridded background, and customized linestyle, linewidth, and color. This time, also add a legend. 
 
 * Bonus point: 
 
@@ -60,10 +63,6 @@ Read the data and answer the following questions:
 
 * h) Limit the x-axis from Jul 02 to Sep 30. 
 
-```{note} 
-We will be taking points off if any of the labels are outside of the figure panel. We will also give bonus points to plots that are nicely formatted.
-```
-
 *****************************
 
 ## Task 3 (5 points)
@@ -72,7 +71,7 @@ We will be taking points off if any of the labels are outside of the figure pane
 
 * b) Annotate the figure so that each panel is labelled (a), (b), (c), and (d). 
 
-* c) Label the y-axes of each panel. Label only the x-axes of panels (c) and (d)
+* c) Label the x- and y-axes of each panel.
 
 * d) Customize the size and facecolors of the dots in the plots.
 

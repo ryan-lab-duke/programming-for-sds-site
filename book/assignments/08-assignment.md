@@ -66,19 +66,19 @@ Reproject and plot the data (using `plot()`) in the following coordinate referen
 
 ## Task 4 (5 points)
 
-* Make a new `GeoDataFrame` containing only the countries in Africa. 
+* a) Make a new `GeoDataFrame` containing only the countries in Africa. 
 
-* Reproject to **Albers Equal Area Conic** (https://epsg.io/102022). 
+* b) Reproject to **Albers Equal Area Conic** (https://epsg.io/102022). 
 
-* Calculate the **area** of each country.
+* c) Calculate the **area** of each country.
 
-* Make a chloropleth map showing population density (i.e. population per km$^2$). 
+* d) Make a choropleth map showing population density (i.e. population per km$^2$). 
 
 *****************************
 
 ## Task 5 (5 points)
 
-List the countries that are within 1,000 **miles** of the **centroid** of Nepal. 
+* List the countries that are within 1,000 **miles** of the **centroid** of Nepal. 
 
 *****************************
 
@@ -111,3 +111,7 @@ Save your notebook to your local course folder and submit assignment (in **.pdf*
 
 
 
+
+```python
+
+```

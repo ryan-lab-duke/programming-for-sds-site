@@ -30,15 +30,15 @@
 # 
 # Read the the golf course dataset and answer the following questions:
 # 
-# * How many rows and columns are in this dataset?
+# * a) How many rows and columns are in this dataset?
 # 
-# * What are the names of the columns?
+# * b) What are the names of the columns?
 # 
-# * When was the first golf course built in Oregon?
+# * c) When was the first golf course built in Oregon?
 # 
-# * What is the name and the town of the oldest course?
+# * d) What is the name and the town of the oldest course?
 # 
-# * What is the name (and cost) of the course with the highest green fees?
+# * e) What is the name (and cost) of the course with the highest green fees?
 
 # *****************************
 # 
@@ -46,29 +46,29 @@
 # 
 # Read the the zip code population dataset and answer the following questions:
 # 
-# * How many rows and columns are in this dataset?
+# * a) How many rows and columns are in this dataset?
 # 
-# * What is the mean population?
+# * b) What is the mean population?
 # 
-# * How many zip codes have more than 40,000 people?
+# * c) How many zip codes have more than 40,000 people?
 # 
-# * Which county has the most cities?
+# * d) Which county has the most cities?
 # 
-# * Which city has the most zip codes?
+# * e) Which city has the most zip codes?
 
 # *****************************
 # 
 # ## Task 3 (5 points)
 # 
-# * Merge the two Dataframes
+# * a) Merge the two Dataframes
 # 
-# * How many zip codes do not have a single golf course?
+# * b) How many zip codes do not have a single golf course?
 # 
-# * Which zip code has the most golf courses?
+# * c) Which zip code has the most golf courses?
 # 
-# * Which city has the most golf courses per capita (i.e. per person)?
+# * d) Which city has the most golf courses per capita (i.e. per person)?
 # 
-# * Which county has the most golf courses per capita?
+# * e) Which county has the most golf courses per capita?
 
 # *****************************
 # 
@@ -81,3 +81,9 @@
 # ```{important} 
 # Save your notebook to your local course folder and submit assignment (in **.pdf** format) to Canvas by the deadline.
 # ```
+
+# In[ ]:
+
+
+
+

@@ -40,13 +40,13 @@
 # 
 # This dataset contains mean air temperature from a weather station that was installed on Hayden Glacier in the Oregon Cascades between Jul 2 and Sep 30 (91 days). Let's first get some intuition about our dataset. 
 # 
-# * What was the mean air temperature?
+# * a) What was the mean air temperature?
 # 
-# * What was the lowest/highest air temperaterature recorded?
+# * b) What was the lowest/highest air temperaterature recorded?
 # 
-# * How many days was the air temperature above 0°C?
+# * c) How many days was the air temperature above 0°C?
 # 
-# * How many days was the air temperature below 0°C?
+# * d) How many days was the air temperature below 0°C?
 
 # *****************************
 # 
@@ -70,14 +70,14 @@
 # 
 # Let's assume that the melt factor is equal to `0.003`.
 # 
-# * Write a for loop that keeps track of **melt** over our study period. 
+# * a) Write a for loop that keeps track of **melt** over our study period. 
 # 
 # ```{admonition} Click to reveal hint
 # :class: tip, dropdown
 # The boolean conditional statements (i.e. `if` and `else`) will be useful here, as well as the `+=` operator.
 # ```
 # 
-# * What is the total melt that occurs during our study period?
+# * b) What is the total melt that occurs during our study period?
 # 
 
 # *****************************
@@ -88,9 +88,9 @@
 # 
 # Let's assume our snow depth at the start of our study period is equal to `1 m`.
 # 
-# * Modify your for loop so that it keeps track of the **snow depth** during our study period.
+# * a) Modify your for loop so that it keeps track of the **snow depth** during our study period.
 # 
-# * By the end of the season, what is the snow depth?
+# * b) By the end of the season, what is the snow depth?
 # 
 # ```{admonition} Click to reveal hint
 # :class: tip, dropdown
@@ -105,9 +105,9 @@
 # 
 # Let's assume that our melt factor for ice is `0.008` and the melt factor for snow is `0.003`.
 # 
-# * Modify your for loop so that it accounts for the different melt rates of snow and ice. 
+# * a) Modify your for loop so that it accounts for the different melt rates of snow and ice. 
 # 
-# * What is the total melt that occurs during our study period? How much larger is it than the previous model that assumed a constant melt factor of `0.003`?
+# * b) What is the total melt that occurs during our study period? How much larger is it than the previous model that assumed a constant melt factor of `0.003`?
 # 
 
 # *****************************

@@ -49,7 +49,8 @@ parts:
     - file: demos/06a-demo.ipynb
     - file: demos/06b-demo.ipynb
     - file: assignments/06-assignment.md
-    
+    - file: activities/06-activity.ipynb
+
   - caption: Week 7
     chapters:
     - file: demos/07-demo.ipynb
