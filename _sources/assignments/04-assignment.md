@@ -68,7 +68,7 @@ Produce a new DataFrame that groups the countries into regions and answer the fo
 
 * a) Which region has the highest **mean** GNI per capita?
 
-* b) Which **three** regions have the lowest GDP?
+* b) Which **three** regions have the lowest **mean** GDP?
 
 ```{admonition} Click to reveal hint
 :class: tip, dropdown

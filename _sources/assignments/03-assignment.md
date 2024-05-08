@@ -41,15 +41,15 @@ The `np.where()` function is useful for this task.
 
 ## Task 2 (5 points)
 
-* Define a **list** containing the names of **five** cities (as **strings**).
+* a) Define a **list** containing the names of **five** cities (as **strings**).
 
-* Define two **NumPy arrays** (i.e. `np.array()`), one called `lat` and one called `lon`, that contain the latitudes and longitudes, respectively, of **five** global cities to **two decimal places**.
+* b) Define two **NumPy arrays** (i.e. `np.array()`), one called `lat` and one called `lon`, that contain the latitudes and longitudes, respectively, of **five** global cities to **two decimal places**.
 
-* Print the **name** and **latitude** of the most northly city using **f-string** formatting.
+* c) Print the **name** and **latitude** of the most northerly city using **f-string** formatting.
 
-* Repeat for the for city with the most easterly longitude.
+* d) Repeat for the for city with the most westerly longitude.
 
-* Print the **mean** latitude and **mean** longitude of your five cities to **two decimal places**. 
+* e) Print the **mean** latitude and **mean** longitude of your five cities to **two decimal places**. 
 
 Geographic coordinates for your cities can be found from [this website](https://www.latlong.net/). 
 
@@ -58,19 +58,19 @@ Geographic coordinates for your cities can be found from [this website](https://
 ## Task 3 (10 points)
 
 
-* Write a for loop that **prints** each city followed by its latitude and longitude (two decimal places). 
+* a) Write a for loop that **prints** each city followed by its latitude and longitude (two decimal places). 
 
-* Write a **for loop** that converts every character of your cities to uppercase.
+* b) Write a **for loop** that converts every character of your cities to uppercase.
 
 ```{hint}
 Look for the string method you need [here](https://www.w3schools.com/python/python_ref_string.asp)
 ```
 
-* Write a for loop that **counts** the number of characters of each city and saves it to a new list.
+* c) Write a for loop that **counts** the number of characters of each city and saves it to a new list.
 
-* Write a for loop that prints the name of the city, only if its more northerly than the mean latitude of all your cities (i.e. `np.mean(lat)`)
+* d) Write a for loop that prints the name of the city, only if its more northerly than the mean latitude of all your cities (i.e. `np.mean(lat)`)
 
-### Extra credit (5 points)
+### Extra credit (2 points)
 
 * Write a for loop that counts the number of vowels in each city. 
 
@@ -82,13 +82,13 @@ The `count()` method is useful for this task.
 *****************************
 ## Task 4 (5 points)
 
-* Combine a for loop with a conditional statement that returns `True` for every city that is located in the **Northern Hemisphere** (and **False** if not).
+* a) Combine a for loop with a conditional statement that returns `True` for every city that is located in the **Northern Hemisphere** (and **False** if not).
 
 Make a new list of containing the countries and continents of your cities.
 
-* Combine a for loop with a conditional statement that returns `True` for every city that is **not** located in **Asia** (and **False** if not).
+* b) Combine a for loop with a conditional statement that returns `True` for every city that is **not** located in **Asia** (and **False** if not).
 
-* Combine a for loop with a conditional statement that returns `True` for every city that is located in the **USA** (and **False** if not).
+* c) Combine a for loop with a conditional statement that returns `True` for every city that is located in the **USA** (and **False** if not).
 
 *****************************
 ## Task 5 (5 points)
@@ -117,3 +117,7 @@ discharge = np.array([0.3, 0.2, 1.6, 2.3, 0.8, 1.5, 1.5, 0.1, 2.2, 1.4,
 ```{important} Save your notebook to your local course folder and submit assignment (in **.pdf** format) to Canvas by the deadline.
 ```
 
+
+```python
+
+```
