@@ -16,7 +16,7 @@ jupyter lab
 *****************************
 ## Task 1 (5 points)
 
-Write a function that checks the validity of a lon/lat pair based on their range. (i.e. longitude should be between -180 and 180, and latitude should be between -90 and 90). The function should return `False` if the pair is invalid, and `True` otherwise. The function should rely on two sub-functions `is_lon_valid` and `is_lat_valid` .
+Write a function that checks the validity of a lon/lat pair based on their range. (i.e. longitude should be between -180 and 180, and latitude should be between -90 and 90). The function should return `False` if the pair is invalid, and `True` otherwise. The function should rely on two sub-functions `is_lon_valid` and `is_lat_valid`.
 
 
 ```
@@ -92,7 +92,7 @@ print(convert_area(10,'km','mi'))
 
 * c) Convert the string `2022-06-19 220755` to ISO 8601 standard format (time order is hours, minutes, seconds)
 
-* d) What day was it in Eugene when Unix time reached 1234567890 seconds?
+* d) What day of the week was it in Eugene when Unix time reached 1234567890 seconds?
 
 * e) What year will it be when Unix time reaches 2,000,000,000 seconds?
 
