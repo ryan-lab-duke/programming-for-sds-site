@@ -14,7 +14,7 @@
 
 # ## Daily reservoir levels
 
-# In[1]:
+# In[2]:
 
 
 import pandas as pd
@@ -26,7 +26,7 @@ df
 
 # We can see that we have a table with two columns. The first column contains dates (from Nov 5, 2020 to June 14, 2022) and the second column contains reservoir level (in feet). Before we plot, we need to make sure that `Pandas` has interpreted the **date** column as dates.
 
-# In[2]:
+# In[3]:
 
 
 df.dtypes
@@ -34,7 +34,7 @@ df.dtypes
 
 # While the **level** column has been interpeted as a `float64`, the **date** column has not been recognized as dates. We have to alert `Pandas` that this column contains dates using the keyword argument `parse_dates` when we read the file.
 
-# In[3]:
+# In[4]:
 
 
 df = pd.read_csv('data/fall_creek_levels.csv', parse_dates=['date'])
@@ -43,7 +43,7 @@ df
 
 # Now when we display the column data types, we find that the **date** column has been interpreted as a **NumPy datetime**.
 
-# In[4]:
+# In[5]:
 
 
 df.dtypes
@@ -53,20 +53,26 @@ df.dtypes
 # `parse_dates` will automatically recognize and convert many common date formats. But if the date and time is formatted unusually, we might have to specify the format. We can do that using a parser function (see below).
 # ```
 
-# In[5]:
+# In[6]:
 
 
 parser = lambda date: pd.to_datetime(date).strftime('%Y-%m-%d')
 df = pd.read_csv('data/fall_creek_levels.csv', parse_dates=['date'], date_parser=parser)
 
 
+# In[9]:
+
+
+df['date']
+
+
 # Now that we have read our dataset as a DataFrame, we can plot it easily.
 
-# In[6]:
+# In[12]:
 
 
 fig, ax = plt.subplots(figsize=(12, 6))
-ax.plot(df['date'], df['level'], linewidth=2)
+ax.plot(df['date'].values, df['level'].values, linewidth=2)
 ax.set_title('Fall Creek Reservoir levels', fontsize=14)
 ax.tick_params(axis='both', labelsize=14)
 ax.set_ylabel('Level (ft)', fontsize=14)
@@ -77,17 +83,17 @@ plt.show()
 
 # This looks great but the tick labels on the x-axis are difficult to read. We can edit the tick labels using the `dates.mdates` functions.
 
-# In[7]:
+# In[13]:
 
 
 import matplotlib.dates as mdates
 
 
-# In[8]:
+# In[15]:
 
 
 fig, ax = plt.subplots(figsize=(12, 6))
-ax.plot(df['date'], df['level'], linewidth=2)
+ax.plot(df['date'].values, df['level'].values, linewidth=2)
 ax.set_title('Fall Creek Reservoir levels', fontsize=14)
 ax.tick_params(axis='both', labelsize=14)
 ax.set_ylabel('Level (ft)', fontsize=14)
@@ -106,7 +112,7 @@ plt.show()
 # 
 # Next we will plot some time-series data with higher temporal resolution. This file contains air temperatures from a U.S. Climate Reference Network weather station near Corvallis. 
 
-# In[9]:
+# In[16]:
 
 
 df = pd.read_csv('data/corvallis_air_temp.csv')
@@ -115,7 +121,7 @@ df
 
 # When we have a look at the data, we find that the dates are in one column and the time is in another. So we will use another parser function to transform dates and times in **ISO 8601** format (i.e. `yyyy-mm-dd hh:mm:ss`)
 
-# In[10]:
+# In[17]:
 
 
 parser = lambda date: pd.to_datetime(date).strftime('%Y%m%d %H%M')
@@ -123,20 +129,20 @@ df = pd.read_csv('data/corvallis_air_temp.csv', parse_dates={'datetime': ['date'
 df
 
 
-# In[11]:
+# In[18]:
 
 
 df.dtypes
 
 
-# In[12]:
+# In[20]:
 
 
 fig, ax = plt.subplots(figsize=(12, 6))
-ax.plot(df['datetime'], df['air_temp'], linewidth=2)
+ax.plot(df['datetime'].values, df['air_temp'].values, linewidth=2)
 ax.set_title('Corvallis air temperatures', fontsize=14)
 ax.tick_params(axis='both', labelsize=14)
-ax.set_ylabel('Air temperature (C)', fontsize=14)
+ax.set_ylabel('Air temperature ($^\circ$C)', fontsize=14)
 ax.tick_params(axis='both', labelsize=14)
 ax.grid()
 ax.xaxis.set_major_formatter(mdates.DateFormatter('%b %d'))
@@ -155,7 +161,7 @@ df_slice
 
 # But this is a little unwieldy because we have to manually find the right index for the start of June 13. A better way of doing this would be to slice by date and time. We can only do this if we make our `datetime` column the  **index column**.
 
-# In[14]:
+# In[27]:
 
 
 df.set_index('datetime', inplace=True)
@@ -164,20 +170,20 @@ df
 
 # Now we can slice the DataFrame using datetime. This time we have to use the `.loc` function to make it clear that we are referring to the index of the DataFrame.
 
-# In[15]:
+# In[28]:
 
 
 df_slice = df.loc['2022-06-13 00:00:00':'2022-06-13 23:55:00']
 
 
-# In[16]:
+# In[31]:
 
 
 fig, ax = plt.subplots(figsize=(12, 6))
-ax.plot(df_slice.index, df_slice['air_temp'], linewidth=2)
+ax.plot(df_slice.index.values, df_slice['air_temp'].values, linewidth=2)
 ax.set_title('Corvallis air temperatures', fontsize=14)
 ax.tick_params(axis='both', labelsize=14)
-ax.set_ylabel('Air temperature (C)', fontsize=14)
+ax.set_ylabel('Air temperature ($^\circ$C)', fontsize=14)
 ax.set_xlabel('Time (UTC)', fontsize=14)
 ax.tick_params(axis='both', labelsize=14)
 ax.grid()
@@ -192,14 +198,14 @@ plt.show()
 
 # Strangely the lowest air temperatures occur at noon. This is because our data are in UTC time. So we need to convert to Pacific by subtracting eight hours from our datetime index.
 
-# In[17]:
+# In[32]:
 
 
 df['pacific_time'] = df.index + pd.DateOffset(hours=-8)
 df
 
 
-# In[18]:
+# In[33]:
 
 
 df.set_index('pacific_time', inplace=True)
@@ -208,7 +214,7 @@ df
 
 # Now we can slice using the same syntax as before.
 
-# In[19]:
+# In[34]:
 
 
 df_pacific_slice = df.loc['2022-06-13 00:00:00':'2022-06-13 23:55:00']
@@ -216,14 +222,14 @@ df_pacific_slice = df.loc['2022-06-13 00:00:00':'2022-06-13 23:55:00']
 
 # And we produce a more logical figure showing highest air temperatures at around 1 pm. 
 
-# In[40]:
+# In[36]:
 
 
 fig, ax = plt.subplots(figsize=(12, 6))
-ax.plot(df_pacific_slice.index, df_pacific_slice['air_temp'], linewidth=2)
+ax.plot(df_pacific_slice.index.values, df_pacific_slice['air_temp'].values, linewidth=2)
 ax.set_title('Corvallis air temperatures', fontsize=14)
 ax.tick_params(axis='both', labelsize=14)
-ax.set_ylabel('Air temperature (C)', fontsize=14)
+ax.set_ylabel('Air temperature ($^\circ$C)', fontsize=14)
 ax.set_xlabel('Time (PT)', fontsize=14)
 ax.tick_params(axis='both', labelsize=14)
 ax.grid()
@@ -241,7 +247,7 @@ plt.show()
 # This function has the following syntax `Axes.hlines(y, xmin, xmax, colors=None, linestyles='solid', label='', *, data=None, **kwargs)`
 # ```
 
-# In[44]:
+# In[37]:
 
 
 # Identify the time and value of the maximum air temperature
@@ -249,14 +255,14 @@ highest_temp_idx = df_pacific_slice['air_temp'].idxmax()
 highest_temp = df_pacific_slice['air_temp'].max()
 
 
-# In[45]:
+# In[39]:
 
 
 fig, ax = plt.subplots(figsize=(12, 6))
-ax.plot(df_pacific_slice.index, df_pacific_slice['air_temp'], linewidth=2)
+ax.plot(df_pacific_slice.index.values, df_pacific_slice['air_temp'].values, linewidth=2)
 ax.set_title('Corvallis air temperatures', fontsize=14)
 ax.tick_params(axis='both', labelsize=14)
-ax.set_ylabel('Air temperature (C)', fontsize=14)
+ax.set_ylabel('Air temperature ($^\circ$C)', fontsize=14)
 ax.set_xlabel('Time (PT)', fontsize=14)
 ax.tick_params(axis='both', labelsize=14)
 ax.grid()
@@ -271,14 +277,14 @@ plt.show()
 
 # We can also add some text to our plots using the `annotate` function to make them even more informative. In it's simplest form, the text is placed at `xy`. Optionally, the text can be displayed in another position `xytext`. An arrow pointing from the text to the annotated point xy can then be added by defining `arrowprops`.
 
-# In[76]:
+# In[40]:
 
 
 fig, ax = plt.subplots(figsize=(12, 6))
-ax.plot(df_pacific_slice.index, df_pacific_slice['air_temp'], linewidth=2)
+ax.plot(df_pacific_slice.index.values, df_pacific_slice['air_temp'].values, linewidth=2)
 ax.set_title('Corvallis air temperatures', fontsize=14)
 ax.tick_params(axis='both', labelsize=14)
-ax.set_ylabel('Air temperature (C)', fontsize=14)
+ax.set_ylabel('Air temperature ($^\circ$C)', fontsize=14)
 ax.set_xlabel('Time (PT)', fontsize=14)
 ax.tick_params(axis='both', labelsize=14)
 ax.grid()
