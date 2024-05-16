@@ -86,3 +86,9 @@
 # 
 # This activity is based on the [Earth Data Analytics Online Certificate](https://www.earthdatascience.org/courses/scientists-guide-to-plotting-data-in-python/plot-activities/plot-time-series-data-python/) plotting chapter. 
 # 
+
+# In[ ]:
+
+
+
+

@@ -55,6 +55,7 @@ parts:
     chapters:
     - file: demos/07-demo.ipynb
     - file: assignments/07-assignment.md
+    - file: activities/07-activity.ipynb
 
   - caption: Week 8
     chapters:
