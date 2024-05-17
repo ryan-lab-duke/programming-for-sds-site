@@ -18,7 +18,7 @@
 # 
 # ## Analyzing table data
 # 
-# In this activity, we will use `Pandas` and `Matplotlib` to do some more advanced data analysis.. The data can be downloaded [here](https://www.dropbox.com/scl/fi/tesoyfuc1do9oagvpl2h5/hayden-glacier-aws-data.csv?rlkey=zbjlb5zre4u9g9t7ccrlcygzy&st=1o7e0cdb&dl=0). We have seen this dataset before! It's weather station data from Hayden Glacier but this time it is provided at 15-minute interval. 
+# In this activity, we will use `Pandas` and `Matplotlib` to do some more advanced data analysis. The data can be downloaded [here](https://www.dropbox.com/scl/fi/tesoyfuc1do9oagvpl2h5/hayden-glacier-aws-data.csv?rlkey=zbjlb5zre4u9g9t7ccrlcygzy&st=1o7e0cdb&dl=0). We have seen this dataset before! It's the weather station data from Hayden Glacier but this time it is provided at 15-minute interval. 
 
 # *****************************
 # 
@@ -28,7 +28,7 @@
 # 
 #  * b) What time was solar radiation highest on July 3?
 # 
-#  * c) Make a plot showing solar radiation and annotate it to show the value of highest solar radiation
+#  * c) Make a plot showing solar radiation (on July 3) and annotate it to show the value of highest solar radiation
 # 
 #  * d) Resample the data to **mean daily** values
 # 
