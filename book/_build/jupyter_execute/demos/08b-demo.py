@@ -226,7 +226,7 @@ stadiums_usa.explore(column='distance_to_eugene', cmap='Set1')
 # The `explore()` method returns a `folium.Map` object which is a really nice way of making interactive maps. We don't have enough time to cover `Folium` in this course. But we use it a lot in **Geospatial Data Science**, the next course in this series. 
 # ```
 
-# ## Chloropleth maps
+# ## Choropleth maps
 # 
 # Choropleth maps, where the color of each shape is based on the value of an associated variable, are a useful for displaying geospatial data. If we wanted to produce a chloropleth map showing the number of stadiums in each state, we would first group the stadium data by state.
 

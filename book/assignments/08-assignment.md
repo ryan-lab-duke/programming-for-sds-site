@@ -10,10 +10,6 @@ and
 jupyter lab
 ```
 
-```{attention}
-Print all answers (except Task 3 and 4) in a human-readable way using **f-string** formatting.
-```
-
 ```{image} images/projections.png
 :alt: projections
 :class: bg-primary mb-1
@@ -68,7 +64,7 @@ Reproject and plot the data (using `plot()`) in the following coordinate referen
 
 * a) Make a new `GeoDataFrame` containing only the countries in Africa. 
 
-* b) Reproject to **Albers Equal Area Conic** (https://epsg.io/102022). 
+* b) Reproject to **WGS 1984 Albers for Africa** (https://epsg.io/102022). 
 
 * c) Calculate the **area** of each country.
 
