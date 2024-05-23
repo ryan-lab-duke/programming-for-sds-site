@@ -62,6 +62,7 @@ parts:
     - file: demos/08a-demo.ipynb
     - file: demos/08b-demo.ipynb
     - file: assignments/08-assignment.md
+    - file: activities/08-activity.ipynb
 
   - caption: Week 9
     chapters:
