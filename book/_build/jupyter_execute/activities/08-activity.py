@@ -101,6 +101,10 @@
 # ```
 # 
 # * g) Make a plot of buildings in Harney County that are within 1/2 mile of the highway using `explore()`.
+# 
+# ```{important} 
+# Save your notebook to your local course folder and submit assignment (in **.pdf** format) to Canvas by the deadline.
+# ```
 
 # In[ ]:
 

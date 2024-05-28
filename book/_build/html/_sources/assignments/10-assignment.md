@@ -31,24 +31,6 @@ Download elevation data for Mt Rainier [here](https://www.dropbox.com/s/ej4rdh93
 
 * d) Which five glaciers span the most elevation (i.e. difference between maximum and minimum elevation)? 
 
-*****************************
-
-## Task 2 (15 points)
-
-Download the Landsat data from [here](https://www.dropbox.com/sh/k3bkxwa2j9fovta/AADX4yZiIAEHiG9VPcyCON2pa?dl=0).
-
-* a) Compute a [Normalized Difference Vegetation Index](https://www.usgs.gov/landsat-missions/landsat-normalized-difference-vegetation-index) using bands 4 and 5. 
-
-* b) Compute a [Normalized Difference Moisture Index](https://www.usgs.gov/landsat-missions/normalized-difference-moisture-index) using bands 5 and 6.
-
-* c) Find the area of water in the **NDWI** image.
-
-* d) Find the area of sand in **Band 1** image 
-
-* e) Calculate the area of **healthy vegetation** and **non-vegetation** in the **NDVI** image. Note that you may need to subtract the sand and water pixels from non-vegetation classification - a pixel should only have one land cover. 
-
-* f) Compute the area of all four land covers in $km^{2}$.
-
 
 *****************************
 

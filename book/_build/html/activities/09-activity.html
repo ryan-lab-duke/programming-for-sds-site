@@ -50,8 +50,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Raster data analysis" href="../demos/09a-demo.html" />
-    <link rel="prev" title="Assignment 8" href="../assignments/08-assignment.html" />
+    <link rel="next" title="Sampling raster data" href="../demos/10a-demo.html" />
+    <link rel="prev" title="Assignment 9" href="../assignments/09-assignment.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -301,7 +301,7 @@ const thebe_selector_output = ".output, .cell_output"
   Week 8
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../demos/08a-demo.html">
    Vector data analysis
@@ -317,8 +317,8 @@ const thebe_selector_output = ".output, .cell_output"
    Assignment 8
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="08-activity.html">
    Practice activity
   </a>
  </li>
@@ -328,7 +328,7 @@ const thebe_selector_output = ".output, .cell_output"
   Week 9
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../demos/09a-demo.html">
    Raster data analysis
@@ -344,8 +344,8 @@ const thebe_selector_output = ".output, .cell_output"
    Assignment 9
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="09-activity.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Practice activity
   </a>
  </li>
@@ -412,7 +412,7 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/activities/08-activity.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/activities/09-activity.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -432,7 +432,7 @@ const thebe_selector_output = ".output, .cell_output"
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/owel-lab/programming-for-sds-site/issues/new?title=Issue%20on%20page%20%2Factivities/08-activity.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/owel-lab/programming-for-sds-site/issues/new?title=Issue%20on%20page%20%2Factivities/09-activity.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -453,7 +453,7 @@ const thebe_selector_output = ".output, .cell_output"
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/owel-lab/programming-for-sds-site/HEAD/v2/gh/owel-lab/programming-for-sds-site/main?urlpath=lab/tree/book/activities/08-activity.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/owel-lab/programming-for-sds-site/HEAD/v2/gh/owel-lab/programming-for-sds-site/main?urlpath=lab/tree/book/activities/09-activity.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -476,33 +476,13 @@ const thebe_selector_output = ".output, .cell_output"
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#where-are-buildings-in-eastern-oregon">
-   Where are buildings in Eastern Oregon?
+  <a class="reference internal nav-link" href="#remote-sensing-in-python">
+   Remote sensing in Python
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#task-1-10-points">
    Task 1 (10 points)
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#task-2-5-points">
-   Task 2 (5 points)
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#task-3-5-points">
-   Task 3 (5 points)
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#task-4-5-points">
-   Task 4 (5 points)
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#task-5-10-points">
-   Task 5 (10 points)
   </a>
  </li>
 </ul>
@@ -526,33 +506,13 @@ const thebe_selector_output = ".output, .cell_output"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#where-are-buildings-in-eastern-oregon">
-   Where are buildings in Eastern Oregon?
+  <a class="reference internal nav-link" href="#remote-sensing-in-python">
+   Remote sensing in Python
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#task-1-10-points">
    Task 1 (10 points)
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#task-2-5-points">
-   Task 2 (5 points)
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#task-3-5-points">
-   Task 3 (5 points)
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#task-4-5-points">
-   Task 4 (5 points)
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#task-5-10-points">
-   Task 5 (10 points)
   </a>
  </li>
 </ul>
@@ -575,87 +535,20 @@ const thebe_selector_output = ".output, .cell_output"
 </pre></div>
 </div>
 <hr class="docutils" />
-<div class="section" id="where-are-buildings-in-eastern-oregon">
-<h2>Where are buildings in Eastern Oregon?<a class="headerlink" href="#where-are-buildings-in-eastern-oregon" title="Permalink to this headline">¶</a></h2>
-<a class="bg-primary mb-1 reference internal image-reference" href="../_images/harney.jpeg"><img alt="checkerboard" class="bg-primary mb-1 align-center" src="../_images/harney.jpeg" style="width: 600px;" /></a>
-<p>In this activity, we will combine several vector datasets to investigate the spatial distribution of buildings in Eastern Oregon. The building footprints can be downloaded from <a class="reference external" href="https://www.dropbox.com/scl/fi/e5fhrozgfv2bsj224w87r/eastern-oregon-buildings.geojson?rlkey=ci2ycqrm5y1ouhky578ye9h4m&amp;st=9xy0bsho&amp;dl=0">here</a>. This a subset of buildings from the dataset produced by Microsoft using AI. See the <a class="reference external" href="https://github.com/Microsoft/USBuildingFootprints">GitHub page</a> for more information about the data. The other datasets we will need is the highways dataset which can be downloaded from <a class="reference external" href="https://www.dropbox.com/scl/fi/k7le95ttz1ekgq83muxej/highways.zip?rlkey=wu09bsduthq1mr323fauodg2r&amp;st=kkorc7b2&amp;dl=0">here</a> and the Census tracts dataset which can be downloaded from <a class="reference external" href="https://www.dropbox.com/scl/fi/mi4nh71pqaqtfv34nsg0t/tracts.zip?rlkey=q90fkkoekrto3o2wa1g1enbet&amp;st=qgxjo890&amp;dl=0">here</a>. A “tract” is a subdivision used by the Census Bureau that is smaller than a county and usually contains between 1,200 and 8,000 people.</p>
+<div class="section" id="remote-sensing-in-python">
+<h2>Remote sensing in Python<a class="headerlink" href="#remote-sensing-in-python" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="task-1-10-points">
 <h2>Task 1 (10 points)<a class="headerlink" href="#task-1-10-points" title="Permalink to this headline">¶</a></h2>
-<p>Load the building dataset.</p>
 <ul class="simple">
-<li><p>a) How many rows and columns does this file have?</p></li>
-<li><p>b) What is the coordinate reference system of this file?</p></li>
-<li><p>c) What type of geometries does this file contain? (i.e. points, lines, or polygons?)</p></li>
-</ul>
-<p>Load the Census tracts dataset</p>
-<ul class="simple">
-<li><p>e) How many rows and columns does this file have?</p></li>
-<li><p>f) What is the coordinate reference system of this file?</p></li>
-<li><p>g) What type of geometries does this file contain?</p></li>
-</ul>
-<p>Load the highways dataset.</p>
-<ul class="simple">
-<li><p>h) How many rows and columns does this file have?</p></li>
-<li><p>i) What is the coordinate reference system of this file?</p></li>
-<li><p>j) What type of geometries does this file contain?</p></li>
-</ul>
-</div>
-<div class="section" id="task-2-5-points">
-<h2>Task 2 (5 points)<a class="headerlink" href="#task-2-5-points" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p>Reproject all three files to UTM Zone 11N (EPSG:32611)</p></li>
-</ul>
-</div>
-<div class="section" id="task-3-5-points">
-<h2>Task 3 (5 points)<a class="headerlink" href="#task-3-5-points" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p>Perform a <strong>spatial join</strong> (i.e. <code class="docutils literal notranslate"><span class="pre">sjoin</span></code>) between the building footprints and the tracts GeoDataFrames so that each building has the attributes of the tracts GeoDataFrame.</p></li>
-<li><p>Which <strong>county</strong> (<code class="docutils literal notranslate"><span class="pre">COUNTYFP</span></code>) in Eastern Oregon contains the <strong>most</strong> buildings? Looking for a name here (not a number).</p></li>
+<li><p>a) Download the Landsat data from <a class="reference external" href="https://www.dropbox.com/sh/k3bkxwa2j9fovta/AADX4yZiIAEHiG9VPcyCON2pa?dl=0">here</a>.</p></li>
+<li><p>b) Read each band (i.e. <code class="docutils literal notranslate"><span class="pre">src1</span> <span class="pre">=</span> <span class="pre">rasterio.open(files[0])</span></code>) and scale the values between 0 and 1 by dividing by the maximum value of a 16-bit integer (i.e. <code class="docutils literal notranslate"><span class="pre">band1</span> <span class="pre">=</span> <span class="pre">src1.read(1)</span> <span class="pre">/</span> <span class="pre">65536</span></code>).</p></li>
+<li><p>c) Compute all eight of the spectral indices on <a class="reference external" href="https://www.usgs.gov/landsat-missions/landsat-surface-reflectance-derived-spectral-indices">this website</a>. For each index, make a plot (with a colorbar and a different colormap for each one) to show your answers.</p></li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>We can find the name of the county that corresponds to the <code class="docutils literal notranslate"><span class="pre">COUNTYFP</span></code> code <a class="reference external" href="https://unicede.air-worldwide.com/unicede/unicede_oregon_fips.html">here</a></p>
+<p>Note that the images we are using are from <strong>Landsat 8</strong>.</p>
 </div>
-<ul class="simple">
-<li><p>Which <strong>county</strong> (<code class="docutils literal notranslate"><span class="pre">COUNTYFP</span></code>) in Eastern Oregon contains the <strong>least</strong> buildings?</p></li>
-</ul>
-</div>
-<div class="section" id="task-4-5-points">
-<h2>Task 4 (5 points)<a class="headerlink" href="#task-4-5-points" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p>a) Produce an interactive plot (i.e. using <code class="docutils literal notranslate"><span class="pre">explore()</span></code>) showing buildings in Wheeler County</p></li>
-</ul>
-</div>
-<div class="section" id="task-5-10-points">
-<h2>Task 5 (10 points)<a class="headerlink" href="#task-5-10-points" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p>a) Produce a new GeoDataFrame that only contains highways within Harney County (i.e. using <code class="docutils literal notranslate"><span class="pre">sjoin()</span></code>).</p></li>
-<li><p>b) Produce another new GeoDataFrame containing only the buildings within Harney County.</p></li>
-<li><p>c) Buffer the Harney Highwway GeoDataFrame by 1/2 mile.</p></li>
-</ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The <a class="reference external" href="https://geopandas.org/en/stable/docs/reference/api/geopandas.GeoSeries.buffer.html"><code class="docutils literal notranslate"><span class="pre">buffer()</span></code></a> function is useful for this.</p>
-</div>
-<ul class="simple">
-<li><p>d) Set the active geometry of the Harney Highways GeoDataFrame as the new buffer column.</p></li>
-</ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>We can use <a class="reference external" href="https://geopandas.org/en/stable/docs/reference/api/geopandas.GeoDataFrame.set_geometry.html"><code class="docutils literal notranslate"><span class="pre">set_geometry()</span></code></a> to do this.</p>
-</div>
-<ul class="simple">
-<li><p>e) Group the buffered polygons into a single <code class="docutils literal notranslate"><span class="pre">MultiPolygon</span></code> using the <a class="reference external" href="https://geopandas.org/en/stable/docs/reference/api/geopandas.GeoDataFrame.dissolve.html"><code class="docutils literal notranslate"><span class="pre">dissolve()</span></code></a> function. There should only be one row after performing this step.</p></li>
-<li><p>f) What percentage of buildings in Harney County are within 1/2 of the highway?</p></li>
-</ul>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>May have to drop the <code class="docutils literal notranslate"><span class="pre">index_right</span></code> columns before running this function.</p>
-</div>
-<ul class="simple">
-<li><p>g) Make a plot of buildings in Harney County that are within 1/2 mile of the highway using <code class="docutils literal notranslate"><span class="pre">explore()</span></code>.</p></li>
-</ul>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>Save your notebook to your local course folder and submit assignment (in <strong>.pdf</strong> format) to Canvas by the deadline.</p>
@@ -688,17 +581,17 @@ const thebe_selector_output = ".output, .cell_output"
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="../assignments/08-assignment.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="../assignments/09-assignment.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Assignment 8</p>
+            <p class="prev-next-title">Assignment 9</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../demos/09a-demo.html" title="next page">
+    <a class='right-next' id="next-link" href="../demos/10a-demo.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Raster data analysis</p>
+        <p class="prev-next-title">Sampling raster data</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
