@@ -16,7 +16,7 @@
 # 
 # *****************************
 # 
-# ## Where are buildings in Eastern Oregon
+# ## Where are buildings in Eastern Oregon?
 # 
 # ```{image} images/harney.jpeg
 # :alt: checkerboard
@@ -94,7 +94,7 @@
 # * e) Group the buffered polygons into a single `MultiPolygon` using the [`dissolve()`](https://geopandas.org/en/stable/docs/reference/api/geopandas.GeoDataFrame.dissolve.html) function. There should only be one row after performing this step. 
 # 
 # 
-# * f) What percentage of buildings in Harney County that are within 1/2 of the highway? 
+# * f) What percentage of buildings in Harney County are within 1/2 of the highway? 
 # 
 # ```{note}
 # May have to drop the `index_right` columns before running this function.

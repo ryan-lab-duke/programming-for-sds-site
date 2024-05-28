@@ -75,7 +75,7 @@ Read in the July precipitation data (i.e. `wc2.1_2.5m_prec_07.tif`, mask the **N
 
 ```{admonition} Click to reveal hint
 :class: tip, dropdown
-Remember to specify the axis when using [`np.nanmean`](https://numpy.org/doc/stable/reference/generated/numpy.nanmean.html). 
+Probably need a for loop for this, combined with the [`np.dstack()`](https://numpy.org/doc/stable/reference/generated/numpy.dstack.html) function. Also remember to specify the axis when using [`np.nanmean`](https://numpy.org/doc/stable/reference/generated/numpy.nanmean.html). 
 ```
 
 * b) Compute the **standard deviation** of precipitation across all twelve files and make a plot showing new variable. 
