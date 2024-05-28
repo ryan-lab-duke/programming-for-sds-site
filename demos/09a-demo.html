@@ -51,7 +51,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Remote sensing in Python" href="09b-demo.html" />
-    <link rel="prev" title="Assignment 8" href="../assignments/08-assignment.html" />
+    <link rel="prev" title="Practice activity" href="../activities/08-activity.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -315,6 +315,11 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="../assignments/08-assignment.html">
    Assignment 8
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../activities/08-activity.html">
+   Practice activity
   </a>
  </li>
 </ul>
@@ -620,10 +625,9 @@ const thebe_selector_output = ".output, .cell_output"
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="raster-data-analysis">
 <h1>Raster data analysis<a class="headerlink" href="#raster-data-analysis" title="Permalink to this headline">¶</a></h1>
-<p>Raster data represent a matrix of cells (or pixels) organized into rows and columns (or a grid). Grid cells can represent data that changes <strong>continuously</strong> across a landscape (surface) such as elevation, air temperature, or . reflectance data from satellite imaging platforms. Grid cells can also represent <strong>discrete</strong> data such as vegetation type or land cover.</p>
+<p>Raster data represent a matrix of cells (or pixels) organized into rows and columns (or a grid). Grid cells can represent data that changes <strong>continuously</strong> across a landscape (surface) such as elevation, air temperature, or reflectance data from satellite imaging platforms. Grid cells can also represent <strong>discrete</strong> data such as vegetation type or land cover.</p>
 <a class="reference internal image-reference" href="../_images/rainier_adams.jpg"><img alt="rainier_adams" class="align-center" src="../_images/rainier_adams.jpg" style="width: 600px;" /></a>
 <p>We recommend three libraries for accessing and analyzing raster data in Python. The first is called <code class="docutils literal notranslate"><span class="pre">rasterio</span></code> which builds on the popular <strong>Geographic Raster Abstraction Library</strong> or <code class="docutils literal notranslate"><span class="pre">GDAL</span></code>. It supports read/write access for over 160 raster formats (e.g. GeoTIFF, NetCDF4) and includes methods for finding dataset information, reprojections, resampling, format conversion, and mosaicking. Once we have imported, resampled the data etc., we can apply fast matrix operations using <code class="docutils literal notranslate"><span class="pre">NumPy</span></code>. Finally, we may also use <code class="docutils literal notranslate"><span class="pre">xarray</span></code> which introduces labels in the form of <strong>dimensions</strong>, <strong>coordinates</strong> and <strong>attributes</strong> on top of raw NumPy-like arrays, a bit like <code class="docutils literal notranslate"><span class="pre">Pandas</span></code>.</p>
-<a class="reference internal image-reference" href="../_images/raster_matrix.png"><img alt="raster matrix" class="align-center" src="../_images/raster_matrix.png" style="width: 500px;" /></a>
 <div class="section" id="review-of-raster-data">
 <h2>Review of raster data<a class="headerlink" href="#review-of-raster-data" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
@@ -643,7 +647,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="simple">
 <li><p>Grid cells can represent from a satellite imagaing platforms such as reflectance.</p></li>
 </ul>
-<a class="reference internal image-reference" href="../_images/satellite.gif"><img alt="satellite" class="align-center" src="../_images/satellite.gif" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="../_images/glacier.png"><img alt="satellite" class="align-center" src="../_images/glacier.png" style="width: 600px;" /></a>
 <div class="section" id="examples-classification-maps">
 <h3>Examples: classification maps<a class="headerlink" href="#examples-classification-maps" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
@@ -941,7 +945,7 @@ Height: 3601
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(-121.97305555555556, 46.5325)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(-121.97305555555555, 46.5325)
 </pre></div>
 </div>
 </div>
@@ -966,7 +970,7 @@ Height: 3601
 </div>
 <div class="section" id="reprojecting">
 <h2>Reprojecting<a class="headerlink" href="#reprojecting" title="Permalink to this headline">¶</a></h2>
-<p>We could use <code class="docutils literal notranslate"><span class="pre">Rasterio</span></code> to reproject raster data… but it’s quite tricky!</p>
+<p>We could use <code class="docutils literal notranslate"><span class="pre">Rasterio</span></code> to reproject raster data… but, unlike <code class="docutils literal notranslate"><span class="pre">GeoPandas</span></code>, it requires manual re-projection which is quite tricky!</p>
 <a class="reference internal image-reference" href="../_images/rasterio_reproject.png"><img alt="rasterio reproject" class="align-center" src="../_images/rasterio_reproject.png" style="width: 700px;" /></a>
 <p>Instead we recommend using <a class="reference external" href="https://gdal.org/programs/index.html#raster-programs"><strong>GDAL utilities</strong></a>. We can execute these commands in our jupyter notebook cells using the <code class="docutils literal notranslate"><span class="pre">!</span></code> sign.</p>
 <p>To reproject our data, we can use <a class="reference external" href="https://gdal.org/programs/gdalwarp.html#gdalwarp"><code class="docutils literal notranslate"><span class="pre">gdalwarp</span></code></a>. All we need to do is set a <strong>target spatial reference</strong> using the <code class="docutils literal notranslate"><span class="pre">-t_srs</span></code> flag followed by a space, the <strong>input dataset</strong>, and the <strong>output dataset</strong>. Below we set the target spatial reference to <a class="reference external" href="https://epsg.io/32610"><strong>UTM Zone 10N</strong></a> (or EPSG:32610) which is the UTM Zone for the Pacific Northwest.</p>
@@ -1043,7 +1047,7 @@ Height: 3601
 </div>
 </div>
 </div>
-<p>Now when we plot the data, the NoData values are not assigned a color.`</p>
+<p>Now when we plot the data, the NoData values are not assigned a color.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="mi">7</span><span class="p">))</span>
@@ -1134,11 +1138,11 @@ Copying nodata values from source data/N46W122_utm.tif to destination data/N46W1
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="../assignments/08-assignment.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="../activities/08-activity.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Assignment 8</p>
+            <p class="prev-next-title">Practice activity</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="09b-demo.html" title="next page">
