@@ -21,7 +21,7 @@ jupyter lab
 
 ## Task 1 (4 points)
 
-Download the data for the assignment from [here](https://www.dropbox.com/sh/zop198jg5dksrgv/AACKuC1KjASxVTrix3FfOR-ja?dl=0). This is [WorldClim](https://www.worldclim.org/) version 2.1 **monthly precipitation data** averaged across the 1970-2000 period. The spatial resolution is **2.5 minutes** (around 21 km<sup>2</sup> at the equator). The numbers in the file name represent the month of the year (January is `01`; December is `12`).
+Download the data for the assignment from [here](https://www.dropbox.com/sh/zop198jg5dksrgv/AACKuC1KjASxVTrix3FfOR-ja?dl=0). This is [WorldClim](https://www.worldclim.org/) version 2.1 **monthly precipitation data** averaged across the 1970-2000 period. The spatial resolution is **2.5 minutes** (around 21 km<sup>2</sup> at the equator) and the units are in **mm**. The numbers in the file name represent the month of the year (January is `01`; December is `12`).
 
 Read in the January precipitation data (i.e. `wc2.1_2.5m_prec_01.tif`) and answer the following questions:
 

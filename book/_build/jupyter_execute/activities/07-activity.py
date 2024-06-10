@@ -40,7 +40,7 @@
 # 
 #  * h) Make a figure showing both the daily solar radiation and median filtered solar radiation on the same plot
 # 
-#  * i) By how much does mean daily solar radiation change during the study period (July 07 to Sep 16)? Looking for a value in W m$^{-2}$ d$^{-1}$.
+#  * i) By how much does mean daily solar radiation change during the study period (July 17 to Sep 16)? Looking for a value in W m$^{-2}$ d$^{-1}$.
 # 
 #  * j) Based on this rate, what will be the mean solar radiation on Oct 30, 2023?
 
